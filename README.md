@@ -53,5 +53,3 @@ $ npm run hot // hot reloading
 
 ## Project Guidelines
 Please adhere as much as possible to the guidelines
-* [Git flow (Creating branches/pull request)](docs/git-flow.md)
-* [The commit message](docs/commit-guidelines.md)
