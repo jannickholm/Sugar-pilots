@@ -1,29 +1,36 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+const config = require('./webpack.config');
+require('laravel-mix-purgecss');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+const paths = {
+    js: 'resources/js',
+    sass: 'resources/sass',
+    publicJs: 'public/js',
+    publicCss: 'public/css'
+};
 
-mix.js('resources/js/site.js', 'public/js')
-   .sass('resources/sass/site.scss', 'public/css');
+// eslint-disable-next-line no-unused-vars
+const extractLibraries = ['vue'];
 
+mix.babelConfig({
+    plugins: ['@babel/plugin-syntax-dynamic-import']
+});
 
-/*
- |--------------------------------------------------------------------------
- | Statamic Control Panel Assets
- |--------------------------------------------------------------------------
- |
- | Feel free to add your own JS or CSS to the Statamic Control Panel.
- | https://statamic.dev/extending/control-panel#adding-css-and-js-assets
- |
- */
+mix.js(`${paths.js}/site.js`, `${paths.publicJs}/site.js`).sass(
+    `${paths.sass}/site.scss`,
+    `${paths.publicCss}/app.css`
+);
 
-// mix.js('resources/js/cp.js', 'public/vendor/app/js')
-//    .sass('resources/sass/cp.scss', 'public/vendor/app/css');
+// local settings
+if (!mix.inProduction()) {
+    mix.sourceMaps();
+}
+
+// production settings
+if (mix.inProduction()) {
+    mix.version();
+    mix.disableNotifications();
+    mix.purgeCss();
+}
+
+mix.webpackConfig(config);
