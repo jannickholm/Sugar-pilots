@@ -26,3 +26,15 @@ public/vendors~calendar.js
 public/vendors~calendar.js.LICENSE
 package-lock.json
 package.json
+.deployignore
+.editorconfig
+.eslintignore
+.gitattributes
+.gitignore
+.env.example
+.eslintrc.js
+.prettierrc.js
+stylelint.config.js
+webpack.config.js
+webpack.mix.js
+SugarPilots_logo-300x253.png
