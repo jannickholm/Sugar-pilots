@@ -31,7 +31,7 @@ the project further:
 
 ```shell
 $ # Clone the project
-$ git clone https://github.com/WeCodeDK/wecode2020.git
+$ git clone https://github.com/jannickholm/Sugar-pilots.git
 
 $ # go into the project folder
 $ cd Sugar-pilots/
