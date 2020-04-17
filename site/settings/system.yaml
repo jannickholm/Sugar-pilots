@@ -4,5 +4,5 @@ locales:
   en:
     full: en_US
     name: English
-    url: 'http://statamic.test/'
+    url: 'http://sugarpilots.test/'
 timezone: UTC
