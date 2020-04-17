@@ -1,4 +1,6 @@
 /* Custom Control Panel styles... */
-.site-warning-stripe.status-trial.flexy {
+.site-warning-stripe.status-trial.flexy,
+.site-warning-stripe.flexy {
     display: none !important;
 }
+
