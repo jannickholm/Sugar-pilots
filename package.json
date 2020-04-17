@@ -10,28 +10,13 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "@nuxtjs/eslint-config": "^2.0.0",
-        "babel-eslint": "^10.0.3",
-        "cross-env": "^5.1",
-        "eslint": "^6.8.0",
-        "eslint-loader": "^3.0.3",
-        "eslint-plugin-vue": "^6.1.2",
-        "laravel-mix": "^4.0",
-        "laravel-mix-purgecss": "^4.2.0",
-        "laravel-mix-tailwind": "^0.1.0",
-        "mix-tailwindcss": "^1.2.0",
-        "prettier": "^1.19.1",
+        "axios": "^0.19",
+        "cross-env": "^7.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.13",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.24.0",
-        "sass-loader": "^7.1.0",
-        "stylelint": "^12.0.0",
-        "stylelint-config-sass-guidelines": "^6.2.0",
-        "stylelint-webpack-plugin": "^1.1.2",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
         "vue-template-compiler": "^2.6.11"
-    },
-    "dependencies": {
-        "tailwindcss": "^1.2.0",
-        "vue": "^2.6.11",
-        "vue-router": "^3.1.6"
     }
 }

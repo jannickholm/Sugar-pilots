@@ -1,0 +1,8 @@
+app_key: gAdMJN6udDT8WODhCdOINP8BQ9zDH6tJ
+yaml_parser: symfony
+locales:
+  en:
+    full: en_US
+    name: English
+    url: 'http://statamic.test/'
+timezone: UTC

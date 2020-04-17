@@ -1,36 +1,15 @@
 const mix = require('laravel-mix');
-const config = require('./webpack.config');
-require('laravel-mix-purgecss');
 
-const paths = {
-    js: 'resources/js',
-    sass: 'resources/sass',
-    publicJs: 'public/js',
-    publicCss: 'public/css'
-};
+/*
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for the application as well as bundling up all the JS files.
+ |
+ */
 
-// eslint-disable-next-line no-unused-vars
-const extractLibraries = ['vue'];
-
-mix.babelConfig({
-    plugins: ['@babel/plugin-syntax-dynamic-import']
-});
-
-mix.js(`${paths.js}/site.js`, `${paths.publicJs}/site.js`).sass(
-    `${paths.sass}/site.scss`,
-    `${paths.publicCss}/app.css`
-);
-
-// local settings
-if (!mix.inProduction()) {
-    mix.sourceMaps();
-}
-
-// production settings
-if (mix.inProduction()) {
-    mix.version();
-    mix.disableNotifications();
-    mix.purgeCss();
-}
-
-mix.webpackConfig(config);
+mix.js('site/themes/sugarpilots/js/site.js', 'sugarpilots/js/sugarpilots.js')
+    .sass('site/themes/sugarpilots/sass/sugarpilots.scss', 'site/themes/sugarpilots/css');

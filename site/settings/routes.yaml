@@ -1,0 +1,4 @@
+routes:
+  /:
+    layout: default
+    template: home
