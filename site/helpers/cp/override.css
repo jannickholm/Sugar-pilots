@@ -4,3 +4,6 @@
     display: none !important;
 }
 
+.nav-main ul li>ul {
+    display: block !important;
+}
