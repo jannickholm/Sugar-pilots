@@ -36,19 +36,11 @@ $ git clone https://github.com/jannickholm/Sugar-pilots.git
 $ # go into the project folder
 $ cd Sugar-pilots/
 
-$ # Copy the .env.example to .env
-$ cp .env.example .env
-
-$ # Install composer dependencies
-$ composer install
-
 $ # Install npm dependencies
 $ npm install
 
 $ # Build/Compile assets
 $ npm run dev
-$ or
-$ npm run hot // hot reloading
 ```
 
 ## Project Guidelines
