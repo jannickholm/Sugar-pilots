@@ -90,7 +90,7 @@ $resources = '_resources';
 |
 */
 
-$environment = 'production';
+$environment = 'Develop';
 
 /*
 |--------------------------------------------------------------------------
