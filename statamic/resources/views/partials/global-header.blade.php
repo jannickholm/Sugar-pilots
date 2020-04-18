@@ -1,8 +1,9 @@
 <div class="cp-head">
 
     <div class="logo">
-        <a href="{{ route('cp') }}" class="">
-            <h1>Sugar pilots</h1>
+        <a href="{{ route('cp') }}" class="flex items-center">
+              {!! inline_svg('statamic-logo') !!}
+              <span class="version" v-cloak>@{{ version }}</span>
         </a>
     </div>
 
