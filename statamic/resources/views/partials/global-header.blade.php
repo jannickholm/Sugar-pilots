@@ -15,11 +15,7 @@
         </a>
 
         <a class="dropdown-toggle ml-1 hide md:block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            @if (\Statamic\API\Config::get('users.enable_gravatar'))
-                <img src="{{ \Statamic\API\User::getCurrent()->getAvatar() }}" alt="" height="32" width="32" class="round ml-8 z-depth-1">
-            @else
-                <div class="icon-user-initials round ml-8 z-depth-1">{{ \Statamic\API\User::getCurrent()->userInitials() }}</div>
-            @endif
+            <img src="/assets/sugarpilots_logo-300x253.png" alt="" height="32" width="32" class="round ml-8 z-depth-1">
         </a>
         <ul class="dropdown-menu hide md:block">
             <li><a href="{{ route('account') }}">{{ t('profile') }}</a></li>
