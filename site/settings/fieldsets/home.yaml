@@ -28,5 +28,11 @@ sections:
       content_2:
         type: text
         display: content_2
+  sidebar:
+    display: sidebar
+    fields:
+      template:
+        type: template
+        display: Template
 taxonomies: true
 title: Home

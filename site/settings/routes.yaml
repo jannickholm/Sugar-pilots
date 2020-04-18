@@ -1,4 +1,4 @@
 routes:
-  /:
+  /home:
     layout: default
     template: home
