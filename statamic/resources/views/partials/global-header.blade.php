@@ -2,7 +2,7 @@
 
     <div class="logo">
         <a href="{{ route('cp') }}" class="flex items-center">
-              {!! inline_svg('statamic-logo') !!}
+              Sugar Pilots  
               <span class="version" v-cloak>@{{ version }}</span>
         </a>
     </div>

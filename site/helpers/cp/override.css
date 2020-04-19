@@ -1,3 +1,131 @@
+@font-face {
+    font-family: 'airbnb_cereal_appmedium';
+    src: url('./fonts/airbnbcereal-medium-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnb_cereal_appblack';
+    src: url('./fonts/airbnbcereal-black-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnb_cereal_appbold';
+    src: url('./fonts/airbnbcereal-bold-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnb_cereal_appbook';
+    src: url('./fonts/airbnbcereal-book-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnb_cereal_appextra_bold';
+    src: url('./fonts/airbnbcereal-extrabold-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'airbnb_cereal_applight';
+    src: url('./fonts/airbnbcereal-light-webfont.woff2') format('woff2'),
+         url('./fonts/airbnbcereal-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.cp-head .logo a {
+    font-family: 'airbnb_cereal_appblack' !important;
+    font-size: 1.8rem;
+}
+
+h1, h2 {
+    font-family: 'airbnb_cereal_appblack' !important;
+}
+
+.page-title, h3 {
+    font-family: 'airbnb_cereal_appextra_bold' !important;
+}
+
+.btn {
+    font-family: 'airbnb_cereal_appextra_bold' !important;
+}
+
+.nav-main .nav-dashboard a:first-child,
+.nav-main .nav-assets a:first-child,
+.nav-main .nav-globals a:first-child,
+.nav-main .nav-pages a:first-child, 
+.nav-main .nav-forms a:first-child, 
+.nav-main .nav-updater a:first-child, 
+.nav-main .nav-import a:first-child, 
+.nav-main .nav-addons a:first-child,
+.nav-main .nav-taxonomies a:first-child, 
+.nav-main .nav-collections a:first-child, 
+.nav-main .nav-config-content a:first-child, 
+.nav-main .nav-fieldsets a:first-child, 
+.nav-main .nav-settings a:first-child, 
+.nav-main .nav-users a:first-child { 
+    font-family: 'airbnb_cereal_appextra_bold' !important;
+}
+
+.nav-main .nav-config-content .nav-collections a:first-child,
+.nav-main .nav-config-content .nav-taxonomies a:first-child,
+.nav-main .nav-config-content .nav-globals a:first-child,
+.nav-main .nav-caching a:first-child, 
+.nav-main .nav-cp a:first-child, 
+.nav-main .nav-debug a:first-child, 
+.nav-main .nav-email a:first-child, 
+.nav-main .nav-routes a:first-child, 
+.nav-main .nav-search a:first-child, 
+.nav-main .nav-system a:first-child,
+.nav-main .nav-config-content .nav-assets a:first-child, 
+.nav-main .nav-settings .nav-assets a:first-child, 
+.nav-main .nav-theming a:first-child, 
+.nav-main .nav-user-groups a:first-child, 
+.nav-main .nav-user-roles a:first-child, 
+.nav-main .nav-settings .nav-users a:first-child {
+    font-family: 'airbnb_cereal_applight' !important;
+}
+
+.nav-main .section {
+    font-family: 'airbnb_cereal_appblack' !important;
+}
+
+
 /* Custom Control Panel styles... */
 .site-warning-stripe.status-trial.flexy,
 .site-warning-stripe.flexy {
@@ -6,6 +134,15 @@
 
 .nav-main ul li>ul {
     display: block !important;
+}
+
+.page-tree,
+.card {
+    box-shadow: 0 1rem 2.8rem 0 rgba(0,0,0,.05);
+}
+
+.sweet-alert p {
+    font-family: 'airbnb_cereal_appbold';
 }
 
 .btn.btn-primary {
