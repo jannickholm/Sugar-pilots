@@ -145,7 +145,23 @@ h1, h2 {
     font-family: 'airbnb_cereal_appbold';
 }
 
-.btn.btn-primary {
-    background: #0277b5 !important;
-    color: #f5f5f5 !important;
+.btn.btn-primary:not(.dropdown-toggle) {
+    /* button / large / fill - normal / text */
+background: #1947E6;
+}
+
+.btn.btn-primary.dropdown-toggle {
+    background: #1947E6;
+}
+
+.btn-group .btn.btn-primary:hover {
+    background: rgb(23, 63, 209);
+}
+
+.btn.btn-default.status-field {
+/* Colors / White */
+
+background: #FFFFFF;
+/* Colors / Black */
+border: 1px solid #18191F;
 }
