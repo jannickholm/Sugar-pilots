@@ -2,14 +2,6 @@
     outline: none;
 }
 
-*::after {
-    position: relative;
-    left: 1rem;
-    content: attr(data-html-type);
-    font-size: 1rem;
-    color: red;
-}
-
 body {
     margin: 0;
     padding: 0;

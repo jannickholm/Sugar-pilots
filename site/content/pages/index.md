@@ -9,7 +9,7 @@ title_scroll_speed: '-2'
 inspiration_title: 'Hop med på rejsen'
 inspiration_text: 'Vi brænder for at koge smukke slikkepinde, som kan bruges som smagsbooster i en kop kaffe, en cocktail eller som pynt på bordet eller bare til at spise som de er. Vi designer også meget gerne dine egne slikkepinde til din event, din fest eller til dit firma.'
 video_type: youtube
-youtube_video: 'https://www.youtube.com/watch?v=NpEaa2P7qZI'
+youtube_video: 'https://www.youtube.com/watch?v=pVE92TNDwUk'
 header_image_type: img
 image_2: /assets/sugarpilots_mojito_cocktailslikkepind_shop-2_-removebg-preview.png
 content_2: 'Our latest blog posts:'

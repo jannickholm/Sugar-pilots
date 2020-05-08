@@ -104,6 +104,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     videoLink: {
@@ -111,10 +125,22 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     }
   },
+  computed: {
+    placeholderImage: function placeholderImage() {
+      return "https://i.ytimg.com/vi/" + this.getYoutubeId(this.videoLink) + "/maxresdefault.jpg";
+    }
+  },
   data: function data() {
     return {
       loadVideo: false
     };
+  },
+  methods: {
+    getYoutubeId: function getYoutubeId(url) {
+      var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+      var match = url.match(regExp);
+      return match && match[7].length === 11 ? match[7] : false;
+    }
   }
 });
 
@@ -1103,8 +1129,52 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "video-container" }, [
+    _c(
+      "div",
+      {
+        staticClass: "video-placeholder-container",
+        on: {
+          click: function($event) {
+            _vm.loadVideo = true
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "video-placeholder-overlay" }),
+        _vm._v(" "),
+        !_vm.loadVideo
+          ? _c("img", {
+              staticClass: "video-placeholder",
+              attrs: { src: _vm.placeholderImage, alt: "" }
+            })
+          : _vm._e()
+      ]
+    ),
+    _vm._v(" "),
+    _vm.loadVideo
+      ? _c("div", { staticClass: "video" }, [
+          _c("div", { staticClass: "embed-container" }, [
+            _c("iframe", {
+              attrs: {
+                src:
+                  "https://www.youtube.com/embed/" +
+                  _vm.getYoutubeId(_vm.videoLink),
+                frameborder: "0",
+                allowfullscreen: ""
+              }
+            })
+          ])
+        ])
+      : _vm._e()
+  ])
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
@@ -13353,7 +13423,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element'); // import all vue components
+
+function wheel(event) {
+  var delta = 0;
+
+  if (event.wheelDelta) {
+    delta = event.wheelDelta / 120;
+  } else if (event.detail) {
+    delta = -event.detail / 3;
+  }
+
+  handle(delta);
+
+  if (event.preventDefault) {
+    event.preventDefault();
+  }
+
+  event.returnValue = false;
+}
+
+function handle(delta) {
+  var time = 1000;
+  var distance = 300;
+  document.querySelector('html, body').animate({
+    scrollTop: window.scrollTop - distance * delta
+  }, time);
+}
+
+if (window.addEventListener) {
+  window.addEventListener('DOMMouseScroll', wheel, false);
+}
+
+window.onmousewheel = document.onmousewheel = wheel; // import all vue components
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
 
@@ -13365,6 +13466,15 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.prototype.$eventBus = new vue__WEBPAC
 new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   // eslint-disable-line no-new
   el: '#site'
+});
+var rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element');
+
+if (window.innerWidth < 769) {
+  rellax.destroy();
+}
+
+window.addEventListener("resize", function () {
+  rellax.destroy();
 });
 
 /***/ }),
