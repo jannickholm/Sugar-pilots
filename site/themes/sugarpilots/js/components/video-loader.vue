@@ -1,7 +1,7 @@
 <template>
   <div class="video-container">
     <div class="video-placeholder-container" @click="loadVideo = true">
-    <div class="video-placeholder-overlay"></div>
+    <div class="video-placeholder-overlay" :style="`background-color: ${overlayColor}`"></div>
       <img
         v-if="!loadVideo"
         :src="placeholderImage"
@@ -25,6 +25,10 @@
 export default {
   props: {
     videoLink: {
+      type: String,
+      required: true,
+    },
+    overlayColor: {
       type: String,
       required: true,
     },

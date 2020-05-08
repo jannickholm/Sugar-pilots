@@ -1,0 +1,51 @@
+.section-home {
+  .b2b-section {
+    margin-block-start: 2rem;
+
+    .content {
+      @include md {
+        display: grid;
+        justify-items: space-between;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+      }
+    }
+
+    h4 {
+      max-width: 560px;
+      margin-block-end: 2rem;
+    }
+
+    &-text {
+      max-width: 507px;
+    }
+
+    .main-right {
+      @include md {
+          margin-left: 2rem;
+      }
+      max-width: max-content;
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    .main-left {
+        margin-bottom: 2rem;
+        @include md {
+            margin-bottom: 0;
+        }
+    }
+
+    &-image1 {
+      max-width: 400px;
+    }
+
+    &-image2 {
+      max-width: 250px;
+      grid-column: 2;
+      grid-row: 2;
+      margin-left: -4rem;
+      margin-top: -4rem;
+    }
+  }
+}

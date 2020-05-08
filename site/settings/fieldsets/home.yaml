@@ -53,25 +53,103 @@ sections:
         type: textarea
         display: inspiration_text
         default: 'Vi brænder for at koge smukke slikkepinde, som kan bruges som smagsbooster i en kop kaffe, en cocktail eller som pynt på bordet eller bare til at spise som de er. Vi designer også meget gerne dine egne slikkepinde til din event, din fest eller til dit firma.'
-      video_type:
-        options:
-          youtube: 'Youtube video'
-          html5_video: 'Uploaded video'
-        type: select
-        display: 'Video type'
-        default: youtube
-      video:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: Video
-        show_when:
-          video_type: html5_video
       youtube_video:
         type: text
         display: video
+        width: 50
         show_when:
           video_type: youtube
+      video_overlay_color:
+        options:
+          'rgba(255, 189, 198, 0.5)': 'Light color'
+        type: select
+        width: 50
+        display: 'Video overlay color'
+        default: 'rgba(255, 189, 198, 0.5)'
+  b2b:
+    display: B2B
+    fields:
+      b2b_title:
+        type: text
+        display: 'B2B title'
+        default: 'Vil du forkæle dine kunder eller dine medarbejdere?'
+      b2b_text:
+        buttons:
+          - bold
+          - italic
+          - removeformat
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: true
+        link_noreferrer: true
+        target_blank: true
+        semantic_elements: false
+        container: main
+        folder: /
+        restrict_assets: false
+        type: bard
+        display: 'B2B text'
+      b2b_image_1:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        width: 50
+        display: 'Image 1'
+      b2b_image_2:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 50
+        display: 'Image 2'
+      b2b_image_1_scroll_speed:
+        type: text
+        width: 50
+        display: 'Image 1 scroll speed'
+        default: '0'
+      b2b_image_2_scroll_speed:
+        type: text
+        width: 50
+        display: 'Image 2 scroll speed'
+        default: '1'
+  sustainable_and_natural_materials:
+    display: 'Sustainable and natural materials'
+    fields:
+      sustainable_title:
+        type: text
+        display: 'Sustainable title'
+      sustainable_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: list
+        type: assets
+        width: 50
+        display: Image
+      sustainable_image_scroll_speed:
+        type: text
+        width: 50
+        display: 'Image scroll speed'
+      sustainable_text:
+        sets:
+          block:
+            display: Block
+            fields:
+              sustainable_text_title:
+                type: text
+                display: Title
+              sustainable_text_body:
+                type: textarea
+                display: Text
+        type: replicator
+        display: 'Sustainable text'
 taxonomies: true
 title: Home

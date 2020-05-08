@@ -2,10 +2,9 @@
     <div class="wrapper">
         <h2>{{ inspiration_title }}</h2>
         <p>{{ inspiration_text }}</p>
-
-        {{ if video_type === "youtube" }}
-            <video-loader video-link="{{ youtube_video }}"></video-loader>
-        {{ /if }}
         
+        {{ if youtube_video }}
+            <video-loader video-link="{{ youtube_video }}" overlay-color="{{ video_overlay_color }}"></video-loader>
+        {{ /if }}
     </div>
 </div>

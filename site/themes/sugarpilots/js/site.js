@@ -1,6 +1,7 @@
 "use strict";
 import Rellax from 'rellax';
 import Vue from 'vue';
+feather.replace()
 
 function wheel(event) {
     var delta = 0;
@@ -36,6 +37,8 @@ new Vue({ // eslint-disable-line no-new
     el: '#site'
 });
 
+
+// enable rellax
 let rellax = new Rellax('.parallax-element');
 
 if(window.innerWidth < 769) {
@@ -43,5 +46,9 @@ if(window.innerWidth < 769) {
 }
 
 window.addEventListener("resize", () => {
-    rellax.destroy();
+    if(window.innerWidth < 769) {
+        rellax.destroy();
+    } else {
+        let rellax = new Rellax('.parallax-element');
+    }
 })

@@ -123,6 +123,10 @@ __webpack_require__.r(__webpack_exports__);
     videoLink: {
       type: String,
       required: true
+    },
+    overlayColor: {
+      type: String,
+      required: true
     }
   },
   computed: {
@@ -1145,7 +1149,10 @@ var render = function() {
         }
       },
       [
-        _c("div", { staticClass: "video-placeholder-overlay" }),
+        _c("div", {
+          staticClass: "video-placeholder-overlay",
+          style: "background-color: " + _vm.overlayColor
+        }),
         _vm._v(" "),
         !_vm.loadVideo
           ? _c("img", {
@@ -13423,6 +13430,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+feather.replace();
 
 function wheel(event) {
   var delta = 0;
@@ -13466,7 +13474,8 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.prototype.$eventBus = new vue__WEBPAC
 new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   // eslint-disable-line no-new
   el: '#site'
-});
+}); // enable rellax
+
 var rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element');
 
 if (window.innerWidth < 769) {
@@ -13474,7 +13483,11 @@ if (window.innerWidth < 769) {
 }
 
 window.addEventListener("resize", function () {
-  rellax.destroy();
+  if (window.innerWidth < 769) {
+    rellax.destroy();
+  } else {
+    var _rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element');
+  }
 });
 
 /***/ }),

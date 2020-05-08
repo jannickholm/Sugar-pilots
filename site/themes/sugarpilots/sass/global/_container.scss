@@ -1,17 +1,21 @@
 .wrapper {
     margin: auto;
-    padding: 0 20px;
+    padding: 20px;
     max-width: 1400px;
 
     @include s {
-        padding: 0 25px;
+        padding: 25px;
     }
 
     @include lg {
-        padding: 0 30px;
+        padding: 30px;
     }
 
     @include xlg {
-        padding: 0 2rem;
+        padding: 35px;
     }
+}
+
+.wrapper.narrow {
+    width: 85%;
 }
