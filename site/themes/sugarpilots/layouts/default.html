@@ -10,18 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="robots" content="noindex" />
-    <title>{{ title ensure_right=" / " }}{{ site_name }}</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>{{ site_name }}{{ title ensure_left=" - " }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ theme:css }}">
 </head>
 
 <body class="section-{{ segment_1 or "home" }}">
 
-    {{ template_content }}
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <div id="site">
+        {{ partial:navigation }}
+        <div class="content">
+            {{ template_content }}
+        </div>
+</div>
     <script src="{{ theme:js }}"></script>
-
 </body>
 </html>

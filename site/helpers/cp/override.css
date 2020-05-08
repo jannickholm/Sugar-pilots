@@ -165,3 +165,8 @@ background: #FFFFFF;
 /* Colors / Black */
 border: 1px solid #18191F;
 }
+
+
+.asset-solo-container .asset-tile {
+    margin: auto;
+}

@@ -1,0 +1,11 @@
+<div class="video">
+    <div class="wrapper">
+        <h2>{{ inspiration_title }}</h2>
+        <p>{{ inspiration_text }}</p>
+
+        {{ if video_type === "youtube" }}
+            <video-loader video-link="{{ youtube_video | embed_url }}"></video-loader>
+        {{ /if }}
+        
+    </div>
+</div>

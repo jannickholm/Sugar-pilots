@@ -3,36 +3,75 @@ sections:
   main:
     display: Main
     fields:
-      content:
-        buttons:
-          - h2
-          - h3
-          - bold
-          - italic
-          - unorderedlist
-          - orderedlist
-          - removeformat
-          - quote
-          - anchor
-        style: sans
-        spellcheck: true
-        allow_source: true
-        allow_internal_links: true
-        link_noopener: false
-        link_noreferrer: false
-        target_blank: false
-        semantic_elements: false
-        restrict_assets: false
-        type: bard
-        display: content
-      content_2:
-        type: text
-        display: content_2
-  sidebar:
-    display: sidebar
-    fields:
       template:
         type: template
         display: Template
+  header:
+    display: Header
+    fields:
+      header:
+        type: section
+        display: Header
+      header_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Image
+        max_files: 1
+        show_when: {  }
+      header_title:
+        type: text
+        display: Title
+        validate: required
+        default: 'HÅNDLAVEDE  SLIKKEPINDE MED SMAGE FRA HELE VERDEN'
+        show_when: {  }
+      header_text:
+        type: textarea
+        display: Text
+        validate: required
+      add_parallax_to_section:
+        type: toggle
+        width: 33
+        display: 'Add parallax to section'
+      image_scroll_speed:
+        type: text
+        width: 33
+        display: 'Image scroll speed'
+      title_scroll_speed:
+        type: text
+        width: 33
+        display: 'Title scroll speed'
+  inspirations_video:
+    display: 'Inspirations video'
+    fields:
+      inspiration_title:
+        type: text
+        display: Title
+        default: 'Hop med på rejsen'
+      inspiration_text:
+        type: textarea
+        display: inspiration_text
+        default: 'Vi brænder for at koge smukke slikkepinde, som kan bruges som smagsbooster i en kop kaffe, en cocktail eller som pynt på bordet eller bare til at spise som de er. Vi designer også meget gerne dine egne slikkepinde til din event, din fest eller til dit firma.'
+      video_type:
+        options:
+          youtube: 'Youtube video'
+          html5_video: 'Uploaded video'
+        type: select
+        display: 'Video type'
+        default: youtube
+      video:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Video
+        show_when:
+          video_type: html5_video
+      youtube_video:
+        type: text
+        display: video
+        show_when:
+          video_type: youtube
 taxonomies: true
 title: Home

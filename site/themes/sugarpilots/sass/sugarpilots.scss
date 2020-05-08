@@ -1,1 +1,20 @@
-@import './tailwind.css'
+// root
+@import './fonts';
+@import './global/breakpoints';
+@import './root';
+
+
+//Globals
+@import './global/mixins';
+@import './global/typography';
+@import './global/container';
+@import './global/navigation';
+
+//Components
+@import './components/buttons';
+@import './components/video_styles';
+@import './components/inspiration_video';
+
+
+//Frontpage
+@import './frontpage/header';

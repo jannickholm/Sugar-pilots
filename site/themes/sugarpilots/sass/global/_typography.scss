@@ -1,0 +1,38 @@
+@mixin antialiased() {
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin headline_bold {
+  font-family: "meno-banner", serif;
+  font-weight: 800;
+}
+
+@mixin headline_medium {
+  font-family: "meno-banner", serif;
+  font-weight: 700;
+}
+
+h1, 
+h2,
+h3,
+h4 {
+  @include headline_bold();
+}
+
+h1 {
+    @include font-size(22px, 40px);
+}
+
+h2 {
+    @include font-size(30px, 48px); 
+}
+
+p,
+a {
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  color: black;
+  @include font-size(14px, 16px);
+}
+
+
