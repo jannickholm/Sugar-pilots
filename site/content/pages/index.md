@@ -1,6 +1,6 @@
 ---
 template: home
-header_image: ./assets/header_image_example.png
+header_image: ./assets/header-image-2.png
 header_title: 'Håndlavede slikkepinde <wbr> med smage fra hele verden'
 header_text: 'På vores kulinariske rejser har vi smags os igennem et vælg af eksotiske smage fra hele verden og disse slikkepinde er baseret på vores yndlingscocktails!'
 add_parallax_to_section: true
