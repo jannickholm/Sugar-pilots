@@ -1,8 +1,7 @@
 .section-home {
   .header {
     min-height: 100vh;
-.content {
-      
+    .content {
       @include md {
         display: flex;
         justify-content: center;
@@ -14,29 +13,27 @@
       }
 
       .main-left {
-        grid-row: 1;
         margin-bottom: 2rem;
         img {
-            max-width: 500px;
+          max-width: 500px;
         }
         @include md {
-            margin-bottom: 0;
+          margin-bottom: 0;
         }
       }
 
       .main-right {
         max-width: 520px;
 
-
         @include md {
-            margin-left: -5rem;
-          }
+          margin-left: -5rem;
+        }
       }
     }
   }
 
   .video {
-      margin-top: 2rem;
-      text-align: center;
+    margin-top: 2rem;
+    text-align: center;
   }
 }
