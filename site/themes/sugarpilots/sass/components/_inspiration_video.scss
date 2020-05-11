@@ -21,7 +21,10 @@
         transform: translate(-50%, -50%);
         width: 20%;
         height: 20%;
-        background: image("/assets/video-play-icon.png", "./assets/video-play-icon.png") contain center no-repeat;
+        background-image: url($assets + "video-play-icon.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
         z-index: 2;
       }
 
