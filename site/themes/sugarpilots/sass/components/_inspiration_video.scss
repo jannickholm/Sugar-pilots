@@ -21,7 +21,7 @@
         transform: translate(-50%, -50%);
         width: 20%;
         height: 20%;
-        background-image: url($assets + "video-play-icon.png");
+        @include background-image("video-play-icon.png", no-repeat, center, contain);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

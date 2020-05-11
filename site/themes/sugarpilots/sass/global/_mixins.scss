@@ -43,3 +43,19 @@
   }
 }
 
+@mixin background-image($filename, $repeat, $position, $size) {
+  background-image: url($assets + $filename);
+
+  @if $repeat {
+    background-repeat: $position;
+  }
+
+  @if $position {
+    background-position: $position;
+  }
+
+  @if $size {
+    background-position: $size;
+  }
+}
+
