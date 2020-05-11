@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return {
-      loadVideo: false,
+      loadVideo: false
     };
   },
   methods: {
