@@ -7,3 +7,4 @@ local/storage/*
 local/temp/*
 installer.php
 index.php
+site/themes/sugarpilots/js/sugarpilots.js

@@ -13430,39 +13430,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-feather.replace();
-
-function wheel(event) {
-  var delta = 0;
-
-  if (event.wheelDelta) {
-    delta = event.wheelDelta / 120;
-  } else if (event.detail) {
-    delta = -event.detail / 3;
-  }
-
-  handle(delta);
-
-  if (event.preventDefault) {
-    event.preventDefault();
-  }
-
-  event.returnValue = false;
-}
-
-function handle(delta) {
-  var time = 1000;
-  var distance = 300;
-  document.querySelector('html, body').animate({
-    scrollTop: window.scrollTop - distance * delta
-  }, time);
-}
-
-if (window.addEventListener) {
-  window.addEventListener('DOMMouseScroll', wheel, false);
-}
-
-window.onmousewheel = document.onmousewheel = wheel; // import all vue components
+feather.replace(); // import all vue components
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
 
