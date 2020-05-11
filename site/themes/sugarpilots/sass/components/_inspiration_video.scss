@@ -21,11 +21,7 @@
         transform: translate(-50%, -50%);
         width: 20%;
         height: 20%;
-        background-image: image("/assets/video-play-icon.png", "./assets/video-play-icon.png");
-        // background-image: url("/assets/video-play-icon.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+        background: image("/assets/video-play-icon.png", "./assets/video-play-icon.png") contain center no-repeat;
         z-index: 2;
       }
 
