@@ -43,6 +43,10 @@
   }
 }
 
+@mixin color-opacity($property, $color, $opacity) {
+  $property: rgba($color, $opacity);
+}
+
 @mixin background-image($filename, $repeat, $position, $size) {
   background-image: url($assets + $filename);
 

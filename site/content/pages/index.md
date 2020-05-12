@@ -36,6 +36,8 @@ sustainable_text:
     type: block
     sustainable_text_title: 'Bæredygtig lorem ipsum'
     sustainable_text_body: 'Beskrivende tekst om dét lorem ipsum lorem ipsum lorem  lorem ipsum lorem ipsum lorem ipsum'
+show_assortment_section: true
+assortment_title: 'Se vores sortiment'
 video_type: youtube
 header_image_type: img
 image_2: /assets/sugarpilots_mojito_cocktailslikkepind_shop-2_-removebg-preview.png

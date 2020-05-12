@@ -2,6 +2,9 @@ hide: true
 sections:
   main:
     display: Main
+    fields: {  }
+  sidebar:
+    display: sidebar
     fields:
       template:
         type: template
@@ -151,5 +154,16 @@ sections:
                 display: Text
         type: replicator
         display: 'Sustainable text'
+  products_assortment:
+    display: 'Products assortment'
+    fields:
+      show_assortment_section:
+        type: toggle
+        display: 'Show section'
+      assortment_title:
+        type: text
+        display: Title
+        show_when:
+          show_assortment_section: true
 taxonomies: true
 title: Home

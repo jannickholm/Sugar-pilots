@@ -1,5 +1,6 @@
 // root
 @import url($assets);
+@import './global/colors';
 @import './fonts';
 @import './global/breakpoints';
 @import './root';
@@ -15,6 +16,7 @@
 @import './components/buttons';
 @import './components/video_styles';
 @import './components/inspiration_video';
+@import './components/products';
 
 
 //Frontpage

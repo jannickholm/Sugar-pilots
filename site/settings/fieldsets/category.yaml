@@ -1,0 +1,24 @@
+title: Category
+sections:
+  main:
+    display: Main
+    fields:
+      category_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        width: 50
+        display: 'Category image'
+        max_files: 1
+      category_text:
+        type: textarea
+        width: 50
+        display: 'Category text'
+  sidebar:
+    display: sidebar
+    fields:
+      show_on_frontpage:
+        type: toggle
+        display: 'Show on frontpage'
+taxonomies: true

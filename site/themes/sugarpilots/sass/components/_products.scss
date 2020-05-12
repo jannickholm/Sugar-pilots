@@ -1,0 +1,37 @@
+.category-block {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0;
+
+  @include lg {
+    flex-direction: row;
+  }
+
+  img {
+    max-width: 400px;
+  }
+
+  .main-left {
+    max-width: 400px;
+    @include lg {
+      max-width: 450px;
+    }
+  }
+
+  .main-right {
+    order: -1;
+    margin-bottom: 1rem;
+    @include lg {
+      order: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .order {
+    @include lg {
+      order: -1;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="categories">
+  <div class="wrapper narrow">
+    <div class="content">
+      <h2 class="text-center">{{ assortment_title }}</h2>
+
+      <div class="inner-content">
+        {{ collection:categories }}
+        <div id="{{ title | slugify }}-{{ id }}" class="category-block">
+          <div class="main-left">
+            <h4>{{ title }}</h4>
+            <p>{{ category_text }}</p>
+            <a href="/products#{{ title | slugify }}" class="btn">Se mere</a>
+          </div>
+          <div class="main-right {{ switch between='order| ' }}">
+            <img src="{{ category_image }}" alt="">
+          </div>
+        </div>
+        {{ /collection:categories }}
+      </div>
+    </div>
+  </div>
+</div>
