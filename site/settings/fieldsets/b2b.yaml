@@ -50,6 +50,33 @@ sections:
                 validate: 'max:135'
         type: replicator
         display: 'Inspiration list'
+      lollipop_builder_cta:
+        type: section
+        display: 'Lollipop builder cta'
+      lollipop_builder_animation:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: list
+        type: assets
+        width: 50
+        display: Animation
+      lollipop_builder_cta_title:
+        type: text
+        width: 50
+        display: Title
+      lollipop_builder_text:
+        type: textarea
+        display: Text
+      lollipop_builder_cta_background:
+        options:
+          '#dfedfb': Blue
+          '#fbbdc6': Pink
+          '#f9eee4': Linen
+          '#fdfaf6': White
+        type: select
+        display: 'Background color'
   sidebar:
     display: sidebar
     fields:

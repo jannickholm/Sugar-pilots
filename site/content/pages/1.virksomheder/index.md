@@ -48,6 +48,10 @@ inspiration_list:
     inspiration_image: ./assets/coffee-image.png
     inspiration_title: 'I COCKTAILBAREN'
     inspiration_text: 'Vores slikkepinde fungerer sfantastisk om en garnish til cocktails. Vi laver meget gerne jeres helt egen slikkepinde, som passer til jeres signaturcocktail.'
+lollipop_builder_animation: ./assets/20903-share-the-bread.json
+lollipop_builder_cta_title: 'Design dine  egne slikkepinde'
+lollipop_builder_text: 'Lorem ipsum, dolor sit amet consectetur adipi sicing elit. Quibusdam voluptas debitis inventore perspiciatis harum. Sint nemo mollitia, eligendi vel atque accusantium magnam libero, est facere quibusdam, rerum sit? Quis, iusto!'
+lollipop_builder_cta_background: '#dfedfb'
 template: b2b/index
 menu_title: 'Brandede slikkepinde'
 title: Virksomheder
