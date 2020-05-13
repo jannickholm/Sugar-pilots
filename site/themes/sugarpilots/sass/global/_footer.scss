@@ -1,0 +1,38 @@
+footer {
+  padding: 3rem 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px #e3e3e3 solid;
+  .wrapper {
+      height: 100%;
+      padding-bottom: 0;
+    .top-content {
+      display: flex;
+      justify-content: space-evenly;
+
+      .icon {
+        margin-right: 0.3rem;
+        svg.feather {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .kitchen-address {
+        margin-top: 3rem;
+      }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        margin-top: 4rem;
+        max-width: 1000px;
+        
+        img {
+            max-width: 236px;
+        }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+sections:
+  main:
+    display: Main
+    fields:
+      header:
+        type: section
+        display: Header
+      header_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Header image'
+      header_title:
+        type: text
+        display: 'Header title'
+      header_text:
+        type: textarea
+        display: 'Header text'
+      header_list:
+        sets:
+          list_item:
+            display: 'List item'
+            fields:
+              text:
+                type: text
+                display: Text
+        type: replicator
+        display: 'Header list'
+      inspiration_list:
+        sets:
+          list_item:
+            display: 'List item'
+            fields:
+              inspiration_image:
+                container: main
+                folder: /
+                restrict: false
+                max_files: 1
+                mode: list
+                type: assets
+                display: Image
+              inspiration_title:
+                type: text
+                display: Title
+              inspiration_text:
+                type: textarea
+                display: Text
+                validate: 'max:135'
+        type: replicator
+        display: 'Inspiration list'
+  sidebar:
+    display: sidebar
+    fields:
+      template:
+        type: template
+        display: Template
+      menu_title:
+        type: text
+        instructions: 'Used if page is in **navigation** - Leave blank to use the **title** field'
+        display: 'Menu title'
+taxonomies: true
+title: 'P: B2B'

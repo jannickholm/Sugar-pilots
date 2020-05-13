@@ -1,0 +1,80 @@
+sections:
+  main:
+    display: Main
+    fields:
+      address:
+        type: section
+        display: 'Office Address'
+      office_address:
+        type: text
+        width: 50
+        display: 'Office Address'
+      phone:
+        type: text
+        width: 50
+        display: phone
+      kitchen_address:
+        type: text
+        width: 50
+        display: 'Kitchen address'
+      email_address:
+        type: text
+        width: 50
+        display: 'Email address'
+      copyright:
+        type: section
+        display: Copyright
+      legal_name:
+        type: text
+        width: 50
+        display: 'Legal name'
+      payment_options:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: list
+        type: assets
+        width: 50
+        display: 'Payment options'
+  ekstra_links:
+    display: 'Ekstra links'
+    fields:
+      links:
+        sets:
+          ekstra_link:
+            display: 'Ekstra Link'
+            fields:
+              link_label:
+                type: text
+                width: 50
+                display: 'Link label'
+              link_url:
+                type: text
+                width: 50
+                display: 'Link url'
+        type: replicator
+        display: Links
+  social_media:
+    display: 'Social media'
+    fields:
+      social_medias:
+        sets:
+          social_media:
+            display: 'Social media'
+            fields:
+              media_name:
+                type: text
+                width: 50
+                display: 'Media name'
+              username:
+                type: text
+                width: 50
+                display: Username
+              url:
+                type: text
+                display: Url
+        type: replicator
+        display: 'Social medias'
+taxonomies: true
+title: Footer

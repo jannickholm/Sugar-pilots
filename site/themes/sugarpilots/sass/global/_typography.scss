@@ -15,8 +15,10 @@
 h1, 
 h2,
 h3,
-h4 {
+h4, 
+h5 {
   @include headline_bold();
+  @include antialiased();
 }
 
 h1 {
@@ -31,12 +33,24 @@ h4 {
     @include font-size(22px, 35px); 
 }
 
+h5 {
+  @include font-size(20px, 28px); 
+}
+
+h6 {
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  @include font-size(18px, 24px); 
+}
+
 p,
-a {
+a,
+li {
   font-family: montserrat, sans-serif;
   font-weight: 400;
   color: black;
   @include font-size(14px, 16px);
+  @include antialiased();
 }
 
 

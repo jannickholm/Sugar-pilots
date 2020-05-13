@@ -29,7 +29,7 @@
             <suggest-fieldtype :data.sync="timezone" :suggestions-prop="timezones" :config='{ "max_items": 1 }'></suggest-fieldtype>
         </div>
 
-        <button class="btn btn-primary" @click="submit" :disabled="loading">{{ translate('cp.save') }}</button>
+        <button class="btn expand-cursor btn expand-cursor-primary" @click="submit" :disabled="loading">{{ translate('cp.save') }}</button>
 
     </template>
 

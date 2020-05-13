@@ -1,6 +1,6 @@
-.category-block {
+.product-block {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 3rem 0;
@@ -14,24 +14,30 @@
   }
 
   .main-left {
+    order: -1;
     max-width: 400px;
+    position: relative;
+    z-index: 1;
     @include lg {
+      order: 0;
       max-width: 450px;
+      text-align: right;
+      margin-right: -2rem;
     }
   }
 
   .main-right {
-    order: -1;
     margin-bottom: 1rem;
     @include lg {
-      order: 0;
       margin-bottom: 0;
     }
   }
 
   .order {
     @include lg {
-      order: -1;
+      order: 1;
+      text-align: left;
+      margin-left: -2rem;
     }
   }
 }

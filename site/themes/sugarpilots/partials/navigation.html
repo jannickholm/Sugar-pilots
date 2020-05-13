@@ -1,11 +1,21 @@
 <nav class="main-navigation wrapper">
-    <div class="logo">sugarpilots</div>
+    <div class="logo"><a href="/" class="expand-cursor">sugarpilots</a></div>
     <ul class="links">
         {{ nav from="/" }}
-        <li>{{ title }}</li>
+        <li class="expand-cursor">
+            <a href="{{ url }}">
+                {{ if menu_title }}
+                    {{ menu_title }}
+                {{ else }}
+                    {{ title }}
+                {{ /if }}
+            </a>
+        </li>
         {{ /nav }}
     </ul>
-    <div class="cart" data-feather="shopping-bag"></div>
+    <div class="cart" data-feather="shopping-bag">
+
+    </div>
     
 </nav>
 

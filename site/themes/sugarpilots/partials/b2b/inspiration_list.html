@@ -1,0 +1,16 @@
+<div class="inspiration-list">
+    <div class="wrapper">
+        <div class="content">
+            {{ inspiration_list }}
+                <div class="inspiration-block expand-cursor">
+                    <img src="{{ inspiration_image }}" alt="">
+                    <div class="text">
+                        <h6>{{ inspiration_title }}</h6>
+                        <p class="short-text">{{ inspiration_text | safe_truncate:135:... }}</p>
+                        <p class="normal-text">{{ inspiration_text }}</p>
+                    </div>
+                </div>
+            {{ /inspiration_list }}
+        </div>
+    </div>
+</div>

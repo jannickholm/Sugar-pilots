@@ -5,16 +5,18 @@
 
       <div class="inner-content">
         {{ collection:categories }}
-        <div id="{{ title | slugify }}-{{ id }}" class="category-block">
-          <div class="main-left">
+        {{ if show_on_frontpage }}
+        <div id="{{ title | slugify }}-{{ id }}" class="product-block">
+          <div class="main-left {{ switch between='order| ' }}">
             <h4>{{ title }}</h4>
             <p>{{ category_text }}</p>
-            <a href="/products#{{ title | slugify }}" class="btn">Se mere</a>
+            <a href="/products#{{ title | slugify }}" class="btn expand-cursor {{ switch between='|right' }}">Se mere</a>
           </div>
-          <div class="main-right {{ switch between='order| ' }}">
+          <div class="main-right">
             <img src="{{ category_image }}" alt="">
           </div>
         </div>
+        {{ /if }}
         {{ /collection:categories }}
       </div>
     </div>

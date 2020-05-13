@@ -123,7 +123,7 @@ sections:
         display: 'Image 2 scroll speed'
         default: '1'
   sustainable_and_natural_materials:
-    display: 'Sustainable and natural materials'
+    display: 'Sustainable section'
     fields:
       sustainable_title:
         type: text
@@ -165,5 +165,32 @@ sections:
         display: Title
         show_when:
           show_assortment_section: true
+  lollipop_builder_cta:
+    display: 'Lollipop builder cta'
+    fields:
+      lollipop_builder_animation:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: list
+        type: assets
+        width: 50
+        display: Animation
+      lollipop_builder_cta_title:
+        type: text
+        width: 50
+        display: Title
+      lollipop_builder_text:
+        type: textarea
+        display: Text
+      lollipop_builder_cta_background:
+        options:
+          '#dfedfb': Blue
+          '#fbbdc6': Pink
+          '#f9eee4': Linen
+          '#fdfaf6': White
+        type: select
+        display: 'Background color'
 taxonomies: true
 title: Home

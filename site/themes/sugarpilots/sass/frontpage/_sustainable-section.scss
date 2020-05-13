@@ -5,6 +5,7 @@
   .inner-content {
     display: grid;
     grid-template-columns: auto auto auto;
+    
     justify-items: center;
 
     .text-block:nth-child(1),

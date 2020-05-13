@@ -2,6 +2,7 @@
 @import url($assets);
 @import './global/colors';
 @import './fonts';
+@import './icons';
 @import './global/breakpoints';
 @import './root';
 
@@ -11,15 +12,18 @@
 @import './global/typography';
 @import './global/container';
 @import './global/navigation';
+@import './global/footer';
 
 //Components
 @import './components/buttons';
 @import './components/video_styles';
 @import './components/inspiration_video';
-@import './components/products';
+@import './components/product_block';
+@import './components/header';
+@import './components/inspiration_list';
 
 
 //Frontpage
-@import './frontpage/header';
 @import './frontpage/b2b';
 @import './frontpage/sustainable-section';
+@import './frontpage/lollipop_cta';

@@ -1,7 +1,7 @@
 "use strict";
 import Rellax from 'rellax';
 import Vue from 'vue';
-feather.replace();
+require("./cursor");
 
   // import all vue components
 const files = require.context('./', true, /\.vue$/i);
@@ -30,3 +30,19 @@ window.addEventListener("resize", () => {
         let rellax = new Rellax('.parallax-element');
     }
 })
+
+
+document.querySelectorAll(".expand-cursor").forEach(button => {
+    button.addEventListener("mouseover", resizeCursor);
+    button.addEventListener("mouseout", resetCursor);
+});
+
+function resizeCursor() {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList = "cursor link-hover";
+}
+
+function resetCursor() {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList = "cursor";
+}

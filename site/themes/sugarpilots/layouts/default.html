@@ -13,17 +13,21 @@
     <title>{{ site_name }}{{ title ensure_left=" - " }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ theme:css }}">
-    <base href="./" />
 </head>
 
 <body class="section-{{ segment_1 or "home" }}">
+    <div class="cursor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="plus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+    </div>
     <div id="site">
         {{ partial:navigation }}
         <div class="content">
             {{ template_content }}
         </div>
+        {{ partial:footer }}
 </div>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="{{ theme:js }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace();</script>
 </body>
 </html>

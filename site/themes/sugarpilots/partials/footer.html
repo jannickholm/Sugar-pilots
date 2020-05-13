@@ -1,0 +1,94 @@
+{{ footer_content }}
+<footer>
+  <div class="wrapper">
+    <div class="top-content">
+      <div class="footer-section" id="footer-section1">
+        <div class="office-address">
+          <ul>
+            <h5>{{ site_name }}</h5>
+            <li>
+              <span class="icon"><i data-feather="map-pin"></i></span>
+              <a
+                href="https://goo.gl/maps/o5hC5jJ3wjmQDRnMA"
+                class="expand-cursor"
+                >{{ office_address }}</a
+              >
+            </li>
+            <li>
+              <span class="icon"><i data-feather="smartphone"></i></span>
+              <a href="tel:{{ phone | spaceless }}" class="expand-cursor"
+                >{{ phone }}</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="kitchen-address">
+          <ul>
+            <h5>Vores køkken</h5>
+            <li>
+              <span class="icon"><i data-feather="map-pin"></i></span>
+              <a
+                href="https://goo.gl/maps/1p4iLT5sm3QxgxX59"
+                class="expand-cursor"
+                >{{ kitchen_address }}</a
+              >
+            </li>
+            <li>
+              <span class="icon"><i data-feather="mail"></i></span>
+              <a
+                href="https://goo.gl/maps/1p4iLT5sm3QxgxX59"
+                class="expand-cursor"
+                >{{ email_address }}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-section links" id="footer-section2">
+        <ul>
+          <h5>Links</h5>
+          {{ nav from="/" }}
+        <li>
+            <a href="{{ url }}">
+                {{ if menu_title }}
+                    {{ menu_title }}
+                {{ else }}
+                    {{ title }}
+                {{ /if }}
+            </a>
+        </li>
+        {{ /nav }}
+          {{ links }}
+          <li>
+            <a href="{{ link_url }}" class="expand-cursor">{{ link_label }}</a>
+          </li>
+          {{ /links }}
+        </ul>
+      </div>
+      <div class="footer-section social-media" id="footer-section3">
+        <ul>
+          <h5>Sociale medier</h5>
+          {{ social_medias }}
+          <li class="{{ media_name | lower }}">
+            <span class="icon"
+              ><i data-feather="{{ media_name | lower }}"></i
+            ></span>
+            <a href="{{ url }}" class="expand-cursor">{{ username insert="@|0" }}</a>
+          </li>
+          {{ /social_medias }}
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+    <div class="main-left">
+     {{ legal_name ensure_left="© Copyright - " }}
+    </div>
+    <div class="main-right">
+        <img src="{{ payment_options }}" alt="">
+    </div>
+    </div>
+  </div>
+</footer>
+{{ /footer_content }}
+
+

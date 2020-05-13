@@ -38,6 +38,10 @@ sustainable_text:
     sustainable_text_body: 'Beskrivende tekst om dét lorem ipsum lorem ipsum lorem  lorem ipsum lorem ipsum lorem ipsum'
 show_assortment_section: true
 assortment_title: 'Se vores sortiment'
+lollipop_builder_animation: ./assets/20903-share-the-bread.json
+lollipop_builder_cta_title: 'Design dine  egne slikkepinde'
+lollipop_builder_text: 'Lorem ipsum, dolor sit amet consectetur adipi sicing elit. Quibusdam voluptas debitis inventore perspiciatis harum. Sint nemo mollitia, eligendi vel atque accusantium magnam libero, est facere quibusdam, rerum sit? Quis, iusto!'
+lollipop_builder_cta_background: '#dfedfb'
 video_type: youtube
 header_image_type: img
 image_2: /assets/sugarpilots_mojito_cocktailslikkepind_shop-2_-removebg-preview.png

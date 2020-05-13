@@ -1,13 +1,84 @@
 *:focus {
-    outline: none;
+  outline: none;
+}
+
+* {
+  cursor: none !important;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: $white;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+
+  li:not(:last-child) {
+    margin-bottom: 0.7rem;
+  }
+
+  &:not(.ul-checkmark) {
+    padding: 0;
+  }
+
+  &.ul-checkmark {
+    padding-inline-start: 1.5rem;
+    li {
+      position: relative;
+      &::before {
+        content: "";
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        top: 50%;
+        left: -23px;
+        background: url($assets + "check.png"), #39ba36;
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.cursor {
+  position: absolute;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: translateY(calc((var(--clienty) + var(--scrolly)) * 1px))
+    translateX(calc((var(--clientx) + var(--scrollx)) * 1px));
+  will-change: transform;
+  cursor: none;
+  $duration: 0.4s;
+  transition: width $duration, height $duration, border-color $duration,
+    background-color $duration, opacity 0s $duration;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .plus-icon {
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &.link-hover {
+    width: 35px;
+    height: 35px;
+
+    .plus-icon {
+      opacity: 1;
+    }
+  }
 }
