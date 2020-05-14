@@ -28,8 +28,10 @@
 
   .main-right {
     margin-bottom: 1rem;
+    order: -2;
     @include lg {
       margin-bottom: 0;
+      order: unset;
     }
   }
 

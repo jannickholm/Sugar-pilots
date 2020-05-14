@@ -77,6 +77,29 @@ sections:
           '#fdfaf6': White
         type: select
         display: 'Background color'
+      logo_slider:
+        type: section
+        display: 'Logo slider'
+      logo_slider_title:
+        type: text
+        display: Title
+      logos:
+        sets:
+          logo:
+            display: Logo
+            fields:
+              company_logo:
+                container: main
+                folder: /
+                restrict: false
+                type: assets
+                display: 'Company logo'
+                max_files: 1
+              company_website:
+                type: text
+                display: 'Company website'
+        type: replicator
+        display: Logos
   sidebar:
     display: sidebar
     fields:
