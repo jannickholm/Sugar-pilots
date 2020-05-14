@@ -1,35 +1,54 @@
 a.btn {
-    border-radius: 0px;
-    position: relative;
-    z-index: 2;
-    font-weight: 600;
+  border-radius: 0px;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
 
+  &::before {
+    content: "";
+    position: absolute;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: $pink;
+    z-index: -1;
+    transition: max-width 0.3s ease-in-out;
+  }
+
+  &:not(.right)::before {
+    left: 0;
+  }
+  &.right::before {
+    right: 0;
+  }
+
+  &:hover {
     &::before {
-        content: '';
-        position: absolute;
-        max-width: 50%;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        background-color: $pink;
-        z-index: -1;
-        transition: max-width .3s ease-in-out;
+      max-width: 100%;
     }
-
-    &:not(.right)::before {
-        left: 0;
-    }
-    &.right::before {
-        right: 0;
-    }
-
-    &:hover {
-        &::before {
-            max-width: 100%;
-        }
-    }
+  }
 }
 
 .slick-arrow {
-    display: none !important;
+  z-index: 10;
+  &.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    @include s {
+      left: -50px;
+    }
+  }
+
+  &.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    @include s {
+      right: -50px;
+    }
+  }
 }

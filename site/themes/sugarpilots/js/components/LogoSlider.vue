@@ -1,9 +1,17 @@
 <template>
-  <div class="wrapper narrow text-center logo-slider">
+  <div class="wrapper narrow text-center logo-slider ">
     <h4>{{ title }}</h4>
+    <div class="slider position-relative">
+    <div class="prev">
+      <span data-feather="chevron-left"></span>
+    </div>
     <slick ref="slick" :options="slickOptions">
       <slot name="logos" />
     </slick>
+    <div class="next">
+      <span data-feather="chevron-right"></span>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -25,27 +33,35 @@ export default {
           slidesToScroll: 4,
           autoplay: true,
           cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 1024 && window.innerWidth >= 768) {
-          return {
+        return {
           slidesToShow: 3,
           slidesToScroll: 3,
           autoplay: true,
           cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 768 && window.innerWidth >= 500) {
-          return {
+        return {
           slidesToShow: 2,
           slidesToScroll: 2,
           autoplay: true,
           cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 500) {
-          return {
+        return {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
           cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       }
     },
