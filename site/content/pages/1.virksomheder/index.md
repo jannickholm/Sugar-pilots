@@ -52,6 +52,69 @@ lollipop_builder_animation: ./assets/20903-share-the-bread.json
 lollipop_builder_cta_title: 'Design dine  egne slikkepinde'
 lollipop_builder_text: 'Lorem ipsum, dolor sit amet consectetur adipi sicing elit. Quibusdam voluptas debitis inventore perspiciatis harum. Sint nemo mollitia, eligendi vel atque accusantium magnam libero, est facere quibusdam, rerum sit? Quis, iusto!'
 lollipop_builder_cta_background: '#dfedfb'
+logo_slider_title: 'VIRKSOMHEDER DER HAR FÅET SPECIALLAVEDE SLIKKEPINDE'
+logos:
+  -
+    type: logo
+    company_logo: ./assets/yousee.jpg
+    company_website: '#'
+  -
+    type: logo
+    company_logo: ./assets/steve-madden.svg
+  -
+    type: logo
+    company_logo: ./assets/download.jpeg
+  -
+    type: logo
+    company_logo: ./assets/logo-200x162.png
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_louisedorph_logo.jpg
+  -
+    type: logo
+    company_logo: ./assets/1600px_colourbox20223135.jpg
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_formland_logo.jpg
+  -
+    type: logo
+    company_logo: ./assets/unnamed.png
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_creativewood_logo.jpg
+  -
+    type: logo
+    company_logo: ./assets/chateau-motel.jpg
+  -
+    type: logo
+    company_logo: ./assets/unnamed-(1).png
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_rose.dk_.jpg
+  -
+    type: logo
+    company_logo: ./assets/logo-small.png
+  -
+    type: logo
+    company_logo: ./assets/logo-1-bridensta.png
+  -
+    type: logo
+    company_logo: ./assets/topdanmark.jpg
+  -
+    type: logo
+    company_logo: ./assets/uniqlologo.jpg
+  -
+    type: logo
+    company_logo: ./assets/sistie_gold.png
+  -
+    type: logo
+    company_logo: ./assets/brandsome-logo.png
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_pernodricard.jpg
+  -
+    type: logo
+    company_logo: ./assets/sugarpilots_brands_husetnr7.jpg
 template: b2b/index
 menu_title: 'Brandede slikkepinde'
 title: Virksomheder

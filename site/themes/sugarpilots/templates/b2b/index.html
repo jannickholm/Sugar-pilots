@@ -3,3 +3,14 @@
 {{ partial:b2b/inspiration_list }}
 
 {{ partial:lollipop_builder_cta }}
+
+<logo-slider title="{{ logo_slider_title | title }}">
+
+    <template v-slot:logos>
+        {{ logos }}
+            <div class="slide logo-block expand-cursor" style="background-image: url('{{ company_logo }}');">
+            </div>
+        {{ /logos }}
+    </template>
+
+</logo-slider>
