@@ -105,6 +105,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -123,28 +131,36 @@ __webpack_require__.r(__webpack_exports__);
           slidesToShow: 4,
           slidesToScroll: 4,
           autoplay: true,
-          cssEase: "ease-in-out"
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 1024 && window.innerWidth >= 768) {
         return {
           slidesToShow: 3,
           slidesToScroll: 3,
           autoplay: true,
-          cssEase: "ease-in-out"
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 768 && window.innerWidth >= 500) {
         return {
           slidesToShow: 2,
           slidesToScroll: 2,
           autoplay: true,
-          cssEase: "ease-in-out"
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       } else if (window.innerWidth < 500) {
         return {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          cssEase: "ease-in-out"
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
         };
       }
     }
@@ -27403,23 +27419,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "wrapper narrow text-center logo-slider" },
-    [
-      _c("h4", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "slick",
-        { ref: "slick", attrs: { options: _vm.slickOptions } },
-        [_vm._t("logos")],
-        2
-      )
-    ],
-    1
-  )
+  return _c("div", { staticClass: "wrapper narrow text-center logo-slider " }, [
+    _c("h4", [_vm._v(_vm._s(_vm.title))]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "slider position-relative" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "slick",
+          { ref: "slick", attrs: { options: _vm.slickOptions } },
+          [_vm._t("logos")],
+          2
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ],
+      1
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "prev" }, [
+      _c("span", { attrs: { "data-feather": "chevron-left" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "next" }, [
+      _c("span", { attrs: { "data-feather": "chevron-right" } })
+    ])
+  }
+]
 render._withStripped = true
 
 
