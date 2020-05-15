@@ -1,0 +1,67 @@
+<div class="products-container">
+  <div class="products-content wrapper">
+    <div class="product-content-txt">
+      <img src="{{ product_sustainable }}" alt="" class="sustainable" />
+      <h1 class="product-title">{{ title }}</h1>
+      <h6 class="product-category">{{ product_category }}, {{ pcs_number }} stk.</h6>
+      <h6 class="price-tag">{{ price_tag }} kr.</h6>
+      <br />
+      <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+
+      <div class="description-wrapper">
+        <h2>{{ title_of_description }}</h2>
+        <p>{{ description }}</p>
+      </div>
+
+      <details class="nutrients-container">
+        <summary>Næringsindhold</summary>
+        <div class="nutrient-wrapper">
+          <ul class="nutrient-catogories">
+            <li class="nutrients">Energi</li>
+            <li class="nutrients">Fedt</li>
+            <li class="nutrients">- heraf mættede fedtsyrer</li>
+            <li class="nutrients">Kulhydrat</li>
+            <li class="nutrients">- heraf sukkerarter</li>
+            <li class="nutrients">Protein</li>
+            <li class="nutrients">Salt</li>
+          </ul>
+
+          <ul class="nutrients-data">
+            <li class="nutrients">{{ nutrient_energi }}</li>
+            <li class="nutrients">{{ nutrient_fedt }}g</li>
+            <li class="nutrients">{{ nutrient_fedtsyrer }}g</li>
+            <li class="nutrients">{{ nutrient_kulhydrat }}g</li>
+            <li class="nutrients">{{ nutrient_sukkerarter }}g</li>
+            <li class="nutrients">{{ nutrient_protein }}g</li>
+            <li class="nutrients">{{ nutrient_salt }}g</li>
+          </ul>
+        </div>
+      </details>
+
+      <details open class="ingredients-container">
+        <summary>Ingredienser</summary>
+        <div class="ingredient-wrapper">
+          {{ ingredients }}
+
+          <div class="ingredient">
+            <h3>{{ ingredient_name }}</h3>
+            <img src="{{ ingredient_image }}" alt="" />
+          </div>
+
+          {{ /ingredients }}
+        </div>
+      </details>
+    </div>
+    <div class="product-content-image"
+      style="background: url({{ product_picture }}); background-position: center; background-size: contain; background-repeat: no-repeat;">
+    </div>
+  </div>
+  <div class="inspi-section">
+    <div class="img_big"
+      style="background: url({{ inspi_img_big }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    </div>
+    <div class="img_small"
+      style="background: url({{ inspi_img_small }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    </div>
+  </div>
+</div>

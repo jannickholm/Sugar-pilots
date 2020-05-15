@@ -1,31 +1,30 @@
 // root
-@import './slider_styles';
+@import "./slider_styles";
 @import url($assets);
-@import './global/colors';
-@import './fonts';
-@import './icons';
-@import './global/breakpoints';
-@import './root';
-
+@import "./global/colors";
+@import "./fonts";
+@import "./icons";
+@import "./global/breakpoints";
+@import "./root";
 
 //Globals
-@import './global/mixins';
-@import './global/typography';
-@import './global/container';
-@import './global/navigation';
-@import './global/footer';
+@import "./global/mixins";
+@import "./global/typography";
+@import "./global/container";
+@import "./global/navigation";
+@import "./global/footer";
 
 //Components
-@import './components/buttons';
-@import './components/video_styles';
-@import './components/inspiration_video';
-@import './components/product_block';
-@import './components/header';
-@import './components/inspiration_list';
-@import './components/logo_slider';
-
+@import "./components/buttons";
+@import "./components/video_styles";
+@import "./components/inspiration_video";
+@import "./components/product_block";
+@import "./components/header";
+@import "./components/inspiration_list";
+@import "./components/logo_slider";
+@import "./components/single_product";
 
 //Frontpage
-@import './frontpage/b2b';
-@import './frontpage/sustainable-section';
-@import './frontpage/lollipop_cta';
+@import "./frontpage/b2b";
+@import "./frontpage/sustainable-section";
+@import "./frontpage/lollipop_cta";

@@ -4,5 +4,5 @@ locales:
   en:
     full: en_US
     name: English
-    url: 'https://sugarpilots.test/'
+    url: "http://sugar-pilots.test/"
 timezone: UTC

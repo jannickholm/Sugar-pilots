@@ -2,3 +2,6 @@ routes:
   /home:
     layout: default
     template: home
+collections:
+  product: '/products/{slug}'
+taxonomies: {  }

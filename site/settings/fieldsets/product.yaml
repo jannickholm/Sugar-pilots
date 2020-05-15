@@ -1,0 +1,174 @@
+sections:
+  main:
+    display: Main
+    fields:
+      product_sustainable:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 50
+        display: 'Bæredygtige Ikoner'
+      product_category:
+        type: text
+        display: Category
+        validate: required
+      pcs_number:
+        type: text
+        display: pieces
+        default: '6'
+      price_tag:
+        type: text
+        instructions: 'Her skal du skrive prisen på produktet.'
+        display: Price
+        validate: required
+      title_of_description:
+        type: text
+        display: 'Title of description'
+        validate: required
+      description:
+        type: textarea
+        display: Description
+        validate: required
+      product_picture:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        display: Picture
+        validate: required
+  sidebar:
+    display: Sidebar
+    fields: {  }
+  naeringsinhold:
+    display: Næringsindhold
+    fields:
+      nutrient_energi:
+        type: text
+        display: Energi
+        validate: required
+        default: '0'
+      nutrient_fedt:
+        type: text
+        display: Fedt
+        validate: required
+        default: '0'
+      nutrient_fedtsyrer:
+        type: text
+        display: 'Mættede fedtsyrer'
+        validate: required
+        default: '0'
+      nutrient_kulhydrat:
+        type: text
+        display: Kulhydrat
+        validate: required
+        default: '0'
+      nutrient_sukkerarter:
+        type: text
+        display: Sukkerarter
+        validate: required
+        default: '0'
+      nutrient_protein:
+        type: text
+        display: Protein
+        validate: required
+        default: '0'
+      nutrient_salt:
+        type: text
+        display: Salt
+        validate: required
+        default: '0'
+  ingredienser:
+    display: Ingredienser
+    fields:
+      ingrediens_1:
+        type: text
+        display: 'Ingrediens 1'
+      ingrediens_2:
+        type: text
+        display: 'Ingrediens 2'
+      ingrediens_3:
+        type: text
+        display: 'Ingrediens 3'
+      ingrediens_4:
+        type: text
+        display: 'Ingrediens 4'
+      ingrediens_5:
+        type: text
+        display: 'Ingrediens 5'
+      img_ingrediens_1:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Billede af ingrediens 1'
+        max_files: 1
+      img_ingrediens_2:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Billede af ingrediens 2'
+        max_files: 1
+      img_ingrediens_3:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Billede af ingrediens 3'
+        max_files: 1
+      img_ingrediens_4:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Billede af ingrediens 4'
+        max_files: 1
+      img_ingrediens_5:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Billede af ingrediens 5'
+        max_files: 1
+      ingredients:
+        sets:
+          ingrediens:
+            display: ingrediens
+            fields:
+              ingredient_name:
+                type: text
+                display: Name
+              ingredient_image:
+                container: main
+                folder: /
+                restrict: false
+                max_files: 1
+                type: assets
+                display: Image
+        type: replicator
+        display: Ingredienser
+  inspirations_billeder:
+    display: 'Inspirations billeder'
+    fields:
+      inspi_img_big:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Inspirations billede - Stor'
+        width: 50
+      inspi_img_small:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Inspirations billede - Lille'
+        width: 50
+taxonomies: true
+title: 'c: Product'
