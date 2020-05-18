@@ -9,3 +9,4 @@ installer.php
 index.php
 site/themes/sugarpilots/js/sugarpilots.js
 scssVars.json
+site/settings/system.yaml

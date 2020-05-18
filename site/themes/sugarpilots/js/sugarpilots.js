@@ -43303,8 +43303,8 @@ function resetCursor() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
-module.exports = __webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
+__webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
+module.exports = __webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
 
 
 /***/ })
