@@ -1,0 +1,39 @@
+sections:
+  main:
+    display: Main
+    fields: {  }
+  sidebar:
+    display: Sidebar
+    fields:
+      template:
+        type: template
+        display: Template
+      menu_title:
+        type: text
+        display: 'Menu title'
+  shop_categories:
+    display: Categories
+    fields:
+      shop_category_info:
+        sets:
+          '':
+            fields:
+              shop_image:
+                container: main
+                folder: /
+                restrict: false
+                max_files: 1
+                type: assets
+                display: Image
+                validate: required
+              shop_category_name:
+                type: text
+                display: 'Category Name'
+                validate: required
+                default: 'Navn på kategori'
+            instructions: 'Categories in nav'
+        type: replicator
+        display: 'Category info'
+taxonomies: true
+title: 'p: webshop'
+create_title: Webshop
