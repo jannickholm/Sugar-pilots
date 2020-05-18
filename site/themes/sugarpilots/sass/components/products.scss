@@ -1,0 +1,38 @@
+.shop_container {
+
+.nav_categories {
+    display:  grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    justify-items: center;
+
+    margin-top: 100px;
+
+    .shop_categories {
+        text-align: center;
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
+-moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
+box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
+
+        img {
+            min-height: 200px;
+            max-height: 200px;
+            height: 100%;
+            min-width: 150px;
+            object-fit: cover;
+
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+    }
+}
+
+.products_wrapper {
+    text-align: center;
+    margin-top: 60px;
+}
+}
