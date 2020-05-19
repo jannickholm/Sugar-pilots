@@ -17,11 +17,11 @@
             {{ collection:categories as="category" }}
 
             {{ category }}
-            <h1 style="margin-top: 70px;">{{ title }}</h1>
+            <h1 class="category-title">{{ title }}</h1>
 
             {{ collection:product product_category:is="{{ title }}" as="product" }}
             {{ product }}
-            <div class="product-seperate">
+            <div class="product-seperate {{ switch between='right|left' }}">
 
                 <div class="product-main-left">
                     <img src="{{ product_picture }}" alt="" />
@@ -33,11 +33,15 @@
                     <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
                 </div>
             </div>
+
             {{ /product }}
+
             {{ /collection:product }}
+
             {{ /category }}
 
             {{ /collection:categories }}
+
         </div>
     </div>
 </div>
