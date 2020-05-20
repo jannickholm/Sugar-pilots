@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 55px;
 
     .product-content-txt {
       max-width: 50%;
-      margin-top: 55px;
 
       .product-title {
         font-family: montserrat, sans-serif;
@@ -115,12 +115,12 @@
       .ingredient-wrapper {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
         justify-items: stretch;
         margin-top: 20px;
         margin-bottom: 80px;
 
         .ingredient {
-          background: #faefe5;
           text-align: center;
           padding-top: 30px;
           height: 180px;

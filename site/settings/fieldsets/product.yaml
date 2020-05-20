@@ -42,7 +42,15 @@ sections:
         validate: required
   sidebar:
     display: Sidebar
-    fields: {  }
+    fields:
+      background_color:
+        options:
+          '#FFBDC6': Pink
+          '#FAEFE5': Peach
+          '#DFEDFB': 'Baby blue'
+        type: select
+        display: 'Background color'
+        default: Pink
   naeringsinhold:
     display: Næringsindhold
     fields:
@@ -84,56 +92,6 @@ sections:
   ingredienser:
     display: Ingredienser
     fields:
-      ingrediens_1:
-        type: text
-        display: 'Ingrediens 1'
-      ingrediens_2:
-        type: text
-        display: 'Ingrediens 2'
-      ingrediens_3:
-        type: text
-        display: 'Ingrediens 3'
-      ingrediens_4:
-        type: text
-        display: 'Ingrediens 4'
-      ingrediens_5:
-        type: text
-        display: 'Ingrediens 5'
-      img_ingrediens_1:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: 'Billede af ingrediens 1'
-        max_files: 1
-      img_ingrediens_2:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: 'Billede af ingrediens 2'
-        max_files: 1
-      img_ingrediens_3:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: 'Billede af ingrediens 3'
-        max_files: 1
-      img_ingrediens_4:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: 'Billede af ingrediens 4'
-        max_files: 1
-      img_ingrediens_5:
-        container: main
-        folder: /
-        restrict: false
-        type: assets
-        display: 'Billede af ingrediens 5'
-        max_files: 1
       ingredients:
         sets:
           ingrediens:
