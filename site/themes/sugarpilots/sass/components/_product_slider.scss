@@ -1,0 +1,22 @@
+.product-slide {
+  max-width: 300px;
+
+  img {
+      margin-bottom: 1rem;
+  }
+
+  h5 {
+    @include font-size(16px, 28px);
+  }
+
+  .product-category {
+    font-weight: 400;
+    @include font-size(14px, 18px);
+  }
+
+  .price-tag {
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    @include font-size(13px, 20px);
+  }
+}
