@@ -14,23 +14,24 @@
         </div>
 
         <div class="products-wrapper">
-            {{ collection:categories as="category" }}
+            {{ collection:categories as="category" limit="4" }}
 
             {{ category }}
-            <h1 class="category-title">{{ title }}</h1>
+            <h2 class="category-title" id="{{ title | slufigy }}">{{ title }}</h2>
 
             {{ collection:product product_category:is="{{ title }}" as="product" }}
             {{ product }}
-            <div class="product-seperate {{ switch between='right|left' }}">
+
+            <div class="product-seperate">
 
                 <div class="product-main-left">
                     <img src="{{ product_picture }}" alt="" />
                 </div>
                 <div class="product-main-right {{ switch between='odd|even' }}">
-                    <h5> {{ title }}</h5>
-                    <h5>{{ product_category }}</h5>
+                    <h4> {{ title }}</h4>
+                    <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
                     <h6 class="price-tag">{{ price_tag }} kr.</h6>
-                    <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+                    <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Tilføj til kurv</a>
                 </div>
             </div>
 
@@ -40,6 +41,28 @@
 
             {{ /category }}
 
+            {{ /collection:categories }}
+
+            {{ collection:categories as="category2" }}
+
+            <div class="gift-container">
+                {{ collection:product product_category:is="gaver" }}
+
+                <div class="gift-wrapper">
+
+                    <div class="gift-main-top">
+                        <img src="{{ product_picture }}" alt="" />
+                    </div>
+                    <div class="gift-main-bottom">
+                        <h5> {{ title }} </h5>
+                        <h5> {{ product_category }}, {{ pcs_number }} stk.</h5>
+                        <h6 class="price-tag"> {{ price_tag }} kr.</h6>
+                        <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+                    </div>
+                </div>
+
+                {{ /collection:product }}
+            </div>
             {{ /collection:categories }}
 
         </div>
