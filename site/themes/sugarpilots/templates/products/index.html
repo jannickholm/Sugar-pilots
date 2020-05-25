@@ -1,34 +1,70 @@
-<div class="shop_container">
-  <div class="shop wrapper">
-    <div class="nav_categories">
-      {{ shop_category_info }}
+<div class="shop-container">
+    <div class="shop wrapper">
+        <div class="nav-categories">
+            {{ shop_category_info }}
 
-      <!--<a href="#{{ shop_category_name | slugify }}">Link</a>-->
+            <a href="#{{ shop_category_name | slugify }}">
+                <div class="shop-categories" style="background-color: {{ background_color }};">
+                    <img src="{{ shop_image }}" alt="" />
+                    <p>{{ shop_category_name }}</p>
+                </div>
+            </a>
 
-      <div
-        class="shop_categories"
-        style="background-color: {{ background_color }};"
-      >
-        <img src="{{ shop_image }}" alt="" />
-        <p>{{ shop_category_name }}</p>
-      </div>
+            {{ /shop_category_info }}
+        </div>
 
-      {{ /shop_category_info }}
+        <div class="products-wrapper">
+            {{ collection:categories as="category" limit="4" }}
+
+            {{ category }}
+            <h2 class="category-title" id="{{ title | slufigy }}">{{ title }}</h2>
+
+            {{ collection:product product_category:is="{{ title }}" as="product" }}
+            {{ product }}
+
+            <div class="product-seperate">
+
+                <div class="product-main-left">
+                    <img src="{{ product_picture }}" alt="" />
+                </div>
+                <div class="product-main-right {{ switch between='odd|even' }}">
+                    <h4> {{ title }}</h4>
+                    <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
+                    <h6 class="price-tag">{{ price_tag }} kr.</h6>
+                    <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Tilføj til kurv</a>
+                </div>
+            </div>
+
+            {{ /product }}
+
+            {{ /collection:product }}
+
+            {{ /category }}
+
+            {{ /collection:categories }}
+
+            {{ collection:categories as="category2" }}
+
+            <div class="gift-container">
+                {{ collection:product product_category:is="gaver" }}
+
+                <div class="gift-wrapper">
+
+                    <div class="gift-main-top">
+                        <img src="{{ product_picture }}" alt="" />
+                    </div>
+                    <div class="gift-main-bottom">
+                        <h5> {{ title }} </h5>
+                        <h5> {{ product_category }}, {{ pcs_number }} stk.</h5>
+                        <h6 class="price-tag"> {{ price_tag }} kr.</h6>
+                        <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+                    </div>
+                </div>
+
+                {{ /collection:product }}
+            </div>
+            {{ /collection:categories }}
+
+        </div>
     </div>
-
-    <div class="products_wrapper">
-      <!-- {{ collection:categories as="category" }}
-      <ul>
-        {{ category }}
-            <h3>{{ title }}</h3>
-            {{ collection:product product_category:is="{{ title }}" as="product" }} 
-                {{ product }}
-                    <li>{{ title }}</li>
-                {{ /product }} 
-            {{ /collection:product }} 
-        {{ /category }}
-      </ul>
-      {{ /collection:categories }} -->
-    </div>
-  </div>
 </div>
