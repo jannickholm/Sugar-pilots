@@ -1,0 +1,142 @@
+.form-group {
+  width: 100%;
+  height: calc(1.66em + 0.75rem + 2px);
+  padding: 0.375rem 0.95rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.66;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 1px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  position: relative;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+  &::after {
+    font-family: "icons";
+    content: "\e803";
+    position: absolute;
+    right: 0.9rem;
+    font-size: 0.9em;
+    top: 50%;
+    color: #e6e6e6;
+    transform: translateY(-50%);
+  }
+
+  select {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: calc(1.66em + 0.75rem + 2px);
+  padding: 0.375rem 0.95rem;
+  font-size: 0.9375rem;
+  line-height: 1.66;
+  color: #495057;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 1px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+  &:not(.is-invalid) + .invalid-message,
+  &.is-invalid.focus-visible:not(:placeholder-shown) + .invalid-message,
+  &.is-invalid:placeholder-shown + .invalid-message {
+   display: none;
+  }
+
+  &.is-invalid:not(.focus-visible):not(:placeholder-shown) {
+    border: red 1px solid;
+    background-image: url("https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon_Circle-512.png");
+    background-size: contain;
+    background-position: 95%;
+    background-repeat: no-repeat;
+    animation: invalidShake 0.2s;
+
+    & + .invalid-message {
+      font-weight: 600;
+      color: red;
+      margin-top: .25rem;
+      font-size: 70%;
+    }
+  }
+}
+
+
+
+
+
+@keyframes invalidShake {
+  25% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+.col-12 input {
+  @media (min-width: 768px) {
+    width: 90%;
+  }
+}
+
+.col-12.col-md-6 input,
+.col-12.col-md-4 input {
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+}
+
+.col-12.col-md-8 input {
+  @media (min-width: 768px) {
+    width: 85%;
+  }
+}
+
+.helper-label {
+  font-size: 70%;
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+.form-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.66;
+}
+
+.group {
+  margin-bottom: 2rem;
+}
+
+.col-6 {
+  padding: 0;
+}
+
+.hidden-form {
+  display: none;
+}

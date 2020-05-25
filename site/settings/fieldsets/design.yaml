@@ -1,0 +1,81 @@
+sections:
+  main:
+    display: Main
+    fields:
+      sizes:
+        sets:
+          size:
+            display: Size
+            fields:
+              size_name:
+                type: text
+                display: 'Size name'
+                default: Mini
+                width: 50
+              size_guide:
+                type: text
+                instructions: 'e.g. "100mm x 28mm"'
+                width: 50
+                display: 'Size guide'
+              price:
+                type: text
+                display: Price
+        type: replicator
+        display: Sizes
+      predefined_amounts:
+        sets:
+          amount:
+            display: amount
+            fields:
+              amount:
+                type: text
+                display: Amount
+        type: replicator
+        display: 'Predefined amounts'
+      colors:
+        sets:
+          color:
+            display: Color
+            fields:
+              color_name:
+                type: text
+                width: 50
+                display: 'Color name'
+              color_code:
+                type: text
+                width: 50
+                display: 'Color code'
+        type: replicator
+        display: Colors
+      flavors:
+        sets:
+          flavor:
+            display: Flavor
+            fields:
+              name:
+                type: text
+                width: 50
+                display: Name
+              color:
+                type: text
+                width: 50
+                display: Color
+        type: replicator
+        display: Flavors
+  sidebar:
+    display: sidebar
+    fields:
+      template:
+        type: template
+        display: Template
+      menu_title:
+        type: text
+        display: 'Menu title'
+  settings:
+    display: Settings
+    fields:
+      min_order:
+        type: text
+        display: 'Min order'
+taxonomies: true
+title: 'P: Design din egen slikkepind'
