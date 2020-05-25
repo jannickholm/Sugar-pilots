@@ -1899,6 +1899,102 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    productId: {
+      type: String
+    },
+    productTitle: {
+      type: String
+    },
+    productPrice: {
+      type: Number
+    },
+    productCategory: {
+      type: String
+    }
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    currentCart: 'cart/currentCart'
+  })),
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapMutations"])({
+    addProductToCart: 'cart/addToCart'
+  })), {}, {
+    addToCart: function addToCart() {
+      var product = {
+        productId: this.productId,
+        productTitle: this.productTitle,
+        productPrice: this.productPrice,
+        productCategory: this.productCategory,
+        quantity: 1
+      };
+      this.addProductToCart(product);
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Cart",
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    currentCart: "cart/currentCart"
+  }))
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js& ***!
@@ -2920,6 +3016,25 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cart {\n  position: relative;\n}\n.product-count {\n  position: absolute;\n  top: -5px;\n  right: -5px;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background-color: pink;\n  border: 2px solid white;\n}\n.product-count p {\n  text-align: center;\n  font-size: 70%;\n  font-weight: 900;\n}", ""]);
+
+// exports
+
 
 /***/ }),
 
@@ -29448,6 +29563,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=style&index=0&id=98d346b0&scoped=true&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=style&index=0&id=98d346b0&scoped=true&lang=css& ***!
@@ -30059,6 +30204,82 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (this && this.clearImmediate);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "a",
+    {
+      staticClass: "btn expand-cursor",
+      attrs: { href: "#" },
+      on: {
+        click: function($event) {
+          $event.preventDefault()
+          return _vm.addToCart($event)
+        }
+      }
+    },
+    [_vm._v("Tilføj til kurv")]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      class: ["cart", { "products-in-cart": _vm.currentCart.length > 0 }],
+      style: "--product-count: " + _vm.currentCart.length
+    },
+    [
+      _c("span", { attrs: { "data-feather": "shopping-bag" } }),
+      _vm._v(" "),
+      _vm.currentCart.length > 0
+        ? _c("div", { staticClass: "product-count" }, [
+            _c("p", [_vm._v(_vm._s(_vm.currentCart.length))])
+          ])
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
 
 /***/ }),
 
@@ -50748,6 +50969,8 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./components/Cart/AddToCart.vue": "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue",
+	"./components/Cart/CartInMenu.vue": "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue",
 	"./components/Custom designer/Configuration.vue": "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue",
 	"./components/Custom designer/ConfigurationOptions.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue",
 	"./components/Custom designer/ConfigurationSummary.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue",
@@ -50777,6 +51000,162 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./site/themes/sugarpilots/js sync recursive \\.vue$/";
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue":
+/*!******************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddToCart.vue?vue&type=template&id=6d732ba9& */ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&");
+/* harmony import */ var _AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddToCart.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Cart/AddToCart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AddToCart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&":
+/*!*************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AddToCart.vue?vue&type=template&id=6d732ba9& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue":
+/*!*******************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=template&id=124c3fc7& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&");
+/* harmony import */ var _CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Cart/CartInMenu.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!*****************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&":
+/*!**************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=template&id=124c3fc7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -51474,6 +51853,7 @@ function resetCursor() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./cart.js": "./site/themes/sugarpilots/js/store/cart.js",
 	"./configuration.js": "./site/themes/sugarpilots/js/store/configuration.js"
 };
 
@@ -51496,6 +51876,43 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./site/themes/sugarpilots/js/store sync recursive \\.js$/";
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/store/cart.js":
+/*!**************************************************!*\
+  !*** ./site/themes/sugarpilots/js/store/cart.js ***!
+  \**************************************************/
+/*! exports provided: name, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+var name = 'cart';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: {
+    currentCart: [],
+    totalPrice: 0
+  },
+  mutations: {
+    addToCart: function addToCart(state, product) {
+      state.currentCart.push(product);
+    },
+    setTotalPrice: function setTotalPrice(state, totalPrice) {
+      state.totalPrice = totalPrice;
+    }
+  },
+  getters: {
+    currentCart: function currentCart(state) {
+      return state.currentCart;
+    },
+    totalPrice: function totalPrice(state) {
+      return state.totalPrice;
+    }
+  }
+});
 
 /***/ }),
 
@@ -51586,7 +52003,7 @@ var name = 'configuration';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n   ╷\n27 │ @import \"./components/products.scss\";\n   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   ╵\n  /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss 27:9  root stylesheet\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:87584:16)\n    at _render_closure1.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:77359:12)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:13333:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:15991:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

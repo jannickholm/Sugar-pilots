@@ -83,3 +83,8 @@
 .menu-toggle.is-active ~ .mobile-menu {
   transform: translateX(0%) !important;
 }
+
+
+.side-nav {
+  position: fixed;
+}

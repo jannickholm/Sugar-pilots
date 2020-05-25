@@ -13,56 +13,19 @@
         </div>
       </a>
 
-        <div class="products-wrapper">
-            {{ collection:categories as="category" limit="4" }}
+      {{ /shop_category_info }}
+    </div>
 
-            {{ category }}
-            <h1 class="category-title">{{ title }}</h1>
-            {{ collection:product product_category:is="{{ title }}" as="product" }}
-
-            {{ if product | count < 5 }}
-            {{ product }}
-            <div class="product-seperate {{ switch between='right|left' }}">
-                <div class="product-main-left">
-                    <img src="{{ product_picture }}" alt="" />
-                </div>
-                <div class="product-main-right {{ switch between='odd|even' }}">
-                    <h4> {{ title }}</h4>
-                    <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
-                    <h6 class="price-tag">{{ price_tag }} kr.</h6>
-                    <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Se mere</a>
-                </div>
-            </div>
-            {{ /product }}
-            {{ /if }}
-
-            {{ /collection:product }}
-
-            {{ /category }}
-
+    <div class="products-wrapper" data-spy="scroll" data-target="#nav" data-offset="50">
+        <ul id="nav" class="side-nav">
+            {{ collection:categories }}
+              <li> <a href="#{{ title | slugify }}"> {{ title }} </a></li>
             {{ /collection:categories }}
-
-            {{ collection:categories as="category2"  title:is="gaver" }}
-
-            <div class="gift-container">
-                {{ collection:product product_category:is="gaver"}}
-                {{ category2 }}
-                    <h1 class="category-title">{{ title }}</h1>
-                {{ /category2 }}
-                <div class="gift-wrapper">
-                    <div class="gift-main-top">
-                        <img src="{{ product_picture }}" alt="" />
-                    </div>
-                    <div class="gift-main-bottom">
-                        <h5> {{ title }} </h5>
-                        <h5> {{ product_category }}, {{ pcs_number }} stk.</h5>
-                        <h6 class="price-tag"> {{ price_tag }} kr.</h6>
-                        <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
-                    </div>
-                </div>
-
-    <div class="products-wrapper">
-      {{ collection:categories as="category" limit="4" }} {{ category }}
+          </ul>
+      {{ collection:categories as="category" limit="4" }} 
+      
+      {{ category }}
+      <div id="{{ title | slugify }}" class="category">
       <h2 class="category-title" id="{{ title | slufigy }}">{{ title }}</h2>
 
       {{ collection:product product_category:is="{{ title }}" as="product" }} {{
@@ -75,17 +38,20 @@
           <h4>{{ title }}</h4>
           <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
           <h6 class="price-tag">{{ price_tag }} kr.</h6>
-          <div>
             <a
               class="btn expand-cursor {{ switch between='left|right' }}"
               href="{{ url }}"
               >Se mere</a
             >
-          </div>
         </div>
       </div>
-      {{ /product }} {{ /if }} {{ /collection:product }} {{ /category }} {{
-      /collection:categories }} {{ collection:categories as="category2" }}
+      {{ /product }} {{ /if }} {{ /collection:product }} 
+    </div>
+      {{ /category }} 
+   
+      {{ /collection:categories }} 
+      
+      {{ collection:categories as="category2" }}
 
       <div class="gift-container">
         {{ collection:product product_category:is="gaver" }}

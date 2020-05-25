@@ -8,7 +8,7 @@
       </h6>
       <h6 class="price-tag">{{ price_tag }} kr.</h6>
       <br />
-      <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+     <add-to-cart product-id="{{ id }}" product-title="{{ title }}" :product-price="{{ price_tag }}" product-category="{{ product_category }}"></add-to-cart>
 
       <div class="description-wrapper">
         <h2>{{ title_of_description }}</h2>
