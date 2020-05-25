@@ -3,7 +3,9 @@
     <div class="product-content-txt">
       <img src="{{ product_sustainable }}" alt="" class="sustainable" />
       <h1 class="product-title">{{ title }}</h1>
-      <h6 class="product-category">{{ product_category }}, {{ pcs_number }} stk.</h6>
+      <h6 class="product-category">
+        {{ product_category }}, {{ pcs_number }} stk.
+      </h6>
       <h6 class="price-tag">{{ price_tag }} kr.</h6>
       <br />
       <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
@@ -43,7 +45,7 @@
         <div class="ingredient-wrapper">
           {{ ingredients }}
 
-          <div class="ingredient" style="background-color: {{ background_color }};">
+          <div class="ingredient">
             <h3>{{ ingredient_name }}</h3>
             <img src="{{ ingredient_image }}" alt="" />
           </div>
@@ -52,21 +54,39 @@
         </div>
       </details>
     </div>
-    <div class="product-content-image"
-      style="background: url({{ product_picture }}); background-position: center; background-size: contain; background-repeat: no-repeat;">
-    </div>
+    <div
+      class="product-content-image"
+      style="background: url({{ product_picture }}); background-position: center; background-size: contain; background-repeat: no-repeat;"
+    ></div>
   </div>
   <div class="inspi-section">
-    <div class="img_big"
-      style="background: url({{ inspi_img_big }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
-    </div>
-    <div class="img_small"
-      style="background: url({{ inspi_img_small }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
-    </div>
+    <div
+      class="img_big"
+      style="background: url({{ inspi_img_big }}); background-position: center; background-size: cover; background-repeat: no-repeat;"
+    ></div>
+    <div
+      class="img_small"
+      style="background: url({{ inspi_img_small }}); background-position: center; background-size: cover; background-repeat: no-repeat;"
+    ></div>
   </div>
+
+
 
   <div class="product-slider wrapper narrow text-center">
     <h4>Prøv også</h4>
-    <product-slider current-category="{{ product_category | lower }}"></product-slider>
+    <product-slider class="mt-5 medium--hide">
+      <template v-slot:products>
+        {{ collection:product }}
+        <a href="{{ url }}" class="product-slide text-left expand-cursor">
+          <img src="{{ product_picture }}" alt="" />
+          <h5>{{ title }}</h5>
+          <h6 class="product-category">
+            {{ product_category }}, {{ pcs_number }} stk.
+          </h6>
+          <div class="price-tag">{{ price_tag }} kr.</div>
+        </a>
+        {{ /collection:product }}
+      </template>
+    </product-slider>
   </div>
 </div>

@@ -1,0 +1,36 @@
+title: 'Custom orders'
+fields:
+  size:
+    display: Size
+    validate: ''
+  amount:
+    display: Amount
+  color:
+    display: Color
+  flavor:
+    display: Flavor
+  text:
+    display: Text
+    validate: ''
+  delivery_date:
+    display: 'Delivery date'
+  total_price:
+    display: 'Total price'
+  firstname:
+    display: Firstname
+  lastname:
+    display: Lastname
+  email:
+    display: Email
+  tel:
+    display: Phone
+  postal:
+    display: 'Postal code'
+  address:
+    display: Address
+columns:
+  - size
+  - amount
+  - delivery_date
+  - total_price
+  - firstname

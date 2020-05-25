@@ -1,4 +1,5 @@
 template: products/index
+menu_title: shop
 shop_category_info:
   -
     shop_image: /assets/component-1.png

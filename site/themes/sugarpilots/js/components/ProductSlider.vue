@@ -1,20 +1,15 @@
 <template>
   <div class="slider position-relative">
-    <div class="prev">
+    <div class="prev expand-cursor">
       <span data-feather="chevron-left"></span>
     </div>
     <slick ref="slick" :options="slickOptions">
-        <div class="product-slide text-left" v-for="product in products" :key="product.id">
-            <img :src="product.product_picture" alt="">
-            <h5>{{ product.title }}</h5>
-            <h6 class="product-category">{{ product.product_category }}, {{ product.pcs_number }} stk.</h6>
-            <div class="price-tag">{{ product.price_tag }} kr.</div>
-        </div>
+      <slot name="products" />
     </slick>
-    <div class="next">
+    <div class="next expand-cursor">
       <span data-feather="chevron-right"></span>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -22,20 +17,11 @@ import axios from "axios";
 import Slick from "vue-slick";
 export default {
   components: { Slick },
-  props: {
-      currentCategory: {
-          type: String,
-          required: true
-      } 
-  },
   data() {
     return {
-      loading: true,
-      products: []
     };
   },
   created() {
-    this.fetchProducts();
   },
   computed: {
     slickOptions() {
@@ -43,7 +29,7 @@ export default {
         return {
           slidesToShow: 3,
           slidesToScroll: 3,
-          autoplay: true,
+          autoplay: false,
           cssEase: "ease-in-out",
           nextArrow: ".next",
           prevArrow: ".prev",
@@ -77,14 +63,7 @@ export default {
         };
       }
     },
-  },
-  methods: {
-    fetchProducts() {
-      axios.get("/!/Fetch/collection/product").then((response) => {
-        this.products = response.data.data;
-      });
-    },
-  },
+  }
 };
 </script>
 

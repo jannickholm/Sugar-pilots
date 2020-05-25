@@ -18,11 +18,11 @@
 
             {{ category }}
             <h1 class="category-title">{{ title }}</h1>
-
             {{ collection:product product_category:is="{{ title }}" as="product" }}
+
+            {{ if product | count < 5 }}
             {{ product }}
             <div class="product-seperate {{ switch between='right|left' }}">
-
                 <div class="product-main-left">
                     <img src="{{ product_picture }}" alt="" />
                 </div>
@@ -30,11 +30,11 @@
                     <h5> {{ title }}</h5>
                     <h5>{{ product_category }}</h5>
                     <h6 class="price-tag">{{ price_tag }} kr.</h6>
-                    <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+                    <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
                 </div>
             </div>
-
             {{ /product }}
+            {{ /if }}
 
             {{ /collection:product }}
 

@@ -6,6 +6,7 @@
 @import "./icons";
 @import "./global/breakpoints";
 @import "./root";
+@import "./utilities";
 
 //Globals
 @import "./global/mixins";
@@ -23,9 +24,11 @@
 @import "./components/inspiration_list";
 @import "./components/logo_slider";
 @import "./components/single_product";
-@import "./components/products.scss";
+@import "./components/products";
 @import "./components/product_slider";
 @import "./components/pricetag";
+@import './components/configuration';
+@import './components/forms';
 
 //Frontpage
 @import "./frontpage/b2b";
