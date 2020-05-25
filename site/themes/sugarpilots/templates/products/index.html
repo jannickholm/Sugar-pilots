@@ -42,13 +42,14 @@
 
             {{ /collection:categories }}
 
-            {{ collection:categories as="category2" }}
+            {{ collection:categories as="category2"  title:is="gaver" }}
 
             <div class="gift-container">
-                {{ collection:product product_category:is="gaver" }}
-
+                {{ collection:product product_category:is="gaver"}}
+                {{ category2 }}
+                    <h1 class="category-title">{{ title }}</h1>
+                {{ /category2 }}
                 <div class="gift-wrapper">
-
                     <div class="gift-main-top">
                         <img src="{{ product_picture }}" alt="" />
                     </div>
