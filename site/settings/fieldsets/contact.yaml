@@ -1,0 +1,55 @@
+sections:
+  main:
+    display: Main
+    fields:
+      contact_title:
+        type: text
+        display: Overskrift
+      contact_subtitle:
+        type: text
+        display: Underoverskrift
+      contact_description:
+        type: textarea
+        display: 'Beskrivelse af virksomhed'
+      contact_img_1:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+  contact_quote:
+    display: Quote
+    fields:
+      contact_img_quote:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+      contact_txt_quote:
+        type: textarea
+        display: 'Quote tekst'
+  om_sugar_pilots_kaptajn:
+    display: 'Om Sugar Pilots Kaptajn'
+    fields:
+      contact_title_about:
+        type: text
+        display: Overskrift
+      om_charlotte:
+        type: textarea
+        display: 'Om Charlotte'
+      contact_img:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+  sidebar:
+    display: Sidebar
+    fields: {  }
+taxonomies: true
+title: 'p: Kontakt'
+create_title: kontakt
