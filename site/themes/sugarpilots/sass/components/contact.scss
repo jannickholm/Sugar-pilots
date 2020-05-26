@@ -60,4 +60,121 @@ padding: 60px 35px;
         }
 
     }
+
+    #form-contact {
+        max-width: 500px;
+        margin: 0 auto;
+        padding-top: 100px;
+
+        .form-town {
+        display: flex;
+
+        input {
+
+            &:first-child {
+                margin-right: 2rem;
+            }
+             width: calc(200px - 1rem);
+            }
+        }
+
+        .field-wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            max-width: 400px;
+
+            label, input {
+                transition: all .3s;
+            }
+
+            label {
+                position: absolute;
+                top: 0;
+                padding: 5px;
+            }
+
+            input[type=email] {
+                text-transform: lowercase;
+            }
+
+            input {
+                font-size: 16px;
+                border: 0;
+                border-bottom: 1px rgb(29, 29, 29) solid;
+                margin-bottom: 25px;
+                background: none;
+                text-transform: capitalize;
+                padding: 5px;
+
+                &:focus {
+                    outline: 0;
+                    border-bottom: 1px #FFBDC6 solid;
+                }
+
+                &:placeholder-shown + label {
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+
+            input::-webkit-input-placeholder {
+                opacity: 0;
+                transition: inherit;
+            }
+
+            input:focus::-webkit-input-placeholder {
+                     opacity: 1;
+                }
+                  input:not(:placeholder-shown) + label,
+                  input:focus + label {
+                    top: -14px;
+                    font-size: 10px;
+        }
+
+    }
+
+    .textarea {
+        label {
+            top: 5%;
+        }
+
+        textarea {
+            height: 150px;
+            max-width: 100%;
+            resize: none;
+            text-transform: initial;
+            background: none;
+            border: 1px rgb(29, 29, 29) solid;
+            margin: 10px 0;
+
+            &:focus {
+                outline: 0;
+                border: 1px #FFBDC6 solid;
+            }
+
+            &:placeholder-shown + label {
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        textarea::placeholder {
+            opacity: 0;
+            transition: inherit;
+        }
+
+        textarea:focus::placeholder {
+                 opacity: 1;
+            }
+              textarea:not(:placeholder-shown) + label,
+              textarea:focus + label {
+                top: -18px;
+                font-size: 10px;
+    }
 }
+   }
+}
+
+
+	
