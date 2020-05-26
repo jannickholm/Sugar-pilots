@@ -1,5 +1,5 @@
 <div class="contact-container">
-    <div class="contact">
+    <div class="about-section">
         <div class="contact-info wrapper">
             <div class="contact-info-img">
                 <img src="{{ contact_img_1 }}" alt="">
@@ -25,4 +25,41 @@
             </div>
         </div>
     </div>
+
+    <form id="form-contact">
+        <fieldset>
+            <div class="field-wrapper">
+                <input type="text" name="name" placeholder="Fx. Ida Jensen" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+                    required />
+                <label for="name">For- og efternavn</label>
+            </div>
+            <div class="field-wrapper">
+                <input type="text" name="comname" placeholder="Firmanavn" />
+                <label for="comname">Firmanavn <small>(valgfrit)</small></label>
+            </div>
+            <div class="field-wrapper">
+                <input type="tel" name="tel" placeholder="Fx. +45 45 67 89 12" />
+                <label for="tel">Telefon nummer <small>(valgfrit)</small></label>
+            </div>
+            <div class="field-wrapper">
+                <input type="email" name="email" placeholder="Fx. ida@gmail.com" required />
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form-town">
+                <div class="field-wrapper">
+                    <input type="text" name="postcode" pattern="[0-9]{3,4}" placeholder="Fx. 1550" required />
+                    <label for="postcode">Post nr.</label>
+                </div>
+                <div class="field-wrapper">
+                    <input type="text" name="town" placeholder="Fx. København V" required />
+                    <label for="town">By</label>
+                </div>
+            </div>
+            <div class="field-wrapper textarea">
+                <textarea name="message" id="message" placeholder="Skriv din besked her..." required></textarea>
+                <label for="message">Besked</label>
+            </div>
+        </fieldset>
+        <button type="button" class="btn expand-cursor slick-arrow">Send besked</button>
+    </form>
 </div>
