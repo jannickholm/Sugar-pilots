@@ -1,80 +1,201 @@
 .contact-container {
 
-.contact-info {
+.about-info {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    padding: 80px 0;
+    padding: 0;
+    flex-direction: column;
 
-    img {
-        max-height: 500px;
-        max-width: 450px;
-        object-fit: cover;
+    @include s {
+        flex-direction: initial;
+        padding: 80px 0;
     }
 
-    .contact-info-txt {
-        margin-left: -3rem;
+    img {
+        max-height: 400px;
+        max-width: 450px;
+        object-fit: cover;
+
+        @include s {
+            padding-left: 35px;
+        }
+
+        @include md {
+            padding-left: 0;
+            max-height: 500px;
+        }
+    }
+
+    .about-info-txt {
         z-index: 1;    
         max-width: 520px;
+        padding: 20px;
+
+        h2 {
+        @include s {
+            margin-left: -3rem;
+            padding: 0 30px 0 0;
+        }
+    }
+        @include xlg {
+            padding-right: 0;
+        }
     }
 }
 
-.contact-quote {
+.about-quote {
     display: flex;
     justify-content: center;
     align-items: center;
-background: #fefefe;
-padding: 60px 35px;
+padding: 30px 20px;
+flex-direction: column;
+
+@include s {
+    flex-direction: initial;
+    padding: 60px 35px;
+}
         img {
             max-height: 580px;
             height: 100%;
             object-fit: cover;
-            max-width: 800px;
+            max-width: 400px;
+
+            @include xlg {
+                max-width: 700px;
+            }
+
+            @include xl {
+                max-width: 800px;
+            }
         }
 
         h1 {
-            font-weight: 100;
             max-width: 500px;
             z-index: 1;
             text-align: right;
             padding: 20px;
+            order: 1;
+
+            @include s {
+                order: initial;
+            }
         }
     }
 
-    .contact-about {
+    .about {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 80px 35px;
+        padding: 20px 20px;
+        background: #DFEDFB;
+        flex-direction: column;
+
+        @include s {
+            flex-direction: initial;
+            padding: 80px 35px;
+        }
         
         img {
-            max-height: 500px;
-            max-width: 450px;
-            object-fit: cover;            
+            max-height: 300px;
+            max-width: 350px;
+            object-fit: cover; 
+            
+            @include s {
+                max-height: 500px;
+                max-width: 450px;
+            }
         }
 
-        .contact-about-txt {
+        .about-txt {
             max-width: 520px;
+            padding-top: 1rem;
+
+           @include s { 
             padding-left: 1.5rem;
+            padding-top: 0;
+            }
+        }
+
+    }
+
+    .contact-section {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        margin-bottom: 50px;
+        flex-direction: column;
+
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+            @include md {
+                margin: 0;
+            }
+        }
+
+        @include md {
+            flex-direction: initial;
+            padding-top: 80px;
+        }
+
+        .contact-txt {
+            max-width: 500px;
+            text-align: center;
+
+            @include md {
+            margin-right: 5rem;
+            text-align: left;
+        }
+        }
+
+        .contact-details {
+            max-width: 350px;
+            margin: 50px auto;
+            text-align: center;
+@include md {
+    margin: 50px 0 0 0;
+    text-align: left;
+}
+
+            .adresse-2 {
+                margin: 20px 0;
+            }
         }
 
     }
 
     #form-contact {
         max-width: 500px;
+        padding-top: 20px;
+        
+        @include s {
         margin: 0 auto;
-        padding-top: 100px;
+    }
+        @include md {
+            margin: 0;
+        }
 
         .form-town {
         display: flex;
+        flex-direction: column;
+
+        @include s {
+            flex-direction: initial;
+        }
 
         input {
 
+            @include s {
             &:first-child {
                 margin-right: 2rem;
             }
              width: calc(200px - 1rem);
+            }
             }
         }
 
