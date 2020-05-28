@@ -1,0 +1,263 @@
+.sustainable-icons {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+
+    @include s {
+        max-width: 200%;
+        width: 200%;
+        flex-direction: row;
+    }
+
+    @include xlg {
+        max-width: 100%;
+        width: 100%;
+        align-items: initial;
+        justify-content: initial;
+    }
+
+    .column {
+        display: flex;
+
+        & > * {
+            margin-right: 10px;
+        }
+    }
+
+    p {
+        font-size: 9px;
+    line-height: 1;
+    padding-top: 5px; 
+text-transform: uppercase;
+font-variant-caps: all-small-caps;
+max-width: 50px;
+}
+svg {
+    max-width: 50px;
+    height: auto;
+}
+
+    .natural-colors-1 {
+      fill: #faefe5;
+    }
+  
+    .natural-colors-2 {
+      fill: #090a0a;
+    }
+  
+    .natural-colors-3 {
+      fill: #d8e5f2;
+    }
+  
+    .natural-colors-4 {
+      fill: #ddebf9;
+    }
+  
+    .natural-colors-5 {
+      fill: #9bc09d;
+    }
+  
+    .natural-colors-6 {
+      fill: #587b5a;
+    }
+  
+    .natural-colors-7 {
+      fill: #99bc9b;
+    }
+  
+    .natural-colors-8 {
+      fill: #58795a;
+    }
+  
+    .natural-colors-9 {
+      fill: #5a795d;
+    }
+  
+    .natural-colors-10 {
+      fill: #d2d9d2;
+    }
+  
+    .natural-colors-11 {
+      fill: #b8c3b9;
+    }
+  
+    .natural-colors-12 {
+      fill: #384d39;
+    }
+
+    .vegan-1 {
+        fill: #faefe5;
+      }
+
+      .vegan-2 {
+        fill: #080a08;
+      }
+
+      .vegan-3 {
+        fill: #9abe9c;
+      }
+
+      .vegan-4 {
+        fill: #9bc09d;
+      }
+
+      .vegan-5 {
+        fill: #9bbf9d;
+      }
+
+      .vegan-6 {
+        fill: #597c5b;
+      }
+
+      .dairy-free-1 {
+        fill: #faefe5;
+      }
+
+      .dairy-free-2 {
+        fill: #0d0d0d;
+      }
+
+      .dairy-free-3, .dairy-free-4 {
+        fill: #fafcfe;
+      }
+
+      .dairy-free-4 {
+        opacity: 0.5;
+        isolation: isolate;
+      }
+
+      .dairy-free-5 {
+        fill: #fdfdfd;
+      }
+
+      .dairy-free-6 {
+        fill: #ffbdc6;
+        stroke: #222220;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .alcohol-free-1 {
+        fill: #faefe5;
+      }
+
+      .alcohol-free-2 {
+        fill: #0e0e0d;
+      }
+
+      .alcohol-free-3 {
+        fill: #ebf1f8;
+      }
+
+      .alcohol-free-4 {
+        fill: #a0a09f;
+      }
+
+      .alcohol-free-5 {
+        fill: #ecdabf;
+      }
+
+      .alcohol-free-6 {
+        fill: #fac175;
+      }
+
+      .alcohol-free-7 {
+        fill: #ffbdc6;
+        stroke: #222220;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+
+      .natural-flavors-1 {
+        fill: #faefe5;
+      }
+
+      .natural-flavors-2 {
+        fill: #0b0b0a;
+      }
+
+      .natural-flavors-3 {
+        fill: #eedda9;
+      }
+
+      .natural-flavors-4 {
+        fill: #f8e6ae;
+      }
+
+      .natural-flavors-5 {
+        fill: #9abf9c;
+      }
+
+      .natural-flavors-6 {
+        fill: #9abe9c;
+      }
+
+      .natural-flavors-7 {
+        fill: #fefefe;
+      }
+
+
+      .handmade-1 {
+        fill: #faefe5;
+      }
+
+      .handmade-2 {
+        fill: #0b0a0b;
+      }
+
+      .handmade-3 {
+        fill: #deebf9;
+      }
+
+      .handmade-4 {
+        fill: #be5f5e;
+      }
+
+      .handmade-5 {
+        fill: #7b838a;
+      }
+
+      .handmade-6 {
+        fill: #f8e3c6;
+      }
+
+      .eco-1 {
+        fill: none;
+      }
+
+      .eco-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .eco-3 {
+        fill: #faefe5;
+      }
+
+      .eco-4 {
+        fill: #fff;
+      }
+
+      .eco-5 {
+        fill: #161211;
+      }
+
+      .eco-6 {
+        fill: #242420;
+      }
+
+      .eco-7 {
+        fill: #f5decb;
+      }
+
+      .eco-8 {
+        fill: #9abf9c;
+      }
+
+      .eco-9 {
+        fill: #577959;
+      }
+  }
