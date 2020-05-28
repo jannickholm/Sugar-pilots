@@ -2,8 +2,9 @@
 import Rellax from 'rellax';
 import Vue from 'vue';
 require("./cursor");
+require("./webshop");
 
-  // import all vue components
+// import all vue components
 const files = require.context('./', true, /\.vue$/i);
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
@@ -19,12 +20,12 @@ new Vue({ // eslint-disable-line no-new
 // enable rellax
 let rellax = new Rellax('.parallax-element');
 
-if(window.innerWidth < 769) {
+if (window.innerWidth < 769) {
     rellax.destroy();
 }
 
 window.addEventListener("resize", () => {
-    if(window.innerWidth < 769) {
+    if (window.innerWidth < 769) {
         rellax.destroy();
     } else {
         let rellax = new Rellax('.parallax-element');
