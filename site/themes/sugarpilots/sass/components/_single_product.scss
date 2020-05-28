@@ -1,12 +1,26 @@
 .products-container {
   .products-content {
     display: flex;
+flex-direction: column;
+
+@include s {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 55px;
+    margin-top: 40px;
+  }
+
+  @include md {
+    margin-top: 80px;
+  }
+
+  @include xl {
+    margin-left: 80px;
+  }
 
     .product-content-txt {
+      @include s {
       max-width: 50%;
+    }
 
       .product-title {
         font-family: montserrat, sans-serif;
@@ -40,9 +54,13 @@
       .description-wrapper {
         margin-top: 30px;
         margin-bottom: 40px;
+        padding-right: 20px;
 
         p {
+          @include md {
+            padding-right: 0;
           max-width: 80%;
+        }
         }
       }
 
@@ -109,31 +127,94 @@
     }
 
     .ingredients-container {
+      position: relative;
+
+      @include s {
       max-width: 200%;
       width: 200%;
+    }
 
       .ingredient-wrapper {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 20px;
-        justify-items: stretch;
-        margin-top: 20px;
-        margin-bottom: 80px;
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-left: 10px;
+
+        @include md {
+          padding-left: 0;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: -10px;
+          top: 60%;
+          transform: translateY(-50%) rotate(45deg);
+          border-color: black black transparent transparent;
+          border-style: solid;
+          border-width: 3px 3px 3px 3px;
+          height: 15px;
+          width: 15px;
+
+          @include md {
+            display: none;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: -5px;
+          top: 60%;
+          transform: translateY(-50%) rotate(225deg);
+          border-color: black black transparent transparent;
+          border-style: solid;
+          border-width: 3px 3px 3px 3px;
+          height: 15px;
+          width: 15px;
+
+          @include md {
+            display: none;
+          }
+        }
+
+        @include md{
+          overflow-x: initial;
+          overflow-y: initial;
+          margin-top: 20px;
+        }
 
         .ingredient {
           text-align: center;
-          padding-top: 30px;
+          padding: 25px 10px;
           height: 180px;
           position: relative;
-          max-width: 200px;
+          width: 160px;
+          min-width: 160px;
+          margin-right: 20px;
+          text-transform: uppercase;
+          font-variant-caps: all-small-caps;
+
+          h5 {
+            max-width: 160px;
+            width: 100%;
+            @include font-size(18px, 24px); 
+          }
 
           img {
-            max-height: 180px;
+            width: auto;
+            max-height: 120px;
+
+        @include md {
+            max-width: 120px;
+            max-height: auto;
             position: absolute;
-            top: 40%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%);
           }
+        }
         }
       }
     }
@@ -141,26 +222,54 @@
     .product-content-image {
       height: 100%;
       width: 100%;
-      min-height: 550px;
+      height: 350px;
+      order: -1;
+
+      @include s {
+        order: 0;
+        height: 550px;
+        margin-top: 20px;
+      }
+
+      @include md {
+        margin-top: 0;
+      }
     }
   }
 
   .inspi-section {
     display: flex;
     justify-content: center;
-    margin: 80px;
+margin: 20px;
+
+@include md {
+    margin: 60px;
+  }
 
     .img_big {
+max-width: 200px;
+height: 250px;
+width: 100%;
+
+@include s {
       max-width: 500px;
       height: 500px;
-      width: 100%;
+    }
     }
 
     .img_small {
+      width: 100%;
+      margin-top: 70px;
+      margin-left: -50px;
+      height: 150px;
+      max-width: 200px;
+
+      @include s {
       height: 350px;
       max-width: 300px;
-      width: 100%;
-      transform: translate(-30%, 30%);
+      margin-top: 90px;
+    }
+      
     }
   }
 }
