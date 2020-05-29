@@ -1,15 +1,12 @@
 "use strict";
 document.addEventListener("scroll", showSidenav);
 
-
 window.addEventListener('DOMContentLoaded', () => {
-    console.log("hej");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const sectionName = entry.target.getAttribute('id');
             if (entry.isIntersecting > 0) {
-                console.log(sectionName);
                 document.querySelector(`a[href="#${sectionName}"]`).classList.add(`active`);
             } else {
                 document.querySelector(`a[href="#${sectionName}"]`).classList.remove(`active`);
@@ -22,7 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function showSidenav() {
-    console.log("function læst");
     const scrollY = window.pageYOffset;
     const nav = document.querySelector(".webshop-sidenav");
 

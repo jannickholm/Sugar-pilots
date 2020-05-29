@@ -43299,13 +43299,11 @@ function resetCursor() {
 
 document.addEventListener("scroll", showSidenav);
 window.addEventListener('DOMContentLoaded', function () {
-  console.log("hej");
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       var sectionName = entry.target.getAttribute('id');
 
       if (entry.isIntersecting > 0) {
-        console.log(sectionName);
         document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
       } else {
         document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
@@ -43318,7 +43316,6 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function showSidenav() {
-  console.log("function læst");
   var scrollY = window.pageYOffset;
   var nav = document.querySelector(".webshop-sidenav");
   scrollY >= 365 ? nav.classList.add("show-sidenav") : "";
