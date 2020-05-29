@@ -2,6 +2,21 @@ sections:
   main:
     display: Main
     fields: {  }
+  header:
+    display: Header
+    fields:
+      add_parallax_to_section_webshop:
+        type: toggle
+        width: 33
+        display: 'Add parallax to section'
+      image_scroll_speed_webshop:
+        type: text
+        width: 33
+        display: 'Image scroll speed'
+      text_scroll_speed_webshop:
+        type: text
+        width: 33
+        display: 'Text Scroll Speed'
   sidebar:
     display: Sidebar
     fields:

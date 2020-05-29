@@ -3,6 +3,9 @@ about_description: |
   Hos Sugar Pilots tager vi skridtet videre og udforsker den søde verden. Vi nytænker hvordan slikkepinde kan nydes og gør op med de klassiske smage. Vi brænder for at skabe nye smage og flotte, interessante looks, der alle er med til at give en lækker og sjov oplevelse. 
   Vores mission er at tage kunden med på en spændende rejse og give dem et indblik i forskellige landes kulinariske oplevelser og byde dem velkommen ind i den søde verden.
 about_img_1: /assets/p1260816-1590571048.jpg
+add_parallax_to_section_contact: true
+image_scroll_speed_contact: '1.5'
+text_scroll_speed_contact: '0'
 about_img_quote: /assets/p1260004-1590571066.jpg
 about_txt_quote: 'Kom med på vores rejse og oplev slikkepinde på en helt ny måde'
 about_title_about: 'Kaptajnen i Sugar Pilots'
@@ -37,6 +40,8 @@ adresse_2:
   - booking@sugarpilots.com
   - 'NB! Aftal på forhånd hvis I ønsker at komme forbi, vi er her ikke altid.'
 contact_tlf: '26712734'
+text_scrool_speed_contact: '-2'
+text_scrool_spedd_contact: '-2'
 contact_subtitle: 'Fra idé til virkelighed'
 contact_img_1: /assets/p1260816.jpg
 contact_img_quote: /assets/p1260004.jpg
