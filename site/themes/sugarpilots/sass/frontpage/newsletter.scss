@@ -3,10 +3,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
+    margin-top: 35px;
 
     @include s {
         flex-direction: initial;
         margin-top: 50px;
+        width: 100%!important;
     }
 
     .newsletter-txt {
