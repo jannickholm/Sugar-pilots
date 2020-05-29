@@ -18,6 +18,21 @@ sections:
         max_files: 1
         type: assets
         display: Billede
+  header:
+    display: Header
+    fields:
+      add_parallax_to_section_contact:
+        type: toggle
+        width: 33
+        display: 'Add parallax to section'
+      image_scroll_speed_contact:
+        type: text
+        width: 33
+        display: 'image scroll speed'
+      text_scroll_speed_contact:
+        type: text
+        width: 33
+        display: 'text scroll speed'
   about_quote:
     display: Quote
     fields:

@@ -39,10 +39,11 @@
 
                 <div id="{{ title | slugify }}" class="product-seperate">
 
-                    <div class="product-main-left">
-                        <img src="{{ product_picture }}" alt="" />
+                    <div class="product-main-left" data-aos="fade-left" data-aos-duration="400">
+                        >
+                        <img src="{{ product_picture }}" alt="produkt-billede" />
                     </div>
-                    <div class="product-main-right {{ switch between='odd|even' }}">
+                    <div class="product-main-right {{ switch between='odd|even' }} ">
                         <h4> {{ title }}</h4>
                         <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
                         <h6 class="price-tag">{{ price_tag }} kr.</h6>
@@ -62,6 +63,9 @@
             {{ /collection:categories }}
 
             <!-- {{ collection:categories as="category2" }}
+
+                {{ if add_parallax_to_section_webshop }} parallax-element"
+                        data-rellax-speed="{{ text_scroll_speed_webshop }} {{ /if }}
 
             <div class="gift-container">
                 {{ collection:product product_category:is="gaver" }}
@@ -86,3 +90,8 @@
         </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
