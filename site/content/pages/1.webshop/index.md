@@ -1,3 +1,6 @@
+add_parallax_to_section_webshop: true
+image_scroll_speed_webshop: '1'
+text_scroll_speed_webshop: '0.2'
 template: products/index
 menu_title: shop
 shop_category_info:

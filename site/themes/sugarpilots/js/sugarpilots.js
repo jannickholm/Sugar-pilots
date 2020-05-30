@@ -57645,7 +57645,10 @@ smooth_scrollbar__WEBPACK_IMPORTED_MODULE_3__["default"].initAll({
   wheelEventTarget: null,
   // plugins
   plugins: {}
-}); // import all vue components
+});
+
+__webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js"); // import all vue components
+
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
 
@@ -57687,25 +57690,20 @@ window.addEventListener("resize", function () {
     var _rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element');
   }
 });
-var section = document.querySelectorAll(".section");
-var sections = {};
-var i = 0;
-Array.prototype.forEach.call(section, function (e) {
-  sections[e.id] = e.offsetTop;
-  console.log(e.offsetTop);
+document.querySelectorAll(".expand-cursor").forEach(function (button) {
+  button.addEventListener("mouseover", resizeCursor);
+  button.addEventListener("mouseout", resetCursor);
 });
 
-window.onscroll = function () {
-  var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+function resizeCursor() {
+  var cursor = document.querySelector(".cursor");
+  cursor.classList = "cursor link-hover";
+}
 
-  for (i in sections) {
-    if (sections[i] <= scrollPosition) {
-      document.querySelector('.active').setAttribute('class', ' ');
-      document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-      console.log(i);
-    }
-  }
-};
+function resetCursor() {
+  var cursor = document.querySelector(".cursor");
+  cursor.classList = "cursor";
+}
 
 /***/ }),
 
@@ -57860,6 +57858,43 @@ var name = 'configuration';
 
 /***/ }),
 
+/***/ "./site/themes/sugarpilots/js/webshop.js":
+/*!***********************************************!*\
+  !*** ./site/themes/sugarpilots/js/webshop.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+document.addEventListener("scroll", showSidenav);
+window.addEventListener('DOMContentLoaded', function () {
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var sectionName = entry.target.getAttribute('id');
+
+      if (entry.isIntersecting > 0) {
+        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
+      } else {
+        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
+      }
+    });
+  });
+  document.querySelectorAll('.section').forEach(function (target) {
+    observer.observe(target);
+  });
+});
+
+function showSidenav() {
+  var scrollY = window.pageYOffset;
+  var nav = document.querySelector(".webshop-sidenav");
+  scrollY >= 365 ? nav.classList.add("show-sidenav") : "";
+  scrollY < 365 ? nav.classList.remove("show-sidenav") : "";
+}
+
+/***/ }),
+
 /***/ "./site/themes/sugarpilots/sass/sugarpilots.scss":
 /*!*******************************************************!*\
   !*** ./site/themes/sugarpilots/sass/sugarpilots.scss ***!
@@ -57867,7 +57902,7 @@ var name = 'configuration';
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable.\n  ╷\n3 │ @import url($assets);\n  │             ^^^^^^^\n  ╵\n  /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss 3:13  root stylesheet\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:87584:16)\n    at _render_closure1.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:77359:12)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:13333:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:15991:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)");
 
 /***/ }),
 

@@ -32,8 +32,14 @@ gift_idea_image_1: /assets/sugarpilots_the_slikkepinde_gaveaske_low.jpg
 gift_idea_image_2: /assets/sugarpilots_the_slikkepinde_gaveaske_low.jpg
 gift_idea_image_3: /assets/sugarpilots_the_slikkepinde_gaveaske_low.jpg
 gift_idea_image_4: /assets/sugarpilots_the_slikkepinde_gaveaske_low.jpg
-sustainable_image: ./assets/sustainable-image.png
-sustainable_image_scroll_speed: '0'
+show_assortment_section: true
+assortment_title: 'Se vores sortiment'
+lollipop_builder_cta_title: 'Design dine  egne slikkepinde'
+lollipop_builder_text: 'Lorem ipsum, dolor sit amet consectetur adipi sicing elit. Quibusdam voluptas debitis inventore perspiciatis harum. Sint nemo mollitia, eligendi vel atque accusantium magnam libero, est facere quibusdam, rerum sit? Quis, iusto!'
+lollipop_builder_cta_background: '#dfedfb'
+title_newsletter: 'Bliv den første til at høre om nye produkter'
+image_newsletter: /assets/p1260816-1590757718.jpg
+text_newsletter: 'Tilmeld dig nyhedsbrevet og modtag inspiration, nyheder og gode tilbud, etc. etc. etc'
 video_type: youtube
 header_image_type: img
 image_2: /assets/sugarpilots_mojito_cocktailslikkepind_shop-2_-removebg-preview.png

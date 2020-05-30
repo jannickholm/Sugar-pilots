@@ -39,6 +39,7 @@ Scrollbar.initAll({
     
   });
 
+require("./webshop");
 
 // import all vue components
 const files = require.context('./', true, /\.vue$/i);
@@ -72,37 +73,29 @@ new Vue({ // eslint-disable-line no-new
 // enable rellax
 let rellax = new Rellax('.parallax-element');
 
-if(window.innerWidth < 769) {
+if (window.innerWidth < 769) {
     rellax.destroy();
 }
 
 window.addEventListener("resize", () => {
-    if(window.innerWidth < 769) {
+    if (window.innerWidth < 769) {
         rellax.destroy();
     } else {
         let rellax = new Rellax('.parallax-element');
     }
 })
 
-  
-    var section = document.querySelectorAll(".section");
-    var sections = {};
-    var i = 0;
-  
-    Array.prototype.forEach.call(section, function(e) {
-      sections[e.id] = e.offsetTop;
+document.querySelectorAll(".expand-cursor").forEach(button => {
+    button.addEventListener("mouseover", resizeCursor);
+    button.addEventListener("mouseout", resetCursor);
+});
 
-      console.log(e.offsetTop)
-    });
-  
-    window.onscroll = function() {
-      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-  
-      for (i in sections) {
-        if (sections[i] <= scrollPosition) {
-          document.querySelector('.active').setAttribute('class', ' ');
-          document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-          console.log(i)
-        }
-      }
-    };
+function resizeCursor() {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList = "cursor link-hover";
+}
+
+function resetCursor() {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList = "cursor";
+}

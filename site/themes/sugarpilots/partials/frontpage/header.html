@@ -1,26 +1,23 @@
 <div class="header d-flex align-items-center" data-aos="fade-down" data-aos-duration="1500">
     <div class="content wrapper">
         <div class="main-left 
-        {{ if add_parallax_to_section }}parallax-element{{ /if }}" 
-        {{ if add_parallax_to_section }}
-        data-rellax-speed="{{ image_scroll_speed }}"
-        {{/if}}
-        >
+        {{ if add_parallax_to_section }}parallax-element{{ /if }}" {{ if add_parallax_to_section }}
+            data-rellax-speed="{{ image_scroll_speed }}" {{/if}}>
             {{ if header_image_type === "img" }}
-             <img src="{{ header_image }}" class="header-image" alt="{{ header_image | slugify | remove_left:assets | remove_right:png }}">
+            <img src="{{ header_image }}" class="header-image"
+                alt="{{ header_image | slugify | remove_left:assets | remove_right:png }}">
             {{ else }}
             <div class="parallax-image">
-                <img src="{{ header_image_1}}" class="parallax-element" 
-                data-rellax-speed="{{ image_1_scroll_speed }}"
-                alt="{{ header_image_1 | slugify | remove_left:assets | remove_right:png }}">
+                <img src="{{ header_image_1}}" class="parallax-element" data-rellax-speed="{{ image_1_scroll_speed }}"
+                    alt="{{ header_image_1 | slugify | remove_left:assets | remove_right:png }}">
 
-                <img src="{{ header_image_2}}" class="parallax-element" 
-                data-rellax-speed="{{ image_2_scroll_speed }}"
-                alt="{{ header_image_2 | slugify | remove_left:assets | remove_right:png }}">
+                <img src="{{ header_image_2}}" class="parallax-element" data-rellax-speed="{{ image_2_scroll_speed }}"
+                    alt="{{ header_image_2 | slugify | remove_left:assets | remove_right:png }}">
             </div>
             {{ /if }}
         </div>
-        <div class="main-right {{ if add_parallax_to_section }}parallax-element{{ /if }}" {{ if add_parallax_to_section }}data-rellax-speed="{{ title_scroll_speed }}"{{/if}}>
+        <div class="main-right {{ if add_parallax_to_section }}parallax-element{{ /if }}"
+            {{ if add_parallax_to_section }}data-rellax-speed="{{ title_scroll_speed }}" {{/if}}>
             <h1>{{ header_title }}</h1>
             <p>{{ header_text }}</p>
             <a class="btn expand-cursor main-btn expand-cursor " href="#">se mere</a>

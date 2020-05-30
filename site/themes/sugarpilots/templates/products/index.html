@@ -1,14 +1,30 @@
 <div class="shop-container">
-  <div class="shop wrapper">
-    <div class="nav-categories" data-aos="fade-up" data-aos-duration="1000">
-      {{ collection:categories }}
-      <a href="#{{ title | slugify }}">
-        <div
-          class="shop-categories"
-          style="background-color: {{ background_color }};"
-        >
-          <img src="{{ category_image }}" alt="" />
-          <p>{{ title }}</p>
+    <nav class="webshop-sidenav">
+        <ul class="links">
+            {{ collection:categories as="category" }}
+            {{ category }}
+            <li class="expand-cursor">
+                <a href="#{{ title | slugify }}">
+                    {{ title replace="slikkepinde|" }}
+                </a>
+            </li>
+
+            {{ /category }}
+            {{ /collection:categories }}
+        </ul>
+    </nav>
+    <div class="shop wrapper">
+        <div class="nav-categories">
+            {{ shop_category_info }}
+
+            <a href="#{{ shop_category_name | slugify }}">
+                <div class="shop-categories" style="background-color: {{ background_color }};">
+                    <img src="{{ shop_image }}" alt="" />
+                    <p>{{ shop_category_name }}</p>
+                </div>
+            </a>
+
+            {{ /shop_category_info }}
         </div>
         {{ /collection:categories }}
       </a>
