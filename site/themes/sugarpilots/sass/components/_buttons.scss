@@ -19,8 +19,14 @@ a.btn {
   &:not(.right)::before {
     left: 0;
   }
+
   &.right::before {
-    right: 0;
+    left: 0;
+  }
+  @include md {
+    &.right::before {
+      right: 0;
+    }
   }
 
   &:hover {

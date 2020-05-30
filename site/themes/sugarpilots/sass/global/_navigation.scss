@@ -14,9 +14,7 @@
   @include lg {
     background-color: transparent;
     justify-items: center;
-    padding: unset;
-    padding-block-start: 2rem;
-    padding-block-end: 2rem;
+    padding: 2rem;
     grid-template-columns: auto 1fr auto;
     max-width: 1200px;
     display: grid;
@@ -87,4 +85,16 @@
 
 .side-nav {
   position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  
+  li {
+    writing-mode: tb;
+    a {
+      &.active {
+        font-weight: 900;
+      }
+    }
+  }
 }

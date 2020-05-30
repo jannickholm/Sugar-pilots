@@ -1,17 +1,17 @@
-<div class="categories">
+<div class="categories" data-aos="fade-up" data-aos-duration="1000">
   <div class="wrapper narrow">
     <div class="content">
       <h2 class="text-center">{{ assortment_title }}</h2>
       <div class="inner-content">
         {{ collection:categories }}
         {{ if show_on_frontpage }}
-        <div id="{{ title | slugify }}-{{ id }}" class="product-block">
+        <div id="{{ title | slugify }}-{{ id }}" class="product-block" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700">
           <div class="main-left {{ switch between='order| ' }}">
             <h4>{{ title }}</h4>
             <p>{{ category_text }}</p>
             <a href="/products#{{ title | slugify }}" class="btn expand-cursor {{ switch between='|right' }}">Se mere</a>
           </div>
-          <div class="main-right">
+          <div class="main-right parallax-element" data-rellax-speed="-0.1">
             <img src="{{ category_image }}" alt="">
           </div>
         </div>

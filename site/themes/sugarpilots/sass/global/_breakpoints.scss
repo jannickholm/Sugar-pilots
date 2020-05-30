@@ -5,7 +5,7 @@ $breakpoint-s: 500px;
   }
 }
 
-$breakpoint-md: 769px;
+$breakpoint-md: 768px;
 @mixin md {
   @media (min-width: $breakpoint-md) {
     @content;

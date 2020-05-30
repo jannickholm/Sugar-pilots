@@ -1,14 +1,16 @@
-<div class="sustainable-section">
-        <div class="wrapper">
-            <h4>{{ sustainable_title }}</h4>
-            <div class="inner-content">
-                <img class="sustainable-image" src="{{ sustainable_image }}" alt="">
-                {{ sustainable_text }}
-                <div class="text-block">
-                    {{ sustainable_text_title wrap="h6"}}
-                    {{ sustainable_text_body wrap="p" }}
-                </div>
-                {{ /sustainable_text }}
-            </div>
+<div class="sustainable-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="wrapper">
+        <div class="content">
+        <div class="left parallax-element" data-rellax-speed="0.4" style="background-image: url('{{ sustainable_image_1 }}');">
         </div>
+        <div class="right">
+          <div class="top">
+          <h1>{{ sustainable_title }}</h1>
+          
+          <p>{{ sustainable_text }}</p>
+          </div>
+          <img src="{{ sustainable_image_2 }}" alt="">
+        </div>
+    </div>
+      </div>
     </div>

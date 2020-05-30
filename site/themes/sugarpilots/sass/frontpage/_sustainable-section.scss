@@ -1,26 +1,90 @@
 .sustainable-section {
-    h4 {
-        text-align: center;
+  .wrapper {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: unset;
+        height: 90vh;
+        margin-bottom: 6rem;
       }
-  .inner-content {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    
-    justify-items: center;
 
-    .text-block:nth-child(1),
-    .text-block:nth-child(2) {
-        grid-column: 1;
-        grid-row: 1;
-    }
+      .left {
+        justify-self: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        width: calc(200px + 250 * ((100vw - 320px) / 1080));
+        display: flex;
+        justify-content: end;
+        margin-top: 1rem;
+        img {
+          width: calc(200px + 400 * ((100vw - 320px) / 1080));
+          object-fit: contain;
+          max-height: 500px;
+        }
+      }
 
-    .sustainable-image {
-      grid-column: 2 / 2;
-      max-width: 300px;
-    }
-    p {
-      font-size: 12px;
-      max-width: 300px;
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) {
+          display: block;
+          max-width: min-content;
+        }
+
+        h1 {
+          margin: auto;
+          margin-bottom: 1rem;
+          // font-size: calc(20px + 30 * ((100vw - 320px) / 1080));
+          color: #333;
+          font-weight: 800;
+          width: 90%;
+          position: relative;
+          z-index: 10;
+          @media (min-width: 768px) {
+            width: unset;
+            margin-left: -5rem;
+          }
+        }
+
+        p {
+          width: 90%;
+          margin: auto;
+          color: #333;
+          font-weight: 500;
+          font-size: calc(14px + 2 * ((100vw - 320px) / 1080));
+          line-height: 1.4;
+          position: relative;
+          z-index: 10;
+          @media (min-width: 768px) {
+            margin-left: 2rem;
+            width: calc(200px + 200 * ((100vw - 320px) / 1080));
+          }
+        }
+
+        img {
+          width: 90%;
+          height: 70%;
+          margin: auto;
+          margin-top: 1rem;
+          object-fit: cover;
+          max-height: 400px;
+          @media (min-width: 768px) {
+            margin-left: 2rem;
+            margin-top: 2rem;
+            max-height: unset;
+            width: calc(200px + 200 * ((100vw - 320px) / 1080));
+          }
+        }
+      }
     }
   }
 }
