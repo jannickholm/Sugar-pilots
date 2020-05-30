@@ -43240,7 +43240,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-__webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js"); // import all vue components
+__webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js");
+
+__webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js"); // import all vue components
 
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
@@ -43285,6 +43287,43 @@ function resetCursor() {
 
 /***/ }),
 
+/***/ "./site/themes/sugarpilots/js/webshop.js":
+/*!***********************************************!*\
+  !*** ./site/themes/sugarpilots/js/webshop.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+document.addEventListener("scroll", showSidenav);
+window.addEventListener('DOMContentLoaded', function () {
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var sectionName = entry.target.getAttribute('id');
+
+      if (entry.isIntersecting > 0) {
+        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
+      } else {
+        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
+      }
+    });
+  });
+  document.querySelectorAll('.section').forEach(function (target) {
+    observer.observe(target);
+  });
+});
+
+function showSidenav() {
+  var scrollY = window.pageYOffset;
+  var nav = document.querySelector(".webshop-sidenav");
+  scrollY >= 365 ? nav.classList.add("show-sidenav") : "";
+  scrollY < 365 ? nav.classList.remove("show-sidenav") : "";
+}
+
+/***/ }),
+
 /***/ "./site/themes/sugarpilots/sass/sugarpilots.scss":
 /*!*******************************************************!*\
   !*** ./site/themes/sugarpilots/sass/sugarpilots.scss ***!
@@ -43303,8 +43342,8 @@ function resetCursor() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
-module.exports = __webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
+__webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
+module.exports = __webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
 
 
 /***/ })

@@ -192,5 +192,25 @@ sections:
           '#fdfaf6': White
         type: select
         display: 'Background color'
+  newsletter:
+    display: Newsletter
+    fields:
+      title_newsletter:
+        type: text
+        display: Title
+        validate: required
+        width: 50
+      image_newsletter:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Image
+        validate: required
+        width: 50
+      text_newsletter:
+        type: textarea
+        display: Text
 taxonomies: true
 title: Home

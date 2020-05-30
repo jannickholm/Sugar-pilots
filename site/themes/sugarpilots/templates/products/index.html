@@ -1,4 +1,18 @@
 <div class="shop-container">
+    <nav class="webshop-sidenav">
+        <ul class="links">
+            {{ collection:categories as="category" }}
+            {{ category }}
+            <li class="expand-cursor">
+                <a href="#{{ title | slugify }}">
+                    {{ title replace="slikkepinde|" }}
+                </a>
+            </li>
+
+            {{ /category }}
+            {{ /collection:categories }}
+        </ul>
+    </nav>
     <div class="shop wrapper">
         <div class="nav-categories">
             {{ shop_category_info }}
@@ -17,33 +31,40 @@
             {{ collection:categories as="category" limit="4" }}
 
             {{ category }}
-            <h2 class="category-title" id="{{ title | slufigy }}">{{ title }}</h2>
+            <div id="{{ title | slugify }}" class="section">
+                <h2 id="{{ slug }}" class="category-title">{{ title }}</h2>
 
-            {{ collection:product product_category:is="{{ title }}" as="product" }}
-            {{ product }}
+                {{ collection:product product_category:is="{{ title }}" as="product" }}
+                {{ product }}
 
-            <div class="product-seperate">
+                <div id="{{ title | slugify }}" class="product-seperate">
 
-                <div class="product-main-left">
-                    <img src="{{ product_picture }}" alt="" />
+                    <div class="product-main-left" data-aos="fade-left" data-aos-duration="400">
+                        <img src="{{ product_picture }}" alt="produkt-billede" />
+                    </div>
+                    <div class="product-main-right {{ switch between='odd|even' }} ">
+                        <h4> {{ title }}</h4>
+                        <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
+                        <h6 class="price-tag">{{ price_tag }} kr.</h6>
+                        <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Tilføj til
+                            kurv</a>
+                    </div>
                 </div>
-                <div class="product-main-right {{ switch between='odd|even' }}">
-                    <h4> {{ title }}</h4>
-                    <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
-                    <h6 class="price-tag">{{ price_tag }} kr.</h6>
-                    <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Tilføj til kurv</a>
-                </div>
+
+                {{ /product }}
+
+                {{ /collection:product }}
+
             </div>
-
-            {{ /product }}
-
-            {{ /collection:product }}
 
             {{ /category }}
 
             {{ /collection:categories }}
 
-            {{ collection:categories as="category2" }}
+            <!-- {{ collection:categories as="category2" }}
+
+                {{ if add_parallax_to_section_webshop }} parallax-element"
+                        data-rellax-speed="{{ text_scroll_speed_webshop }} {{ /if }}
 
             <div class="gift-container">
                 {{ collection:product product_category:is="gaver" }}
@@ -63,8 +84,13 @@
 
                 {{ /collection:product }}
             </div>
-            {{ /collection:categories }}
+            {{ /collection:categories }} -->
 
         </div>
     </div>
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>

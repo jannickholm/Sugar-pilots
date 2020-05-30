@@ -23,10 +23,13 @@
 @import "./components/inspiration_list";
 @import "./components/logo_slider";
 @import "./components/single_product";
-@import "./components/products.scss";
+@import "./components/products";
+@import "./components/contact";
+@import "./components/svg-icons";
 
 
 //Frontpage
 @import "./frontpage/b2b";
 @import "./frontpage/sustainable-section";
 @import "./frontpage/lollipop_cta";
+@import "./frontpage/newsletter";
