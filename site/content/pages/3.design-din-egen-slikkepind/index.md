@@ -1,3 +1,6 @@
+intro_text: |
+  Kunne du tænke dig at designe dit helt eget unikke produkt? Måske du vil forkæle dine kære med en unik gave, eller give dine gæster en sjov og anderledes oplevelse? Så design din egen slikkepind. Vi specialdesigner både slikkepinde og gaveæsker. <br> <br>
+  Minimumsantallet er 25 personlige slikkepinde. De kan sagtens have forskellige print, men sukkermassen vil være den samme.
 sizes:
   -
     type: size
@@ -293,6 +296,7 @@ flavors:
 template: configuration/index
 menu_title: 'personlige slikkepinde'
 min_order: '25'
+success_message: 'Din din bestilling er modtaget! Vi glæder os til at levere dine personlige slikkepinde til din hoveddør'
 title: 'Design din egen slikkepind'
 fieldset: design
 id: 545dd347-4bdc-49e7-97d2-de8027a9123a

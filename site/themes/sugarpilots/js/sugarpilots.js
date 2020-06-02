@@ -2006,6 +2006,76 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      categories: [],
+      menuOpen: false
+    };
+  },
+  mounted: function mounted() {
+    this.fetchCategories();
+  },
+  methods: {
+    fetchCategories: function fetchCategories() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/!/Fetch/collection/categories").then(function (response) {
+        _this.categories = response.data.data;
+      });
+    },
+    toSlug: function toSlug(str) {
+      str = str.replace(/^\s+|\s+$/g, ""); // trim
+
+      str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+      var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;ø";
+      var to = "aaaaeeeeiiiioooouuuunc------o";
+
+      for (var i = 0, l = from.length; i < l; i++) {
+        str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
+      }
+
+      str = str.replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+      .replace(/\s+/g, "-") // collapse whitespace and replace by -
+      .replace(/-+/g, "-"); // collapse dashes
+
+      return str;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js& ***!
@@ -2501,7 +2571,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     selectedColor: "configuration/selectedColorName",
     selectedFlavor: "configuration/selectedFlavor",
     selectedText: "configuration/selectedText",
-    selectedDate: "configuration/selectedDate",
+    date: "configuration/selectedDate",
     priceForEach: "configuration/priceForEach"
   })), {}, {
     totalPrice: function totalPrice() {
@@ -2706,6 +2776,55 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     });
   },
   methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_instagram_feed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-instagram-feed */ "./node_modules/vue-instagram-feed/dist-web/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Vueinstagram: vue_instagram_feed__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    totalPost: function totalPost() {
+      if (window.innerWidth >= 769) {
+        return 8;
+      } else {
+        return 4;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      accessToken: "14467845720.bd54f22.f435671052e04a44beba7fba40e78597"
+    };
+  }
 });
 
 /***/ }),
@@ -36038,6 +36157,145 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-instagram-feed/dist-web/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vue-instagram-feed/dist-web/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+var index = {
+  name: 'VueInstagram',
+  props: {
+    count: {
+      type: Number,
+      default: 2
+    },
+    token: {
+      type: String,
+      required: true
+    }
+  },
+
+  data() {
+    return {
+      posts: [],
+      nextURL: '',
+      errorMsg: '',
+      areMorePages: false
+    };
+  },
+
+  created() {
+    this.fetchPosts();
+  },
+
+  methods: {
+    fetchPosts() {
+      var _this = this;
+
+      return _asyncToGenerator(function* () {
+        const url = _this.nextURL ? _this.nextURL : "https://api.instagram.com/v1/users/self/media/recent/?access_token=".concat(_this.token, "&count=").concat(_this.count);
+
+        try {
+          if (!window.fetch) {
+            throw new Error('This browser does not support the Fetch API natively. A polyfill is needed.');
+          }
+
+          const res = yield fetch(url);
+
+          if (!res.ok) {
+            throw res;
+          }
+
+          const parsed = yield res.json(); // check for pagination
+
+          if (Object.entries(parsed.pagination).length === 0) {
+            _this.areMorePages = false;
+          } else {
+            _this.areMorePages = true;
+            _this.nextURL = parsed.pagination.next_url;
+          }
+
+          console.log(parsed);
+          _this.nextURL = parsed.pagination.next_url;
+
+          _this.posts.push(...parsed.data);
+        } catch (err) {
+          if (err.json) {
+            const {
+              meta: {
+                code,
+                error_type,
+                error_message
+              }
+            } = yield err.json();
+            _this.errorMsg = "Error ".concat(code, " (").concat(error_type, ") : ").concat(error_message);
+          } else {
+            _this.errorMsg = err.message;
+          }
+
+          console.error(err);
+        }
+      })();
+    }
+
+  },
+
+  render() {
+    return this.$scopedSlots.default({
+      posts: this.posts,
+      errorMsg: this.errorMsg,
+      fetchMorePosts: this.fetchPosts,
+      areMorePages: this.areMorePages
+    });
+  }
+
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&":
 /*!*******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9& ***!
@@ -36104,6 +36362,82 @@ var render = function() {
             _c("p", [_vm._v(_vm._s(_vm.currentCart.length))])
           ])
         : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { class: ["categories-nav-mobile", { open: _vm.menuOpen }] },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "top",
+          on: {
+            click: function($event) {
+              _vm.menuOpen = !_vm.menuOpen
+            }
+          }
+        },
+        [
+          _c("span", {
+            staticClass: "arrow-icon",
+            attrs: { "data-feather": "chevron-up" }
+          }),
+          _vm._v(" "),
+          _c("h6", [_vm._v("Sortiment")])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "content" },
+        _vm._l(_vm.categories, function(category, index) {
+          return _c("li", { key: category.id }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" + _vm.toSlug(category.title) },
+                on: {
+                  click: function($event) {
+                    _vm.menuOpen = !_vm.menuOpen
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  _vm._s(category.title.replace("slikkepinde", "")) +
+                    "\n        "
+                ),
+                _c("span", [_vm._v("0" + _vm._s(index + 1))])
+              ]
+            )
+          ])
+        }),
+        0
+      )
     ]
   )
 }
@@ -36843,18 +37177,18 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.selectedDate,
-              expression: "selectedDate"
+              value: _vm.date,
+              expression: "date"
             }
           ],
           attrs: { type: "text", name: "delivery_date", id: "delivery_date" },
-          domProps: { value: _vm.selectedDate },
+          domProps: { value: _vm.date },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.selectedDate = $event.target.value
+              _vm.date = $event.target.value
             }
           }
         }),
@@ -37276,6 +37610,78 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Vueinstagram", {
+    attrs: { token: _vm.accessToken, count: _vm.totalPost },
+    scopedSlots: _vm._u([
+      {
+        key: "default",
+        fn: function(ref) {
+          var posts = ref.posts
+          var errorMsg = ref.errorMsg
+          return [
+            _c(
+              "div",
+              { staticClass: "instagram-feed" },
+              [
+                _vm._l(posts, function(post) {
+                  return _c("article", { key: post.id, staticClass: "post" }, [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: post.link,
+                          target: "_blank",
+                          rel: "noopener"
+                        }
+                      },
+                      [
+                        _c("button", { staticClass: "btn" }, [
+                          _vm._v("Se på instagram")
+                        ]),
+                        _vm._v(" "),
+                        _c("img", {
+                          attrs: {
+                            src: post.images.low_resolution.url,
+                            alt: "instagram"
+                          }
+                        })
+                      ]
+                    )
+                  ])
+                }),
+                _vm._v(" "),
+                errorMsg ? _c("pre", [_vm._v(_vm._s(errorMsg))]) : _vm._e()
+              ],
+              2
+            )
+          ]
+        }
+      }
+    ])
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=template&id=98d346b0&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=template&id=98d346b0&scoped=true& ***!
@@ -37291,27 +37697,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "wrapper narrow text-center logo-slider " }, [
-    _c("h4", [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "slider position-relative" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "slick",
-          { ref: "slick", attrs: { options: _vm.slickOptions } },
-          [_vm._t("logos")],
-          2
-        ),
-        _vm._v(" "),
-        _vm._m(1)
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    {
+      staticClass: "wrapper narrow text-center logo-slider ",
+      attrs: { "data-aos": "fade-up", "data-aos-duration": "1000" }
+    },
+    [
+      _c("h4", [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "slider position-relative" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "slick",
+            { ref: "slick", attrs: { options: _vm.slickOptions } },
+            [_vm._t("logos")],
+            2
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ],
+        1
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -56802,9 +57215,11 @@ module.exports = g;
 var map = {
 	"./components/Cart/AddToCart.vue": "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue",
 	"./components/Cart/CartInMenu.vue": "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue",
+	"./components/CategoriesNavigationMobile.vue": "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue",
 	"./components/Custom designer/Configuration.vue": "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue",
 	"./components/Custom designer/ConfigurationOptions.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue",
 	"./components/Custom designer/ConfigurationSummary.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue",
+	"./components/InstagramFeed.vue": "./site/themes/sugarpilots/js/components/InstagramFeed.vue",
 	"./components/LogoSlider.vue": "./site/themes/sugarpilots/js/components/LogoSlider.vue",
 	"./components/LottieAnimation.vue": "./site/themes/sugarpilots/js/components/LottieAnimation.vue",
 	"./components/NavigationToggle.vue": "./site/themes/sugarpilots/js/components/NavigationToggle.vue",
@@ -56985,6 +57400,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue":
+/*!******************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& */ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&");
+/* harmony import */ var _CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriesNavigationMobile.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriesNavigationMobile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&":
+/*!*************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -57192,6 +57676,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue":
+/*!*****************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InstagramFeed.vue?vue&type=template&id=44d74238& */ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&");
+/* harmony import */ var _InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InstagramFeed.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/InstagramFeed.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./InstagramFeed.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&":
+/*!************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./InstagramFeed.vue?vue&type=template&id=44d74238& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -57595,6 +58148,55 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./site/themes/sugarpilots/js/navigation.js":
+/*!**************************************************!*\
+  !*** ./site/themes/sugarpilots/js/navigation.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener("scroll", function () {
+  var scrollY = window.pageYOffset;
+  var navigation = document.querySelector(".main-navigation");
+  scrollY >= 200 ? navigation.classList.add("navigation-bg-white") : navigation.classList.remove("navigation-bg-white");
+});
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/scroll_animation.js":
+/*!********************************************************!*\
+  !*** ./site/themes/sugarpilots/js/scroll_animation.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("loaded");
+  var videoContainer = document.querySelector("#videoContainer");
+  var video = document.querySelector("video");
+  video.playbackRate = 2; //Scrollmagic
+
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+    duration: 11000,
+    triggerElement: videoContainer,
+    triggerHook: 0.09
+  }).setPin(videoContainer).addTo(controller); //Videoanimation
+
+  var accelamount = .1;
+  var scrollPos = 0;
+  var delay = 0;
+  scene.on("update", function (e) {
+    scrollPos = e.scrollPos / 1000;
+  });
+  setInterval(function () {
+    delay += (scrollPos - delay) * accelamount;
+    video.currentTime = delay;
+  }, 16.6);
+});
+
+/***/ }),
+
 /***/ "./site/themes/sugarpilots/js/site.js":
 /*!********************************************!*\
   !*** ./site/themes/sugarpilots/js/site.js ***!
@@ -57609,9 +58211,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var smooth_scrollbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! smooth-scrollbar */ "./node_modules/smooth-scrollbar/index.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_instagram_feed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-instagram-feed */ "./node_modules/vue-instagram-feed/dist-web/index.js");
+/* harmony import */ var smooth_scrollbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! smooth-scrollbar */ "./node_modules/smooth-scrollbar/index.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -57620,15 +58224,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_instagram_feed__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 __webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js");
 
-aos__WEBPACK_IMPORTED_MODULE_4___default.a.init({
+__webpack_require__(/*! ./navigation */ "./site/themes/sugarpilots/js/navigation.js");
+
+__webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js");
+
+__webpack_require__(/*! ./scroll_animation */ "./site/themes/sugarpilots/js/scroll_animation.js");
+
+aos__WEBPACK_IMPORTED_MODULE_5___default.a.init({
   once: false,
   mirror: false,
-  offset: 100
+  offset: 100,
+  disable: function disable() {
+    var maxWidth = 769;
+    return window.innerWidth < maxWidth;
+  }
 });
-smooth_scrollbar__WEBPACK_IMPORTED_MODULE_3__["default"].initAll({
+smooth_scrollbar__WEBPACK_IMPORTED_MODULE_4__["default"].initAll({
   // Momentum reduction damping factor, a float value between (0, 1)
   damping: .1,
   // Minimal size for scrollbar thumb.
@@ -57645,10 +58260,7 @@ smooth_scrollbar__WEBPACK_IMPORTED_MODULE_3__["default"].initAll({
   wheelEventTarget: null,
   // plugins
   plugins: {}
-});
-
-__webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js"); // import all vue components
-
+}); // import all vue components
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
 
@@ -57870,27 +58482,33 @@ var name = 'configuration';
 
 document.addEventListener("scroll", showSidenav);
 window.addEventListener('DOMContentLoaded', function () {
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      var sectionName = entry.target.getAttribute('id');
+  if (document.querySelector(".webshop-sidenav")) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var sectionName = entry.target.getAttribute('id');
 
-      if (entry.isIntersecting > 0) {
-        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
-      } else {
-        document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
-      }
+        if (entry.isIntersecting > 0) {
+          document.querySelectorAll(".webshop-sidenav .links li a").forEach(function (link) {
+            return link.classList = "";
+          });
+          document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
+        } else {
+          document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
+        }
+      });
     });
-  });
-  document.querySelectorAll('.section').forEach(function (target) {
-    observer.observe(target);
-  });
+    document.querySelectorAll('.section').forEach(function (target) {
+      observer.observe(target);
+    });
+  }
 });
 
 function showSidenav() {
-  var scrollY = window.pageYOffset;
-  var nav = document.querySelector(".webshop-sidenav");
-  scrollY >= 365 ? nav.classList.add("show-sidenav") : "";
-  scrollY < 365 ? nav.classList.remove("show-sidenav") : "";
+  if (document.querySelector(".webshop-sidenav")) {
+    var scrollY = window.pageYOffset;
+    var nav = document.querySelector(".webshop-sidenav");
+    scrollY >= 365 ? nav.classList.add("show-sidenav") : nav.classList.remove("show-sidenav");
+  }
 }
 
 /***/ }),
@@ -57902,7 +58520,7 @@ function showSidenav() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable.\n  ╷\n3 │ @import url($assets);\n  │             ^^^^^^^\n  ╵\n  /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss 3:13  root stylesheet\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:87584:16)\n    at _render_closure1.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:77359:12)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:13333:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:15991:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

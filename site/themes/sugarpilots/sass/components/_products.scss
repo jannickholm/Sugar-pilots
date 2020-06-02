@@ -1,145 +1,44 @@
 .shop-container {
+  .webshop-sidenav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+    display: none;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      writing-mode: vertical-rl;
+
+      & > * {
+        margin-bottom: 30px;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  .show-sidenav {
+    @include md {
+      display: flex;
+    }
+    transition: 1s all;
+  }
+
   .nav-categories {
-    display: grid;
+    display: none;
     grid-gap: 20px;
     align-items: center;
     justify-items: center;
     margin-top: 100px;
-
-    .nav-categories {
-        display:  grid;
-        grid-gap: 20px;
-        .shop-container {
-
-            .nav-categories {
-            
-                display:  grid;
-                grid-gap: 20px;
-                align-items: center;
-                justify-items: center;
-                margin-top: 100px;
-            
-            @include s {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-                @include lg {
-                grid-template-columns: repeat(6, 1fr);
-            }
-            
-                .shop-categories {
-                    text-align: center;
-            
-                    img {
-                        min-height: 200px;
-                        max-height: 200px;
-                        height: 100%;
-                        min-width: 140px;
-                        object-fit: cover;
-                        -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-                        -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-                        box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-                    }
-            
-                    p {
-                        margin-top: 10px;
-                        padding-bottom: 0.5rem;
-                    }
-            
-                }
-            }
-            
-            .products-wrapper {
-                text-align: center;
-                margin-top: 60px;
-            
-                .category-title {
-                 margin-top: 100px; 
-                 margin-bottom: 2rem;  
-                }
-            
-                .product-seperate {
-            
-            display: flex;
-            justify-content: center;
-            align-items: initial;
-            text-align: left;
-            padding: 20px;
-            flex-direction: column;
-            
-            @include s { 
-                flex-direction: row;
-                margin: 0 8rem;
-                align-items: center;
-            }
-            
-                    .product-main-left img {
-                      max-width: 400px;
-                      vertical-align: middle;
-                      max-height: 400px;
-                      object-fit: cover;
-                    }
-            
-                    .product-main-right {
-                        max-width: 450px;
-                        margin-left: 2rem;
-                        text-transform: capitalize;
-                        width: 40%;
-            
-                        h5 {
-                            @include font-size(18px, 24px); 
-                        }
-            
-                    }
-               
-                .even {
-                    @include s {
-                    order: -1;
-                    text-align: right;
-                    margin-right: 2em;
-                    }  
-                }
-            
-                .odd {
-                    margin-left: 2rem;
-                }
-            }
-            
-            .gift-container {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 30px;
-                padding: 1rem 0 1rem 10rem;
-            
-                .gift-wrapper {
-                    display: flex;
-                    flex-direction: column;
-            
-                    .gift-main-bottom {
-                        text-align: left;
-                        padding: 1rem;
-            
-                        h5, h6 {
-                            @include font-size(18px, 24px); 
-                        }
-                    }
-                }
-            }
-            
-            }
-            }
-        align-items: center;
-        justify-items: center;
-        margin-top: 100px;
-    
-    @include s {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     @include lg {
-      grid-template-columns: repeat(6, 1fr);
+      display: grid;
     }
-
     .shop-categories {
       text-align: center;
 
@@ -156,6 +55,78 @@
         margin-top: 10px;
         padding-bottom: 0.5rem;
       }
+    }
+  }
+
+  .categories-nav-mobile {
+    position: fixed;
+    z-index: 2;
+    bottom: -33%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    background-color: pink;
+    padding: 2rem;
+    padding-top: 1rem;
+    transition: bottom 0.4s ease-in-out;
+
+    @include lg {
+      display: none;
+    }
+  
+    .arrow-icon {
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    &.open {
+      bottom: 0;
+  
+      .arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+  
+    .top {
+      max-width: 80%;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .content {
+      max-width: 80%;
+      margin: auto;
+      li {
+        a {
+          font-size: 1.2rem;
+          font-weight: 900;
+          display: flex;
+          justify-content: space-between;
+  
+          span {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .shop-categories {
+    text-align: center;
+
+    img {
+      min-height: 200px;
+      max-height: 200px;
+      height: 100%;
+      min-width: 140px;
+      object-fit: cover;
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    p {
+      margin-top: 10px;
+      padding-bottom: 0.5rem;
     }
   }
 
@@ -196,7 +167,7 @@
         margin-top: 1rem;
 
         @include md {
-            margin-top: 0;
+          margin-top: 0;
         }
 
         h5 {
@@ -224,6 +195,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 30px;
+      max-width: 1070px;
+      margin: auto;
 
       .gift-wrapper {
         display: flex;

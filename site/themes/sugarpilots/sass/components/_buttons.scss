@@ -1,4 +1,5 @@
-button.btn, a.btn {
+button.btn,
+a.btn {
   border-radius: 0px;
   position: relative;
   z-index: 2;
@@ -22,10 +23,9 @@ button.btn, a.btn {
 
   &.right::before {
     left: 0;
-  }
-  @include md {
-    &.right::before {
+    @include md {
       right: 0;
+      left: unset;
     }
   }
 

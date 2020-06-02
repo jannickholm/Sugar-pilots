@@ -9,8 +9,7 @@
     position: absolute;
     width: 110%;
     height: 45%;
-    border-radius: 5px;
-    top: 30%;
+    bottom: 15%;
     left: 0;
     background-color: #fbbdc6;
     z-index: -1;
@@ -25,10 +24,9 @@
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 45%;
-    border-radius: 5px;
-    top: 30%;
+    bottom: 15%;
     left: 0;
     background-color: #fbbdc6;
     z-index: -1;
@@ -43,10 +41,9 @@
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 45%;
-    border-radius: 5px;
-    top: 30%;
+    bottom: 15%;
     left: 0;
     background-color: #fbbdc6;
     z-index: -1;
@@ -63,11 +60,10 @@
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 45%;
-    border-radius: 5px;
-    top: 30%;
-    left: 0;
+    bottom: 15%;
+    right: 0;
     background-color: #fbbdc6;
     z-index: -1;
     transition: max-width 0.3s ease-in-out;
@@ -83,13 +79,12 @@
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 45%;
-    border-radius: 5px;
-    top: 30%;
+    bottom: 15%;
     left: 0;
     background-color: #fbbdc6;
     z-index: -1;
     transition: max-width 0.3s ease-in-out;
-  }
+}
 }

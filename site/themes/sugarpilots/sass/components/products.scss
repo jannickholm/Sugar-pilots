@@ -1,96 +1,69 @@
 .shop-container {
-    position: relative;
+  position: relative;
 
-    .webshop-sidenav {
-        position: fixed;
-        top: 15%;
-        left: 2%;
-        scroll-behavior: smooth;
-        display: none;
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                writing-mode: vertical-rl;
-        
-                & > * {
-                    margin-bottom: 30px;
-                    text-shadow: 4px 4px 10px rgba(0,0,0,0.05);
-                }
-            }
-        }
-
-        .active {
-            font-weight: bold;
-        }
-
-        .show-sidenav {
-            display: flex;
-            transition: 1s all;
-        }
-
-.nav-categories {
-    display:  grid;
+  .nav-categories {
+    display: grid;
     grid-gap: 20px;
     align-items: center;
     justify-items: center;
     margin-top: 100px;
 
-@include s {
-    grid-template-columns: repeat(3, 1fr);
-}
+    @include s {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include lg {
-    grid-template-columns: repeat(6, 1fr);
-}
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     .shop-categories {
-        text-align: center;
+      text-align: center;
 
-        img {
-            min-height: 200px;
-            max-height: 200px;
-            height: 100%;
-            min-width: 140px;
-            object-fit: cover;
-            -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-            -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-            box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.05);
-        }
+      img {
+        min-height: 200px;
+        max-height: 200px;
+        height: 100%;
+        min-width: 140px;
+        object-fit: cover;
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+      }
 
-        p {
-            margin-top: 10px;
-            padding-bottom: 0.5rem;
-        }
+      p {
+        margin-top: 10px;
+        padding-bottom: 0.5rem;
+      }
     }
-}
+  }
 
-.products-wrapper {
+  .products-wrapper {
     text-align: center;
     margin-top: 60px;
 
     .section {
-        padding-top: 100px; 
-        scroll-snap-type: mandatory;
-        scroll-padding-top: 80px;
+      padding-top: 100px;
+      scroll-snap-type: mandatory;
+      scroll-padding-top: 80px;
 
-    .category-title {
-     margin-bottom: 2rem;  
-    }
+      .category-title {
+        margin-bottom: 2rem;
+      }
 
-    .product-seperate {
-display: flex;
-justify-content: center;
-align-items: initial;
-text-align: left;
-padding: 20px;
-flex-direction: column;
+      .product-seperate {
+        display: flex;
+        justify-content: center;
+        align-items: initial;
+        text-align: left;
+        padding: 20px;
+        flex-direction: column;
 
-@include s { 
-    flex-direction: row;
-    margin: 0 8rem;
-    align-items: center;
-}
+        @include s {
+          flex-direction: row;
+          margin: 0 8rem;
+          align-items: center;
+        }
 
         .product-main-left img {
           max-width: 400px;
@@ -98,37 +71,37 @@ flex-direction: column;
           max-height: 400px;
           object-fit: cover;
         }
-    
+
         .odd {
-            margin-left: 2rem;
+          margin-left: 2rem;
         }
-    }
+      }
 
-    .odd {
+      .odd {
         margin-left: 2rem;
+      }
     }
-}
-}
+  }
 
-.gift-container {
+  .gift-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     padding: 1rem 0 1rem 10rem;
 
     .gift-wrapper {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-        .gift-main-bottom {
-            text-align: left;
-            padding: 1rem;
+      .gift-main-bottom {
+        text-align: left;
+        padding: 1rem;
 
-            h5, h6 {
-                @include font-size(18px, 24px); 
-            }
+        h5,
+        h6 {
+          @include font-size(18px, 24px);
         }
+      }
     }
-    
-    }
-    }
+  }
+}

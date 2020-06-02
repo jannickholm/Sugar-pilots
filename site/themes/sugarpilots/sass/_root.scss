@@ -14,7 +14,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative; 
-  background-color: $white;
   box-sizing: border-box;
 
   &.no-scroll {
@@ -22,8 +21,15 @@ body {
   }
 }
 
+
+.newsletter-alert {
+  width: 100%;
+  bottom: 0;
+}
+
 a:hover {
   text-decoration: none;
+  color: black;
 }
 
 img {

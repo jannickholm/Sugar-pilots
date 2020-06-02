@@ -1,34 +1,27 @@
-<div class="shop-container">
+<div class="shop-container wrapper">
     <nav class="webshop-sidenav">
         <ul class="links">
-            {{ collection:categories as="category" }}
-            {{ category }}
+            {{ collection:categories }}
             <li class="expand-cursor">
                 <a href="#{{ title | slugify }}">
                     {{ title replace="slikkepinde|" }}
                 </a>
             </li>
-
-            {{ /category }}
             {{ /collection:categories }}
         </ul>
     </nav>
     <div class="shop wrapper">
         <div class="nav-categories">
-            {{ shop_category_info }}
-
-            <a href="#{{ shop_category_name | slugify }}">
+          {{ collection:categories }}
+            <a href="#{{ title | slugify }}">
                 <div class="shop-categories" style="background-color: {{ background_color }};">
-                    <img src="{{ shop_image }}" alt="" />
-                    <p>{{ shop_category_name }}</p>
+                    <img src="{{ category_image }}" alt="" />
+                    <p>{{ title }}</p>
                 </div>
             </a>
-
-            {{ /shop_category_info }}
+          {{ /collection:categories }}
         </div>
-        {{ /collection:categories }}
-      </a>
-    </div>
+        
 
     <div class="products-wrapper">
       {{ collection:categories as="category" }} {{ category }} {{ if title !=
@@ -38,11 +31,11 @@
 
         {{ collection:product product_category:is="{{ title }}" as="product" }}
         {{ product }}
-        <div class="product-seperate {{ switch between='right|left' }}" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700">
+        <div class="product-seperate {{ switch between='right|left' }}">
           <div class="product-main-left">
-            <img src="{{ product_picture }}" alt="" />
+            <img src="{{ product_picture }}" alt="" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700" />
           </div>
-          <div class="product-main-right {{ switch between='odd|even' }}">
+          <div class="product-main-right {{ switch between='odd|even' }}" data-aos="{{ switch between='fade-left|fade-right' }}" data-aos-duration="700">
             <h4>{{ title }}</h4>
             <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
@@ -57,11 +50,12 @@
       </div>
       {{ /if }} 
       {{ /category }} 
-      {{ /collection:categories }} {{ collection:categories as="category" }} 
+      {{ /collection:categories }}
+      {{ collection:categories as="category" }} 
       {{category}} 
       {{ if title == "Gaver" }}
-      <h1 class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
-      <div class="gift-container" data-aos="fade-up" data-aos-duration="1000">
+      <h1 id="{{ title | slugify }}" class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
+      <div id="{{ title | slugify }}" class="gift-container section" data-aos="fade-up" data-aos-duration="1000">
         {{ collection:product product_category:is="{{ title }}" as="product" }}
         {{product}}
         <div class="gift-wrapper">
@@ -71,14 +65,14 @@
           <div class="gift-main-bottom">
             <h5>{{ title }}</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
-            <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
           </div>
         </div>
         {{/product}} {{ /collection:product }}
       </div>
       {{ elseif title == "Søde hilsner" }}
-      <h1 class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
-      <div class="gift-container" data-aos="fade-up" data-aos-duration="1000">
+      <h1 id="{{ title | slugify }}" class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
+      <div id="{{ title | slugify }}" class="gift-container section" data-aos="fade-up" data-aos-duration="1000">
         {{ collection:product product_category:is="{{ title }}" as="product" }}
         {{product}}
         <div class="gift-wrapper">
@@ -88,7 +82,7 @@
           <div class="gift-main-bottom">
             <h5>{{ title }}</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
-            <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
+            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
           </div>
         </div>
         {{/product}} {{ /collection:product }}
@@ -96,4 +90,6 @@
       {{ /if }} {{/category}} {{ /collection:categories }}
     </div>
   </div>
+  <categories-navigation-mobile>
+  </categories-navigation-mobile>
 </div>

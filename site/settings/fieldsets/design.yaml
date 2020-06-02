@@ -2,6 +2,9 @@ sections:
   main:
     display: Main
     fields:
+      intro_text:
+        type: textarea
+        display: 'Intro text'
       sizes:
         sets:
           size:
@@ -77,5 +80,8 @@ sections:
       min_order:
         type: text
         display: 'Min order'
+      success_message:
+        type: textarea
+        display: 'Din bestilling er modtaget besked'
 taxonomies: true
 title: 'P: Design din egen slikkepind'

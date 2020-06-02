@@ -1,12 +1,10 @@
 
 
-<h1 class="text-center mb-2 custom-order-title">Design din egen slikkepind</h1>
-<p class="text-center mb-4 col-12 col-md-6 mx-auto">Kunne du tænke dig at designe dit helt eget unikke produkt? Måske du vil forkæle dine kære med en unik gave, eller give dine gæster en sjov og anderledes oplevelse? Så design din egen slikkepind. 
-Vi specialdesigner både slikkepinde og gaveæsker.</p>  
+<h1 class="text-center mb-2 custom-order-title">{{ title }}</h1>
+<p class="text-center mb-4 col-12 col-md-6 mx-auto"> {{ intro_text }}</p>  
 {{ form:create in="custom-order"}}
 {{ if success }}
-        <div class="alert alert-success col-md-8 col-12 mx-auto">
-            Din din bestilling er modtaget! Vi glæder os til at levere dine personlige slikkepinde til din hoveddør        </div>
+<div class="alert alert-success col-md-8 col-12 mx-auto">{{ success_message }}</div>
 {{ /if }}
 {{ /form:create }}
 <configuration></configuration>

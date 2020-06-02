@@ -17,6 +17,10 @@ footer {
         margin-bottom: 2rem;
       }
 
+      .footer-section.links li {
+        text-transform: capitalize;
+      }
+
       .icon {
         margin-right: 0.3rem;
         svg.feather {

@@ -275,7 +275,7 @@
           type="text"
           name="delivery_date"
           id="delivery_date"
-          v-model="selectedDate"
+          v-model="date"
         />
         <input
           type="text"
@@ -427,7 +427,7 @@ export default {
       selectedColor: "configuration/selectedColorName",
       selectedFlavor: "configuration/selectedFlavor",
       selectedText: "configuration/selectedText",
-      selectedDate: "configuration/selectedDate",
+      date: "configuration/selectedDate",
       priceForEach: "configuration/priceForEach",
     }),
     totalPrice() {

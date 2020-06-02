@@ -2,14 +2,23 @@
 import Rellax from 'rellax';
 import Vue from 'vue';
 import Vuex from 'vuex';
+import VueInstagram from 'vue-instagram-feed';
 import Scrollbar from 'smooth-scrollbar';
 import AOS from 'aos';
 Vue.use(Vuex);
+Vue.use(VueInstagram);
 require("./cursor");
+require("./navigation");
+require("./webshop");
+require("./scroll_animation");
 AOS.init({
     once: false,
     mirror: false,
-    offset: 100
+    offset: 100,
+    disable: function() {
+        var maxWidth = 769;
+        return window.innerWidth < maxWidth;
+      }
 });
 
 Scrollbar.initAll({
@@ -39,7 +48,7 @@ Scrollbar.initAll({
     
   });
 
-require("./webshop");
+
 
 // import all vue components
 const files = require.context('./', true, /\.vue$/i);

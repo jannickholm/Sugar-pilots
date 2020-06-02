@@ -1,6 +1,5 @@
 .product-slide {
   max-width: 300px;
-
   img {
       margin-bottom: 1rem;
   }
@@ -19,4 +18,9 @@
     font-weight: 700;
     @include font-size(13px, 20px);
   }
+}
+
+.slick-slide > div {
+  display: grid;
+  justify-items: center;
 }
