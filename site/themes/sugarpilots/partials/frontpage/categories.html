@@ -1,4 +1,4 @@
-<div class="categories">
+<div class="categories" data-aos="fade-up" data-aos-duration="1000">
   <div class="wrapper narrow">
     <div class="content">
       <h2 class="text-center">{{ assortment_title }}</h2>
@@ -6,13 +6,13 @@
         {{ collection:categories }}
         {{ if show_on_frontpage }}
         <div id="{{ title | slugify }}-{{ id }}" class="product-block">
-          <div class="main-left {{ switch between='order| ' }}">
+          <div class="main-left {{ switch between='order| ' }}" data-aos="{{ switch between='fade-left|fade-right' }}" data-aos-duration="700">
             <h4>{{ title }}</h4>
             <p>{{ category_text }}</p>
             <a href="/products#{{ title | slugify }}" class="btn expand-cursor {{ switch between='|right' }}">Se mere</a>
           </div>
           <div class="main-right">
-            <img src="{{ category_image }}" alt="">
+            <img src="{{ category_image }}" alt="" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700">
           </div>
         </div>
         {{ /if }}

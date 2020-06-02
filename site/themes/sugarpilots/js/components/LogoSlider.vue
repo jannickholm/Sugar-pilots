@@ -1,14 +1,14 @@
 <template>
-  <div class="wrapper narrow text-center logo-slider ">
+  <div class="wrapper narrow text-center logo-slider " data-aos="fade-up" data-aos-duration="1000">
     <h4>{{ title }}</h4>
     <div class="slider position-relative">
-    <div class="prev">
+    <div class="prev expand-cursor">
       <span data-feather="chevron-left"></span>
     </div>
     <slick ref="slick" :options="slickOptions">
       <slot name="logos" />
     </slick>
-    <div class="next">
+    <div class="next expand-cursor">
       <span data-feather="chevron-right"></span>
     </div>
     </div>

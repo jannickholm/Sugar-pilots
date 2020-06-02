@@ -26,7 +26,10 @@
       }
       max-width: max-content;
       display: grid;
+      grid-template: 1fr 1fr;
+      @include md {
       grid-template: 1fr 1fr / 1fr 1fr;
+    }
     }
 
     .main-left {

@@ -1,4 +1,5 @@
-button.btn, a.btn {
+button.btn,
+a.btn {
   border-radius: 0px;
   position: relative;
   z-index: 2;
@@ -19,8 +20,13 @@ button.btn, a.btn {
   &:not(.right)::before {
     left: 0;
   }
+
   &.right::before {
-    right: 0;
+    left: 0;
+    @include md {
+      right: 0;
+      left: unset;
+    }
   }
 
   &:hover {
@@ -51,4 +57,144 @@ button.btn, a.btn {
       right: -50px;
     }
   }
+}
+
+button.btn {
+  background-color: $pink;
+  display: block;
+  appearance: none;
+  margin: auto;
+  font-weight: 500;
+}
+
+button.button-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.button-icon {
+  width: 12rem;
+  height: auto;
+}
+
+button.button-icon.large {
+  width: 17rem;
+}
+
+button.button-icon .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: $pink;
+  border-radius: 0px;
+}
+button.button-icon .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.button-icon .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.button-icon .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+button.button-icon .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 1;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 115%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+// Menu toggle
+
+.menu-toggle {
+  position: relative;
+  z-index: 9;
+  display: block;
+  width: 30px;
+  height: 26px;
+  background: transparent;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  color: #333;
+  font-size: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.menu-toggle:before,
+.menu-toggle:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease-in-out;
+}
+
+.menu-toggle.is-active {
+  border-color: transparent;
+}
+.menu-toggle.is-active:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.menu-toggle.is-active:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }

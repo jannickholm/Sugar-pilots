@@ -1,8 +1,8 @@
 about_subtitle: 'Fra idé til virkelighed'
 about_description: |
-  Hos Sugar Pilots tager vi skridtet videre og udforsker den søde verden. Vi nytænker hvordan slikkepinde kan nydes og gør op med de klassiske smage. Vi brænder for at skabe nye smage og flotte, interessante looks, der alle er med til at give en lækker og sjov oplevelse. 
-  Vores mission er at tage kunden med på en spændende rejse og give dem et indblik i forskellige landes kulinariske oplevelser og byde dem velkommen ind i den søde verden.
-about_img_1: /assets/p1260816-1590571048.jpg
+  Hos Sugar Pilots tager vi skridtet videre og udforsker den søde verden. Vi nytænker hvordan slikkepinde kan nydes og gør op med de klassiske smage. Vi brænder for at skabe nye smage og flotte, interessante looks, der alle er med til at give en lækker og sjov oplevelse.  <br>
+  Vores vision er at tage kunden med på en spændende rejse og give dem et indblik i forskellige landes kulinariske oplevelser og byde dem velkommen ind i den søde verden.
+about_img_1: /assets/_mg_8905-(1)-1590609353.jpg
 add_parallax_to_section_contact: true
 image_scroll_speed_contact: '1.5'
 text_scroll_speed_contact: '0'
@@ -19,6 +19,7 @@ about_charlotte: |
   Bedste hilsner <br>
   Charlotte Nørgaard
 about_img: /assets/sugarpilots_charlotte_web-1-1590571191.png
+menu_title: 'om sugarpilots'
 contact_title: 'Har du nogle spørgsmål? <br>Kontakt os med det samme.'
 contact_description: |
   Har du spørgsmål til os, vil du være forhandler eller handler du ind som erhverv, så kontakt os allerede i dag. Vi glæder os til at høre fra dig og sidder klar til at hjælpe, når vi ikke koger slikkepinde.
@@ -39,7 +40,7 @@ adresse_2:
   - '2200 København N'
   - booking@sugarpilots.com
   - 'NB! Aftal på forhånd hvis I ønsker at komme forbi, vi er her ikke altid.'
-contact_tlf: '26712734'
+contact_tlf: '26 71 27 34'
 text_scrool_speed_contact: '-2'
 text_scrool_spedd_contact: '-2'
 contact_subtitle: 'Fra idé til virkelighed'

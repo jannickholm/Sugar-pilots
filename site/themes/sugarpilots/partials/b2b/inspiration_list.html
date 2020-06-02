@@ -1,4 +1,4 @@
-<div class="inspiration-list">
+<div class="inspiration-list" data-aos="fade-up" data-aos-duration="1000">
     <div class="wrapper">
         <div class="content">
             {{ inspiration_list }}
@@ -6,7 +6,7 @@
                     <img src="{{ inspiration_image }}" alt="">
                     <div class="text">
                         <h6>{{ inspiration_title }}</h6>
-                        <p class="short-text">{{ inspiration_text | safe_truncate:135:... }}</p>
+                        <p class="short-text">{{ inspiration_text | safe_truncate:130:... }}</p>
                         <p class="normal-text">{{ inspiration_text }}</p>
                     </div>
                 </div>

@@ -1,25 +1,14 @@
-<section class="newsletter wrapper narrow">
+<section class="newsletter">
     <div class="newsletter-txt">
         <h1 class="title-newsletter">{{ title_newsletter }}</h1>
         <p class="paragraph-newsletter">{{ text_newsletter }}</p>
-
-        <form name="formNewsletter" onsubmit="change()" method="post">
-            <input type="email" name="name" placeholder="Fx. ida@gmail.com"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-            <label for=" name">Din e-mail</label>
-            <input type="submit" value="Tilmeld dig">
-        </form>
-
-
+        {{ form:create in="newsletter" }}
+        <input type="email" name="email" id="email" value="{{ old:email }}" placeholder="Fx. ida@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+        <label for="email">Din e-mail</label>
+        <input type="submit" value="Tilmeld dig">
+        {{ /form:create }}
     </div>
-    <div class=" newsletter-image">
-        <img src="{{ image_newsletter }}" alt="billede af en slikkepind">
+    <div class=" newsletter-image" style="background-image: url({{ image_newsletter }});">
     </div>
 </section>
 
-<script>
-    function change() {
-        document.querySelector('.title-newsletter').innerHTML = 'Tak for din tilmelding';
-        document.querySelector('.paragraph-newsletter').innerHTML = 'indsæt noget andet end lorem ipsum tekst. Noget som fanger brugeren';
-    }
-</script>

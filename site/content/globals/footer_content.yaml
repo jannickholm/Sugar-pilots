@@ -4,27 +4,6 @@ kitchen_address: 'Tagensvej 85F'
 email_address: booking@sugarpilots.com
 legal_name: 'Sugar Pilots ApS'
 payment_options: /assets/betalingsikoner-removebg-preview-1.png
-links:
-  -
-    type: ekstra_link
-    link_label: 'Om Sugarpilots'
-    link_url: /about
-  -
-    type: ekstra_link
-    link_label: 'Persondatapolitik & Cookies'
-    link_url: /cookies
-  -
-    type: ekstra_link
-    link_label: Handelsbetingelser
-    link_url: /terms
-  -
-    type: ekstra_link
-    link_label: 'Min konto'
-    link_url: /account
-  -
-    type: ekstra_link
-    link_label: Kurv
-    link_url: /cart
 social_medias:
   -
     type: social_media

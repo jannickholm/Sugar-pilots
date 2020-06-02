@@ -1,22 +1,129 @@
+
 .main-navigation {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  justify-items: center;
-  padding: 2rem 0;
-  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 999;
+  background-color: $white;
+  transition: all .3s;
+
+  @include lg {
+    background-color: transparent;
+    justify-items: center;
+    padding: 1.5rem 2rem;
+    grid-template-columns: auto 1fr auto;
+    display: grid;
+    &.navigation-bg-white {
+      background-color: $white;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 12;
+    img {
+      max-width: 100px;
+    }
+  }
 
   ul.links {
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: auto auto auto;
     list-style: none;
-    grid-column-gap: 4em;
+
+    &.desktop {
+      display: none;
+      @include lg {
+        display: grid;
+        grid-column-gap: 4em;
+        align-items: center;
+        grid-template-columns: auto auto auto auto;
+      }
+
+      li {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 10%;
+          bottom: 0;
+          background-color: #fbbdc6;
+          z-index: -1;
+          transition: max-width 0.3s ease-in-out;
+        }
+
+        &.active {
+          a {
+            font-weight: 600;
+          }
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &.mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: fill-available;
+      padding: 1.5rem;
+      padding-top: 100px;
+      background-color: hsla(350, 100%, 89%, 1);
+      transition: transform 0.4s ease-in-out;
+      transform: translateX(-100%);
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  .cart {
+    cursor: not-allowed;
+    align-items: center;
+    position: relative;
+    z-index: 12;
+  }
+}
+
+.menu-toggle.is-active ~ .mobile-menu {
+  transform: translateX(0%) !important;
+}
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+
+  li {
+    writing-mode: tb;
+    a {
+      &.active {
+        font-weight: 900;
+      }
+    }
   }
 }

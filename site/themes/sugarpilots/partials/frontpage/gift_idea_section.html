@@ -1,0 +1,20 @@
+<div class="gift-idea mt-5 text-center">
+  <div class="wrapper">
+    <div class="gift-idea-top mb-4">
+      <h2>{{ gift_idea_title }}</h2>
+      <p>{{ gift_idea_text }}</p>
+    </div>
+    <div class="gift-idea-images">
+        {{ collection:product product_category:is="gaver" limit="4"}}
+        <a href="{{ url }}" class="gift" style="background-image: url({{ product_picture }});">
+          <div class="content">
+            <h6>{{ title }}</h6>
+          </div>
+          <div class="gift-overlay"></div>
+        </a>
+        <h6 class="mt-2 hide--medium--up">{{ title }}</h6>
+        {{ /collection:product }}
+    </div>
+    <a class="btn mt-5" href="/shop#gave-ideer">Se alle gaveideer</a>
+  </div>
+</div>

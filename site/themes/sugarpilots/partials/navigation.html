@@ -1,15 +1,30 @@
-<nav class="main-navigation wrapper">
+<nav class="main-navigation">
+  <navigation-toggle></navigation-toggle>
   <div class="logo">
-    <a href="{{ env:APP_URL }}" class="expand-cursor">sugarpilots</a>
+    <a href="{{ env:APP_URL }}" class="expand-cursor">
+      <img src="{{ site_logo }}" alt="">
+    </a>
   </div>
-  <ul class="links">
+  
+  <ul class="links desktop">
     {{ nav from="/" }}
-    <li class="expand-cursor">
+    <li class="expand-cursor {{ if is_current || is_parent }}active{{ /if }}">
       <a href="{{ url }}">
         {{ if menu_title }} {{ menu_title }} {{ else }} {{ title }} {{ /if }}
       </a>
     </li>
     {{ /nav }}
   </ul>
-  <div class="cart" data-feather="shopping-bag"></div>
+<cart-in-menu></cart-in-menu>
+  <ul class="mobile-menu links">
+    {{ nav from="/" }}
+      <li class="expand-cursor {{ if is_current || is_parent }}active{{ /if }}">
+        <a href="{{ url }}">
+          {{ if menu_title }} {{ menu_title }} {{ else }} {{ title }} {{ /if }}
+        </a>
+      </li>
+      {{ /nav }}
+  </ul>
 </nav>
+
+

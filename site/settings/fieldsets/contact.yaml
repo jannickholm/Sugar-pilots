@@ -64,7 +64,10 @@ sections:
         display: Billede
   sidebar:
     display: Sidebar
-    fields: {  }
+    fields:
+      menu_title:
+        type: text
+        display: 'Menu title'
   kontakt:
     display: Kontakt
     fields:

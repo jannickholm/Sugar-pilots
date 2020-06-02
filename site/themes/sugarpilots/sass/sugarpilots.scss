@@ -6,6 +6,7 @@
 @import "./icons";
 @import "./global/breakpoints";
 @import "./root";
+@import "./utilities";
 
 //Globals
 @import "./global/mixins";
@@ -24,8 +25,13 @@
 @import "./components/logo_slider";
 @import "./components/single_product";
 @import "./components/products";
+@import "./components/instagram-feed";
+@import "./components/product_slider";
+@import "./components/pricetag";
+@import './components/configuration';
 @import "./components/contact";
 @import "./components/svg-icons";
+@import "./components/scroll_video";
 
 
 //Frontpage
@@ -33,3 +39,4 @@
 @import "./frontpage/sustainable-section";
 @import "./frontpage/lollipop_cta";
 @import "./frontpage/newsletter";
+@import "./frontpage/gift_ideas";
