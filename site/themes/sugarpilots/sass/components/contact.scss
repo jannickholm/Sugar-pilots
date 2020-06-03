@@ -98,13 +98,15 @@
       }
 
       img {
-        max-height: 300px;
+        max-height: 350px;
         max-width: 350px;
         object-fit: cover;
+        margin-bottom: 1rem;
 
         @include s {
           max-height: 500px;
           max-width: 450px;
+          margin-bottom: unset;
         }
       }
 
@@ -145,7 +147,7 @@
 
   @include md {
     flex-direction: initial;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .contact-txt {
@@ -162,9 +164,11 @@
     max-width: 350px;
     margin: 50px auto;
     text-align: center;
+    display: none;
     @include md {
       margin: 0px 0 0 0;
       text-align: left;
+      display: block;
     }
 
     .adresse-2 {

@@ -1,31 +1,38 @@
-window.addEventListener("DOMContentLoaded", () => {
-    console.log("loaded")
+window.addEventListener("DOMContentLoaded", start);
+import ScrollMagic from "scrollmagic";
+
+function start() {
   const videoContainer = document.querySelector("#videoContainer");
   const video = document.querySelector("video");
-  video.playbackRate = 2;
-  //Scrollmagic
-  const controller = new ScrollMagic.Controller();
+  let orientation =
+    (screen.orientation || {}).type ||
+    screen.mozOrientation ||
+    screen.msOrientation;
+  if (orientation == "landscape-primary" && videoContainer) {
+    //SCROLLMAGIC
+    const controller = new ScrollMagic.Controller();
 
-  const scene = new ScrollMagic.Scene({
-    duration: 11000,
-    triggerElement: videoContainer,
-    triggerHook: 0.09,
-  })
-    .setPin(videoContainer)
-    .addTo(controller);
+    //Scenes
+    let scene = new ScrollMagic.Scene({
+      duration: 11052,
+      triggerElement: videoContainer,
+      triggerHook: 0,
+    })
+      .setPin(videoContainer)
+      .addTo(controller);
 
-  //Videoanimation
+    //Video Animation
+    let accelamount = 0.1;
+    let scrollpos = 0;
+    let delay = 0;
 
-  let accelamount = .1;
-  let scrollPos = 0;
-  let delay = 0;
+    scene.on("update", (e) => {
+      scrollpos = e.scrollPos / 1000;
+    });
 
-  scene.on("update", (e) => {
-    scrollPos = e.scrollPos / 1000;
-  });
-
-  setInterval(() => {
-    delay += (scrollPos - delay) * accelamount;
-    video.currentTime = delay;
-  }, 16.6);
-});
+    setInterval(() => {
+      delay += (scrollpos - delay) * accelamount;
+      video.currentTime = delay;
+    }, 33.3);
+  }
+}

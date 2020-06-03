@@ -25,7 +25,7 @@ export default {
           if(window.innerWidth >= 769) {
               return 8;
           } else {
-              return 4;
+              return 2;
           }
       }
   },

@@ -1,5 +1,5 @@
 header_image: /assets/sugarpilots_watermelon_shop-1-1.png
-header_title: 'VI KOGER SLIKKEPINDE TIL NOGLE AF DE DEJLIGSTE BRANDS'
+header_title: 'Vi koger slikkepinde til nogle af de dejligste brands'
 header_text: |
   Hos Sugar Pilots laver vi slikkepinde tilpasset dine ønsker og behov. Det kan være til både events, som en fast del af jeres sortiment eller som små firmagaver med logo til jeres kunder. Der er mange muligheder for at få lavet noget helt unikt, og det er kun fantasien der sætter grænser. <br> <br>
   Lad jer blive inspireret herunder.

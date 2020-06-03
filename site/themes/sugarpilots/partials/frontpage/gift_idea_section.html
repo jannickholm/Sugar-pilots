@@ -3,6 +3,7 @@
     <div class="gift-idea-top mb-4">
       <h2>{{ gift_idea_title }}</h2>
       <p>{{ gift_idea_text }}</p>
+      <a class="btn mt-3 hide--medium--up" href="/shop#gave-ideer">Se alle gaveideer</a>
     </div>
     <div class="gift-idea-images">
         {{ collection:product product_category:is="gaver" limit="4"}}
@@ -12,9 +13,9 @@
           </div>
           <div class="gift-overlay"></div>
         </a>
-        <h6 class="mt-2 hide--medium--up">{{ title }}</h6>
+        <h6 class="mt-3 mb-5 hide--medium--up">{{ title }}</h6>
         {{ /collection:product }}
     </div>
-    <a class="btn mt-5" href="/shop#gave-ideer">Se alle gaveideer</a>
+    <a class="btn mt-5 hide--medium--inline-block" href="/shop#gave-ideer">Se alle gaveideer</a>
   </div>
 </div>

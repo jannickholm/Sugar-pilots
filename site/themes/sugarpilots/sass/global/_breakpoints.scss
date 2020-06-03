@@ -59,6 +59,11 @@ $breakpoint-xxxl: 1500px;
       &--flex {
         display: flex;
       }
+
+      &--inline-block {
+        display: inline-block;
+      }
+
       &--up {
           display: none !important;
       }

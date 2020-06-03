@@ -1,6 +1,9 @@
 #videoContainer {
     height: 100vh;
     height: -webkit-fill-available;
+    @media (orientation: portrait) {
+        display: none;
+    }
   }
   
   video {
