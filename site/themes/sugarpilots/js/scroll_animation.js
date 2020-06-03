@@ -1,8 +1,14 @@
 window.addEventListener("DOMContentLoaded", start);
 import ScrollMagic from "scrollmagic";
+
 function start() {
-    const videoContainer = document.querySelector("#videoContainer");
-    const video = document.querySelector("video");
+  const videoContainer = document.querySelector("#videoContainer");
+  const video = document.querySelector("video");
+  let orientation =
+    (screen.orientation || {}).type ||
+    screen.mozOrientation ||
+    screen.msOrientation;
+  if (orientation == "landscape-primary" && videoContainer) {
     //SCROLLMAGIC
     const controller = new ScrollMagic.Controller();
 
@@ -26,7 +32,7 @@ function start() {
 
     setInterval(() => {
       delay += (scrollpos - delay) * accelamount;
-      console.log(scrollpos, delay);
       video.currentTime = delay;
     }, 33.3);
+  }
 }

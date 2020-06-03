@@ -1,5 +1,8 @@
 .sustainable-section {
-  margin-bottom: 6rem;
+  margin-bottom: 0rem;
+  @include md {
+    margin-bottom: 6rem;
+  }
   .wrapper {
     .content {
       display: flex;
@@ -8,7 +11,7 @@
       height: auto;
       margin-bottom: 2rem;
       margin-top: 2rem;
-      @media (min-width: 768px) {
+      @include md {
         flex-direction: row;
         justify-content: center;
         align-items: unset;
@@ -36,7 +39,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media (min-width: 768px) {
+        @include md {
           display: block;
           max-width: min-content;
         }
@@ -50,7 +53,7 @@
           width: 90%;
           position: relative;
           z-index: 10;
-          @media (min-width: 768px) {
+          @include md {
             width: unset;
             margin-left: -5rem;
           }
@@ -65,7 +68,7 @@
           line-height: 1.4;
           position: relative;
           z-index: 10;
-          @media (min-width: 768px) {
+          @include md {
             margin-left: 2rem;
             width: calc(200px + 200 * ((100vw - 320px) / 1080));
           }
@@ -78,7 +81,7 @@
           margin-top: 1rem;
           object-fit: cover;
           max-height: 400px;
-          @media (min-width: 768px) {
+          @include md {
             margin-left: 2rem;
             margin-top: 2rem;
             max-height: unset;

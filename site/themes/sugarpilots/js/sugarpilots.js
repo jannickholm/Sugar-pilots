@@ -2816,7 +2816,7 @@ __webpack_require__.r(__webpack_exports__);
       if (window.innerWidth >= 769) {
         return 8;
       } else {
-        return 4;
+        return 2;
       }
     }
   },
@@ -61003,27 +61003,30 @@ window.addEventListener("DOMContentLoaded", start);
 
 function start() {
   var videoContainer = document.querySelector("#videoContainer");
-  var video = document.querySelector("video"); //SCROLLMAGIC
+  var video = document.querySelector("video");
+  var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
-  var controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Controller(); //Scenes
+  if (orientation == "landscape-primary" && videoContainer) {
+    //SCROLLMAGIC
+    var controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Controller(); //Scenes
 
-  var scene = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Scene({
-    duration: 11052,
-    triggerElement: videoContainer,
-    triggerHook: 0
-  }).setPin(videoContainer).addTo(controller); //Video Animation
+    var scene = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Scene({
+      duration: 11052,
+      triggerElement: videoContainer,
+      triggerHook: 0
+    }).setPin(videoContainer).addTo(controller); //Video Animation
 
-  var accelamount = 0.1;
-  var scrollpos = 0;
-  var delay = 0;
-  scene.on("update", function (e) {
-    scrollpos = e.scrollPos / 1000;
-  });
-  setInterval(function () {
-    delay += (scrollpos - delay) * accelamount;
-    console.log(scrollpos, delay);
-    video.currentTime = delay;
-  }, 33.3);
+    var accelamount = 0.1;
+    var scrollpos = 0;
+    var delay = 0;
+    scene.on("update", function (e) {
+      scrollpos = e.scrollPos / 1000;
+    });
+    setInterval(function () {
+      delay += (scrollpos - delay) * accelamount;
+      video.currentTime = delay;
+    }, 33.3);
+  }
 }
 
 /***/ }),
