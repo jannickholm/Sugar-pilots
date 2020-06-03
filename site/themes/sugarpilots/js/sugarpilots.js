@@ -61019,8 +61019,18 @@ function start() {
     var accelamount = 0.1;
     var scrollpos = 0;
     var delay = 0;
+    var skipAnimation = document.querySelector(".btn.skip-animation"); // skipAnimation.addEventListener("click", () => {
+    //   controller.scrollTo("#youtube-video");
+    // });
+
     scene.on("update", function (e) {
       scrollpos = e.scrollPos / 1000;
+
+      if (e.scrollPos <= 11052 && e.scrollPos >= 700) {
+        skipAnimation.classList.add("show");
+      } else {
+        skipAnimation.classList.remove("show");
+      }
     });
     setInterval(function () {
       delay += (scrollpos - delay) * accelamount;

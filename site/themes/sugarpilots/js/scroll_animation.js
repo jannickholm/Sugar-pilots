@@ -25,9 +25,18 @@ function start() {
     let accelamount = 0.1;
     let scrollpos = 0;
     let delay = 0;
+    let skipAnimation = document.querySelector(".btn.skip-animation");
+    // skipAnimation.addEventListener("click", () => {
+    //   controller.scrollTo("#youtube-video");
+    // });
 
     scene.on("update", (e) => {
       scrollpos = e.scrollPos / 1000;
+      if(e.scrollPos <= 11052 && e.scrollPos >= 700) {
+        skipAnimation.classList.add("show");
+      } else {
+        skipAnimation.classList.remove("show");
+      }
     });
 
     setInterval(() => {
