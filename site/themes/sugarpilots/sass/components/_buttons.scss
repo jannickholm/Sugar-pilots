@@ -17,6 +17,12 @@ a.btn {
     transition: max-width 0.3s ease-in-out;
   }
 
+  &.full-bg {
+    &::before {
+      max-width: none;
+    }
+  }
+
   &:not(.right)::before {
     left: 0;
   }
