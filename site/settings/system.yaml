@@ -4,7 +4,7 @@ locales:
   en:
     full: en_US
     name: English
-    url: 'https://sugarpilots.test/'
+    url: 'https://sugar-pilots.test/'
 timezone: UTC
 license_key: ''
 date_format: 'F jS, Y'
