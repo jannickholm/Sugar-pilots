@@ -3,11 +3,23 @@ footer {
   padding-bottom: 2rem;
   border-top: 1px #e3e3e3 solid;
   .wrapper {
-      height: 100%;
-      padding-bottom: 0;
+    height: 100%;
+    padding-bottom: 0;
     .top-content {
-      display: flex;
-      justify-content: space-evenly;
+      text-align: center;
+      @include md {
+        text-align: left;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      & > * {
+        margin-bottom: 2rem;
+      }
+
+      .footer-section.links li {
+        text-transform: capitalize;
+      }
 
       .icon {
         margin-right: 0.3rem;
@@ -18,21 +30,37 @@ footer {
       }
 
       .kitchen-address {
-        margin-top: 3rem;
+        margin-top: 2rem;
+        @include md {
+          margin-top: 3rem;
+        }
       }
     }
 
     .copyright {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        margin-top: 4rem;
-        max-width: 1000px;
-        
-        img {
-            max-width: 236px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      margin-top: 4rem;
+      max-width: 1000px;
+
+      @include md {
+        flex-direction: row;
+      }
+
+      .main-left {
+        margin-bottom: 1rem;
+
+        @include md {
+          margin-bottom: unset;
         }
+      }
+
+      img {
+        max-width: 236px;
+      }
     }
   }
 }

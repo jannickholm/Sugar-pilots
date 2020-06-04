@@ -1,0 +1,7 @@
+title: Newsletter
+fields:
+  email:
+    display: Email
+    validate: ''
+columns:
+  - email

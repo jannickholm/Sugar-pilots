@@ -1,0 +1,103 @@
+sections:
+  main:
+    display: Main
+    fields:
+      about_title:
+        type: text
+        display: Overskrift
+      about_subtitle:
+        type: text
+        display: Underoverskrift
+      about_description:
+        type: textarea
+        display: 'Beskrivelse af virksomhed'
+      about_img_1:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+  sidebar:
+    display: Sidebar
+    fields:
+      menu_title:
+        type: text
+        display: 'Menu title'
+      seo:
+        type: section
+        display: SEO
+      seo_title:
+        type: text
+        display: Title
+      seo_keywords:
+        type: textarea
+        display: Keywords
+      seo_description:
+        type: textarea
+        display: Description
+  header:
+    display: Header
+    fields:
+      add_parallax_to_section_contact:
+        type: toggle
+        width: 33
+        display: 'Add parallax to section'
+      image_scroll_speed_contact:
+        type: text
+        width: 33
+        display: 'image scroll speed'
+      text_scroll_speed_contact:
+        type: text
+        width: 33
+        display: 'text scroll speed'
+  about_quote:
+    display: Quote
+    fields:
+      about_img_quote:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+      about_txt_quote:
+        type: textarea
+        display: 'Quote tekst'
+  about_sugar_pilots:
+    display: 'Om Sugar Pilots Kaptajn'
+    fields:
+      about_title_about:
+        type: text
+        display: Overskrift
+      about_charlotte:
+        type: textarea
+        display: 'Om Charlotte'
+      about_img:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: Billede
+  kontakt:
+    display: Kontakt
+    fields:
+      contact_title:
+        type: text
+        display: Overskrift
+      contact_description:
+        type: textarea
+        display: Beskrivelse
+      adresse_1:
+        type: list
+        display: 'Adresse 1'
+      adresse_2:
+        type: list
+        display: 'Adresse 2'
+      contact_tlf:
+        type: text
+        display: Telefon
+taxonomies: true
+title: 'p: Kontakt'
+create_title: kontakt

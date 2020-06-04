@@ -2,14 +2,6 @@ sections:
   main:
     display: Main
     fields:
-      product_sustainable:
-        container: main
-        folder: /
-        restrict: false
-        max_files: 1
-        type: assets
-        width: 50
-        display: 'Bæredygtige Ikoner'
       product_category:
         type: text
         display: Category
@@ -40,6 +32,15 @@ sections:
         type: assets
         display: Picture
         validate: required
+      add_parallax_to_singleproduct:
+        type: toggle
+        width: 50
+        display: 'Add parallax'
+      image_scroll_speed_singleproduct:
+        type: text
+        width: 50
+        display: 'Image scroll speed'
+        default: '-1.5'
   sidebar:
     display: Sidebar
     fields:
@@ -51,6 +52,9 @@ sections:
         type: select
         display: 'Background color'
         default: Pink
+      field_2:
+        type: toggle
+        display: 'Field 2'
   naeringsinhold:
     display: Næringsindhold
     fields:
@@ -128,5 +132,15 @@ sections:
         type: assets
         display: 'Inspirations billede - Lille'
         width: 50
+      add_parallax_to_inspi:
+        type: toggle
+        width: 33
+        display: 'Add parallax to images'
+        default: 'true'
+      image_scroll_speed_small_singleproduct:
+        type: text
+        width: 33
+        display: 'Image speed scroll - Small'
+        default: '0.3'
 taxonomies: true
 title: 'c: Product'

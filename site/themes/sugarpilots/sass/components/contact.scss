@@ -1,0 +1,304 @@
+.contact-container {
+  .about-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0;
+    flex-direction: column;
+
+    @include s {
+      flex-direction: initial;
+      padding: 80px 0;
+    }
+
+    img {
+      max-height: 400px;
+      max-width: 450px;
+      object-fit: cover;
+
+      @include s {
+        padding-left: 35px;
+      }
+
+      @include md {
+        padding-left: 0;
+        max-height: 500px;
+      }
+    }
+
+    .about-info-txt {
+      z-index: 1;
+      max-width: 520px;
+      padding: 20px;
+
+      h2 {
+        @include s {
+          margin-left: -3rem;
+          padding: 0 30px 0 0;
+        }
+      }
+      @include xlg {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .about-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    flex-direction: column;
+
+    @include s {
+      flex-direction: initial;
+      padding: 60px 35px;
+    }
+    img {
+      max-height: 580px;
+      height: 100%;
+      object-fit: cover;
+      max-width: 400px;
+
+      @include xlg {
+        max-width: 700px;
+      }
+
+      @include xl {
+        max-width: 800px;
+      }
+    }
+
+    h1 {
+      max-width: 500px;
+      z-index: 1;
+      text-align: right;
+      padding: 20px;
+      order: 1;
+
+      @include s {
+        order: initial;
+      }
+    }
+  }
+
+  .about {
+    background: #dfedfb;
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @include s {
+        flex-direction: initial;
+        padding: 80px 35px;
+        justify-content: space-evenly;
+      }
+
+      img {
+        max-height: 350px;
+        max-width: 350px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+
+        @include s {
+          max-height: 500px;
+          max-width: 450px;
+          margin-bottom: unset;
+        }
+      }
+
+      .about-txt {
+        max-width: 520px;
+        padding-top: 1rem;
+
+        @include s {
+          padding-left: 1.5rem;
+          padding-top: 0;
+        }
+      }
+    }
+
+    button.btn {
+      margin: 0;
+    }
+  }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include md {
+      margin: 0;
+    }
+  }
+
+  @include md {
+    flex-direction: initial;
+    padding-top: 100px;
+  }
+
+  .contact-txt {
+    max-width: 500px;
+    text-align: center;
+
+    @include md {
+      margin-right: 5rem;
+      text-align: left;
+    }
+  }
+
+  .contact-details {
+    max-width: 350px;
+    margin: 50px auto;
+    text-align: center;
+    display: none;
+    @include md {
+      margin: 0px 0 0 0;
+      text-align: left;
+      display: block;
+    }
+
+    .adresse-2 {
+      margin: 20px 0;
+    }
+  }
+}
+
+#form-contact {
+  max-width: 500px;
+  padding-top: 20px;
+
+  @include s {
+    margin: 0 auto;
+  }
+  @include md {
+    margin: 0;
+  }
+
+  .form-town {
+    display: flex;
+    flex-direction: column;
+
+    @include s {
+      flex-direction: initial;
+    }
+
+    input {
+      @include s {
+        &:first-child {
+          margin-right: 2rem;
+        }
+        width: calc(200px - 1rem);
+      }
+    }
+  }
+
+  .field-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 400px;
+
+    label,
+    input {
+      transition: all 0.3s;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      padding: 5px;
+    }
+
+    input[type="email"] {
+      text-transform: lowercase;
+    }
+
+    input {
+      font-size: 16px;
+      border: 0;
+      border-bottom: 1px rgb(29, 29, 29) solid;
+      margin-bottom: 25px;
+      background: none;
+      text-transform: capitalize;
+      padding: 5px;
+
+      &:focus {
+        outline: 0;
+        border-bottom: 1px #ffbdc6 solid;
+      }
+
+      &:placeholder-shown + label {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    input::-webkit-input-placeholder {
+      opacity: 0;
+      transition: inherit;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      opacity: 1;
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+      top: -14px;
+      font-size: 10px;
+    }
+  }
+
+  .textarea {
+    label {
+      top: 5%;
+    }
+
+    textarea {
+      height: 150px;
+      max-width: 100%;
+      resize: none;
+      text-transform: initial;
+      background: none;
+      border: 1px rgb(29, 29, 29) solid;
+      margin: 10px 0;
+
+      &:focus {
+        outline: 0;
+        border: 1px #ffbdc6 solid;
+      }
+
+      &:placeholder-shown + label {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    textarea::placeholder {
+      opacity: 0;
+      transition: inherit;
+    }
+
+    textarea:focus::placeholder {
+      opacity: 1;
+    }
+    textarea:not(:placeholder-shown) + label,
+    textarea:focus + label {
+      top: -18px;
+      font-size: 10px;
+    }
+  }
+}

@@ -86,6 +86,2762 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/aos/dist/aos.js":
+/*!**************************************!*\
+  !*** ./node_modules/aos/dist/aos.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t():undefined}(this,function(){return function(e){function t(o){if(n[o])return n[o].exports;var i=n[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="dist/",t(0)}([function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var i=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},r=n(1),a=(o(r),n(6)),u=o(a),c=n(7),s=o(c),f=n(8),d=o(f),l=n(9),p=o(l),m=n(10),b=o(m),v=n(11),y=o(v),g=n(14),h=o(g),w=[],k=!1,x={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,startEvent:"DOMContentLoaded",throttleDelay:99,debounceDelay:50,disableMutationObserver:!1},j=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(e&&(k=!0),k)return w=(0,y.default)(w,x),(0,b.default)(w,x.once),w},O=function(){w=(0,h.default)(),j()},M=function(){w.forEach(function(e,t){e.node.removeAttribute("data-aos"),e.node.removeAttribute("data-aos-easing"),e.node.removeAttribute("data-aos-duration"),e.node.removeAttribute("data-aos-delay")})},S=function(e){return e===!0||"mobile"===e&&p.default.mobile()||"phone"===e&&p.default.phone()||"tablet"===e&&p.default.tablet()||"function"==typeof e&&e()===!0},_=function(e){x=i(x,e),w=(0,h.default)();var t=document.all&&!window.atob;return S(x.disable)||t?M():(x.disableMutationObserver||d.default.isSupported()||(console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '),x.disableMutationObserver=!0),document.querySelector("body").setAttribute("data-aos-easing",x.easing),document.querySelector("body").setAttribute("data-aos-duration",x.duration),document.querySelector("body").setAttribute("data-aos-delay",x.delay),"DOMContentLoaded"===x.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1?j(!0):"load"===x.startEvent?window.addEventListener(x.startEvent,function(){j(!0)}):document.addEventListener(x.startEvent,function(){j(!0)}),window.addEventListener("resize",(0,s.default)(j,x.debounceDelay,!0)),window.addEventListener("orientationchange",(0,s.default)(j,x.debounceDelay,!0)),window.addEventListener("scroll",(0,u.default)(function(){(0,b.default)(w,x.once)},x.throttleDelay)),x.disableMutationObserver||d.default.ready("[data-aos]",O),w)};e.exports={init:_,refresh:j,refreshHard:O}},function(e,t){},,,,,function(e,t){(function(t){"use strict";function n(e,t,n){function o(t){var n=b,o=v;return b=v=void 0,k=t,g=e.apply(o,n)}function r(e){return k=e,h=setTimeout(f,t),M?o(e):g}function a(e){var n=e-w,o=e-k,i=t-n;return S?j(i,y-o):i}function c(e){var n=e-w,o=e-k;return void 0===w||n>=t||n<0||S&&o>=y}function f(){var e=O();return c(e)?d(e):void(h=setTimeout(f,a(e)))}function d(e){return h=void 0,_&&b?o(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),k=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(O())}function m(){var e=O(),n=c(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(f,t),o(w)}return void 0===h&&(h=setTimeout(f,t)),g}var b,v,y,g,h,w,k=0,M=!1,S=!1,_=!0;if("function"!=typeof e)throw new TypeError(s);return t=u(t)||0,i(n)&&(M=!!n.leading,S="maxWait"in n,y=S?x(u(n.maxWait)||0,t):y,_="trailing"in n?!!n.trailing:_),m.cancel=l,m.flush=p,m}function o(e,t,o){var r=!0,a=!0;if("function"!=typeof e)throw new TypeError(s);return i(o)&&(r="leading"in o?!!o.leading:r,a="trailing"in o?!!o.trailing:a),n(e,t,{leading:r,maxWait:t,trailing:a})}function i(e){var t="undefined"==typeof e?"undefined":c(e);return!!e&&("object"==t||"function"==t)}function r(e){return!!e&&"object"==("undefined"==typeof e?"undefined":c(e))}function a(e){return"symbol"==("undefined"==typeof e?"undefined":c(e))||r(e)&&k.call(e)==d}function u(e){if("number"==typeof e)return e;if(a(e))return f;if(i(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=i(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var n=m.test(e);return n||b.test(e)?v(e.slice(2),n?2:8):p.test(e)?f:+e}var c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},s="Expected a function",f=NaN,d="[object Symbol]",l=/^\s+|\s+$/g,p=/^[-+]0x[0-9a-f]+$/i,m=/^0b[01]+$/i,b=/^0o[0-7]+$/i,v=parseInt,y="object"==("undefined"==typeof t?"undefined":c(t))&&t&&t.Object===Object&&t,g="object"==("undefined"==typeof self?"undefined":c(self))&&self&&self.Object===Object&&self,h=y||g||Function("return this")(),w=Object.prototype,k=w.toString,x=Math.max,j=Math.min,O=function(){return h.Date.now()};e.exports=o}).call(t,function(){return this}())},function(e,t){(function(t){"use strict";function n(e,t,n){function i(t){var n=b,o=v;return b=v=void 0,O=t,g=e.apply(o,n)}function r(e){return O=e,h=setTimeout(f,t),M?i(e):g}function u(e){var n=e-w,o=e-O,i=t-n;return S?x(i,y-o):i}function s(e){var n=e-w,o=e-O;return void 0===w||n>=t||n<0||S&&o>=y}function f(){var e=j();return s(e)?d(e):void(h=setTimeout(f,u(e)))}function d(e){return h=void 0,_&&b?i(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),O=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(j())}function m(){var e=j(),n=s(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(f,t),i(w)}return void 0===h&&(h=setTimeout(f,t)),g}var b,v,y,g,h,w,O=0,M=!1,S=!1,_=!0;if("function"!=typeof e)throw new TypeError(c);return t=a(t)||0,o(n)&&(M=!!n.leading,S="maxWait"in n,y=S?k(a(n.maxWait)||0,t):y,_="trailing"in n?!!n.trailing:_),m.cancel=l,m.flush=p,m}function o(e){var t="undefined"==typeof e?"undefined":u(e);return!!e&&("object"==t||"function"==t)}function i(e){return!!e&&"object"==("undefined"==typeof e?"undefined":u(e))}function r(e){return"symbol"==("undefined"==typeof e?"undefined":u(e))||i(e)&&w.call(e)==f}function a(e){if("number"==typeof e)return e;if(r(e))return s;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(d,"");var n=p.test(e);return n||m.test(e)?b(e.slice(2),n?2:8):l.test(e)?s:+e}var u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},c="Expected a function",s=NaN,f="[object Symbol]",d=/^\s+|\s+$/g,l=/^[-+]0x[0-9a-f]+$/i,p=/^0b[01]+$/i,m=/^0o[0-7]+$/i,b=parseInt,v="object"==("undefined"==typeof t?"undefined":u(t))&&t&&t.Object===Object&&t,y="object"==("undefined"==typeof self?"undefined":u(self))&&self&&self.Object===Object&&self,g=v||y||Function("return this")(),h=Object.prototype,w=h.toString,k=Math.max,x=Math.min,j=function(){return g.Date.now()};e.exports=n}).call(t,function(){return this}())},function(e,t){"use strict";function n(e){var t=void 0,o=void 0,i=void 0;for(t=0;t<e.length;t+=1){if(o=e[t],o.dataset&&o.dataset.aos)return!0;if(i=o.children&&n(o.children))return!0}return!1}function o(){return window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver}function i(){return!!o()}function r(e,t){var n=window.document,i=o(),r=new i(a);u=t,r.observe(n.documentElement,{childList:!0,subtree:!0,removedNodes:!0})}function a(e){e&&e.forEach(function(e){var t=Array.prototype.slice.call(e.addedNodes),o=Array.prototype.slice.call(e.removedNodes),i=t.concat(o);if(n(i))return u()})}Object.defineProperty(t,"__esModule",{value:!0});var u=function(){};t.default={isSupported:i,ready:r}},function(e,t){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(){return navigator.userAgent||navigator.vendor||window.opera||""}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),r=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,a=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,u=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,c=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,s=function(){function e(){n(this,e)}return i(e,[{key:"phone",value:function(){var e=o();return!(!r.test(e)&&!a.test(e.substr(0,4)))}},{key:"mobile",value:function(){var e=o();return!(!u.test(e)&&!c.test(e.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}}]),e}();t.default=new s},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t,n){var o=e.node.getAttribute("data-aos-once");t>e.position?e.node.classList.add("aos-animate"):"undefined"!=typeof o&&("false"===o||!n&&"true"!==o)&&e.node.classList.remove("aos-animate")},o=function(e,t){var o=window.pageYOffset,i=window.innerHeight;e.forEach(function(e,r){n(e,i+o,t)})};t.default=o},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(12),r=o(i),a=function(e,t){return e.forEach(function(e,n){e.node.classList.add("aos-init"),e.position=(0,r.default)(e.node,t.offset)}),e};t.default=a},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(13),r=o(i),a=function(e,t){var n=0,o=0,i=window.innerHeight,a={offset:e.getAttribute("data-aos-offset"),anchor:e.getAttribute("data-aos-anchor"),anchorPlacement:e.getAttribute("data-aos-anchor-placement")};switch(a.offset&&!isNaN(a.offset)&&(o=parseInt(a.offset)),a.anchor&&document.querySelectorAll(a.anchor)&&(e=document.querySelectorAll(a.anchor)[0]),n=(0,r.default)(e).top,a.anchorPlacement){case"top-bottom":break;case"center-bottom":n+=e.offsetHeight/2;break;case"bottom-bottom":n+=e.offsetHeight;break;case"top-center":n+=i/2;break;case"bottom-center":n+=i/2+e.offsetHeight;break;case"center-center":n+=i/2+e.offsetHeight/2;break;case"top-top":n+=i;break;case"bottom-top":n+=e.offsetHeight+i;break;case"center-top":n+=e.offsetHeight/2+i}return a.anchorPlacement||a.offset||isNaN(t)||(o=t),n+o};t.default=a},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){for(var t=0,n=0;e&&!isNaN(e.offsetLeft)&&!isNaN(e.offsetTop);)t+=e.offsetLeft-("BODY"!=e.tagName?e.scrollLeft:0),n+=e.offsetTop-("BODY"!=e.tagName?e.scrollTop:0),e=e.offsetParent;return{top:n,left:t}};t.default=n},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){return e=e||document.querySelectorAll("[data-aos]"),Array.prototype.map.call(e,function(e){return{node:e}})};t.default=n}])});
+
+/***/ }),
+
+/***/ "./node_modules/axios/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/axios/index.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/adapters/xhr.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
+var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
+var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
+var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
+var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password || '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    // Listen for ready state
+    request.onreadystatechange = function handleLoad() {
+      if (!request || request.readyState !== 4) {
+        return;
+      }
+
+      // The request errored out and we didn't get a response, this will be
+      // handled by onerror instead
+      // With one exception: request that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful request
+      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+        return;
+      }
+
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+      var response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(resolve, reject, response);
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle browser request cancellation (as opposed to a manual cancellation)
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+
+      reject(createError('Request aborted', config, 'ECONNABORTED', request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(timeoutErrorMessage, config, 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
+
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
+        cookies.read(config.xsrfCookieName) :
+        undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+    }
+
+    // Add responseType to request if needed
+    if (config.responseType) {
+      try {
+        request.responseType = config.responseType;
+      } catch (e) {
+        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+        if (config.responseType !== 'json') {
+          throw e;
+        }
+      }
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken) {
+      // Handle cancellation
+      config.cancelToken.promise.then(function onCanceled(cancel) {
+        if (!request) {
+          return;
+        }
+
+        request.abort();
+        reject(cancel);
+        // Clean up request
+        request = null;
+      });
+    }
+
+    if (requestData === undefined) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/axios.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/axios.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var Axios = __webpack_require__(/*! ./core/Axios */ "./node_modules/axios/lib/core/Axios.js");
+var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
+var defaults = __webpack_require__(/*! ./defaults */ "./node_modules/axios/lib/defaults.js");
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+  return createInstance(mergeConfig(axios.defaults, instanceConfig));
+};
+
+// Expose Cancel & CancelToken
+axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./node_modules/axios/lib/cancel/CancelToken.js");
+axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/Cancel.js":
+/*!*************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/CancelToken.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Cancel = __webpack_require__(/*! ./Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/cancel/isCancel.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/Axios.js":
+/*!**********************************************!*\
+  !*** ./node_modules/axios/lib/core/Axios.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./node_modules/axios/lib/core/InterceptorManager.js");
+var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./node_modules/axios/lib/core/dispatchRequest.js");
+var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = arguments[1] || {};
+    config.url = arguments[0];
+  } else {
+    config = config || {};
+  }
+
+  config = mergeConfig(this.defaults, config);
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
+
+  // Hook up interceptors middleware
+  var chain = [dispatchRequest, undefined];
+  var promise = Promise.resolve(config);
+
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    chain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  while (chain.length) {
+    promise = promise.then(chain.shift(), chain.shift());
+  }
+
+  return promise;
+};
+
+Axios.prototype.getUri = function getUri(config) {
+  config = mergeConfig(this.defaults, config);
+  return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(utils.merge(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/InterceptorManager.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/createError.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/createError.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var enhanceError = __webpack_require__(/*! ./enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/dispatchRequest.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
+var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData(
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData(
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData(
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/enhanceError.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+
+  error.request = request;
+  error.response = response;
+  error.isAxiosError = true;
+
+  error.toJSON = function() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: this.config,
+      code: this.code
+    };
+  };
+  return error;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/mergeConfig.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+module.exports = function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  var config = {};
+
+  var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
+  var defaultToConfig2Keys = [
+    'baseURL', 'url', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
+    'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath'
+  ];
+
+  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    }
+  });
+
+  utils.forEach(mergeDeepPropertiesKeys, function mergeDeepProperties(prop) {
+    if (utils.isObject(config2[prop])) {
+      config[prop] = utils.deepMerge(config1[prop], config2[prop]);
+    } else if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (utils.isObject(config1[prop])) {
+      config[prop] = utils.deepMerge(config1[prop]);
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  var axiosKeys = valueFromConfig2Keys
+    .concat(mergeDeepPropertiesKeys)
+    .concat(defaultToConfig2Keys);
+
+  var otherKeys = Object
+    .keys(config2)
+    .filter(function filterAxiosKeys(key) {
+      return axiosKeys.indexOf(key) === -1;
+    });
+
+  utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  return config;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/settle.js":
+/*!***********************************************!*\
+  !*** ./node_modules/axios/lib/core/settle.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios/lib/core/createError.js");
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  if (!validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/core/transformData.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/transformData.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn(data, headers);
+  });
+
+  return data;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/defaults.js":
+/*!********************************************!*\
+  !*** ./node_modules/axios/lib/defaults.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Accept');
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/bind.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/bind.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/buildURL.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%40/gi, '@').
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    var hashmarkIndex = url.indexOf('#');
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/combineURLs.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/cookies.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+    (function standardBrowserEnv() {
+      return {
+        write: function write(name, value, expires, path, domain, secure) {
+          var cookie = [];
+          cookie.push(name + '=' + encodeURIComponent(value));
+
+          if (utils.isNumber(expires)) {
+            cookie.push('expires=' + new Date(expires).toGMTString());
+          }
+
+          if (utils.isString(path)) {
+            cookie.push('path=' + path);
+          }
+
+          if (utils.isString(domain)) {
+            cookie.push('domain=' + domain);
+          }
+
+          if (secure === true) {
+            cookie.push('secure');
+          }
+
+          document.cookie = cookie.join('; ');
+        },
+
+        read: function read(name) {
+          var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+          return (match ? decodeURIComponent(match[3]) : null);
+        },
+
+        remove: function remove(name) {
+          this.write(name, '', Date.now() - 86400000);
+        }
+      };
+    })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return {
+        write: function write() {},
+        read: function read() { return null; },
+        remove: function remove() {}
+      };
+    })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+    (function standardBrowserEnv() {
+      var msie = /(msie|trident)/i.test(navigator.userAgent);
+      var urlParsingNode = document.createElement('a');
+      var originURL;
+
+      /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+      function resolveURL(url) {
+        var href = url;
+
+        if (msie) {
+        // IE needs attribute set twice to normalize properties
+          urlParsingNode.setAttribute('href', href);
+          href = urlParsingNode.href;
+        }
+
+        urlParsingNode.setAttribute('href', href);
+
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+          href: urlParsingNode.href,
+          protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+          host: urlParsingNode.host,
+          search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+          hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+          hostname: urlParsingNode.hostname,
+          port: urlParsingNode.port,
+          pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+            urlParsingNode.pathname :
+            '/' + urlParsingNode.pathname
+        };
+      }
+
+      originURL = resolveURL(window.location.href);
+
+      /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+      return function isURLSameOrigin(requestURL) {
+        var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+        return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+      };
+    })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return function isURLSameOrigin() {
+        return true;
+      };
+    })()
+);
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/helpers/spread.js":
+/*!**************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/spread.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/axios/lib/utils.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/utils.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                           navigator.product === 'NativeScript' ||
+                                           navigator.product === 'NS')) {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = merge(result[key], val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Function equal to merge with the difference being that no reference
+ * to original objects is kept.
+ *
+ * @see merge
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function deepMerge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (typeof result[key] === 'object' && typeof val === 'object') {
+      result[key] = deepMerge(result[key], val);
+    } else if (typeof val === 'object') {
+      result[key] = deepMerge({}, val);
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  deepMerge: deepMerge,
+  extend: extend,
+  trim: trim
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    productId: {
+      type: String
+    },
+    productTitle: {
+      type: String
+    },
+    productPrice: {
+      type: Number
+    },
+    productCategory: {
+      type: String
+    }
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    currentCart: 'cart/currentCart'
+  })),
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapMutations"])({
+    addProductToCart: 'cart/addToCart'
+  })), {}, {
+    addToCart: function addToCart() {
+      var product = {
+        productId: this.productId,
+        productTitle: this.productTitle,
+        productPrice: this.productPrice,
+        productCategory: this.productCategory,
+        quantity: 1
+      };
+      this.addProductToCart(product);
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Cart",
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    currentCart: "cart/currentCart"
+  }))
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      categories: [],
+      menuOpen: false
+    };
+  },
+  mounted: function mounted() {
+    this.fetchCategories();
+  },
+  methods: {
+    fetchCategories: function fetchCategories() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.apiUrl + "!/Fetch/collection/categories").then(function (response) {
+        _this.categories = response.data.data;
+      });
+    },
+    toSlug: function toSlug(str) {
+      str = str.replace(/^\s+|\s+$/g, ""); // trim
+
+      str = str.toLowerCase(); // remove accents, swap ñ for n, etc
+
+      var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;ø";
+      var to = "aaaaeeeeiiiioooouuuunc------o";
+
+      for (var i = 0, l = from.length; i < l; i++) {
+        str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
+      }
+
+      str = str.replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+      .replace(/\s+/g, "-") // collapse whitespace and replace by -
+      .replace(/-+/g, "-"); // collapse dashes
+
+      return str;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Configuration",
+  props: {
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      options: []
+    };
+  },
+  mounted: function mounted() {
+    this.fetchData();
+  },
+  methods: {
+    start: function start() {
+      this.setCurrentStep(2);
+    },
+    fetchData: function fetchData() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.apiUrl + '!/Fetch/page/design-din-egen-slikkepind').then(function (response) {
+        _this.options = response.data.data;
+        console.clear();
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue_range_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-range-slider */ "./node_modules/vue-range-slider/dist/vue-range-slider.cjs.js");
+/* harmony import */ var vue_range_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_range_slider__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
+/* harmony import */ var vue_range_slider_dist_vue_range_slider_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-range-slider/dist/vue-range-slider.css */ "./node_modules/vue-range-slider/dist/vue-range-slider.css");
+/* harmony import */ var vue_range_slider_dist_vue_range_slider_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_range_slider_dist_vue_range_slider_css__WEBPACK_IMPORTED_MODULE_3__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+ // you probably need to import built-in style
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    sizes: {
+      type: Array,
+      required: true
+    },
+    minOrder: {
+      type: String,
+      required: true
+    },
+    amounts: {
+      type: Array,
+      required: true
+    },
+    colors: {
+      type: Array,
+      required: true
+    },
+    flavors: {
+      type: Array,
+      required: true
+    }
+  },
+  components: {
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    return {
+      step: 1,
+      selectedDate: null,
+      calender: {
+        year: new Date().getFullYear(),
+        month: new Date().getMonth(),
+        disabledDates: {
+          to: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 5),
+          days: [6, 0]
+        }
+      },
+      contactForm: {
+        name: null,
+        lastname: null,
+        email: null,
+        phone: null,
+        postal: null,
+        address: null
+      },
+      validation: {
+        name: {
+          valid: false,
+          rule: /[A-Za-z]/,
+          required: true
+        },
+        lastname: {
+          valid: false,
+          rule: /[A-Za-z]/,
+          required: true
+        },
+        email: {
+          valid: false,
+          rule: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+          required: true
+        },
+        phone: {
+          valid: true,
+          rule: /^(\s*|^\d{8}$)$/
+        },
+        postal: {
+          valid: false,
+          rule: /^\d{4}$/,
+          required: true
+        },
+        address: {
+          valid: false,
+          rule: /\s\S/,
+          required: true
+        }
+      }
+    };
+  },
+  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    selectedSize: "configuration/selectedSize",
+    selectedAmount: "configuration/amount",
+    selectedColor: "configuration/selectedColorName",
+    selectedFlavor: "configuration/selectedFlavor",
+    selectedText: "configuration/selectedText",
+    date: "configuration/selectedDate",
+    priceForEach: "configuration/priceForEach"
+  })), {}, {
+    totalPrice: function totalPrice() {
+      return Number(this.priceForEach) * Number(this.selectedAmount);
+    },
+    filteredFlavors: function filteredFlavors() {
+      var _this = this;
+
+      if (this.selectedColor) {
+        return this.flavors.filter(function (flavor) {
+          return flavor.color.toLowerCase() === _this.selectedColor.toLowerCase();
+        });
+      } else {
+        return this.flavors.filter(function (flavor) {
+          return flavor.color.toLowerCase() === _this.colors[0].color_name.toLowerCase();
+        });
+      }
+    },
+    isFormValid: function isFormValid() {
+      return Object.values(this.validation).every(function (item) {
+        return item.valid === true;
+      });
+    }
+  }),
+  mounted: function mounted() {
+    var _this2 = this;
+
+    this.$eventBus.$on("change-step", function (step) {
+      _this2.step = step;
+    });
+  },
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapMutations"])({
+    setSelectedSize: "configuration/setSelectedSize",
+    setPriceForEach: "configuration/setPriceForEach",
+    setAmount: "configuration/setAmount",
+    setColorName: "configuration/setColorName",
+    setColorCode: "configuration/setColorCode",
+    setFlavor: "configuration/setFlavor",
+    setText: "configuration/setSelectedText",
+    setDate: "configuration/setDate"
+  })), {}, {
+    selectSize: function selectSize(sizeName, sizePrice) {
+      this.setSelectedSize(sizeName);
+      this.setPriceForEach(sizePrice);
+
+      if (!this.selectedAmount) {
+        this.selectAmount(this.amounts[0].amount);
+        this.selectColor(this.colors[0].color_name, this.colors[0].color_code);
+        this.selectColor(this.colors[0].color_name, this.colors[0].color_code);
+        this.selectFlavor(this.filteredFlavors[0].name);
+      }
+    },
+    selectAmount: function selectAmount(amount) {
+      this.setAmount(amount);
+    },
+    selectColor: function selectColor(name, code) {
+      this.setColorName(name);
+      this.setColorCode(code);
+      this.selectFlavor(this.filteredFlavors[0].name);
+    },
+    selectFlavor: function selectFlavor(flavor) {
+      this.setFlavor(flavor);
+    },
+    changeFlavor: function changeFlavor(e) {
+      this.setFlavor(e.target.value);
+    },
+    changeText: function changeText(e) {
+      this.setText(e.target.value);
+    },
+    changeDate: function changeDate(date) {
+      date = new Date(date);
+      var month = date.getMonth() + 1;
+      var day = date.getDate();
+      var year = date.getFullYear();
+      this.setDate("".concat(day, " / ").concat(month, " / ").concat(year));
+    },
+    submitOrder: function submitOrder(e) {
+      e.preventDefault();
+      document.forms["custom-order"].submit();
+    },
+    goToStep: function goToStep(step) {
+      this.step = step;
+      this.$eventBus.$emit('change-step', step);
+      window.scrollTo(0, 0);
+    },
+    validateInput: function validateInput(name) {
+      var value = this.contactForm[name];
+      var rule = this.validation[name].rule;
+
+      if (typeof rule !== "function") {
+        this.validation[name].valid = rule.test(value);
+        return this.validation[name].valid;
+      }
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      notSelectedText: "Ikke valgt",
+      step: 1
+    };
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])({
+    selectedSize: "configuration/selectedSize",
+    amount: "configuration/amount",
+    selectedColor: "configuration/selectedColorName",
+    selectedColorCode: "configuration/selectedColorCode",
+    selectedFlavor: "configuration/selectedFlavor",
+    price: "configuration/priceForEach",
+    text: "configuration/selectedText",
+    date: "configuration/selectedDate"
+  })),
+  watch: {
+    step: function step() {
+      this.$eventBus.$emit("change-step", this.step);
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$eventBus.$on("change-step", function (step) {
+      _this.step = step;
+    });
+  },
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_instagram_feed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-instagram-feed */ "./node_modules/vue-instagram-feed/dist-web/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Vueinstagram: vue_instagram_feed__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    totalPost: function totalPost() {
+      if (window.innerWidth >= 769) {
+        return 8;
+      } else {
+        return 2;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      accessToken: "14467845720.bd54f22.f435671052e04a44beba7fba40e78597"
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=script&lang=js& ***!
@@ -169,10 +2925,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -191,6 +2947,21 @@ __webpack_require__.r(__webpack_exports__);
     animation: {
       type: String,
       required: true
+    },
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    animationUrl: function animationUrl() {
+      var apiUrl = this.apiUrl.replace(/\//g, "");
+
+      if (apiUrl.length === 0) {
+        return apiUrl + this.animation;
+      } else {
+        return "/".concat(apiUrl).concat(this.animation);
+      }
     }
   },
   mounted: function mounted() {
@@ -204,7 +2975,7 @@ __webpack_require__.r(__webpack_exports__);
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: this.animation,
+        path: this.animationUrl,
         rendererSettings: {
           scaleMode: 'noScale',
           clearCanvas: false,
@@ -220,10 +2991,132 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lottie_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lottie-web */ "./node_modules/lottie-web/build/player/lottie.js");
+/* harmony import */ var lottie_web__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lottie_web__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "MenuNavigationToggle",
+  data: function data() {
+    return {
+      menuOpen: false
+    };
+  },
+  mounted: function mounted() {
+    if (this.menuOpen) {
+      document.querySelector(".content").addEventListener("click", this.toggleMenu);
+    }
+  },
+  methods: {
+    toggleMenu: function toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+      document.querySelector("body").classList.toggle("no-scroll");
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-slick */ "./node_modules/vue-slick/dist/slickCarousel.esm.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Slick: vue_slick__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {};
+  },
+  created: function created() {},
+  computed: {
+    slickOptions: function slickOptions() {
+      if (window.innerWidth >= 1024) {
+        return {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: false,
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
+        };
+      } else if (window.innerWidth < 1024 && window.innerWidth >= 768) {
+        return {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: true,
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
+        };
+      } else if (window.innerWidth < 768 && window.innerWidth >= 500) {
+        return {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: true,
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
+        };
+      } else if (window.innerWidth < 500) {
+        return {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          cssEase: "ease-in-out",
+          nextArrow: ".next",
+          prevArrow: ".prev"
+        };
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -284,6 +3177,2647 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/core-js/fn/array/from.js":
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/fn/array/from.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.string.iterator */ "./node_modules/core-js/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../../modules/es6.array.from */ "./node_modules/core-js/modules/es6.array.from.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/modules/_core.js").Array.from;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/fn/map.js":
+/*!****************************************!*\
+  !*** ./node_modules/core-js/fn/map.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/modules/es6.object.to-string.js");
+__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+__webpack_require__(/*! ../modules/es6.map */ "./node_modules/core-js/modules/es6.map.js");
+__webpack_require__(/*! ../modules/es7.map.to-json */ "./node_modules/core-js/modules/es7.map.to-json.js");
+__webpack_require__(/*! ../modules/es7.map.of */ "./node_modules/core-js/modules/es7.map.of.js");
+__webpack_require__(/*! ../modules/es7.map.from */ "./node_modules/core-js/modules/es7.map.from.js");
+module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/modules/_core.js").Map;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/fn/object/assign.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/fn/object/assign.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/modules/_core.js").Object.assign;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/fn/set.js":
+/*!****************************************!*\
+  !*** ./node_modules/core-js/fn/set.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/modules/es6.object.to-string.js");
+__webpack_require__(/*! ../modules/es6.string.iterator */ "./node_modules/core-js/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+__webpack_require__(/*! ../modules/es6.set */ "./node_modules/core-js/modules/es6.set.js");
+__webpack_require__(/*! ../modules/es7.set.to-json */ "./node_modules/core-js/modules/es7.set.to-json.js");
+__webpack_require__(/*! ../modules/es7.set.of */ "./node_modules/core-js/modules/es7.set.of.js");
+__webpack_require__(/*! ../modules/es7.set.from */ "./node_modules/core-js/modules/es7.set.from.js");
+module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/modules/_core.js").Set;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/fn/weak-map.js":
+/*!*********************************************!*\
+  !*** ./node_modules/core-js/fn/weak-map.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../modules/es6.object.to-string */ "./node_modules/core-js/modules/es6.object.to-string.js");
+__webpack_require__(/*! ../modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+__webpack_require__(/*! ../modules/es6.weak-map */ "./node_modules/core-js/modules/es6.weak-map.js");
+__webpack_require__(/*! ../modules/es7.weak-map.of */ "./node_modules/core-js/modules/es7.weak-map.of.js");
+__webpack_require__(/*! ../modules/es7.weak-map.from */ "./node_modules/core-js/modules/es7.weak-map.from.js");
+module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/core-js/modules/_core.js").WeakMap;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_a-function.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_a-function.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_add-to-unscopables.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/_add-to-unscopables.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+var UNSCOPABLES = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('unscopables');
+var ArrayProto = Array.prototype;
+if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js")(ArrayProto, UNSCOPABLES, {});
+module.exports = function (key) {
+  ArrayProto[UNSCOPABLES][key] = true;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_an-instance.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_an-instance.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (it, Constructor, name, forbiddenField) {
+  if (!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)) {
+    throw TypeError(name + ': incorrect invocation!');
+  } return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_an-object.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_an-object.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_array-from-iterable.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-from-iterable.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/modules/_for-of.js");
+
+module.exports = function (iter, ITERATOR) {
+  var result = [];
+  forOf(iter, false, result.push, result, ITERATOR);
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_array-includes.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-includes.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/modules/_to-iobject.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ "./node_modules/core-js/modules/_to-absolute-index.js");
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_array-methods.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-methods.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 0 -> Array#forEach
+// 1 -> Array#map
+// 2 -> Array#filter
+// 3 -> Array#some
+// 4 -> Array#every
+// 5 -> Array#find
+// 6 -> Array#findIndex
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var IObject = __webpack_require__(/*! ./_iobject */ "./node_modules/core-js/modules/_iobject.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var asc = __webpack_require__(/*! ./_array-species-create */ "./node_modules/core-js/modules/_array-species-create.js");
+module.exports = function (TYPE, $create) {
+  var IS_MAP = TYPE == 1;
+  var IS_FILTER = TYPE == 2;
+  var IS_SOME = TYPE == 3;
+  var IS_EVERY = TYPE == 4;
+  var IS_FIND_INDEX = TYPE == 6;
+  var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
+  var create = $create || asc;
+  return function ($this, callbackfn, that) {
+    var O = toObject($this);
+    var self = IObject(O);
+    var f = ctx(callbackfn, that, 3);
+    var length = toLength(self.length);
+    var index = 0;
+    var result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var val, res;
+    for (;length > index; index++) if (NO_HOLES || index in self) {
+      val = self[index];
+      res = f(val, index, O);
+      if (TYPE) {
+        if (IS_MAP) result[index] = res;   // map
+        else if (res) switch (TYPE) {
+          case 3: return true;             // some
+          case 5: return val;              // find
+          case 6: return index;            // findIndex
+          case 2: result.push(val);        // filter
+        } else if (IS_EVERY) return false; // every
+      }
+    }
+    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_array-species-constructor.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-species-constructor.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var isArray = __webpack_require__(/*! ./_is-array */ "./node_modules/core-js/modules/_is-array.js");
+var SPECIES = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('species');
+
+module.exports = function (original) {
+  var C;
+  if (isArray(original)) {
+    C = original.constructor;
+    // cross-realm fallback
+    if (typeof C == 'function' && (C === Array || isArray(C.prototype))) C = undefined;
+    if (isObject(C)) {
+      C = C[SPECIES];
+      if (C === null) C = undefined;
+    }
+  } return C === undefined ? Array : C;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_array-species-create.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/modules/_array-species-create.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
+var speciesConstructor = __webpack_require__(/*! ./_array-species-constructor */ "./node_modules/core-js/modules/_array-species-constructor.js");
+
+module.exports = function (original, length) {
+  return new (speciesConstructor(original))(length);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_classof.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_classof.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// getting tag from 19.1.3.6 Object.prototype.toString()
+var cof = __webpack_require__(/*! ./_cof */ "./node_modules/core-js/modules/_cof.js");
+var TAG = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('toStringTag');
+// ES3 wrong here
+var ARG = cof(function () { return arguments; }()) == 'Arguments';
+
+// fallback for IE11 Script Access Denied error
+var tryGet = function (it, key) {
+  try {
+    return it[key];
+  } catch (e) { /* empty */ }
+};
+
+module.exports = function (it) {
+  var O, T, B;
+  return it === undefined ? 'Undefined' : it === null ? 'Null'
+    // @@toStringTag case
+    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
+    // builtinTag case
+    : ARG ? cof(O)
+    // ES3 arguments fallback
+    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_cof.js":
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_cof.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_collection-strong.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_collection-strong.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js").f;
+var create = __webpack_require__(/*! ./_object-create */ "./node_modules/core-js/modules/_object-create.js");
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ "./node_modules/core-js/modules/_redefine-all.js");
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var anInstance = __webpack_require__(/*! ./_an-instance */ "./node_modules/core-js/modules/_an-instance.js");
+var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/modules/_for-of.js");
+var $iterDefine = __webpack_require__(/*! ./_iter-define */ "./node_modules/core-js/modules/_iter-define.js");
+var step = __webpack_require__(/*! ./_iter-step */ "./node_modules/core-js/modules/_iter-step.js");
+var setSpecies = __webpack_require__(/*! ./_set-species */ "./node_modules/core-js/modules/_set-species.js");
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js");
+var fastKey = __webpack_require__(/*! ./_meta */ "./node_modules/core-js/modules/_meta.js").fastKey;
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var SIZE = DESCRIPTORS ? '_s' : 'size';
+
+var getEntry = function (that, key) {
+  // fast case
+  var index = fastKey(key);
+  var entry;
+  if (index !== 'F') return that._i[index];
+  // frozen object case
+  for (entry = that._f; entry; entry = entry.n) {
+    if (entry.k == key) return entry;
+  }
+};
+
+module.exports = {
+  getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
+    var C = wrapper(function (that, iterable) {
+      anInstance(that, C, NAME, '_i');
+      that._t = NAME;         // collection type
+      that._i = create(null); // index
+      that._f = undefined;    // first entry
+      that._l = undefined;    // last entry
+      that[SIZE] = 0;         // size
+      if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
+    });
+    redefineAll(C.prototype, {
+      // 23.1.3.1 Map.prototype.clear()
+      // 23.2.3.2 Set.prototype.clear()
+      clear: function clear() {
+        for (var that = validate(this, NAME), data = that._i, entry = that._f; entry; entry = entry.n) {
+          entry.r = true;
+          if (entry.p) entry.p = entry.p.n = undefined;
+          delete data[entry.i];
+        }
+        that._f = that._l = undefined;
+        that[SIZE] = 0;
+      },
+      // 23.1.3.3 Map.prototype.delete(key)
+      // 23.2.3.4 Set.prototype.delete(value)
+      'delete': function (key) {
+        var that = validate(this, NAME);
+        var entry = getEntry(that, key);
+        if (entry) {
+          var next = entry.n;
+          var prev = entry.p;
+          delete that._i[entry.i];
+          entry.r = true;
+          if (prev) prev.n = next;
+          if (next) next.p = prev;
+          if (that._f == entry) that._f = next;
+          if (that._l == entry) that._l = prev;
+          that[SIZE]--;
+        } return !!entry;
+      },
+      // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
+      // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
+      forEach: function forEach(callbackfn /* , that = undefined */) {
+        validate(this, NAME);
+        var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3);
+        var entry;
+        while (entry = entry ? entry.n : this._f) {
+          f(entry.v, entry.k, this);
+          // revert to the last existing entry
+          while (entry && entry.r) entry = entry.p;
+        }
+      },
+      // 23.1.3.7 Map.prototype.has(key)
+      // 23.2.3.7 Set.prototype.has(value)
+      has: function has(key) {
+        return !!getEntry(validate(this, NAME), key);
+      }
+    });
+    if (DESCRIPTORS) dP(C.prototype, 'size', {
+      get: function () {
+        return validate(this, NAME)[SIZE];
+      }
+    });
+    return C;
+  },
+  def: function (that, key, value) {
+    var entry = getEntry(that, key);
+    var prev, index;
+    // change existing entry
+    if (entry) {
+      entry.v = value;
+    // create new entry
+    } else {
+      that._l = entry = {
+        i: index = fastKey(key, true), // <- index
+        k: key,                        // <- key
+        v: value,                      // <- value
+        p: prev = that._l,             // <- previous entry
+        n: undefined,                  // <- next entry
+        r: false                       // <- removed
+      };
+      if (!that._f) that._f = entry;
+      if (prev) prev.n = entry;
+      that[SIZE]++;
+      // add to index
+      if (index !== 'F') that._i[index] = entry;
+    } return that;
+  },
+  getEntry: getEntry,
+  setStrong: function (C, NAME, IS_MAP) {
+    // add .keys, .values, .entries, [@@iterator]
+    // 23.1.3.4, 23.1.3.8, 23.1.3.11, 23.1.3.12, 23.2.3.5, 23.2.3.8, 23.2.3.10, 23.2.3.11
+    $iterDefine(C, NAME, function (iterated, kind) {
+      this._t = validate(iterated, NAME); // target
+      this._k = kind;                     // kind
+      this._l = undefined;                // previous
+    }, function () {
+      var that = this;
+      var kind = that._k;
+      var entry = that._l;
+      // revert to the last existing entry
+      while (entry && entry.r) entry = entry.p;
+      // get next entry
+      if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
+        // or finish the iteration
+        that._t = undefined;
+        return step(1);
+      }
+      // return step by kind
+      if (kind == 'keys') return step(0, entry.k);
+      if (kind == 'values') return step(0, entry.v);
+      return step(0, [entry.k, entry.v]);
+    }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
+
+    // add [@@species], 23.1.2.2, 23.2.2.2
+    setSpecies(NAME);
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_collection-to-json.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/_collection-to-json.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/modules/_classof.js");
+var from = __webpack_require__(/*! ./_array-from-iterable */ "./node_modules/core-js/modules/_array-from-iterable.js");
+module.exports = function (NAME) {
+  return function toJSON() {
+    if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
+    return from(this);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_collection-weak.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/_collection-weak.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ "./node_modules/core-js/modules/_redefine-all.js");
+var getWeak = __webpack_require__(/*! ./_meta */ "./node_modules/core-js/modules/_meta.js").getWeak;
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var anInstance = __webpack_require__(/*! ./_an-instance */ "./node_modules/core-js/modules/_an-instance.js");
+var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/modules/_for-of.js");
+var createArrayMethod = __webpack_require__(/*! ./_array-methods */ "./node_modules/core-js/modules/_array-methods.js");
+var $has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var arrayFind = createArrayMethod(5);
+var arrayFindIndex = createArrayMethod(6);
+var id = 0;
+
+// fallback for uncaught frozen keys
+var uncaughtFrozenStore = function (that) {
+  return that._l || (that._l = new UncaughtFrozenStore());
+};
+var UncaughtFrozenStore = function () {
+  this.a = [];
+};
+var findUncaughtFrozen = function (store, key) {
+  return arrayFind(store.a, function (it) {
+    return it[0] === key;
+  });
+};
+UncaughtFrozenStore.prototype = {
+  get: function (key) {
+    var entry = findUncaughtFrozen(this, key);
+    if (entry) return entry[1];
+  },
+  has: function (key) {
+    return !!findUncaughtFrozen(this, key);
+  },
+  set: function (key, value) {
+    var entry = findUncaughtFrozen(this, key);
+    if (entry) entry[1] = value;
+    else this.a.push([key, value]);
+  },
+  'delete': function (key) {
+    var index = arrayFindIndex(this.a, function (it) {
+      return it[0] === key;
+    });
+    if (~index) this.a.splice(index, 1);
+    return !!~index;
+  }
+};
+
+module.exports = {
+  getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
+    var C = wrapper(function (that, iterable) {
+      anInstance(that, C, NAME, '_i');
+      that._t = NAME;      // collection type
+      that._i = id++;      // collection id
+      that._l = undefined; // leak store for uncaught frozen objects
+      if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
+    });
+    redefineAll(C.prototype, {
+      // 23.3.3.2 WeakMap.prototype.delete(key)
+      // 23.4.3.3 WeakSet.prototype.delete(value)
+      'delete': function (key) {
+        if (!isObject(key)) return false;
+        var data = getWeak(key);
+        if (data === true) return uncaughtFrozenStore(validate(this, NAME))['delete'](key);
+        return data && $has(data, this._i) && delete data[this._i];
+      },
+      // 23.3.3.4 WeakMap.prototype.has(key)
+      // 23.4.3.4 WeakSet.prototype.has(value)
+      has: function has(key) {
+        if (!isObject(key)) return false;
+        var data = getWeak(key);
+        if (data === true) return uncaughtFrozenStore(validate(this, NAME)).has(key);
+        return data && $has(data, this._i);
+      }
+    });
+    return C;
+  },
+  def: function (that, key, value) {
+    var data = getWeak(anObject(key), true);
+    if (data === true) uncaughtFrozenStore(that).set(key, value);
+    else data[that._i] = value;
+    return that;
+  },
+  ufstore: uncaughtFrozenStore
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_collection.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_collection.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+var redefineAll = __webpack_require__(/*! ./_redefine-all */ "./node_modules/core-js/modules/_redefine-all.js");
+var meta = __webpack_require__(/*! ./_meta */ "./node_modules/core-js/modules/_meta.js");
+var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/modules/_for-of.js");
+var anInstance = __webpack_require__(/*! ./_an-instance */ "./node_modules/core-js/modules/_an-instance.js");
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var fails = __webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js");
+var $iterDetect = __webpack_require__(/*! ./_iter-detect */ "./node_modules/core-js/modules/_iter-detect.js");
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "./node_modules/core-js/modules/_set-to-string-tag.js");
+var inheritIfRequired = __webpack_require__(/*! ./_inherit-if-required */ "./node_modules/core-js/modules/_inherit-if-required.js");
+
+module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
+  var Base = global[NAME];
+  var C = Base;
+  var ADDER = IS_MAP ? 'set' : 'add';
+  var proto = C && C.prototype;
+  var O = {};
+  var fixMethod = function (KEY) {
+    var fn = proto[KEY];
+    redefine(proto, KEY,
+      KEY == 'delete' ? function (a) {
+        return IS_WEAK && !isObject(a) ? false : fn.call(this, a === 0 ? 0 : a);
+      } : KEY == 'has' ? function has(a) {
+        return IS_WEAK && !isObject(a) ? false : fn.call(this, a === 0 ? 0 : a);
+      } : KEY == 'get' ? function get(a) {
+        return IS_WEAK && !isObject(a) ? undefined : fn.call(this, a === 0 ? 0 : a);
+      } : KEY == 'add' ? function add(a) { fn.call(this, a === 0 ? 0 : a); return this; }
+        : function set(a, b) { fn.call(this, a === 0 ? 0 : a, b); return this; }
+    );
+  };
+  if (typeof C != 'function' || !(IS_WEAK || proto.forEach && !fails(function () {
+    new C().entries().next();
+  }))) {
+    // create collection constructor
+    C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
+    redefineAll(C.prototype, methods);
+    meta.NEED = true;
+  } else {
+    var instance = new C();
+    // early implementations not supports chaining
+    var HASNT_CHAINING = instance[ADDER](IS_WEAK ? {} : -0, 1) != instance;
+    // V8 ~  Chromium 40- weak-collections throws on primitives, but should return false
+    var THROWS_ON_PRIMITIVES = fails(function () { instance.has(1); });
+    // most early implementations doesn't supports iterables, most modern - not close it correctly
+    var ACCEPT_ITERABLES = $iterDetect(function (iter) { new C(iter); }); // eslint-disable-line no-new
+    // for early implementations -0 and +0 not the same
+    var BUGGY_ZERO = !IS_WEAK && fails(function () {
+      // V8 ~ Chromium 42- fails only with 5+ elements
+      var $instance = new C();
+      var index = 5;
+      while (index--) $instance[ADDER](index, index);
+      return !$instance.has(-0);
+    });
+    if (!ACCEPT_ITERABLES) {
+      C = wrapper(function (target, iterable) {
+        anInstance(target, C, NAME);
+        var that = inheritIfRequired(new Base(), target, C);
+        if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
+        return that;
+      });
+      C.prototype = proto;
+      proto.constructor = C;
+    }
+    if (THROWS_ON_PRIMITIVES || BUGGY_ZERO) {
+      fixMethod('delete');
+      fixMethod('has');
+      IS_MAP && fixMethod('get');
+    }
+    if (BUGGY_ZERO || HASNT_CHAINING) fixMethod(ADDER);
+    // weak collections should not contains .clear method
+    if (IS_WEAK && proto.clear) delete proto.clear;
+  }
+
+  setToStringTag(C, NAME);
+
+  O[NAME] = C;
+  $export($export.G + $export.W + $export.F * (C != Base), O);
+
+  if (!IS_WEAK) common.setStrong(C, NAME, IS_MAP);
+
+  return C;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_core.js":
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_core.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.6.11' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_create-property.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/_create-property.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $defineProperty = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js");
+var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/modules/_property-desc.js");
+
+module.exports = function (object, index, value) {
+  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
+  else object[index] = value;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_ctx.js":
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_ctx.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/modules/_a-function.js");
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_defined.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_defined.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_descriptors.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_descriptors.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js")(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_dom-create.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_dom-create.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var document = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js").document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_enum-bug-keys.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_enum-bug-keys.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_export.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_export.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js");
+var hide = __webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js");
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] || (global[name] = {}) : (global[name] || {})[PROTOTYPE];
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE] || (exports[PROTOTYPE] = {});
+  var key, own, out, exp;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    // export native or passed
+    out = (own ? target : source)[key];
+    // bind timers to global for call from export context
+    exp = IS_BIND && own ? ctx(out, global) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // extend global
+    if (target) redefine(target, key, out, type & $export.U);
+    // export
+    if (exports[key] != out) hide(exports, key, exp);
+    if (IS_PROTO && expProto[key] != out) expProto[key] = out;
+  }
+};
+global.core = core;
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_fails.js":
+/*!************************************************!*\
+  !*** ./node_modules/core-js/modules/_fails.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_for-of.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_for-of.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var call = __webpack_require__(/*! ./_iter-call */ "./node_modules/core-js/modules/_iter-call.js");
+var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ "./node_modules/core-js/modules/_is-array-iter.js");
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ "./node_modules/core-js/modules/core.get-iterator-method.js");
+var BREAK = {};
+var RETURN = {};
+var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
+  var iterFn = ITERATOR ? function () { return iterable; } : getIterFn(iterable);
+  var f = ctx(fn, that, entries ? 2 : 1);
+  var index = 0;
+  var length, step, iterator, result;
+  if (typeof iterFn != 'function') throw TypeError(iterable + ' is not iterable!');
+  // fast case for arrays with default iterator
+  if (isArrayIter(iterFn)) for (length = toLength(iterable.length); length > index; index++) {
+    result = entries ? f(anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
+    if (result === BREAK || result === RETURN) return result;
+  } else for (iterator = iterFn.call(iterable); !(step = iterator.next()).done;) {
+    result = call(iterator, f, step.value, entries);
+    if (result === BREAK || result === RETURN) return result;
+  }
+};
+exports.BREAK = BREAK;
+exports.RETURN = RETURN;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_function-to-string.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/_function-to-string.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/modules/_shared.js")('native-function-to-string', Function.toString);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_global.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_global.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_has.js":
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_has.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_hide.js":
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_hide.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js");
+var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/modules/_property-desc.js");
+module.exports = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_html.js":
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_html.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var document = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js").document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_ie8-dom-define.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/_ie8-dom-define.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js")(function () {
+  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ "./node_modules/core-js/modules/_dom-create.js")('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_inherit-if-required.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/modules/_inherit-if-required.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var setPrototypeOf = __webpack_require__(/*! ./_set-proto */ "./node_modules/core-js/modules/_set-proto.js").set;
+module.exports = function (that, target, C) {
+  var S = target.constructor;
+  var P;
+  if (S !== C && typeof S == 'function' && (P = S.prototype) !== C.prototype && isObject(P) && setPrototypeOf) {
+    setPrototypeOf(that, P);
+  } return that;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iobject.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_iobject.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(/*! ./_cof */ "./node_modules/core-js/modules/_cof.js");
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_is-array-iter.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_is-array-iter.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// check on default Array iterator
+var Iterators = __webpack_require__(/*! ./_iterators */ "./node_modules/core-js/modules/_iterators.js");
+var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator');
+var ArrayProto = Array.prototype;
+
+module.exports = function (it) {
+  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_is-array.js":
+/*!***************************************************!*\
+  !*** ./node_modules/core-js/modules/_is-array.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__(/*! ./_cof */ "./node_modules/core-js/modules/_cof.js");
+module.exports = Array.isArray || function isArray(arg) {
+  return cof(arg) == 'Array';
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_is-object.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_is-object.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iter-call.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-call.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// call something on iterator step with safe closing on error
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+module.exports = function (iterator, fn, value, entries) {
+  try {
+    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
+  // 7.4.6 IteratorClose(iterator, completion)
+  } catch (e) {
+    var ret = iterator['return'];
+    if (ret !== undefined) anObject(ret.call(iterator));
+    throw e;
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iter-create.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-create.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var create = __webpack_require__(/*! ./_object-create */ "./node_modules/core-js/modules/_object-create.js");
+var descriptor = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/modules/_property-desc.js");
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "./node_modules/core-js/modules/_set-to-string-tag.js");
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js")(IteratorPrototype, __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator'), function () { return this; });
+
+module.exports = function (Constructor, NAME, next) {
+  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iter-define.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-define.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var LIBRARY = __webpack_require__(/*! ./_library */ "./node_modules/core-js/modules/_library.js");
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+var hide = __webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js");
+var Iterators = __webpack_require__(/*! ./_iterators */ "./node_modules/core-js/modules/_iterators.js");
+var $iterCreate = __webpack_require__(/*! ./_iter-create */ "./node_modules/core-js/modules/_iter-create.js");
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "./node_modules/core-js/modules/_set-to-string-tag.js");
+var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "./node_modules/core-js/modules/_object-gpo.js");
+var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = $native || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iter-detect.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-detect.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator');
+var SAFE_CLOSING = false;
+
+try {
+  var riter = [7][ITERATOR]();
+  riter['return'] = function () { SAFE_CLOSING = true; };
+  // eslint-disable-next-line no-throw-literal
+  Array.from(riter, function () { throw 2; });
+} catch (e) { /* empty */ }
+
+module.exports = function (exec, skipClosing) {
+  if (!skipClosing && !SAFE_CLOSING) return false;
+  var safe = false;
+  try {
+    var arr = [7];
+    var iter = arr[ITERATOR]();
+    iter.next = function () { return { done: safe = true }; };
+    arr[ITERATOR] = function () { return iter; };
+    exec(arr);
+  } catch (e) { /* empty */ }
+  return safe;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iter-step.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_iter-step.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_iterators.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_iterators.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_library.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/modules/_library.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = false;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_meta.js":
+/*!***********************************************!*\
+  !*** ./node_modules/core-js/modules/_meta.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var META = __webpack_require__(/*! ./_uid */ "./node_modules/core-js/modules/_uid.js")('meta');
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var setDesc = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js").f;
+var id = 0;
+var isExtensible = Object.isExtensible || function () {
+  return true;
+};
+var FREEZE = !__webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js")(function () {
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function (it) {
+  setDesc(it, META, { value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  } });
+};
+var fastKey = function (it, create) {
+  // return primitive with prefix
+  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return 'F';
+    // not necessary to add metadata
+    if (!create) return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function (it, create) {
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return true;
+    // not necessary to add metadata
+    if (!create) return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function (it) {
+  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY: META,
+  NEED: false,
+  fastKey: fastKey,
+  getWeak: getWeak,
+  onFreeze: onFreeze
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-assign.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-assign.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js");
+var getKeys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/modules/_object-keys.js");
+var gOPS = __webpack_require__(/*! ./_object-gops */ "./node_modules/core-js/modules/_object-gops.js");
+var pIE = __webpack_require__(/*! ./_object-pie */ "./node_modules/core-js/modules/_object-pie.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var IObject = __webpack_require__(/*! ./_iobject */ "./node_modules/core-js/modules/_iobject.js");
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__(/*! ./_fails */ "./node_modules/core-js/modules/_fails.js")(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) {
+      key = keys[j++];
+      if (!DESCRIPTORS || isEnum.call(S, key)) T[key] = S[key];
+    }
+  } return T;
+} : $assign;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-create.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-create.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var dPs = __webpack_require__(/*! ./_object-dps */ "./node_modules/core-js/modules/_object-dps.js");
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ "./node_modules/core-js/modules/_enum-bug-keys.js");
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "./node_modules/core-js/modules/_shared-key.js")('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(/*! ./_dom-create */ "./node_modules/core-js/modules/_dom-create.js")('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(/*! ./_html */ "./node_modules/core-js/modules/_html.js").appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-dp.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-dp.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ "./node_modules/core-js/modules/_ie8-dom-define.js");
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "./node_modules/core-js/modules/_to-primitive.js");
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-dps.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-dps.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js");
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var getKeys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/modules/_object-keys.js");
+
+module.exports = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-gopd.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-gopd.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pIE = __webpack_require__(/*! ./_object-pie */ "./node_modules/core-js/modules/_object-pie.js");
+var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/modules/_property-desc.js");
+var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/modules/_to-iobject.js");
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "./node_modules/core-js/modules/_to-primitive.js");
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ "./node_modules/core-js/modules/_ie8-dom-define.js");
+var gOPD = Object.getOwnPropertyDescriptor;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js") ? gOPD : function getOwnPropertyDescriptor(O, P) {
+  O = toIObject(O);
+  P = toPrimitive(P, true);
+  if (IE8_DOM_DEFINE) try {
+    return gOPD(O, P);
+  } catch (e) { /* empty */ }
+  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-gops.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-gops.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-gpo.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-gpo.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "./node_modules/core-js/modules/_shared-key.js")('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function (O) {
+  O = toObject(O);
+  if (has(O, IE_PROTO)) return O[IE_PROTO];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-keys-internal.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-keys-internal.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/modules/_to-iobject.js");
+var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ "./node_modules/core-js/modules/_array-includes.js")(false);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "./node_modules/core-js/modules/_shared-key.js")('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-keys.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-keys.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ "./node_modules/core-js/modules/_object-keys-internal.js");
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ "./node_modules/core-js/modules/_enum-bug-keys.js");
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_object-pie.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_object-pie.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_property-desc.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/_property-desc.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_redefine-all.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/_redefine-all.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+module.exports = function (target, src, safe) {
+  for (var key in src) redefine(target, key, src[key], safe);
+  return target;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_redefine.js":
+/*!***************************************************!*\
+  !*** ./node_modules/core-js/modules/_redefine.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var hide = __webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js");
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var SRC = __webpack_require__(/*! ./_uid */ "./node_modules/core-js/modules/_uid.js")('src');
+var $toString = __webpack_require__(/*! ./_function-to-string */ "./node_modules/core-js/modules/_function-to-string.js");
+var TO_STRING = 'toString';
+var TPL = ('' + $toString).split(TO_STRING);
+
+__webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js").inspectSource = function (it) {
+  return $toString.call(it);
+};
+
+(module.exports = function (O, key, val, safe) {
+  var isFunction = typeof val == 'function';
+  if (isFunction) has(val, 'name') || hide(val, 'name', key);
+  if (O[key] === val) return;
+  if (isFunction) has(val, SRC) || hide(val, SRC, O[key] ? '' + O[key] : TPL.join(String(key)));
+  if (O === global) {
+    O[key] = val;
+  } else if (!safe) {
+    delete O[key];
+    hide(O, key, val);
+  } else if (O[key]) {
+    O[key] = val;
+  } else {
+    hide(O, key, val);
+  }
+// add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
+})(Function.prototype, TO_STRING, function toString() {
+  return typeof this == 'function' && this[SRC] || $toString.call(this);
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_set-collection-from.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-collection-from.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// https://tc39.github.io/proposal-setmap-offrom/
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+var aFunction = __webpack_require__(/*! ./_a-function */ "./node_modules/core-js/modules/_a-function.js");
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var forOf = __webpack_require__(/*! ./_for-of */ "./node_modules/core-js/modules/_for-of.js");
+
+module.exports = function (COLLECTION) {
+  $export($export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
+    var mapFn = arguments[1];
+    var mapping, A, n, cb;
+    aFunction(this);
+    mapping = mapFn !== undefined;
+    if (mapping) aFunction(mapFn);
+    if (source == undefined) return new this();
+    A = [];
+    if (mapping) {
+      n = 0;
+      cb = ctx(mapFn, arguments[2], 2);
+      forOf(source, false, function (nextItem) {
+        A.push(cb(nextItem, n++));
+      });
+    } else {
+      forOf(source, false, A.push, A);
+    }
+    return new this(A);
+  } });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_set-collection-of.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-collection-of.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// https://tc39.github.io/proposal-setmap-offrom/
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+
+module.exports = function (COLLECTION) {
+  $export($export.S, COLLECTION, { of: function of() {
+    var length = arguments.length;
+    var A = new Array(length);
+    while (length--) A[length] = arguments[length];
+    return new this(A);
+  } });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_set-proto.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-proto.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+/* eslint-disable no-proto */
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var check = function (O, proto) {
+  anObject(O);
+  if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
+};
+module.exports = {
+  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
+    function (test, buggy, set) {
+      try {
+        set = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js")(Function.call, __webpack_require__(/*! ./_object-gopd */ "./node_modules/core-js/modules/_object-gopd.js").f(Object.prototype, '__proto__').set, 2);
+        set(test, []);
+        buggy = !(test instanceof Array);
+      } catch (e) { buggy = true; }
+      return function setPrototypeOf(O, proto) {
+        check(O, proto);
+        if (buggy) O.__proto__ = proto;
+        else set(O, proto);
+        return O;
+      };
+    }({}, false) : undefined),
+  check: check
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_set-species.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-species.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var dP = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js");
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "./node_modules/core-js/modules/_descriptors.js");
+var SPECIES = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('species');
+
+module.exports = function (KEY) {
+  var C = global[KEY];
+  if (DESCRIPTORS && C && !C[SPECIES]) dP.f(C, SPECIES, {
+    configurable: true,
+    get: function () { return this; }
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_set-to-string-tag.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_set-to-string-tag.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/modules/_object-dp.js").f;
+var has = __webpack_require__(/*! ./_has */ "./node_modules/core-js/modules/_has.js");
+var TAG = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_shared-key.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_shared-key.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/modules/_shared.js")('keys');
+var uid = __webpack_require__(/*! ./_uid */ "./node_modules/core-js/modules/_uid.js");
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_shared.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/_shared.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js");
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/modules/_library.js") ? 'pure' : 'global',
+  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_string-at.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_string-at.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
+var defined = __webpack_require__(/*! ./_defined */ "./node_modules/core-js/modules/_defined.js");
+// true  -> String#at
+// false -> String#codePointAt
+module.exports = function (TO_STRING) {
+  return function (that, pos) {
+    var s = String(defined(that));
+    var i = toInteger(pos);
+    var l = s.length;
+    var a, b;
+    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-absolute-index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-absolute-index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-integer.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-integer.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-iobject.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-iobject.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(/*! ./_iobject */ "./node_modules/core-js/modules/_iobject.js");
+var defined = __webpack_require__(/*! ./_defined */ "./node_modules/core-js/modules/_defined.js");
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-length.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-length.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-object.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-object.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(/*! ./_defined */ "./node_modules/core-js/modules/_defined.js");
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_to-primitive.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/modules/_to-primitive.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_uid.js":
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_uid.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_validate-collection.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/modules/_validate-collection.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+module.exports = function (it, TYPE) {
+  if (!isObject(it) || it._t !== TYPE) throw TypeError('Incompatible receiver, ' + TYPE + ' required!');
+  return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/_wks.js":
+/*!**********************************************!*\
+  !*** ./node_modules/core-js/modules/_wks.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(/*! ./_shared */ "./node_modules/core-js/modules/_shared.js")('wks');
+var uid = __webpack_require__(/*! ./_uid */ "./node_modules/core-js/modules/_uid.js");
+var Symbol = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js").Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/core.get-iterator-method.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/modules/core.get-iterator-method.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/modules/_classof.js");
+var ITERATOR = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('iterator');
+var Iterators = __webpack_require__(/*! ./_iterators */ "./node_modules/core-js/modules/_iterators.js");
+module.exports = __webpack_require__(/*! ./_core */ "./node_modules/core-js/modules/_core.js").getIteratorMethod = function (it) {
+  if (it != undefined) return it[ITERATOR]
+    || it['@@iterator']
+    || Iterators[classof(it)];
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.array.from.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.array.from.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/modules/_ctx.js");
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var call = __webpack_require__(/*! ./_iter-call */ "./node_modules/core-js/modules/_iter-call.js");
+var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ "./node_modules/core-js/modules/_is-array-iter.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var createProperty = __webpack_require__(/*! ./_create-property */ "./node_modules/core-js/modules/_create-property.js");
+var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ "./node_modules/core-js/modules/core.get-iterator-method.js");
+
+$export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ "./node_modules/core-js/modules/_iter-detect.js")(function (iter) { Array.from(iter); }), 'Array', {
+  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
+  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
+    var O = toObject(arrayLike);
+    var C = typeof this == 'function' ? this : Array;
+    var aLen = arguments.length;
+    var mapfn = aLen > 1 ? arguments[1] : undefined;
+    var mapping = mapfn !== undefined;
+    var index = 0;
+    var iterFn = getIterFn(O);
+    var length, result, step, iterator;
+    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
+    // if object isn't iterable or it's array with default iterator - use simple case
+    if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
+      for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
+        createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
+      }
+    } else {
+      length = toLength(O.length);
+      for (result = new C(length); length > index; index++) {
+        createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
+      }
+    }
+    result.length = index;
+    return result;
+  }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.array.iterator.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.array.iterator.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ "./node_modules/core-js/modules/_add-to-unscopables.js");
+var step = __webpack_require__(/*! ./_iter-step */ "./node_modules/core-js/modules/_iter-step.js");
+var Iterators = __webpack_require__(/*! ./_iterators */ "./node_modules/core-js/modules/_iterators.js");
+var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/core-js/modules/_to-iobject.js");
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __webpack_require__(/*! ./_iter-define */ "./node_modules/core-js/modules/_iter-define.js")(Array, 'Array', function (iterated, kind) {
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return step(1);
+  }
+  if (kind == 'keys') return step(0, index);
+  if (kind == 'values') return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.map.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.map.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/modules/_collection-strong.js");
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var MAP = 'Map';
+
+// 23.1 Map Objects
+module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/modules/_collection.js")(MAP, function (get) {
+  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+}, {
+  // 23.1.3.6 Map.prototype.get(key)
+  get: function get(key) {
+    var entry = strong.getEntry(validate(this, MAP), key);
+    return entry && entry.v;
+  },
+  // 23.1.3.9 Map.prototype.set(key, value)
+  set: function set(key, value) {
+    return strong.def(validate(this, MAP), key === 0 ? 0 : key, value);
+  }
+}, strong, true);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.object.assign.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.object.assign.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ "./node_modules/core-js/modules/_object-assign.js") });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.object.to-string.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.object.to-string.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.3.6 Object.prototype.toString()
+var classof = __webpack_require__(/*! ./_classof */ "./node_modules/core-js/modules/_classof.js");
+var test = {};
+test[__webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js")('toStringTag')] = 'z';
+if (test + '' != '[object z]') {
+  __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js")(Object.prototype, 'toString', function toString() {
+    return '[object ' + classof(this) + ']';
+  }, true);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.set.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.set.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var strong = __webpack_require__(/*! ./_collection-strong */ "./node_modules/core-js/modules/_collection-strong.js");
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var SET = 'Set';
+
+// 23.2 Set Objects
+module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/modules/_collection.js")(SET, function (get) {
+  return function Set() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+}, {
+  // 23.2.3.1 Set.prototype.add(value)
+  add: function add(value) {
+    return strong.def(validate(this, SET), value = value === 0 ? 0 : value, value);
+  }
+}, strong);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.string.iterator.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.string.iterator.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $at = __webpack_require__(/*! ./_string-at */ "./node_modules/core-js/modules/_string-at.js")(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__(/*! ./_iter-define */ "./node_modules/core-js/modules/_iter-define.js")(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es6.weak-map.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.weak-map.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var each = __webpack_require__(/*! ./_array-methods */ "./node_modules/core-js/modules/_array-methods.js")(0);
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+var meta = __webpack_require__(/*! ./_meta */ "./node_modules/core-js/modules/_meta.js");
+var assign = __webpack_require__(/*! ./_object-assign */ "./node_modules/core-js/modules/_object-assign.js");
+var weak = __webpack_require__(/*! ./_collection-weak */ "./node_modules/core-js/modules/_collection-weak.js");
+var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/core-js/modules/_is-object.js");
+var validate = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var NATIVE_WEAK_MAP = __webpack_require__(/*! ./_validate-collection */ "./node_modules/core-js/modules/_validate-collection.js");
+var IS_IE11 = !global.ActiveXObject && 'ActiveXObject' in global;
+var WEAK_MAP = 'WeakMap';
+var getWeak = meta.getWeak;
+var isExtensible = Object.isExtensible;
+var uncaughtFrozenStore = weak.ufstore;
+var InternalMap;
+
+var wrapper = function (get) {
+  return function WeakMap() {
+    return get(this, arguments.length > 0 ? arguments[0] : undefined);
+  };
+};
+
+var methods = {
+  // 23.3.3.3 WeakMap.prototype.get(key)
+  get: function get(key) {
+    if (isObject(key)) {
+      var data = getWeak(key);
+      if (data === true) return uncaughtFrozenStore(validate(this, WEAK_MAP)).get(key);
+      return data ? data[this._i] : undefined;
+    }
+  },
+  // 23.3.3.5 WeakMap.prototype.set(key, value)
+  set: function set(key, value) {
+    return weak.def(validate(this, WEAK_MAP), key, value);
+  }
+};
+
+// 23.3 WeakMap Objects
+var $WeakMap = module.exports = __webpack_require__(/*! ./_collection */ "./node_modules/core-js/modules/_collection.js")(WEAK_MAP, wrapper, methods, weak, true, true);
+
+// IE11 WeakMap frozen keys fix
+if (NATIVE_WEAK_MAP && IS_IE11) {
+  InternalMap = weak.getConstructor(wrapper, WEAK_MAP);
+  assign(InternalMap.prototype, methods);
+  meta.NEED = true;
+  each(['delete', 'has', 'get', 'set'], function (key) {
+    var proto = $WeakMap.prototype;
+    var method = proto[key];
+    redefine(proto, key, function (a, b) {
+      // store frozen objects on internal weakmap shim
+      if (isObject(a) && !isExtensible(a)) {
+        if (!this._f) this._f = new InternalMap();
+        var result = this._f[key](a, b);
+        return key == 'set' ? this : result;
+      // store all the rest on native weakmap
+      } return method.call(this, a, b);
+    });
+  });
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.map.from.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.map.from.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/modules/_set-collection-from.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.map.of.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.map.of.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
+__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/modules/_set-collection-of.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.map.to-json.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.map.to-json.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/modules/_collection-to-json.js")('Map') });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.set.from.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.set.from.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.from
+__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/modules/_set-collection-from.js")('Set');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.set.of.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.set.of.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-set.of
+__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/modules/_set-collection-of.js")('Set');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.set.to-json.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.set.to-json.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/modules/_export.js");
+
+$export($export.P + $export.R, 'Set', { toJSON: __webpack_require__(/*! ./_collection-to-json */ "./node_modules/core-js/modules/_collection-to-json.js")('Set') });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.weak-map.from.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.weak-map.from.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.from
+__webpack_require__(/*! ./_set-collection-from */ "./node_modules/core-js/modules/_set-collection-from.js")('WeakMap');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es7.weak-map.of.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/es7.weak-map.of.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-weakmap.of
+__webpack_require__(/*! ./_set-collection-of */ "./node_modules/core-js/modules/_set-collection-of.js")('WeakMap');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/web.dom.iterable.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/web.dom.iterable.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $iterators = __webpack_require__(/*! ./es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+var getKeys = __webpack_require__(/*! ./_object-keys */ "./node_modules/core-js/modules/_object-keys.js");
+var redefine = __webpack_require__(/*! ./_redefine */ "./node_modules/core-js/modules/_redefine.js");
+var global = __webpack_require__(/*! ./_global */ "./node_modules/core-js/modules/_global.js");
+var hide = __webpack_require__(/*! ./_hide */ "./node_modules/core-js/modules/_hide.js");
+var Iterators = __webpack_require__(/*! ./_iterators */ "./node_modules/core-js/modules/_iterators.js");
+var wks = __webpack_require__(/*! ./_wks */ "./node_modules/core-js/modules/_wks.js");
+var ITERATOR = wks('iterator');
+var TO_STRING_TAG = wks('toStringTag');
+var ArrayValues = Iterators.Array;
+
+var DOMIterables = {
+  CSSRuleList: true, // TODO: Not spec compliant, should be false.
+  CSSStyleDeclaration: false,
+  CSSValueList: false,
+  ClientRectList: false,
+  DOMRectList: false,
+  DOMStringList: false,
+  DOMTokenList: true,
+  DataTransferItemList: false,
+  FileList: false,
+  HTMLAllCollection: false,
+  HTMLCollection: false,
+  HTMLFormElement: false,
+  HTMLSelectElement: false,
+  MediaList: true, // TODO: Not spec compliant, should be false.
+  MimeTypeArray: false,
+  NamedNodeMap: false,
+  NodeList: true,
+  PaintRequestList: false,
+  Plugin: false,
+  PluginArray: false,
+  SVGLengthList: false,
+  SVGNumberList: false,
+  SVGPathSegList: false,
+  SVGPointList: false,
+  SVGStringList: false,
+  SVGTransformList: false,
+  SourceBufferList: false,
+  StyleSheetList: true, // TODO: Not spec compliant, should be false.
+  TextTrackCueList: false,
+  TextTrackList: false,
+  TouchList: false
+};
+
+for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++) {
+  var NAME = collections[i];
+  var explicit = DOMIterables[NAME];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  var key;
+  if (proto) {
+    if (!proto[ITERATOR]) hide(proto, ITERATOR, ArrayValues);
+    if (!proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+    Iterators[NAME] = ArrayValues;
+    if (explicit) for (key in $iterators) if (!proto[key]) redefine(proto, key, $iterators[key], true);
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cart {\n  position: relative;\n}\n.product-count {\n  position: absolute;\n  top: -5px;\n  right: -5px;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background-color: pink;\n  border: 2px solid white;\n}\n.product-count p {\n  text-align: center;\n  font-size: 70%;\n  font-weight: 900;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-range-slider/dist/vue-range-slider.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-range-slider/dist/vue-range-slider.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".range-slider {\n  display: inline-block;\n  padding: 0 10px;\n  height: 20px;\n  width: 130px;\n}\n\n.range-slider.disabled {\n  opacity: 0.5;\n}\n\n.range-slider-inner {\n  display: inline-block;\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n\n.range-slider-rail,\n.range-slider-fill {\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  height: 4px;\n  border-radius: 2px;\n  transform: translateY(-50%);\n}\n\n.range-slider-rail {\n  width: 100%;\n  background-color: #e2e2e2;\n}\n\n.range-slider-fill {\n  background-color: #21fb92;\n}\n\n.range-slider-knob {\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  box-sizing: border-box;\n  height: 20px;\n  width: 20px;\n  border: 1px solid #f5f5f5;\n  border-radius: 50%;\n  background-color: #fff;\n  box-shadow: 1px 1px rgba(0, 0, 0, 0.2);\n  transform: translate(-50%, -50%);\n  cursor: pointer;\n}\n\n.range-slider-hidden {\n  display: none;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=style&index=0&id=98d346b0&scoped=true&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=style&index=0&id=98d346b0&scoped=true&lang=css& ***!
@@ -296,7 +5830,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\nh4[data-v-98d346b0] {\n  max-width: 800px;\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
+exports.push([module.i, "\nh4[data-v-98d346b0] {\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -11270,6 +16804,750 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_Symbol.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash-es/_Symbol.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_root.js */ "./node_modules/lodash-es/_root.js");
+
+
+/** Built-in value references. */
+var Symbol = _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Symbol;
+
+/* harmony default export */ __webpack_exports__["default"] = (Symbol);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_baseClamp.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash-es/_baseClamp.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * The base implementation of `_.clamp` which doesn't coerce arguments.
+ *
+ * @private
+ * @param {number} number The number to clamp.
+ * @param {number} [lower] The lower bound.
+ * @param {number} upper The upper bound.
+ * @returns {number} Returns the clamped number.
+ */
+function baseClamp(number, lower, upper) {
+  if (number === number) {
+    if (upper !== undefined) {
+      number = number <= upper ? number : upper;
+    }
+    if (lower !== undefined) {
+      number = number >= lower ? number : lower;
+    }
+  }
+  return number;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (baseClamp);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_baseGetTag.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash-es/_baseGetTag.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./node_modules/lodash-es/_Symbol.js");
+/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_getRawTag.js */ "./node_modules/lodash-es/_getRawTag.js");
+/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_objectToString.js */ "./node_modules/lodash-es/_objectToString.js");
+
+
+
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? Object(_getRawTag_js__WEBPACK_IMPORTED_MODULE_1__["default"])(value)
+    : Object(_objectToString_js__WEBPACK_IMPORTED_MODULE_2__["default"])(value);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (baseGetTag);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_freeGlobal.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash-es/_freeGlobal.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/* harmony default export */ __webpack_exports__["default"] = (freeGlobal);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_getRawTag.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash-es/_getRawTag.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_Symbol.js */ "./node_modules/lodash-es/_Symbol.js");
+
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Built-in value references. */
+var symToStringTag = _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"] ? _Symbol_js__WEBPACK_IMPORTED_MODULE_0__["default"].toStringTag : undefined;
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (getRawTag);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_objectToString.js":
+/*!***************************************************!*\
+  !*** ./node_modules/lodash-es/_objectToString.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (objectToString);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/_root.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash-es/_root.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_freeGlobal.js */ "./node_modules/lodash-es/_freeGlobal.js");
+
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf || Function('return this')();
+
+/* harmony default export */ __webpack_exports__["default"] = (root);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/clamp.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash-es/clamp.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseClamp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_baseClamp.js */ "./node_modules/lodash-es/_baseClamp.js");
+/* harmony import */ var _toNumber_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toNumber.js */ "./node_modules/lodash-es/toNumber.js");
+
+
+
+/**
+ * Clamps `number` within the inclusive `lower` and `upper` bounds.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Number
+ * @param {number} number The number to clamp.
+ * @param {number} [lower] The lower bound.
+ * @param {number} upper The upper bound.
+ * @returns {number} Returns the clamped number.
+ * @example
+ *
+ * _.clamp(-10, -5, 5);
+ * // => -5
+ *
+ * _.clamp(10, -5, 5);
+ * // => 5
+ */
+function clamp(number, lower, upper) {
+  if (upper === undefined) {
+    upper = lower;
+    lower = undefined;
+  }
+  if (upper !== undefined) {
+    upper = Object(_toNumber_js__WEBPACK_IMPORTED_MODULE_1__["default"])(upper);
+    upper = upper === upper ? upper : 0;
+  }
+  if (lower !== undefined) {
+    lower = Object(_toNumber_js__WEBPACK_IMPORTED_MODULE_1__["default"])(lower);
+    lower = lower === lower ? lower : 0;
+  }
+  return Object(_baseClamp_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_toNumber_js__WEBPACK_IMPORTED_MODULE_1__["default"])(number), lower, upper);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (clamp);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/debounce.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash-es/debounce.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _isObject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isObject.js */ "./node_modules/lodash-es/isObject.js");
+/* harmony import */ var _now_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./now.js */ "./node_modules/lodash-es/now.js");
+/* harmony import */ var _toNumber_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./toNumber.js */ "./node_modules/lodash-es/toNumber.js");
+
+
+
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = Object(_toNumber_js__WEBPACK_IMPORTED_MODULE_2__["default"])(wait) || 0;
+  if (Object(_isObject_js__WEBPACK_IMPORTED_MODULE_0__["default"])(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(Object(_toNumber_js__WEBPACK_IMPORTED_MODULE_2__["default"])(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        timeWaiting = wait - timeSinceLastCall;
+
+    return maxing
+      ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+      : timeWaiting;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = Object(_now_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(Object(_now_js__WEBPACK_IMPORTED_MODULE_1__["default"])());
+  }
+
+  function debounced() {
+    var time = Object(_now_js__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        clearTimeout(timerId);
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (debounce);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/isObject.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash-es/isObject.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (isObject);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/isObjectLike.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash-es/isObjectLike.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (isObjectLike);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/isSymbol.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash-es/isSymbol.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_baseGetTag.js */ "./node_modules/lodash-es/_baseGetTag.js");
+/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isObjectLike.js */ "./node_modules/lodash-es/isObjectLike.js");
+
+
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (Object(_isObjectLike_js__WEBPACK_IMPORTED_MODULE_1__["default"])(value) && Object(_baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__["default"])(value) == symbolTag);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (isSymbol);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/now.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash-es/now.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_root.js */ "./node_modules/lodash-es/_root.js");
+
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return _root_js__WEBPACK_IMPORTED_MODULE_0__["default"].Date.now();
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (now);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash-es/toNumber.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash-es/toNumber.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _isObject_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isObject.js */ "./node_modules/lodash-es/isObject.js");
+/* harmony import */ var _isSymbol_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isSymbol.js */ "./node_modules/lodash-es/isSymbol.js");
+
+
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (Object(_isSymbol_js__WEBPACK_IMPORTED_MODULE_1__["default"])(value)) {
+    return NAN;
+  }
+  if (Object(_isObject_js__WEBPACK_IMPORTED_MODULE_0__["default"])(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = Object(_isObject_js__WEBPACK_IMPORTED_MODULE_0__["default"])(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (toNumber);
 
 
 /***/ }),
@@ -26592,6 +32870,2830 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * ScrollMagic v2.0.7 (2019-05-07)
+ * The javascript library for magical scroll interactions.
+ * (c) 2019 Jan Paepke (@janpaepke)
+ * Project Website: http://scrollmagic.io
+ * 
+ * @version 2.0.7
+ * @license Dual licensed under MIT license and GPL.
+ * @author Jan Paepke - e-mail@janpaepke.de
+ *
+ * @file ScrollMagic main library.
+ */
+/**
+ * @namespace ScrollMagic
+ */
+(function (root, factory) {
+	if (true) {
+		// AMD. Register as an anonymous module.
+		!(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}(this, function () {
+	"use strict";
+
+	var ScrollMagic = function () {
+		_util.log(2, '(COMPATIBILITY NOTICE) -> As of ScrollMagic 2.0.0 you need to use \'new ScrollMagic.Controller()\' to create a new controller instance. Use \'new ScrollMagic.Scene()\' to instance a scene.');
+	};
+
+	ScrollMagic.version = "2.0.7";
+
+	// TODO: temporary workaround for chrome's scroll jitter bug
+	window.addEventListener("mousewheel", function () {});
+
+	// global const
+	var PIN_SPACER_ATTRIBUTE = "data-scrollmagic-pin-spacer";
+
+	/**
+	 * The main class that is needed once per scroll container.
+	 *
+	 * @class
+	 *
+	 * @example
+	 * // basic initialization
+	 * var controller = new ScrollMagic.Controller();
+	 *
+	 * // passing options
+	 * var controller = new ScrollMagic.Controller({container: "#myContainer", loglevel: 3});
+	 *
+	 * @param {object} [options] - An object containing one or more options for the controller.
+	 * @param {(string|object)} [options.container=window] - A selector, DOM object that references the main container for scrolling.
+	 * @param {boolean} [options.vertical=true] - Sets the scroll mode to vertical (`true`) or horizontal (`false`) scrolling.
+	 * @param {object} [options.globalSceneOptions={}] - These options will be passed to every Scene that is added to the controller using the addScene method. For more information on Scene options see {@link ScrollMagic.Scene}.
+	 * @param {number} [options.loglevel=2] Loglevel for debugging. Note that logging is disabled in the minified version of ScrollMagic.
+											 ** `0` => silent
+											 ** `1` => errors
+											 ** `2` => errors, warnings
+											 ** `3` => errors, warnings, debuginfo
+	 * @param {boolean} [options.refreshInterval=100] - Some changes don't call events by default, like changing the container size or moving a scene trigger element.  
+	 																										 This interval polls these parameters to fire the necessary events.  
+	 																										 If you don't use custom containers, trigger elements or have static layouts, where the positions of the trigger elements don't change, you can set this to 0 disable interval checking and improve performance.
+	 *
+	 */
+	ScrollMagic.Controller = function (options) {
+		/*
+		 * ----------------------------------------------------------------
+		 * settings
+		 * ----------------------------------------------------------------
+		 */
+		var
+			NAMESPACE = 'ScrollMagic.Controller',
+			SCROLL_DIRECTION_FORWARD = 'FORWARD',
+			SCROLL_DIRECTION_REVERSE = 'REVERSE',
+			SCROLL_DIRECTION_PAUSED = 'PAUSED',
+			DEFAULT_OPTIONS = CONTROLLER_OPTIONS.defaults;
+
+		/*
+		 * ----------------------------------------------------------------
+		 * private vars
+		 * ----------------------------------------------------------------
+		 */
+		var
+			Controller = this,
+			_options = _util.extend({}, DEFAULT_OPTIONS, options),
+			_sceneObjects = [],
+			_updateScenesOnNextCycle = false, // can be boolean (true => all scenes) or an array of scenes to be updated
+			_scrollPos = 0,
+			_scrollDirection = SCROLL_DIRECTION_PAUSED,
+			_isDocument = true,
+			_viewPortSize = 0,
+			_enabled = true,
+			_updateTimeout,
+			_refreshTimeout;
+
+		/*
+		 * ----------------------------------------------------------------
+		 * private functions
+		 * ----------------------------------------------------------------
+		 */
+
+		/**
+		 * Internal constructor function of the ScrollMagic Controller
+		 * @private
+		 */
+		var construct = function () {
+			for (var key in _options) {
+				if (!DEFAULT_OPTIONS.hasOwnProperty(key)) {
+					log(2, "WARNING: Unknown option \"" + key + "\"");
+					delete _options[key];
+				}
+			}
+			_options.container = _util.get.elements(_options.container)[0];
+			// check ScrollContainer
+			if (!_options.container) {
+				log(1, "ERROR creating object " + NAMESPACE + ": No valid scroll container supplied");
+				throw NAMESPACE + " init failed."; // cancel
+			}
+			_isDocument = _options.container === window || _options.container === document.body || !document.body.contains(_options.container);
+			// normalize to window
+			if (_isDocument) {
+				_options.container = window;
+			}
+			// update container size immediately
+			_viewPortSize = getViewportSize();
+			// set event handlers
+			_options.container.addEventListener("resize", onChange);
+			_options.container.addEventListener("scroll", onChange);
+
+			var ri = parseInt(_options.refreshInterval, 10);
+			_options.refreshInterval = _util.type.Number(ri) ? ri : DEFAULT_OPTIONS.refreshInterval;
+			scheduleRefresh();
+
+			log(3, "added new " + NAMESPACE + " controller (v" + ScrollMagic.version + ")");
+		};
+
+		/**
+		 * Schedule the next execution of the refresh function
+		 * @private
+		 */
+		var scheduleRefresh = function () {
+			if (_options.refreshInterval > 0) {
+				_refreshTimeout = window.setTimeout(refresh, _options.refreshInterval);
+			}
+		};
+
+		/**
+		 * Default function to get scroll pos - overwriteable using `Controller.scrollPos(newFunction)`
+		 * @private
+		 */
+		var getScrollPos = function () {
+			return _options.vertical ? _util.get.scrollTop(_options.container) : _util.get.scrollLeft(_options.container);
+		};
+
+		/**
+		 * Returns the current viewport Size (width vor horizontal, height for vertical)
+		 * @private
+		 */
+		var getViewportSize = function () {
+			return _options.vertical ? _util.get.height(_options.container) : _util.get.width(_options.container);
+		};
+
+		/**
+		 * Default function to set scroll pos - overwriteable using `Controller.scrollTo(newFunction)`
+		 * Make available publicly for pinned mousewheel workaround.
+		 * @private
+		 */
+		var setScrollPos = this._setScrollPos = function (pos) {
+			if (_options.vertical) {
+				if (_isDocument) {
+					window.scrollTo(_util.get.scrollLeft(), pos);
+				} else {
+					_options.container.scrollTop = pos;
+				}
+			} else {
+				if (_isDocument) {
+					window.scrollTo(pos, _util.get.scrollTop());
+				} else {
+					_options.container.scrollLeft = pos;
+				}
+			}
+		};
+
+		/**
+		 * Handle updates in cycles instead of on scroll (performance)
+		 * @private
+		 */
+		var updateScenes = function () {
+			if (_enabled && _updateScenesOnNextCycle) {
+				// determine scenes to update
+				var scenesToUpdate = _util.type.Array(_updateScenesOnNextCycle) ? _updateScenesOnNextCycle : _sceneObjects.slice(0);
+				// reset scenes
+				_updateScenesOnNextCycle = false;
+				var oldScrollPos = _scrollPos;
+				// update scroll pos now instead of onChange, as it might have changed since scheduling (i.e. in-browser smooth scroll)
+				_scrollPos = Controller.scrollPos();
+				var deltaScroll = _scrollPos - oldScrollPos;
+				if (deltaScroll !== 0) { // scroll position changed?
+					_scrollDirection = (deltaScroll > 0) ? SCROLL_DIRECTION_FORWARD : SCROLL_DIRECTION_REVERSE;
+				}
+				// reverse order of scenes if scrolling reverse
+				if (_scrollDirection === SCROLL_DIRECTION_REVERSE) {
+					scenesToUpdate.reverse();
+				}
+				// update scenes
+				scenesToUpdate.forEach(function (scene, index) {
+					log(3, "updating Scene " + (index + 1) + "/" + scenesToUpdate.length + " (" + _sceneObjects.length + " total)");
+					scene.update(true);
+				});
+				if (scenesToUpdate.length === 0 && _options.loglevel >= 3) {
+					log(3, "updating 0 Scenes (nothing added to controller)");
+				}
+			}
+		};
+
+		/**
+		 * Initializes rAF callback
+		 * @private
+		 */
+		var debounceUpdate = function () {
+			_updateTimeout = _util.rAF(updateScenes);
+		};
+
+		/**
+		 * Handles Container changes
+		 * @private
+		 */
+		var onChange = function (e) {
+			log(3, "event fired causing an update:", e.type);
+			if (e.type == "resize") {
+				// resize
+				_viewPortSize = getViewportSize();
+				_scrollDirection = SCROLL_DIRECTION_PAUSED;
+			}
+			// schedule update
+			if (_updateScenesOnNextCycle !== true) {
+				_updateScenesOnNextCycle = true;
+				debounceUpdate();
+			}
+		};
+
+		var refresh = function () {
+			if (!_isDocument) {
+				// simulate resize event. Only works for viewport relevant param (performance)
+				if (_viewPortSize != getViewportSize()) {
+					var resizeEvent;
+					try {
+						resizeEvent = new Event('resize', {
+							bubbles: false,
+							cancelable: false
+						});
+					} catch (e) { // stupid IE
+						resizeEvent = document.createEvent("Event");
+						resizeEvent.initEvent("resize", false, false);
+					}
+					_options.container.dispatchEvent(resizeEvent);
+				}
+			}
+			_sceneObjects.forEach(function (scene, index) { // refresh all scenes
+				scene.refresh();
+			});
+			scheduleRefresh();
+		};
+
+		/**
+		 * Send a debug message to the console.
+		 * provided publicly with _log for plugins
+		 * @private
+		 *
+		 * @param {number} loglevel - The loglevel required to initiate output for the message.
+		 * @param {...mixed} output - One or more variables that should be passed to the console.
+		 */
+		var log = this._log = function (loglevel, output) {
+			if (_options.loglevel >= loglevel) {
+				Array.prototype.splice.call(arguments, 1, 0, "(" + NAMESPACE + ") ->");
+				_util.log.apply(window, arguments);
+			}
+		};
+		// for scenes we have getters for each option, but for the controller we don't, so we need to make it available externally for plugins
+		this._options = _options;
+
+		/**
+		 * Sort scenes in ascending order of their start offset.
+		 * @private
+		 *
+		 * @param {array} ScenesArray - an array of ScrollMagic Scenes that should be sorted
+		 * @return {array} The sorted array of Scenes.
+		 */
+		var sortScenes = function (ScenesArray) {
+			if (ScenesArray.length <= 1) {
+				return ScenesArray;
+			} else {
+				var scenes = ScenesArray.slice(0);
+				scenes.sort(function (a, b) {
+					return a.scrollOffset() > b.scrollOffset() ? 1 : -1;
+				});
+				return scenes;
+			}
+		};
+
+		/**
+		 * ----------------------------------------------------------------
+		 * public functions
+		 * ----------------------------------------------------------------
+		 */
+
+		/**
+		 * Add one ore more scene(s) to the controller.  
+		 * This is the equivalent to `Scene.addTo(controller)`.
+		 * @public
+		 * @example
+		 * // with a previously defined scene
+		 * controller.addScene(scene);
+		 *
+		 * // with a newly created scene.
+		 * controller.addScene(new ScrollMagic.Scene({duration : 0}));
+		 *
+		 * // adding multiple scenes
+		 * controller.addScene([scene, scene2, new ScrollMagic.Scene({duration : 0})]);
+		 *
+		 * @param {(ScrollMagic.Scene|array)} newScene - ScrollMagic Scene or Array of Scenes to be added to the controller.
+		 * @return {Controller} Parent object for chaining.
+		 */
+		this.addScene = function (newScene) {
+			if (_util.type.Array(newScene)) {
+				newScene.forEach(function (scene, index) {
+					Controller.addScene(scene);
+				});
+			} else if (newScene instanceof ScrollMagic.Scene) {
+				if (newScene.controller() !== Controller) {
+					newScene.addTo(Controller);
+				} else if (_sceneObjects.indexOf(newScene) < 0) {
+					// new scene
+					_sceneObjects.push(newScene); // add to array
+					_sceneObjects = sortScenes(_sceneObjects); // sort
+					newScene.on("shift.controller_sort", function () { // resort whenever scene moves
+						_sceneObjects = sortScenes(_sceneObjects);
+					});
+					// insert Global defaults.
+					for (var key in _options.globalSceneOptions) {
+						if (newScene[key]) {
+							newScene[key].call(newScene, _options.globalSceneOptions[key]);
+						}
+					}
+					log(3, "adding Scene (now " + _sceneObjects.length + " total)");
+				}
+			} else {
+				log(1, "ERROR: invalid argument supplied for '.addScene()'");
+			}
+			return Controller;
+		};
+
+		/**
+		 * Remove one ore more scene(s) from the controller.  
+		 * This is the equivalent to `Scene.remove()`.
+		 * @public
+		 * @example
+		 * // remove a scene from the controller
+		 * controller.removeScene(scene);
+		 *
+		 * // remove multiple scenes from the controller
+		 * controller.removeScene([scene, scene2, scene3]);
+		 *
+		 * @param {(ScrollMagic.Scene|array)} Scene - ScrollMagic Scene or Array of Scenes to be removed from the controller.
+		 * @returns {Controller} Parent object for chaining.
+		 */
+		this.removeScene = function (Scene) {
+			if (_util.type.Array(Scene)) {
+				Scene.forEach(function (scene, index) {
+					Controller.removeScene(scene);
+				});
+			} else {
+				var index = _sceneObjects.indexOf(Scene);
+				if (index > -1) {
+					Scene.off("shift.controller_sort");
+					_sceneObjects.splice(index, 1);
+					log(3, "removing Scene (now " + _sceneObjects.length + " left)");
+					Scene.remove();
+				}
+			}
+			return Controller;
+		};
+
+		/**
+	 * Update one ore more scene(s) according to the scroll position of the container.  
+	 * This is the equivalent to `Scene.update()`.  
+	 * The update method calculates the scene's start and end position (based on the trigger element, trigger hook, duration and offset) and checks it against the current scroll position of the container.  
+	 * It then updates the current scene state accordingly (or does nothing, if the state is already correct) – Pins will be set to their correct position and tweens will be updated to their correct progress.  
+	 * _**Note:** This method gets called constantly whenever Controller detects a change. The only application for you is if you change something outside of the realm of ScrollMagic, like moving the trigger or changing tween parameters._
+	 * @public
+	 * @example
+	 * // update a specific scene on next cycle
+ 	 * controller.updateScene(scene);
+ 	 *
+	 * // update a specific scene immediately
+	 * controller.updateScene(scene, true);
+ 	 *
+	 * // update multiple scenes scene on next cycle
+	 * controller.updateScene([scene1, scene2, scene3]);
+	 *
+	 * @param {ScrollMagic.Scene} Scene - ScrollMagic Scene or Array of Scenes that is/are supposed to be updated.
+	 * @param {boolean} [immediately=false] - If `true` the update will be instant, if `false` it will wait until next update cycle.  
+	 										  This is useful when changing multiple properties of the scene - this way it will only be updated once all new properties are set (updateScenes).
+	 * @return {Controller} Parent object for chaining.
+	 */
+		this.updateScene = function (Scene, immediately) {
+			if (_util.type.Array(Scene)) {
+				Scene.forEach(function (scene, index) {
+					Controller.updateScene(scene, immediately);
+				});
+			} else {
+				if (immediately) {
+					Scene.update(true);
+				} else if (_updateScenesOnNextCycle !== true && Scene instanceof ScrollMagic.Scene) { // if _updateScenesOnNextCycle is true, all connected scenes are already scheduled for update
+					// prep array for next update cycle
+					_updateScenesOnNextCycle = _updateScenesOnNextCycle || [];
+					if (_updateScenesOnNextCycle.indexOf(Scene) == -1) {
+						_updateScenesOnNextCycle.push(Scene);
+					}
+					_updateScenesOnNextCycle = sortScenes(_updateScenesOnNextCycle); // sort
+					debounceUpdate();
+				}
+			}
+			return Controller;
+		};
+
+		/**
+		 * Updates the controller params and calls updateScene on every scene, that is attached to the controller.  
+		 * See `Controller.updateScene()` for more information about what this means.  
+		 * In most cases you will not need this function, as it is called constantly, whenever ScrollMagic detects a state change event, like resize or scroll.  
+		 * The only application for this method is when ScrollMagic fails to detect these events.  
+		 * One application is with some external scroll libraries (like iScroll) that move an internal container to a negative offset instead of actually scrolling. In this case the update on the controller needs to be called whenever the child container's position changes.
+		 * For this case there will also be the need to provide a custom function to calculate the correct scroll position. See `Controller.scrollPos()` for details.
+		 * @public
+		 * @example
+		 * // update the controller on next cycle (saves performance due to elimination of redundant updates)
+		 * controller.update();
+		 *
+		 * // update the controller immediately
+		 * controller.update(true);
+		 *
+		 * @param {boolean} [immediately=false] - If `true` the update will be instant, if `false` it will wait until next update cycle (better performance)
+		 * @return {Controller} Parent object for chaining.
+		 */
+		this.update = function (immediately) {
+			onChange({
+				type: "resize"
+			}); // will update size and set _updateScenesOnNextCycle to true
+			if (immediately) {
+				updateScenes();
+			}
+			return Controller;
+		};
+
+		/**
+		 * Scroll to a numeric scroll offset, a DOM element, the start of a scene or provide an alternate method for scrolling.  
+		 * For vertical controllers it will change the top scroll offset and for horizontal applications it will change the left offset.
+		 * @public
+		 *
+		 * @since 1.1.0
+		 * @example
+		 * // scroll to an offset of 100
+		 * controller.scrollTo(100);
+		 *
+		 * // scroll to a DOM element
+		 * controller.scrollTo("#anchor");
+		 *
+		 * // scroll to the beginning of a scene
+		 * var scene = new ScrollMagic.Scene({offset: 200});
+		 * controller.scrollTo(scene);
+		 *
+		 * // define a new scroll position modification function (jQuery animate instead of jump)
+		 * controller.scrollTo(function (newScrollPos) {
+		 *	$("html, body").animate({scrollTop: newScrollPos});
+		 * });
+		 * controller.scrollTo(100); // call as usual, but the new function will be used instead
+		 *
+		 * // define a new scroll function with an additional parameter
+		 * controller.scrollTo(function (newScrollPos, message) {
+		 *  console.log(message);
+		 *	$(this).animate({scrollTop: newScrollPos});
+		 * });
+		 * // call as usual, but supply an extra parameter to the defined custom function
+		 * controller.scrollTo(100, "my message");
+		 *
+		 * // define a new scroll function with an additional parameter containing multiple variables
+		 * controller.scrollTo(function (newScrollPos, options) {
+		 *  someGlobalVar = options.a + options.b;
+		 *	$(this).animate({scrollTop: newScrollPos});
+		 * });
+		 * // call as usual, but supply an extra parameter containing multiple options
+		 * controller.scrollTo(100, {a: 1, b: 2});
+		 *
+		 * // define a new scroll function with a callback supplied as an additional parameter
+		 * controller.scrollTo(function (newScrollPos, callback) {
+		 *	$(this).animate({scrollTop: newScrollPos}, 400, "swing", callback);
+		 * });
+		 * // call as usual, but supply an extra parameter, which is used as a callback in the previously defined custom scroll function
+		 * controller.scrollTo(100, function() {
+		 *	console.log("scroll has finished.");
+		 * });
+		 *
+		 * @param {mixed} scrollTarget - The supplied argument can be one of these types:
+		 * 1. `number` -> The container will scroll to this new scroll offset.
+		 * 2. `string` or `object` -> Can be a selector or a DOM object.  
+		 *  The container will scroll to the position of this element.
+		 * 3. `ScrollMagic Scene` -> The container will scroll to the start of this scene.
+		 * 4. `function` -> This function will be used for future scroll position modifications.  
+		 *  This provides a way for you to change the behaviour of scrolling and adding new behaviour like animation. The function receives the new scroll position as a parameter and a reference to the container element using `this`.  
+		 *  It may also optionally receive an optional additional parameter (see below)  
+		 *  _**NOTE:**  
+		 *  All other options will still work as expected, using the new function to scroll._
+		 * @param {mixed} [additionalParameter] - If a custom scroll function was defined (see above 4.), you may want to supply additional parameters to it, when calling it. You can do this using this parameter – see examples for details. Please note, that this parameter will have no effect, if you use the default scrolling function.
+		 * @returns {Controller} Parent object for chaining.
+		 */
+		this.scrollTo = function (scrollTarget, additionalParameter) {
+			if (_util.type.Number(scrollTarget)) { // excecute
+				setScrollPos.call(_options.container, scrollTarget, additionalParameter);
+			} else if (scrollTarget instanceof ScrollMagic.Scene) { // scroll to scene
+				if (scrollTarget.controller() === Controller) { // check if the controller is associated with this scene
+					Controller.scrollTo(scrollTarget.scrollOffset(), additionalParameter);
+				} else {
+					log(2, "scrollTo(): The supplied scene does not belong to this controller. Scroll cancelled.", scrollTarget);
+				}
+			} else if (_util.type.Function(scrollTarget)) { // assign new scroll function
+				setScrollPos = scrollTarget;
+			} else { // scroll to element
+				var elem = _util.get.elements(scrollTarget)[0];
+				if (elem) {
+					// if parent is pin spacer, use spacer position instead so correct start position is returned for pinned elements.
+					while (elem.parentNode.hasAttribute(PIN_SPACER_ATTRIBUTE)) {
+						elem = elem.parentNode;
+					}
+
+					var
+						param = _options.vertical ? "top" : "left", // which param is of interest ?
+						containerOffset = _util.get.offset(_options.container), // container position is needed because element offset is returned in relation to document, not in relation to container.
+						elementOffset = _util.get.offset(elem);
+
+					if (!_isDocument) { // container is not the document root, so substract scroll Position to get correct trigger element position relative to scrollcontent
+						containerOffset[param] -= Controller.scrollPos();
+					}
+
+					Controller.scrollTo(elementOffset[param] - containerOffset[param], additionalParameter);
+				} else {
+					log(2, "scrollTo(): The supplied argument is invalid. Scroll cancelled.", scrollTarget);
+				}
+			}
+			return Controller;
+		};
+
+		/**
+		 * **Get** the current scrollPosition or **Set** a new method to calculate it.  
+		 * -> **GET**:
+		 * When used as a getter this function will return the current scroll position.  
+		 * To get a cached value use Controller.info("scrollPos"), which will be updated in the update cycle.  
+		 * For vertical controllers it will return the top scroll offset and for horizontal applications it will return the left offset.
+		 *
+		 * -> **SET**:
+		 * When used as a setter this method prodes a way to permanently overwrite the controller's scroll position calculation.  
+		 * A typical usecase is when the scroll position is not reflected by the containers scrollTop or scrollLeft values, but for example by the inner offset of a child container.  
+		 * Moving a child container inside a parent is a commonly used method for several scrolling frameworks, including iScroll.  
+		 * By providing an alternate calculation function you can make sure ScrollMagic receives the correct scroll position.  
+		 * Please also bear in mind that your function should return y values for vertical scrolls an x for horizontals.
+		 *
+		 * To change the current scroll position please use `Controller.scrollTo()`.
+		 * @public
+		 *
+		 * @example
+		 * // get the current scroll Position
+		 * var scrollPos = controller.scrollPos();
+		 *
+		 * // set a new scroll position calculation method
+		 * controller.scrollPos(function () {
+		 *	return this.info("vertical") ? -mychildcontainer.y : -mychildcontainer.x
+		 * });
+		 *
+		 * @param {function} [scrollPosMethod] - The function to be used for the scroll position calculation of the container.
+		 * @returns {(number|Controller)} Current scroll position or parent object for chaining.
+		 */
+		this.scrollPos = function (scrollPosMethod) {
+			if (!arguments.length) { // get
+				return getScrollPos.call(Controller);
+			} else { // set
+				if (_util.type.Function(scrollPosMethod)) {
+					getScrollPos = scrollPosMethod;
+				} else {
+					log(2, "Provided value for method 'scrollPos' is not a function. To change the current scroll position use 'scrollTo()'.");
+				}
+			}
+			return Controller;
+		};
+
+		/**
+		 * **Get** all infos or one in particular about the controller.
+		 * @public
+		 * @example
+		 * // returns the current scroll position (number)
+		 * var scrollPos = controller.info("scrollPos");
+		 *
+		 * // returns all infos as an object
+		 * var infos = controller.info();
+		 *
+		 * @param {string} [about] - If passed only this info will be returned instead of an object containing all.  
+		 							 Valid options are:
+		 							 ** `"size"` => the current viewport size of the container
+		 							 ** `"vertical"` => true if vertical scrolling, otherwise false
+		 							 ** `"scrollPos"` => the current scroll position
+		 							 ** `"scrollDirection"` => the last known direction of the scroll
+		 							 ** `"container"` => the container element
+		 							 ** `"isDocument"` => true if container element is the document.
+		 * @returns {(mixed|object)} The requested info(s).
+		 */
+		this.info = function (about) {
+			var values = {
+				size: _viewPortSize, // contains height or width (in regard to orientation);
+				vertical: _options.vertical,
+				scrollPos: _scrollPos,
+				scrollDirection: _scrollDirection,
+				container: _options.container,
+				isDocument: _isDocument
+			};
+			if (!arguments.length) { // get all as an object
+				return values;
+			} else if (values[about] !== undefined) {
+				return values[about];
+			} else {
+				log(1, "ERROR: option \"" + about + "\" is not available");
+				return;
+			}
+		};
+
+		/**
+		 * **Get** or **Set** the current loglevel option value.
+		 * @public
+		 *
+		 * @example
+		 * // get the current value
+		 * var loglevel = controller.loglevel();
+		 *
+		 * // set a new value
+		 * controller.loglevel(3);
+		 *
+		 * @param {number} [newLoglevel] - The new loglevel setting of the Controller. `[0-3]`
+		 * @returns {(number|Controller)} Current loglevel or parent object for chaining.
+		 */
+		this.loglevel = function (newLoglevel) {
+			if (!arguments.length) { // get
+				return _options.loglevel;
+			} else if (_options.loglevel != newLoglevel) { // set
+				_options.loglevel = newLoglevel;
+			}
+			return Controller;
+		};
+
+		/**
+		 * **Get** or **Set** the current enabled state of the controller.  
+		 * This can be used to disable all Scenes connected to the controller without destroying or removing them.
+		 * @public
+		 *
+		 * @example
+		 * // get the current value
+		 * var enabled = controller.enabled();
+		 *
+		 * // disable the controller
+		 * controller.enabled(false);
+		 *
+		 * @param {boolean} [newState] - The new enabled state of the controller `true` or `false`.
+		 * @returns {(boolean|Controller)} Current enabled state or parent object for chaining.
+		 */
+		this.enabled = function (newState) {
+			if (!arguments.length) { // get
+				return _enabled;
+			} else if (_enabled != newState) { // set
+				_enabled = !!newState;
+				Controller.updateScene(_sceneObjects, true);
+			}
+			return Controller;
+		};
+
+		/**
+		 * Destroy the Controller, all Scenes and everything.
+		 * @public
+		 *
+		 * @example
+		 * // without resetting the scenes
+		 * controller = controller.destroy();
+		 *
+		 * // with scene reset
+		 * controller = controller.destroy(true);
+		 *
+		 * @param {boolean} [resetScenes=false] - If `true` the pins and tweens (if existent) of all scenes will be reset.
+		 * @returns {null} Null to unset handler variables.
+		 */
+		this.destroy = function (resetScenes) {
+			window.clearTimeout(_refreshTimeout);
+			var i = _sceneObjects.length;
+			while (i--) {
+				_sceneObjects[i].destroy(resetScenes);
+			}
+			_options.container.removeEventListener("resize", onChange);
+			_options.container.removeEventListener("scroll", onChange);
+			_util.cAF(_updateTimeout);
+			log(3, "destroyed " + NAMESPACE + " (reset: " + (resetScenes ? "true" : "false") + ")");
+			return null;
+		};
+
+		// INIT
+		construct();
+		return Controller;
+	};
+
+	// store pagewide controller options
+	var CONTROLLER_OPTIONS = {
+		defaults: {
+			container: window,
+			vertical: true,
+			globalSceneOptions: {},
+			loglevel: 2,
+			refreshInterval: 100
+		}
+	};
+	/*
+	 * method used to add an option to ScrollMagic Scenes.
+	 */
+	ScrollMagic.Controller.addOption = function (name, defaultValue) {
+		CONTROLLER_OPTIONS.defaults[name] = defaultValue;
+	};
+	// instance extension function for plugins
+	ScrollMagic.Controller.extend = function (extension) {
+		var oldClass = this;
+		ScrollMagic.Controller = function () {
+			oldClass.apply(this, arguments);
+			this.$super = _util.extend({}, this); // copy parent state
+			return extension.apply(this, arguments) || this;
+		};
+		_util.extend(ScrollMagic.Controller, oldClass); // copy properties
+		ScrollMagic.Controller.prototype = oldClass.prototype; // copy prototype
+		ScrollMagic.Controller.prototype.constructor = ScrollMagic.Controller; // restore constructor
+	};
+
+
+	/**
+	 * A Scene defines where the controller should react and how.
+	 *
+	 * @class
+	 *
+	 * @example
+	 * // create a standard scene and add it to a controller
+	 * new ScrollMagic.Scene()
+	 *		.addTo(controller);
+	 *
+	 * // create a scene with custom options and assign a handler to it.
+	 * var scene = new ScrollMagic.Scene({
+	 * 		duration: 100,
+	 *		offset: 200,
+	 *		triggerHook: "onEnter",
+	 *		reverse: false
+	 * });
+	 *
+	 * @param {object} [options] - Options for the Scene. The options can be updated at any time.  
+	 							   Instead of setting the options for each scene individually you can also set them globally in the controller as the controllers `globalSceneOptions` option. The object accepts the same properties as the ones below.  
+	 							   When a scene is added to the controller the options defined using the Scene constructor will be overwritten by those set in `globalSceneOptions`.
+	 * @param {(number|string|function)} [options.duration=0] - The duration of the scene. 
+	 					Please see `Scene.duration()` for details.
+	 * @param {number} [options.offset=0] - Offset Value for the Trigger Position. If no triggerElement is defined this will be the scroll distance from the start of the page, after which the scene will start.
+	 * @param {(string|object)} [options.triggerElement=null] - Selector or DOM object that defines the start of the scene. If undefined the scene will start right at the start of the page (unless an offset is set).
+	 * @param {(number|string)} [options.triggerHook="onCenter"] - Can be a number between 0 and 1 defining the position of the trigger Hook in relation to the viewport.  
+	 															  Can also be defined using a string:
+	 															  ** `"onEnter"` => `1`
+	 															  ** `"onCenter"` => `0.5`
+	 															  ** `"onLeave"` => `0`
+	 * @param {boolean} [options.reverse=true] - Should the scene reverse, when scrolling up?
+	 * @param {number} [options.loglevel=2] - Loglevel for debugging. Note that logging is disabled in the minified version of ScrollMagic.
+	 										  ** `0` => silent
+	 										  ** `1` => errors
+	 										  ** `2` => errors, warnings
+	 										  ** `3` => errors, warnings, debuginfo
+	 * 
+	 */
+	ScrollMagic.Scene = function (options) {
+
+		/*
+		 * ----------------------------------------------------------------
+		 * settings
+		 * ----------------------------------------------------------------
+		 */
+
+		var
+			NAMESPACE = 'ScrollMagic.Scene',
+			SCENE_STATE_BEFORE = 'BEFORE',
+			SCENE_STATE_DURING = 'DURING',
+			SCENE_STATE_AFTER = 'AFTER',
+			DEFAULT_OPTIONS = SCENE_OPTIONS.defaults;
+
+		/*
+		 * ----------------------------------------------------------------
+		 * private vars
+		 * ----------------------------------------------------------------
+		 */
+
+		var
+			Scene = this,
+			_options = _util.extend({}, DEFAULT_OPTIONS, options),
+			_state = SCENE_STATE_BEFORE,
+			_progress = 0,
+			_scrollOffset = {
+				start: 0,
+				end: 0
+			}, // reflects the controllers's scroll position for the start and end of the scene respectively
+			_triggerPos = 0,
+			_enabled = true,
+			_durationUpdateMethod,
+			_controller;
+
+		/**
+		 * Internal constructor function of the ScrollMagic Scene
+		 * @private
+		 */
+		var construct = function () {
+			for (var key in _options) { // check supplied options
+				if (!DEFAULT_OPTIONS.hasOwnProperty(key)) {
+					log(2, "WARNING: Unknown option \"" + key + "\"");
+					delete _options[key];
+				}
+			}
+			// add getters/setters for all possible options
+			for (var optionName in DEFAULT_OPTIONS) {
+				addSceneOption(optionName);
+			}
+			// validate all options
+			validateOption();
+		};
+
+		/*
+		 * ----------------------------------------------------------------
+		 * Event Management
+		 * ----------------------------------------------------------------
+		 */
+
+		var _listeners = {};
+		/**
+		 * Scene start event.  
+		 * Fires whenever the scroll position its the starting point of the scene.  
+		 * It will also fire when scrolling back up going over the start position of the scene. If you want something to happen only when scrolling down/right, use the scrollDirection parameter passed to the callback.
+		 *
+		 * For details on this event and the order in which it is fired, please review the {@link Scene.progress} method.
+		 *
+		 * @event ScrollMagic.Scene#start
+		 *
+		 * @example
+		 * scene.on("start", function (event) {
+		 * 	console.log("Hit start point of scene.");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.progress - Reflects the current progress of the scene
+		 * @property {string} event.state - The current state of the scene `"BEFORE"` or `"DURING"`
+		 * @property {string} event.scrollDirection - Indicates which way we are scrolling `"PAUSED"`, `"FORWARD"` or `"REVERSE"`
+		 */
+		/**
+		 * Scene end event.  
+		 * Fires whenever the scroll position its the ending point of the scene.  
+		 * It will also fire when scrolling back up from after the scene and going over its end position. If you want something to happen only when scrolling down/right, use the scrollDirection parameter passed to the callback.
+		 *
+		 * For details on this event and the order in which it is fired, please review the {@link Scene.progress} method.
+		 *
+		 * @event ScrollMagic.Scene#end
+		 *
+		 * @example
+		 * scene.on("end", function (event) {
+		 * 	console.log("Hit end point of scene.");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.progress - Reflects the current progress of the scene
+		 * @property {string} event.state - The current state of the scene `"DURING"` or `"AFTER"`
+		 * @property {string} event.scrollDirection - Indicates which way we are scrolling `"PAUSED"`, `"FORWARD"` or `"REVERSE"`
+		 */
+		/**
+		 * Scene enter event.  
+		 * Fires whenever the scene enters the "DURING" state.  
+		 * Keep in mind that it doesn't matter if the scene plays forward or backward: This event always fires when the scene enters its active scroll timeframe, regardless of the scroll-direction.
+		 *
+		 * For details on this event and the order in which it is fired, please review the {@link Scene.progress} method.
+		 *
+		 * @event ScrollMagic.Scene#enter
+		 *
+		 * @example
+		 * scene.on("enter", function (event) {
+		 * 	console.log("Scene entered.");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.progress - Reflects the current progress of the scene
+		 * @property {string} event.state - The current state of the scene - always `"DURING"`
+		 * @property {string} event.scrollDirection - Indicates which way we are scrolling `"PAUSED"`, `"FORWARD"` or `"REVERSE"`
+		 */
+		/**
+		 * Scene leave event.  
+		 * Fires whenever the scene's state goes from "DURING" to either "BEFORE" or "AFTER".  
+		 * Keep in mind that it doesn't matter if the scene plays forward or backward: This event always fires when the scene leaves its active scroll timeframe, regardless of the scroll-direction.
+		 *
+		 * For details on this event and the order in which it is fired, please review the {@link Scene.progress} method.
+		 *
+		 * @event ScrollMagic.Scene#leave
+		 *
+		 * @example
+		 * scene.on("leave", function (event) {
+		 * 	console.log("Scene left.");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.progress - Reflects the current progress of the scene
+		 * @property {string} event.state - The current state of the scene `"BEFORE"` or `"AFTER"`
+		 * @property {string} event.scrollDirection - Indicates which way we are scrolling `"PAUSED"`, `"FORWARD"` or `"REVERSE"`
+		 */
+		/**
+		 * Scene update event.  
+		 * Fires whenever the scene is updated (but not necessarily changes the progress).
+		 *
+		 * @event ScrollMagic.Scene#update
+		 *
+		 * @example
+		 * scene.on("update", function (event) {
+		 * 	console.log("Scene updated.");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.startPos - The starting position of the scene (in relation to the conainer)
+		 * @property {number} event.endPos - The ending position of the scene (in relation to the conainer)
+		 * @property {number} event.scrollPos - The current scroll position of the container
+		 */
+		/**
+		 * Scene progress event.  
+		 * Fires whenever the progress of the scene changes.
+		 *
+		 * For details on this event and the order in which it is fired, please review the {@link Scene.progress} method.
+		 *
+		 * @event ScrollMagic.Scene#progress
+		 *
+		 * @example
+		 * scene.on("progress", function (event) {
+		 * 	console.log("Scene progress changed to " + event.progress);
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {number} event.progress - Reflects the current progress of the scene
+		 * @property {string} event.state - The current state of the scene `"BEFORE"`, `"DURING"` or `"AFTER"`
+		 * @property {string} event.scrollDirection - Indicates which way we are scrolling `"PAUSED"`, `"FORWARD"` or `"REVERSE"`
+		 */
+		/**
+		 * Scene change event.  
+		 * Fires whenvever a property of the scene is changed.
+		 *
+		 * @event ScrollMagic.Scene#change
+		 *
+		 * @example
+		 * scene.on("change", function (event) {
+		 * 	console.log("Scene Property \"" + event.what + "\" changed to " + event.newval);
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {string} event.what - Indicates what value has been changed
+		 * @property {mixed} event.newval - The new value of the changed property
+		 */
+		/**
+		 * Scene shift event.  
+		 * Fires whenvever the start or end **scroll offset** of the scene change.
+		 * This happens explicitely, when one of these values change: `offset`, `duration` or `triggerHook`.
+		 * It will fire implicitly when the `triggerElement` changes, if the new element has a different position (most cases).
+		 * It will also fire implicitly when the size of the container changes and the triggerHook is anything other than `onLeave`.
+		 *
+		 * @event ScrollMagic.Scene#shift
+		 * @since 1.1.0
+		 *
+		 * @example
+		 * scene.on("shift", function (event) {
+		 * 	console.log("Scene moved, because the " + event.reason + " has changed.)");
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {string} event.reason - Indicates why the scene has shifted
+		 */
+		/**
+		 * Scene destroy event.  
+		 * Fires whenvever the scene is destroyed.
+		 * This can be used to tidy up custom behaviour used in events.
+		 *
+		 * @event ScrollMagic.Scene#destroy
+		 * @since 1.1.0
+		 *
+		 * @example
+		 * scene.on("enter", function (event) {
+		 *        // add custom action
+		 *        $("#my-elem").left("200");
+		 *      })
+		 *      .on("destroy", function (event) {
+		 *        // reset my element to start position
+		 *        if (event.reset) {
+		 *          $("#my-elem").left("0");
+		 *        }
+		 *      });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {boolean} event.reset - Indicates if the destroy method was called with reset `true` or `false`.
+		 */
+		/**
+		 * Scene add event.  
+		 * Fires when the scene is added to a controller.
+		 * This is mostly used by plugins to know that change might be due.
+		 *
+		 * @event ScrollMagic.Scene#add
+		 * @since 2.0.0
+		 *
+		 * @example
+		 * scene.on("add", function (event) {
+		 * 	console.log('Scene was added to a new controller.');
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 * @property {boolean} event.controller - The controller object the scene was added to.
+		 */
+		/**
+		 * Scene remove event.  
+		 * Fires when the scene is removed from a controller.
+		 * This is mostly used by plugins to know that change might be due.
+		 *
+		 * @event ScrollMagic.Scene#remove
+		 * @since 2.0.0
+		 *
+		 * @example
+		 * scene.on("remove", function (event) {
+		 * 	console.log('Scene was removed from its controller.');
+		 * });
+		 *
+		 * @property {object} event - The event Object passed to each callback
+		 * @property {string} event.type - The name of the event
+		 * @property {Scene} event.target - The Scene object that triggered this event
+		 */
+
+		/**
+		 * Add one ore more event listener.  
+		 * The callback function will be fired at the respective event, and an object containing relevant data will be passed to the callback.
+		 * @method ScrollMagic.Scene#on
+		 *
+		 * @example
+		 * function callback (event) {
+		 * 		console.log("Event fired! (" + event.type + ")");
+		 * }
+		 * // add listeners
+		 * scene.on("change update progress start end enter leave", callback);
+		 *
+		 * @param {string} names - The name or names of the event the callback should be attached to.
+		 * @param {function} callback - A function that should be executed, when the event is dispatched. An event object will be passed to the callback.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.on = function (names, callback) {
+			if (_util.type.Function(callback)) {
+				names = names.trim().split(' ');
+				names.forEach(function (fullname) {
+					var
+						nameparts = fullname.split('.'),
+						eventname = nameparts[0],
+						namespace = nameparts[1];
+					if (eventname != "*") { // disallow wildcards
+						if (!_listeners[eventname]) {
+							_listeners[eventname] = [];
+						}
+						_listeners[eventname].push({
+							namespace: namespace || '',
+							callback: callback
+						});
+					}
+				});
+			} else {
+				log(1, "ERROR when calling '.on()': Supplied callback for '" + names + "' is not a valid function!");
+			}
+			return Scene;
+		};
+
+		/**
+		 * Remove one or more event listener.
+		 * @method ScrollMagic.Scene#off
+		 *
+		 * @example
+		 * function callback (event) {
+		 * 		console.log("Event fired! (" + event.type + ")");
+		 * }
+		 * // add listeners
+		 * scene.on("change update", callback);
+		 * // remove listeners
+		 * scene.off("change update", callback);
+		 *
+		 * @param {string} names - The name or names of the event that should be removed.
+		 * @param {function} [callback] - A specific callback function that should be removed. If none is passed all callbacks to the event listener will be removed.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.off = function (names, callback) {
+			if (!names) {
+				log(1, "ERROR: Invalid event name supplied.");
+				return Scene;
+			}
+			names = names.trim().split(' ');
+			names.forEach(function (fullname, key) {
+				var
+					nameparts = fullname.split('.'),
+					eventname = nameparts[0],
+					namespace = nameparts[1] || '',
+					removeList = eventname === '*' ? Object.keys(_listeners) : [eventname];
+				removeList.forEach(function (remove) {
+					var
+						list = _listeners[remove] || [],
+						i = list.length;
+					while (i--) {
+						var listener = list[i];
+						if (listener && (namespace === listener.namespace || namespace === '*') && (!callback || callback == listener.callback)) {
+							list.splice(i, 1);
+						}
+					}
+					if (!list.length) {
+						delete _listeners[remove];
+					}
+				});
+			});
+			return Scene;
+		};
+
+		/**
+		 * Trigger an event.
+		 * @method ScrollMagic.Scene#trigger
+		 *
+		 * @example
+		 * this.trigger("change");
+		 *
+		 * @param {string} name - The name of the event that should be triggered.
+		 * @param {object} [vars] - An object containing info that should be passed to the callback.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.trigger = function (name, vars) {
+			if (name) {
+				var
+					nameparts = name.trim().split('.'),
+					eventname = nameparts[0],
+					namespace = nameparts[1],
+					listeners = _listeners[eventname];
+				log(3, 'event fired:', eventname, vars ? "->" : '', vars || '');
+				if (listeners) {
+					listeners.forEach(function (listener, key) {
+						if (!namespace || namespace === listener.namespace) {
+							listener.callback.call(Scene, new ScrollMagic.Event(eventname, listener.namespace, Scene, vars));
+						}
+					});
+				}
+			} else {
+				log(1, "ERROR: Invalid event name supplied.");
+			}
+			return Scene;
+		};
+
+		// set event listeners
+		Scene
+			.on("change.internal", function (e) {
+				if (e.what !== "loglevel" && e.what !== "tweenChanges") { // no need for a scene update scene with these options...
+					if (e.what === "triggerElement") {
+						updateTriggerElementPosition();
+					} else if (e.what === "reverse") { // the only property left that may have an impact on the current scene state. Everything else is handled by the shift event.
+						Scene.update();
+					}
+				}
+			})
+			.on("shift.internal", function (e) {
+				updateScrollOffset();
+				Scene.update(); // update scene to reflect new position
+			});
+
+		/**
+		 * Send a debug message to the console.
+		 * @private
+		 * but provided publicly with _log for plugins
+		 *
+		 * @param {number} loglevel - The loglevel required to initiate output for the message.
+		 * @param {...mixed} output - One or more variables that should be passed to the console.
+		 */
+		var log = this._log = function (loglevel, output) {
+			if (_options.loglevel >= loglevel) {
+				Array.prototype.splice.call(arguments, 1, 0, "(" + NAMESPACE + ") ->");
+				_util.log.apply(window, arguments);
+			}
+		};
+
+		/**
+		 * Add the scene to a controller.  
+		 * This is the equivalent to `Controller.addScene(scene)`.
+		 * @method ScrollMagic.Scene#addTo
+		 *
+		 * @example
+		 * // add a scene to a ScrollMagic Controller
+		 * scene.addTo(controller);
+		 *
+		 * @param {ScrollMagic.Controller} controller - The controller to which the scene should be added.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.addTo = function (controller) {
+			if (!(controller instanceof ScrollMagic.Controller)) {
+				log(1, "ERROR: supplied argument of 'addTo()' is not a valid ScrollMagic Controller");
+			} else if (_controller != controller) {
+				// new controller
+				if (_controller) { // was associated to a different controller before, so remove it...
+					_controller.removeScene(Scene);
+				}
+				_controller = controller;
+				validateOption();
+				updateDuration(true);
+				updateTriggerElementPosition(true);
+				updateScrollOffset();
+				_controller.info("container").addEventListener('resize', onContainerResize);
+				controller.addScene(Scene);
+				Scene.trigger("add", {
+					controller: _controller
+				});
+				log(3, "added " + NAMESPACE + " to controller");
+				Scene.update();
+			}
+			return Scene;
+		};
+
+		/**
+		 * **Get** or **Set** the current enabled state of the scene.  
+		 * This can be used to disable this scene without removing or destroying it.
+		 * @method ScrollMagic.Scene#enabled
+		 *
+		 * @example
+		 * // get the current value
+		 * var enabled = scene.enabled();
+		 *
+		 * // disable the scene
+		 * scene.enabled(false);
+		 *
+		 * @param {boolean} [newState] - The new enabled state of the scene `true` or `false`.
+		 * @returns {(boolean|Scene)} Current enabled state or parent object for chaining.
+		 */
+		this.enabled = function (newState) {
+			if (!arguments.length) { // get
+				return _enabled;
+			} else if (_enabled != newState) { // set
+				_enabled = !!newState;
+				Scene.update(true);
+			}
+			return Scene;
+		};
+
+		/**
+		 * Remove the scene from the controller.  
+		 * This is the equivalent to `Controller.removeScene(scene)`.
+		 * The scene will not be updated anymore until you readd it to a controller.
+		 * To remove the pin or the tween you need to call removeTween() or removePin() respectively.
+		 * @method ScrollMagic.Scene#remove
+		 * @example
+		 * // remove the scene from its controller
+		 * scene.remove();
+		 *
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.remove = function () {
+			if (_controller) {
+				_controller.info("container").removeEventListener('resize', onContainerResize);
+				var tmpParent = _controller;
+				_controller = undefined;
+				tmpParent.removeScene(Scene);
+				Scene.trigger("remove");
+				log(3, "removed " + NAMESPACE + " from controller");
+			}
+			return Scene;
+		};
+
+		/**
+		 * Destroy the scene and everything.
+		 * @method ScrollMagic.Scene#destroy
+		 * @example
+		 * // destroy the scene without resetting the pin and tween to their initial positions
+		 * scene = scene.destroy();
+		 *
+		 * // destroy the scene and reset the pin and tween
+		 * scene = scene.destroy(true);
+		 *
+		 * @param {boolean} [reset=false] - If `true` the pin and tween (if existent) will be reset.
+		 * @returns {null} Null to unset handler variables.
+		 */
+		this.destroy = function (reset) {
+			Scene.trigger("destroy", {
+				reset: reset
+			});
+			Scene.remove();
+			Scene.off("*.*");
+			log(3, "destroyed " + NAMESPACE + " (reset: " + (reset ? "true" : "false") + ")");
+			return null;
+		};
+
+
+		/**
+		 * Updates the Scene to reflect the current state.  
+		 * This is the equivalent to `Controller.updateScene(scene, immediately)`.  
+		 * The update method calculates the scene's start and end position (based on the trigger element, trigger hook, duration and offset) and checks it against the current scroll position of the container.  
+		 * It then updates the current scene state accordingly (or does nothing, if the state is already correct) – Pins will be set to their correct position and tweens will be updated to their correct progress.
+		 * This means an update doesn't necessarily result in a progress change. The `progress` event will be fired if the progress has indeed changed between this update and the last.  
+		 * _**NOTE:** This method gets called constantly whenever ScrollMagic detects a change. The only application for you is if you change something outside of the realm of ScrollMagic, like moving the trigger or changing tween parameters._
+		 * @method ScrollMagic.Scene#update
+		 * @example
+		 * // update the scene on next tick
+		 * scene.update();
+		 *
+		 * // update the scene immediately
+		 * scene.update(true);
+		 *
+		 * @fires Scene.update
+		 *
+		 * @param {boolean} [immediately=false] - If `true` the update will be instant, if `false` it will wait until next update cycle (better performance).
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.update = function (immediately) {
+			if (_controller) {
+				if (immediately) {
+					if (_controller.enabled() && _enabled) {
+						var
+							scrollPos = _controller.info("scrollPos"),
+							newProgress;
+
+						if (_options.duration > 0) {
+							newProgress = (scrollPos - _scrollOffset.start) / (_scrollOffset.end - _scrollOffset.start);
+						} else {
+							newProgress = scrollPos >= _scrollOffset.start ? 1 : 0;
+						}
+
+						Scene.trigger("update", {
+							startPos: _scrollOffset.start,
+							endPos: _scrollOffset.end,
+							scrollPos: scrollPos
+						});
+
+						Scene.progress(newProgress);
+					} else if (_pin && _state === SCENE_STATE_DURING) {
+						updatePinState(true); // unpin in position
+					}
+				} else {
+					_controller.updateScene(Scene, false);
+				}
+			}
+			return Scene;
+		};
+
+		/**
+		 * Updates dynamic scene variables like the trigger element position or the duration.
+		 * This method is automatically called in regular intervals from the controller. See {@link ScrollMagic.Controller} option `refreshInterval`.
+		 * 
+		 * You can call it to minimize lag, for example when you intentionally change the position of the triggerElement.
+		 * If you don't it will simply be updated in the next refresh interval of the container, which is usually sufficient.
+		 *
+		 * @method ScrollMagic.Scene#refresh
+		 * @since 1.1.0
+		 * @example
+		 * scene = new ScrollMagic.Scene({triggerElement: "#trigger"});
+		 * 
+		 * // change the position of the trigger
+		 * $("#trigger").css("top", 500);
+		 * // immediately let the scene know of this change
+		 * scene.refresh();
+		 *
+		 * @fires {@link Scene.shift}, if the trigger element position or the duration changed
+		 * @fires {@link Scene.change}, if the duration changed
+		 *
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.refresh = function () {
+			updateDuration();
+			updateTriggerElementPosition();
+			// update trigger element position
+			return Scene;
+		};
+
+		/**
+		 * **Get** or **Set** the scene's progress.  
+		 * Usually it shouldn't be necessary to use this as a setter, as it is set automatically by scene.update().  
+		 * The order in which the events are fired depends on the duration of the scene:
+		 *  1. Scenes with `duration == 0`:  
+		 *  Scenes that have no duration by definition have no ending. Thus the `end` event will never be fired.  
+		 *  When the trigger position of the scene is passed the events are always fired in this order:  
+		 *  `enter`, `start`, `progress` when scrolling forward  
+		 *  and  
+		 *  `progress`, `start`, `leave` when scrolling in reverse
+		 *  2. Scenes with `duration > 0`:  
+		 *  Scenes with a set duration have a defined start and end point.  
+		 *  When scrolling past the start position of the scene it will fire these events in this order:  
+		 *  `enter`, `start`, `progress`  
+		 *  When continuing to scroll and passing the end point it will fire these events:  
+		 *  `progress`, `end`, `leave`  
+		 *  When reversing through the end point these events are fired:  
+		 *  `enter`, `end`, `progress`  
+		 *  And when continuing to scroll past the start position in reverse it will fire:  
+		 *  `progress`, `start`, `leave`  
+		 *  In between start and end the `progress` event will be called constantly, whenever the progress changes.
+		 * 
+		 * In short:  
+		 * `enter` events will always trigger **before** the progress update and `leave` envents will trigger **after** the progress update.  
+		 * `start` and `end` will always trigger at their respective position.
+		 * 
+		 * Please review the event descriptions for details on the events and the event object that is passed to the callback.
+		 * 
+		 * @method ScrollMagic.Scene#progress
+		 * @example
+		 * // get the current scene progress
+		 * var progress = scene.progress();
+		 *
+		 * // set new scene progress
+		 * scene.progress(0.3);
+		 *
+		 * @fires {@link Scene.enter}, when used as setter
+		 * @fires {@link Scene.start}, when used as setter
+		 * @fires {@link Scene.progress}, when used as setter
+		 * @fires {@link Scene.end}, when used as setter
+		 * @fires {@link Scene.leave}, when used as setter
+		 *
+		 * @param {number} [progress] - The new progress value of the scene `[0-1]`.
+		 * @returns {number} `get` -  Current scene progress.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+		this.progress = function (progress) {
+			if (!arguments.length) { // get
+				return _progress;
+			} else { // set
+				var
+					doUpdate = false,
+					oldState = _state,
+					scrollDirection = _controller ? _controller.info("scrollDirection") : 'PAUSED',
+					reverseOrForward = _options.reverse || progress >= _progress;
+				if (_options.duration === 0) {
+					// zero duration scenes
+					doUpdate = _progress != progress;
+					_progress = progress < 1 && reverseOrForward ? 0 : 1;
+					_state = _progress === 0 ? SCENE_STATE_BEFORE : SCENE_STATE_DURING;
+				} else {
+					// scenes with start and end
+					if (progress < 0 && _state !== SCENE_STATE_BEFORE && reverseOrForward) {
+						// go back to initial state
+						_progress = 0;
+						_state = SCENE_STATE_BEFORE;
+						doUpdate = true;
+					} else if (progress >= 0 && progress < 1 && reverseOrForward) {
+						_progress = progress;
+						_state = SCENE_STATE_DURING;
+						doUpdate = true;
+					} else if (progress >= 1 && _state !== SCENE_STATE_AFTER) {
+						_progress = 1;
+						_state = SCENE_STATE_AFTER;
+						doUpdate = true;
+					} else if (_state === SCENE_STATE_DURING && !reverseOrForward) {
+						updatePinState(); // in case we scrolled backwards mid-scene and reverse is disabled => update the pin position, so it doesn't move back as well.
+					}
+				}
+				if (doUpdate) {
+					// fire events
+					var
+						eventVars = {
+							progress: _progress,
+							state: _state,
+							scrollDirection: scrollDirection
+						},
+						stateChanged = _state != oldState;
+
+					var trigger = function (eventName) { // tmp helper to simplify code
+						Scene.trigger(eventName, eventVars);
+					};
+
+					if (stateChanged) { // enter events
+						if (oldState !== SCENE_STATE_DURING) {
+							trigger("enter");
+							trigger(oldState === SCENE_STATE_BEFORE ? "start" : "end");
+						}
+					}
+					trigger("progress");
+					if (stateChanged) { // leave events
+						if (_state !== SCENE_STATE_DURING) {
+							trigger(_state === SCENE_STATE_BEFORE ? "start" : "end");
+							trigger("leave");
+						}
+					}
+				}
+
+				return Scene;
+			}
+		};
+
+
+		/**
+		 * Update the start and end scrollOffset of the container.
+		 * The positions reflect what the controller's scroll position will be at the start and end respectively.
+		 * Is called, when:
+		 *   - Scene event "change" is called with: offset, triggerHook, duration 
+		 *   - scroll container event "resize" is called
+		 *   - the position of the triggerElement changes
+		 *   - the controller changes -> addTo()
+		 * @private
+		 */
+		var updateScrollOffset = function () {
+			_scrollOffset = {
+				start: _triggerPos + _options.offset
+			};
+			if (_controller && _options.triggerElement) {
+				// take away triggerHook portion to get relative to top
+				_scrollOffset.start -= _controller.info("size") * _options.triggerHook;
+			}
+			_scrollOffset.end = _scrollOffset.start + _options.duration;
+		};
+
+		/**
+		 * Updates the duration if set to a dynamic function.
+		 * This method is called when the scene is added to a controller and in regular intervals from the controller through scene.refresh().
+		 * 
+		 * @fires {@link Scene.change}, if the duration changed
+		 * @fires {@link Scene.shift}, if the duration changed
+		 *
+		 * @param {boolean} [suppressEvents=false] - If true the shift event will be suppressed.
+		 * @private
+		 */
+		var updateDuration = function (suppressEvents) {
+			// update duration
+			if (_durationUpdateMethod) {
+				var varname = "duration";
+				if (changeOption(varname, _durationUpdateMethod.call(Scene)) && !suppressEvents) { // set
+					Scene.trigger("change", {
+						what: varname,
+						newval: _options[varname]
+					});
+					Scene.trigger("shift", {
+						reason: varname
+					});
+				}
+			}
+		};
+
+		/**
+		 * Updates the position of the triggerElement, if present.
+		 * This method is called ...
+		 *  - ... when the triggerElement is changed
+		 *  - ... when the scene is added to a (new) controller
+		 *  - ... in regular intervals from the controller through scene.refresh().
+		 * 
+		 * @fires {@link Scene.shift}, if the position changed
+		 *
+		 * @param {boolean} [suppressEvents=false] - If true the shift event will be suppressed.
+		 * @private
+		 */
+		var updateTriggerElementPosition = function (suppressEvents) {
+			var
+				elementPos = 0,
+				telem = _options.triggerElement;
+			if (_controller && (telem || _triggerPos > 0)) { // either an element exists or was removed and the triggerPos is still > 0
+				if (telem) { // there currently a triggerElement set
+					if (telem.parentNode) { // check if element is still attached to DOM
+						var
+							controllerInfo = _controller.info(),
+							containerOffset = _util.get.offset(controllerInfo.container), // container position is needed because element offset is returned in relation to document, not in relation to container.
+							param = controllerInfo.vertical ? "top" : "left"; // which param is of interest ?
+
+						// if parent is spacer, use spacer position instead so correct start position is returned for pinned elements.
+						while (telem.parentNode.hasAttribute(PIN_SPACER_ATTRIBUTE)) {
+							telem = telem.parentNode;
+						}
+
+						var elementOffset = _util.get.offset(telem);
+
+						if (!controllerInfo.isDocument) { // container is not the document root, so substract scroll Position to get correct trigger element position relative to scrollcontent
+							containerOffset[param] -= _controller.scrollPos();
+						}
+
+						elementPos = elementOffset[param] - containerOffset[param];
+
+					} else { // there was an element, but it was removed from DOM
+						log(2, "WARNING: triggerElement was removed from DOM and will be reset to", undefined);
+						Scene.triggerElement(undefined); // unset, so a change event is triggered
+					}
+				}
+
+				var changed = elementPos != _triggerPos;
+				_triggerPos = elementPos;
+				if (changed && !suppressEvents) {
+					Scene.trigger("shift", {
+						reason: "triggerElementPosition"
+					});
+				}
+			}
+		};
+
+		/**
+		 * Trigger a shift event, when the container is resized and the triggerHook is > 1.
+		 * @private
+		 */
+		var onContainerResize = function (e) {
+			if (_options.triggerHook > 0) {
+				Scene.trigger("shift", {
+					reason: "containerResize"
+				});
+			}
+		};
+
+
+		var _validate = _util.extend(SCENE_OPTIONS.validate, {
+			// validation for duration handled internally for reference to private var _durationMethod
+			duration: function (val) {
+				if (_util.type.String(val) && val.match(/^(\.|\d)*\d+%$/)) {
+					// percentage value
+					var perc = parseFloat(val) / 100;
+					val = function () {
+						return _controller ? _controller.info("size") * perc : 0;
+					};
+				}
+				if (_util.type.Function(val)) {
+					// function
+					_durationUpdateMethod = val;
+					try {
+						val = parseFloat(_durationUpdateMethod.call(Scene));
+					} catch (e) {
+						val = -1; // will cause error below
+					}
+				}
+				// val has to be float
+				val = parseFloat(val);
+				if (!_util.type.Number(val) || val < 0) {
+					if (_durationUpdateMethod) {
+						_durationUpdateMethod = undefined;
+						throw ["Invalid return value of supplied function for option \"duration\":", val];
+					} else {
+						throw ["Invalid value for option \"duration\":", val];
+					}
+				}
+				return val;
+			}
+		});
+
+		/**
+		 * Checks the validity of a specific or all options and reset to default if neccessary.
+		 * @private
+		 */
+		var validateOption = function (check) {
+			check = arguments.length ? [check] : Object.keys(_validate);
+			check.forEach(function (optionName, key) {
+				var value;
+				if (_validate[optionName]) { // there is a validation method for this option
+					try { // validate value
+						value = _validate[optionName](_options[optionName]);
+					} catch (e) { // validation failed -> reset to default
+						value = DEFAULT_OPTIONS[optionName];
+						var logMSG = _util.type.String(e) ? [e] : e;
+						if (_util.type.Array(logMSG)) {
+							logMSG[0] = "ERROR: " + logMSG[0];
+							logMSG.unshift(1); // loglevel 1 for error msg
+							log.apply(this, logMSG);
+						} else {
+							log(1, "ERROR: Problem executing validation callback for option '" + optionName + "':", e.message);
+						}
+					} finally {
+						_options[optionName] = value;
+					}
+				}
+			});
+		};
+
+		/**
+		 * Helper used by the setter/getters for scene options
+		 * @private
+		 */
+		var changeOption = function (varname, newval) {
+			var
+				changed = false,
+				oldval = _options[varname];
+			if (_options[varname] != newval) {
+				_options[varname] = newval;
+				validateOption(varname); // resets to default if necessary
+				changed = oldval != _options[varname];
+			}
+			return changed;
+		};
+
+		// generate getters/setters for all options
+		var addSceneOption = function (optionName) {
+			if (!Scene[optionName]) {
+				Scene[optionName] = function (newVal) {
+					if (!arguments.length) { // get
+						return _options[optionName];
+					} else {
+						if (optionName === "duration") { // new duration is set, so any previously set function must be unset
+							_durationUpdateMethod = undefined;
+						}
+						if (changeOption(optionName, newVal)) { // set
+							Scene.trigger("change", {
+								what: optionName,
+								newval: _options[optionName]
+							});
+							if (SCENE_OPTIONS.shifts.indexOf(optionName) > -1) {
+								Scene.trigger("shift", {
+									reason: optionName
+								});
+							}
+						}
+					}
+					return Scene;
+				};
+			}
+		};
+
+		/**
+		 * **Get** or **Set** the duration option value.
+		 *
+		 * As a **setter** it accepts three types of parameters:
+		 * 1. `number`: Sets the duration of the scene to exactly this amount of pixels.  
+		 *   This means the scene will last for exactly this amount of pixels scrolled. Sub-Pixels are also valid.
+		 *   A value of `0` means that the scene is 'open end' and no end will be triggered. Pins will never unpin and animations will play independently of scroll progress.
+		 * 2. `string`: Always updates the duration relative to parent scroll container.  
+		 *   For example `"100%"` will keep the duration always exactly at the inner height of the scroll container.
+		 *   When scrolling vertically the width is used for reference respectively.
+		 * 3. `function`: The supplied function will be called to return the scene duration.
+		 *   This is useful in setups where the duration depends on other elements who might change size. By supplying a function you can return a value instead of updating potentially multiple scene durations.  
+		 *   The scene can be referenced inside the callback using `this`.
+		 *   _**WARNING:** This is an easy way to kill performance, as the callback will be executed every time `Scene.refresh()` is called, which happens a lot. The interval is defined by the controller (see ScrollMagic.Controller option `refreshInterval`).  
+		 *   It's recomended to avoid calculations within the function and use cached variables as return values.  
+		 *   This counts double if you use the same function for multiple scenes._
+		 *
+		 * @method ScrollMagic.Scene#duration
+		 * @example
+		 * // get the current duration value
+		 * var duration = scene.duration();
+		 *
+		 * // set a new duration
+		 * scene.duration(300);
+		 *
+		 * // set duration responsively to container size
+		 * scene.duration("100%");
+		 *
+		 * // use a function to randomize the duration for some reason.
+		 * var durationValueCache;
+		 * function durationCallback () {
+		 *   return durationValueCache;
+		 * }
+		 * function updateDuration () {
+		 *   durationValueCache = Math.random() * 100;
+		 * }
+		 * updateDuration(); // set to initial value
+		 * scene.duration(durationCallback); // set duration callback
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @fires {@link Scene.shift}, when used as setter
+		 * @param {(number|string|function)} [newDuration] - The new duration setting for the scene.
+		 * @returns {number} `get` -  Current scene duration.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** or **Set** the offset option value.
+		 * @method ScrollMagic.Scene#offset
+		 * @example
+		 * // get the current offset
+		 * var offset = scene.offset();
+		 *
+		 * // set a new offset
+		 * scene.offset(100);
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @fires {@link Scene.shift}, when used as setter
+		 * @param {number} [newOffset] - The new offset of the scene.
+		 * @returns {number} `get` -  Current scene offset.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** or **Set** the triggerElement option value.
+		 * Does **not** fire `Scene.shift`, because changing the trigger Element doesn't necessarily mean the start position changes. This will be determined in `Scene.refresh()`, which is automatically triggered.
+		 * @method ScrollMagic.Scene#triggerElement
+		 * @example
+		 * // get the current triggerElement
+		 * var triggerElement = scene.triggerElement();
+		 *
+		 * // set a new triggerElement using a selector
+		 * scene.triggerElement("#trigger");
+		 * // set a new triggerElement using a DOM object
+		 * scene.triggerElement(document.getElementById("trigger"));
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @param {(string|object)} [newTriggerElement] - The new trigger element for the scene.
+		 * @returns {(string|object)} `get` -  Current triggerElement.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** or **Set** the triggerHook option value.
+		 * @method ScrollMagic.Scene#triggerHook
+		 * @example
+		 * // get the current triggerHook value
+		 * var triggerHook = scene.triggerHook();
+		 *
+		 * // set a new triggerHook using a string
+		 * scene.triggerHook("onLeave");
+		 * // set a new triggerHook using a number
+		 * scene.triggerHook(0.7);
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @fires {@link Scene.shift}, when used as setter
+		 * @param {(number|string)} [newTriggerHook] - The new triggerHook of the scene. See {@link Scene} parameter description for value options.
+		 * @returns {number} `get` -  Current triggerHook (ALWAYS numerical).
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** or **Set** the reverse option value.
+		 * @method ScrollMagic.Scene#reverse
+		 * @example
+		 * // get the current reverse option
+		 * var reverse = scene.reverse();
+		 *
+		 * // set new reverse option
+		 * scene.reverse(false);
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @param {boolean} [newReverse] - The new reverse setting of the scene.
+		 * @returns {boolean} `get` -  Current reverse option value.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** or **Set** the loglevel option value.
+		 * @method ScrollMagic.Scene#loglevel
+		 * @example
+		 * // get the current loglevel
+		 * var loglevel = scene.loglevel();
+		 *
+		 * // set new loglevel
+		 * scene.loglevel(3);
+		 *
+		 * @fires {@link Scene.change}, when used as setter
+		 * @param {number} [newLoglevel] - The new loglevel setting of the scene. `[0-3]`
+		 * @returns {number} `get` -  Current loglevel.
+		 * @returns {Scene} `set` -  Parent object for chaining.
+		 */
+
+		/**
+		 * **Get** the associated controller.
+		 * @method ScrollMagic.Scene#controller
+		 * @example
+		 * // get the controller of a scene
+		 * var controller = scene.controller();
+		 *
+		 * @returns {ScrollMagic.Controller} Parent controller or `undefined`
+		 */
+		this.controller = function () {
+			return _controller;
+		};
+
+		/**
+		 * **Get** the current state.
+		 * @method ScrollMagic.Scene#state
+		 * @example
+		 * // get the current state
+		 * var state = scene.state();
+		 *
+		 * @returns {string} `"BEFORE"`, `"DURING"` or `"AFTER"`
+		 */
+		this.state = function () {
+			return _state;
+		};
+
+		/**
+		 * **Get** the current scroll offset for the start of the scene.  
+		 * Mind, that the scrollOffset is related to the size of the container, if `triggerHook` is bigger than `0` (or `"onLeave"`).  
+		 * This means, that resizing the container or changing the `triggerHook` will influence the scene's start offset.
+		 * @method ScrollMagic.Scene#scrollOffset
+		 * @example
+		 * // get the current scroll offset for the start and end of the scene.
+		 * var start = scene.scrollOffset();
+		 * var end = scene.scrollOffset() + scene.duration();
+		 * console.log("the scene starts at", start, "and ends at", end);
+		 *
+		 * @returns {number} The scroll offset (of the container) at which the scene will trigger. Y value for vertical and X value for horizontal scrolls.
+		 */
+		this.scrollOffset = function () {
+			return _scrollOffset.start;
+		};
+
+		/**
+		 * **Get** the trigger position of the scene (including the value of the `offset` option).  
+		 * @method ScrollMagic.Scene#triggerPosition
+		 * @example
+		 * // get the scene's trigger position
+		 * var triggerPosition = scene.triggerPosition();
+		 *
+		 * @returns {number} Start position of the scene. Top position value for vertical and left position value for horizontal scrolls.
+		 */
+		this.triggerPosition = function () {
+			var pos = _options.offset; // the offset is the basis
+			if (_controller) {
+				// get the trigger position
+				if (_options.triggerElement) {
+					// Element as trigger
+					pos += _triggerPos;
+				} else {
+					// return the height of the triggerHook to start at the beginning
+					pos += _controller.info("size") * Scene.triggerHook();
+				}
+			}
+			return pos;
+		};
+
+
+		var
+			_pin,
+			_pinOptions;
+
+		Scene
+			.on("shift.internal", function (e) {
+				var durationChanged = e.reason === "duration";
+				if ((_state === SCENE_STATE_AFTER && durationChanged) || (_state === SCENE_STATE_DURING && _options.duration === 0)) {
+					// if [duration changed after a scene (inside scene progress updates pin position)] or [duration is 0, we are in pin phase and some other value changed].
+					updatePinState();
+				}
+				if (durationChanged) {
+					updatePinDimensions();
+				}
+			})
+			.on("progress.internal", function (e) {
+				updatePinState();
+			})
+			.on("add.internal", function (e) {
+				updatePinDimensions();
+			})
+			.on("destroy.internal", function (e) {
+				Scene.removePin(e.reset);
+			});
+		/**
+		 * Update the pin state.
+		 * @private
+		 */
+		var updatePinState = function (forceUnpin) {
+			if (_pin && _controller) {
+				var
+					containerInfo = _controller.info(),
+					pinTarget = _pinOptions.spacer.firstChild; // may be pin element or another spacer, if cascading pins
+
+				if (!forceUnpin && _state === SCENE_STATE_DURING) { // during scene or if duration is 0 and we are past the trigger
+					// pinned state
+					if (_util.css(pinTarget, "position") != "fixed") {
+						// change state before updating pin spacer (position changes due to fixed collapsing might occur.)
+						_util.css(pinTarget, {
+							"position": "fixed"
+						});
+						// update pin spacer
+						updatePinDimensions();
+					}
+
+					var
+						fixedPos = _util.get.offset(_pinOptions.spacer, true), // get viewport position of spacer
+						scrollDistance = _options.reverse || _options.duration === 0 ?
+						containerInfo.scrollPos - _scrollOffset.start // quicker
+						:
+						Math.round(_progress * _options.duration * 10) / 10; // if no reverse and during pin the position needs to be recalculated using the progress
+
+					// add scrollDistance
+					fixedPos[containerInfo.vertical ? "top" : "left"] += scrollDistance;
+
+					// set new values
+					_util.css(_pinOptions.spacer.firstChild, {
+						top: fixedPos.top,
+						left: fixedPos.left
+					});
+				} else {
+					// unpinned state
+					var
+						newCSS = {
+							position: _pinOptions.inFlow ? "relative" : "absolute",
+							top: 0,
+							left: 0
+						},
+						change = _util.css(pinTarget, "position") != newCSS.position;
+
+					if (!_pinOptions.pushFollowers) {
+						newCSS[containerInfo.vertical ? "top" : "left"] = _options.duration * _progress;
+					} else if (_options.duration > 0) { // only concerns scenes with duration
+						if (_state === SCENE_STATE_AFTER && parseFloat(_util.css(_pinOptions.spacer, "padding-top")) === 0) {
+							change = true; // if in after state but havent updated spacer yet (jumped past pin)
+						} else if (_state === SCENE_STATE_BEFORE && parseFloat(_util.css(_pinOptions.spacer, "padding-bottom")) === 0) { // before
+							change = true; // jumped past fixed state upward direction
+						}
+					}
+					// set new values
+					_util.css(pinTarget, newCSS);
+					if (change) {
+						// update pin spacer if state changed
+						updatePinDimensions();
+					}
+				}
+			}
+		};
+
+		/**
+		 * Update the pin spacer and/or element size.
+		 * The size of the spacer needs to be updated whenever the duration of the scene changes, if it is to push down following elements.
+		 * @private
+		 */
+		var updatePinDimensions = function () {
+			if (_pin && _controller && _pinOptions.inFlow) { // no spacerresize, if original position is absolute
+				var
+					after = (_state === SCENE_STATE_AFTER),
+					before = (_state === SCENE_STATE_BEFORE),
+					during = (_state === SCENE_STATE_DURING),
+					vertical = _controller.info("vertical"),
+					pinTarget = _pinOptions.spacer.firstChild, // usually the pined element but can also be another spacer (cascaded pins)
+					marginCollapse = _util.isMarginCollapseType(_util.css(_pinOptions.spacer, "display")),
+					css = {};
+
+				// set new size
+				// if relsize: spacer -> pin | else: pin -> spacer
+				if (_pinOptions.relSize.width || _pinOptions.relSize.autoFullWidth) {
+					if (during) {
+						_util.css(_pin, {
+							"width": _util.get.width(_pinOptions.spacer)
+						});
+					} else {
+						_util.css(_pin, {
+							"width": "100%"
+						});
+					}
+				} else {
+					// minwidth is needed for cascaded pins.
+					css["min-width"] = _util.get.width(vertical ? _pin : pinTarget, true, true);
+					css.width = during ? css["min-width"] : "auto";
+				}
+				if (_pinOptions.relSize.height) {
+					if (during) {
+						// the only padding the spacer should ever include is the duration (if pushFollowers = true), so we need to substract that.
+						_util.css(_pin, {
+							"height": _util.get.height(_pinOptions.spacer) - (_pinOptions.pushFollowers ? _options.duration : 0)
+						});
+					} else {
+						_util.css(_pin, {
+							"height": "100%"
+						});
+					}
+				} else {
+					// margin is only included if it's a cascaded pin to resolve an IE9 bug
+					css["min-height"] = _util.get.height(vertical ? pinTarget : _pin, true, !marginCollapse); // needed for cascading pins
+					css.height = during ? css["min-height"] : "auto";
+				}
+
+				// add space for duration if pushFollowers is true
+				if (_pinOptions.pushFollowers) {
+					css["padding" + (vertical ? "Top" : "Left")] = _options.duration * _progress;
+					css["padding" + (vertical ? "Bottom" : "Right")] = _options.duration * (1 - _progress);
+				}
+				_util.css(_pinOptions.spacer, css);
+			}
+		};
+
+		/**
+		 * Updates the Pin state (in certain scenarios)
+		 * If the controller container is not the document and we are mid-pin-phase scrolling or resizing the main document can result to wrong pin positions.
+		 * So this function is called on resize and scroll of the document.
+		 * @private
+		 */
+		var updatePinInContainer = function () {
+			if (_controller && _pin && _state === SCENE_STATE_DURING && !_controller.info("isDocument")) {
+				updatePinState();
+			}
+		};
+
+		/**
+		 * Updates the Pin spacer size state (in certain scenarios)
+		 * If container is resized during pin and relatively sized the size of the pin might need to be updated...
+		 * So this function is called on resize of the container.
+		 * @private
+		 */
+		var updateRelativePinSpacer = function () {
+			if (_controller && _pin && // well, duh
+				_state === SCENE_STATE_DURING && // element in pinned state?
+				( // is width or height relatively sized, but not in relation to body? then we need to recalc.
+					((_pinOptions.relSize.width || _pinOptions.relSize.autoFullWidth) && _util.get.width(window) != _util.get.width(_pinOptions.spacer.parentNode)) ||
+					(_pinOptions.relSize.height && _util.get.height(window) != _util.get.height(_pinOptions.spacer.parentNode))
+				)
+			) {
+				updatePinDimensions();
+			}
+		};
+
+		/**
+		 * Is called, when the mousewhel is used while over a pinned element inside a div container.
+		 * If the scene is in fixed state scroll events would be counted towards the body. This forwards the event to the scroll container.
+		 * @private
+		 */
+		var onMousewheelOverPin = function (e) {
+			if (_controller && _pin && _state === SCENE_STATE_DURING && !_controller.info("isDocument")) { // in pin state
+				e.preventDefault();
+				_controller._setScrollPos(_controller.info("scrollPos") - ((e.wheelDelta || e[_controller.info("vertical") ? "wheelDeltaY" : "wheelDeltaX"]) / 3 || -e.detail * 30));
+			}
+		};
+
+		/**
+		 * Pin an element for the duration of the scene.
+		 * If the scene duration is 0 the element will only be unpinned, if the user scrolls back past the start position.  
+		 * Make sure only one pin is applied to an element at the same time.
+		 * An element can be pinned multiple times, but only successively.
+		 * _**NOTE:** The option `pushFollowers` has no effect, when the scene duration is 0._
+		 * @method ScrollMagic.Scene#setPin
+		 * @example
+		 * // pin element and push all following elements down by the amount of the pin duration.
+		 * scene.setPin("#pin");
+		 *
+		 * // pin element and keeping all following elements in their place. The pinned element will move past them.
+		 * scene.setPin("#pin", {pushFollowers: false});
+		 *
+		 * @param {(string|object)} element - A Selector targeting an element or a DOM object that is supposed to be pinned.
+		 * @param {object} [settings] - settings for the pin
+		 * @param {boolean} [settings.pushFollowers=true] - If `true` following elements will be "pushed" down for the duration of the pin, if `false` the pinned element will just scroll past them.  
+		 												   Ignored, when duration is `0`.
+		 * @param {string} [settings.spacerClass="scrollmagic-pin-spacer"] - Classname of the pin spacer element, which is used to replace the element.
+		 *
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.setPin = function (element, settings) {
+			var
+				defaultSettings = {
+					pushFollowers: true,
+					spacerClass: "scrollmagic-pin-spacer"
+				};
+			var pushFollowersActivelySet = settings && settings.hasOwnProperty('pushFollowers');
+			settings = _util.extend({}, defaultSettings, settings);
+
+			// validate Element
+			element = _util.get.elements(element)[0];
+			if (!element) {
+				log(1, "ERROR calling method 'setPin()': Invalid pin element supplied.");
+				return Scene; // cancel
+			} else if (_util.css(element, "position") === "fixed") {
+				log(1, "ERROR calling method 'setPin()': Pin does not work with elements that are positioned 'fixed'.");
+				return Scene; // cancel
+			}
+
+			if (_pin) { // preexisting pin?
+				if (_pin === element) {
+					// same pin we already have -> do nothing
+					return Scene; // cancel
+				} else {
+					// kill old pin
+					Scene.removePin();
+				}
+
+			}
+			_pin = element;
+
+			var
+				parentDisplay = _pin.parentNode.style.display,
+				boundsParams = ["top", "left", "bottom", "right", "margin", "marginLeft", "marginRight", "marginTop", "marginBottom"];
+
+			_pin.parentNode.style.display = 'none'; // hack start to force css to return stylesheet values instead of calculated px values.
+			var
+				inFlow = _util.css(_pin, "position") != "absolute",
+				pinCSS = _util.css(_pin, boundsParams.concat(["display"])),
+				sizeCSS = _util.css(_pin, ["width", "height"]);
+			_pin.parentNode.style.display = parentDisplay; // hack end.
+
+			if (!inFlow && settings.pushFollowers) {
+				log(2, "WARNING: If the pinned element is positioned absolutely pushFollowers will be disabled.");
+				settings.pushFollowers = false;
+			}
+			window.setTimeout(function () { // wait until all finished, because with responsive duration it will only be set after scene is added to controller
+				if (_pin && _options.duration === 0 && pushFollowersActivelySet && settings.pushFollowers) {
+					log(2, "WARNING: pushFollowers =", true, "has no effect, when scene duration is 0.");
+				}
+			}, 0);
+
+			// create spacer and insert
+			var
+				spacer = _pin.parentNode.insertBefore(document.createElement('div'), _pin),
+				spacerCSS = _util.extend(pinCSS, {
+					position: inFlow ? "relative" : "absolute",
+					boxSizing: "content-box",
+					mozBoxSizing: "content-box",
+					webkitBoxSizing: "content-box"
+				});
+
+			if (!inFlow) { // copy size if positioned absolutely, to work for bottom/right positioned elements.
+				_util.extend(spacerCSS, _util.css(_pin, ["width", "height"]));
+			}
+
+			_util.css(spacer, spacerCSS);
+			spacer.setAttribute(PIN_SPACER_ATTRIBUTE, "");
+			_util.addClass(spacer, settings.spacerClass);
+
+			// set the pin Options
+			_pinOptions = {
+				spacer: spacer,
+				relSize: { // save if size is defined using % values. if so, handle spacer resize differently...
+					width: sizeCSS.width.slice(-1) === "%",
+					height: sizeCSS.height.slice(-1) === "%",
+					autoFullWidth: sizeCSS.width === "auto" && inFlow && _util.isMarginCollapseType(pinCSS.display)
+				},
+				pushFollowers: settings.pushFollowers,
+				inFlow: inFlow, // stores if the element takes up space in the document flow
+			};
+
+			if (!_pin.___origStyle) {
+				_pin.___origStyle = {};
+				var
+					pinInlineCSS = _pin.style,
+					copyStyles = boundsParams.concat(["width", "height", "position", "boxSizing", "mozBoxSizing", "webkitBoxSizing"]);
+				copyStyles.forEach(function (val) {
+					_pin.___origStyle[val] = pinInlineCSS[val] || "";
+				});
+			}
+
+			// if relative size, transfer it to spacer and make pin calculate it...
+			if (_pinOptions.relSize.width) {
+				_util.css(spacer, {
+					width: sizeCSS.width
+				});
+			}
+			if (_pinOptions.relSize.height) {
+				_util.css(spacer, {
+					height: sizeCSS.height
+				});
+			}
+
+			// now place the pin element inside the spacer	
+			spacer.appendChild(_pin);
+			// and set new css
+			_util.css(_pin, {
+				position: inFlow ? "relative" : "absolute",
+				margin: "auto",
+				top: "auto",
+				left: "auto",
+				bottom: "auto",
+				right: "auto"
+			});
+
+			if (_pinOptions.relSize.width || _pinOptions.relSize.autoFullWidth) {
+				_util.css(_pin, {
+					boxSizing: "border-box",
+					mozBoxSizing: "border-box",
+					webkitBoxSizing: "border-box"
+				});
+			}
+
+			// add listener to document to update pin position in case controller is not the document.
+			window.addEventListener('scroll', updatePinInContainer);
+			window.addEventListener('resize', updatePinInContainer);
+			window.addEventListener('resize', updateRelativePinSpacer);
+			// add mousewheel listener to catch scrolls over fixed elements
+			_pin.addEventListener("mousewheel", onMousewheelOverPin);
+			_pin.addEventListener("DOMMouseScroll", onMousewheelOverPin);
+
+			log(3, "added pin");
+
+			// finally update the pin to init
+			updatePinState();
+
+			return Scene;
+		};
+
+		/**
+		 * Remove the pin from the scene.
+		 * @method ScrollMagic.Scene#removePin
+		 * @example
+		 * // remove the pin from the scene without resetting it (the spacer is not removed)
+		 * scene.removePin();
+		 *
+		 * // remove the pin from the scene and reset the pin element to its initial position (spacer is removed)
+		 * scene.removePin(true);
+		 *
+		 * @param {boolean} [reset=false] - If `false` the spacer will not be removed and the element's position will not be reset.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.removePin = function (reset) {
+			if (_pin) {
+				if (_state === SCENE_STATE_DURING) {
+					updatePinState(true); // force unpin at position
+				}
+				if (reset || !_controller) { // if there's no controller no progress was made anyway...
+					var pinTarget = _pinOptions.spacer.firstChild; // usually the pin element, but may be another spacer (cascaded pins)...
+					if (pinTarget.hasAttribute(PIN_SPACER_ATTRIBUTE)) { // copy margins to child spacer
+						var
+							style = _pinOptions.spacer.style,
+							values = ["margin", "marginLeft", "marginRight", "marginTop", "marginBottom"],
+							margins = {};
+						values.forEach(function (val) {
+							margins[val] = style[val] || "";
+						});
+						_util.css(pinTarget, margins);
+					}
+					_pinOptions.spacer.parentNode.insertBefore(pinTarget, _pinOptions.spacer);
+					_pinOptions.spacer.parentNode.removeChild(_pinOptions.spacer);
+					if (!_pin.parentNode.hasAttribute(PIN_SPACER_ATTRIBUTE)) { // if it's the last pin for this element -> restore inline styles
+						// TODO: only correctly set for first pin (when cascading) - how to fix?
+						_util.css(_pin, _pin.___origStyle);
+						delete _pin.___origStyle;
+					}
+				}
+				window.removeEventListener('scroll', updatePinInContainer);
+				window.removeEventListener('resize', updatePinInContainer);
+				window.removeEventListener('resize', updateRelativePinSpacer);
+				_pin.removeEventListener("mousewheel", onMousewheelOverPin);
+				_pin.removeEventListener("DOMMouseScroll", onMousewheelOverPin);
+				_pin = undefined;
+				log(3, "removed pin (reset: " + (reset ? "true" : "false") + ")");
+			}
+			return Scene;
+		};
+
+
+		var
+			_cssClasses,
+			_cssClassElems = [];
+
+		Scene
+			.on("destroy.internal", function (e) {
+				Scene.removeClassToggle(e.reset);
+			});
+		/**
+		 * Define a css class modification while the scene is active.  
+		 * When the scene triggers the classes will be added to the supplied element and removed, when the scene is over.
+		 * If the scene duration is 0 the classes will only be removed if the user scrolls back past the start position.
+		 * @method ScrollMagic.Scene#setClassToggle
+		 * @example
+		 * // add the class 'myclass' to the element with the id 'my-elem' for the duration of the scene
+		 * scene.setClassToggle("#my-elem", "myclass");
+		 *
+		 * // add multiple classes to multiple elements defined by the selector '.classChange'
+		 * scene.setClassToggle(".classChange", "class1 class2 class3");
+		 *
+		 * @param {(string|object)} element - A Selector targeting one or more elements or a DOM object that is supposed to be modified.
+		 * @param {string} classes - One or more Classnames (separated by space) that should be added to the element during the scene.
+		 *
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.setClassToggle = function (element, classes) {
+			var elems = _util.get.elements(element);
+			if (elems.length === 0 || !_util.type.String(classes)) {
+				log(1, "ERROR calling method 'setClassToggle()': Invalid " + (elems.length === 0 ? "element" : "classes") + " supplied.");
+				return Scene;
+			}
+			if (_cssClassElems.length > 0) {
+				// remove old ones
+				Scene.removeClassToggle();
+			}
+			_cssClasses = classes;
+			_cssClassElems = elems;
+			Scene.on("enter.internal_class leave.internal_class", function (e) {
+				var toggle = e.type === "enter" ? _util.addClass : _util.removeClass;
+				_cssClassElems.forEach(function (elem, key) {
+					toggle(elem, _cssClasses);
+				});
+			});
+			return Scene;
+		};
+
+		/**
+		 * Remove the class binding from the scene.
+		 * @method ScrollMagic.Scene#removeClassToggle
+		 * @example
+		 * // remove class binding from the scene without reset
+		 * scene.removeClassToggle();
+		 *
+		 * // remove class binding and remove the changes it caused
+		 * scene.removeClassToggle(true);
+		 *
+		 * @param {boolean} [reset=false] - If `false` and the classes are currently active, they will remain on the element. If `true` they will be removed.
+		 * @returns {Scene} Parent object for chaining.
+		 */
+		this.removeClassToggle = function (reset) {
+			if (reset) {
+				_cssClassElems.forEach(function (elem, key) {
+					_util.removeClass(elem, _cssClasses);
+				});
+			}
+			Scene.off("start.internal_class end.internal_class");
+			_cssClasses = undefined;
+			_cssClassElems = [];
+			return Scene;
+		};
+
+		// INIT
+		construct();
+		return Scene;
+	};
+
+	// store pagewide scene options
+	var SCENE_OPTIONS = {
+		defaults: {
+			duration: 0,
+			offset: 0,
+			triggerElement: undefined,
+			triggerHook: 0.5,
+			reverse: true,
+			loglevel: 2
+		},
+		validate: {
+			offset: function (val) {
+				val = parseFloat(val);
+				if (!_util.type.Number(val)) {
+					throw ["Invalid value for option \"offset\":", val];
+				}
+				return val;
+			},
+			triggerElement: function (val) {
+				val = val || undefined;
+				if (val) {
+					var elem = _util.get.elements(val)[0];
+					if (elem && elem.parentNode) {
+						val = elem;
+					} else {
+						throw ["Element defined in option \"triggerElement\" was not found:", val];
+					}
+				}
+				return val;
+			},
+			triggerHook: function (val) {
+				var translate = {
+					"onCenter": 0.5,
+					"onEnter": 1,
+					"onLeave": 0
+				};
+				if (_util.type.Number(val)) {
+					val = Math.max(0, Math.min(parseFloat(val), 1)); //  make sure its betweeen 0 and 1
+				} else if (val in translate) {
+					val = translate[val];
+				} else {
+					throw ["Invalid value for option \"triggerHook\": ", val];
+				}
+				return val;
+			},
+			reverse: function (val) {
+				return !!val; // force boolean
+			},
+			loglevel: function (val) {
+				val = parseInt(val);
+				if (!_util.type.Number(val) || val < 0 || val > 3) {
+					throw ["Invalid value for option \"loglevel\":", val];
+				}
+				return val;
+			}
+		}, // holder for  validation methods. duration validation is handled in 'getters-setters.js'
+		shifts: ["duration", "offset", "triggerHook"], // list of options that trigger a `shift` event
+	};
+	/*
+	 * method used to add an option to ScrollMagic Scenes.
+	 * TODO: DOC (private for dev)
+	 */
+	ScrollMagic.Scene.addOption = function (name, defaultValue, validationCallback, shifts) {
+		if (!(name in SCENE_OPTIONS.defaults)) {
+			SCENE_OPTIONS.defaults[name] = defaultValue;
+			SCENE_OPTIONS.validate[name] = validationCallback;
+			if (shifts) {
+				SCENE_OPTIONS.shifts.push(name);
+			}
+		} else {
+			ScrollMagic._util.log(1, "[static] ScrollMagic.Scene -> Cannot add Scene option '" + name + "', because it already exists.");
+		}
+	};
+	// instance extension function for plugins
+	// TODO: DOC (private for dev)
+	ScrollMagic.Scene.extend = function (extension) {
+		var oldClass = this;
+		ScrollMagic.Scene = function () {
+			oldClass.apply(this, arguments);
+			this.$super = _util.extend({}, this); // copy parent state
+			return extension.apply(this, arguments) || this;
+		};
+		_util.extend(ScrollMagic.Scene, oldClass); // copy properties
+		ScrollMagic.Scene.prototype = oldClass.prototype; // copy prototype
+		ScrollMagic.Scene.prototype.constructor = ScrollMagic.Scene; // restore constructor
+	};
+
+
+
+	/**
+	 * TODO: DOCS (private for dev)
+	 * @class
+	 * @private
+	 */
+
+	ScrollMagic.Event = function (type, namespace, target, vars) {
+		vars = vars || {};
+		for (var key in vars) {
+			this[key] = vars[key];
+		}
+		this.type = type;
+		this.target = this.currentTarget = target;
+		this.namespace = namespace || '';
+		this.timeStamp = this.timestamp = Date.now();
+		return this;
+	};
+
+	/*
+	 * TODO: DOCS (private for dev)
+	 */
+
+	var _util = ScrollMagic._util = (function (window) {
+		var U = {},
+			i;
+
+		/**
+		 * ------------------------------
+		 * internal helpers
+		 * ------------------------------
+		 */
+
+		// parse float and fall back to 0.
+		var floatval = function (number) {
+			return parseFloat(number) || 0;
+		};
+		// get current style IE safe (otherwise IE would return calculated values for 'auto')
+		var _getComputedStyle = function (elem) {
+			return elem.currentStyle ? elem.currentStyle : window.getComputedStyle(elem);
+		};
+
+		// get element dimension (width or height)
+		var _dimension = function (which, elem, outer, includeMargin) {
+			elem = (elem === document) ? window : elem;
+			if (elem === window) {
+				includeMargin = false;
+			} else if (!_type.DomElement(elem)) {
+				return 0;
+			}
+			which = which.charAt(0).toUpperCase() + which.substr(1).toLowerCase();
+			var dimension = (outer ? elem['offset' + which] || elem['outer' + which] : elem['client' + which] || elem['inner' + which]) || 0;
+			if (outer && includeMargin) {
+				var style = _getComputedStyle(elem);
+				dimension += which === 'Height' ? floatval(style.marginTop) + floatval(style.marginBottom) : floatval(style.marginLeft) + floatval(style.marginRight);
+			}
+			return dimension;
+		};
+		// converts 'margin-top' into 'marginTop'
+		var _camelCase = function (str) {
+			return str.replace(/^[^a-z]+([a-z])/g, '$1').replace(/-([a-z])/g, function (g) {
+				return g[1].toUpperCase();
+			});
+		};
+
+		/**
+		 * ------------------------------
+		 * external helpers
+		 * ------------------------------
+		 */
+
+		// extend obj – same as jQuery.extend({}, objA, objB)
+		U.extend = function (obj) {
+			obj = obj || {};
+			for (i = 1; i < arguments.length; i++) {
+				if (!arguments[i]) {
+					continue;
+				}
+				for (var key in arguments[i]) {
+					if (arguments[i].hasOwnProperty(key)) {
+						obj[key] = arguments[i][key];
+					}
+				}
+			}
+			return obj;
+		};
+
+		// check if a css display type results in margin-collapse or not
+		U.isMarginCollapseType = function (str) {
+			return ["block", "flex", "list-item", "table", "-webkit-box"].indexOf(str) > -1;
+		};
+
+		// implementation of requestAnimationFrame
+		// based on https://gist.github.com/paulirish/1579671
+		var
+			lastTime = 0,
+			vendors = ['ms', 'moz', 'webkit', 'o'];
+		var _requestAnimationFrame = window.requestAnimationFrame;
+		var _cancelAnimationFrame = window.cancelAnimationFrame;
+		// try vendor prefixes if the above doesn't work
+		for (i = 0; !_requestAnimationFrame && i < vendors.length; ++i) {
+			_requestAnimationFrame = window[vendors[i] + 'RequestAnimationFrame'];
+			_cancelAnimationFrame = window[vendors[i] + 'CancelAnimationFrame'] || window[vendors[i] + 'CancelRequestAnimationFrame'];
+		}
+
+		// fallbacks
+		if (!_requestAnimationFrame) {
+			_requestAnimationFrame = function (callback) {
+				var
+					currTime = new Date().getTime(),
+					timeToCall = Math.max(0, 16 - (currTime - lastTime)),
+					id = window.setTimeout(function () {
+						callback(currTime + timeToCall);
+					}, timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+		}
+		if (!_cancelAnimationFrame) {
+			_cancelAnimationFrame = function (id) {
+				window.clearTimeout(id);
+			};
+		}
+		U.rAF = _requestAnimationFrame.bind(window);
+		U.cAF = _cancelAnimationFrame.bind(window);
+
+		var
+			loglevels = ["error", "warn", "log"],
+			console = window.console || {};
+
+		console.log = console.log || function () {}; // no console log, well - do nothing then...
+		// make sure methods for all levels exist.
+		for (i = 0; i < loglevels.length; i++) {
+			var method = loglevels[i];
+			if (!console[method]) {
+				console[method] = console.log; // prefer .log over nothing
+			}
+		}
+		U.log = function (loglevel) {
+			if (loglevel > loglevels.length || loglevel <= 0) loglevel = loglevels.length;
+			var now = new Date(),
+				time = ("0" + now.getHours()).slice(-2) + ":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2) + ":" + ("00" + now.getMilliseconds()).slice(-3),
+				method = loglevels[loglevel - 1],
+				args = Array.prototype.splice.call(arguments, 1),
+				func = Function.prototype.bind.call(console[method], console);
+			args.unshift(time);
+			func.apply(console, args);
+		};
+
+		/**
+		 * ------------------------------
+		 * type testing
+		 * ------------------------------
+		 */
+
+		var _type = U.type = function (v) {
+			return Object.prototype.toString.call(v).replace(/^\[object (.+)\]$/, "$1").toLowerCase();
+		};
+		_type.String = function (v) {
+			return _type(v) === 'string';
+		};
+		_type.Function = function (v) {
+			return _type(v) === 'function';
+		};
+		_type.Array = function (v) {
+			return Array.isArray(v);
+		};
+		_type.Number = function (v) {
+			return !_type.Array(v) && (v - parseFloat(v) + 1) >= 0;
+		};
+		_type.DomElement = function (o) {
+			return (
+				typeof HTMLElement === "object" || typeof HTMLElement === "function" ? o instanceof HTMLElement || o instanceof SVGElement : //DOM2
+				o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName === "string"
+			);
+		};
+
+		/**
+		 * ------------------------------
+		 * DOM Element info
+		 * ------------------------------
+		 */
+		// always returns a list of matching DOM elements, from a selector, a DOM element or an list of elements or even an array of selectors
+		var _get = U.get = {};
+		_get.elements = function (selector) {
+			var arr = [];
+			if (_type.String(selector)) {
+				try {
+					selector = document.querySelectorAll(selector);
+				} catch (e) { // invalid selector
+					return arr;
+				}
+			}
+			if (_type(selector) === 'nodelist' || _type.Array(selector) || selector instanceof NodeList) {
+				for (var i = 0, ref = arr.length = selector.length; i < ref; i++) { // list of elements
+					var elem = selector[i];
+					arr[i] = _type.DomElement(elem) ? elem : _get.elements(elem); // if not an element, try to resolve recursively
+				}
+			} else if (_type.DomElement(selector) || selector === document || selector === window) {
+				arr = [selector]; // only the element
+			}
+			return arr;
+		};
+		// get scroll top value
+		_get.scrollTop = function (elem) {
+			return (elem && typeof elem.scrollTop === 'number') ? elem.scrollTop : window.pageYOffset || 0;
+		};
+		// get scroll left value
+		_get.scrollLeft = function (elem) {
+			return (elem && typeof elem.scrollLeft === 'number') ? elem.scrollLeft : window.pageXOffset || 0;
+		};
+		// get element height
+		_get.width = function (elem, outer, includeMargin) {
+			return _dimension('width', elem, outer, includeMargin);
+		};
+		// get element width
+		_get.height = function (elem, outer, includeMargin) {
+			return _dimension('height', elem, outer, includeMargin);
+		};
+
+		// get element position (optionally relative to viewport)
+		_get.offset = function (elem, relativeToViewport) {
+			var offset = {
+				top: 0,
+				left: 0
+			};
+			if (elem && elem.getBoundingClientRect) { // check if available
+				var rect = elem.getBoundingClientRect();
+				offset.top = rect.top;
+				offset.left = rect.left;
+				if (!relativeToViewport) { // clientRect is by default relative to viewport...
+					offset.top += _get.scrollTop();
+					offset.left += _get.scrollLeft();
+				}
+			}
+			return offset;
+		};
+
+		/**
+		 * ------------------------------
+		 * DOM Element manipulation
+		 * ------------------------------
+		 */
+
+		U.addClass = function (elem, classname) {
+			if (classname) {
+				if (elem.classList)
+					elem.classList.add(classname);
+				else
+					elem.className += ' ' + classname;
+			}
+		};
+		U.removeClass = function (elem, classname) {
+			if (classname) {
+				if (elem.classList)
+					elem.classList.remove(classname);
+				else
+					elem.className = elem.className.replace(new RegExp('(^|\\b)' + classname.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+			}
+		};
+		// if options is string -> returns css value
+		// if options is array -> returns object with css value pairs
+		// if options is object -> set new css values
+		U.css = function (elem, options) {
+			if (_type.String(options)) {
+				return _getComputedStyle(elem)[_camelCase(options)];
+			} else if (_type.Array(options)) {
+				var
+					obj = {},
+					style = _getComputedStyle(elem);
+				options.forEach(function (option, key) {
+					obj[option] = style[_camelCase(option)];
+				});
+				return obj;
+			} else {
+				for (var option in options) {
+					var val = options[option];
+					if (val == parseFloat(val)) { // assume pixel for seemingly numerical values
+						val += 'px';
+					}
+					elem.style[_camelCase(option)] = val;
+				}
+			}
+		};
+
+		return U;
+	}(window || {}));
+
+
+	ScrollMagic.Scene.prototype.addIndicators = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling addIndicators() due to missing Plugin \'debug.addIndicators\'. Please make sure to include plugins/debug.addIndicators.js');
+		return this;
+	}
+	ScrollMagic.Scene.prototype.removeIndicators = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling removeIndicators() due to missing Plugin \'debug.addIndicators\'. Please make sure to include plugins/debug.addIndicators.js');
+		return this;
+	}
+	ScrollMagic.Scene.prototype.setTween = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling setTween() due to missing Plugin \'animation.gsap\'. Please make sure to include plugins/animation.gsap.js');
+		return this;
+	}
+	ScrollMagic.Scene.prototype.removeTween = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling removeTween() due to missing Plugin \'animation.gsap\'. Please make sure to include plugins/animation.gsap.js');
+		return this;
+	}
+	ScrollMagic.Scene.prototype.setVelocity = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling setVelocity() due to missing Plugin \'animation.velocity\'. Please make sure to include plugins/animation.velocity.js');
+		return this;
+	}
+	ScrollMagic.Scene.prototype.removeVelocity = function () {
+		ScrollMagic._util.log(1, '(ScrollMagic.Scene) -> ERROR calling removeVelocity() due to missing Plugin \'animation.velocity\'. Please make sure to include plugins/animation.velocity.js');
+		return this;
+	}
+
+	return ScrollMagic;
+}));
+
+/***/ }),
+
 /***/ "./node_modules/setimmediate/setImmediate.js":
 /*!***************************************************!*\
   !*** ./node_modules/setimmediate/setImmediate.js ***!
@@ -26787,6 +35889,2261 @@ process.umask = function() { return 0; };
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/decorators/boolean.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/decorators/boolean.js ***!
+  \*************************************************************/
+/*! exports provided: boolean */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "boolean", function() { return boolean; });
+function boolean(proto, key) {
+    var alias = "_" + key;
+    Object.defineProperty(proto, key, {
+        get: function () {
+            return this[alias];
+        },
+        set: function (val) {
+            Object.defineProperty(this, alias, {
+                value: !!val,
+                enumerable: false,
+                writable: true,
+                configurable: true,
+            });
+        },
+        enumerable: true,
+        configurable: true,
+    });
+}
+//# sourceMappingURL=boolean.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/decorators/debounce.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/decorators/debounce.js ***!
+  \**************************************************************/
+/*! exports provided: debounce */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return debounce; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash_es_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es/debounce */ "./node_modules/lodash-es/debounce.js");
+
+
+function debounce() {
+    var options = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        options[_i] = arguments[_i];
+    }
+    return function (_proto, key, descriptor) {
+        var fn = descriptor.value;
+        return {
+            get: function () {
+                if (!this.hasOwnProperty(key)) {
+                    Object.defineProperty(this, key, {
+                        value: lodash_es_debounce__WEBPACK_IMPORTED_MODULE_1__["default"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spreadArrays"])([fn], options)),
+                    });
+                }
+                return this[key];
+            },
+        };
+    };
+}
+//# sourceMappingURL=debounce.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/decorators/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/decorators/index.js ***!
+  \***********************************************************/
+/*! exports provided: range, boolean, debounce */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _range__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./range */ "./node_modules/smooth-scrollbar/decorators/range.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "range", function() { return _range__WEBPACK_IMPORTED_MODULE_0__["range"]; });
+
+/* harmony import */ var _boolean__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./boolean */ "./node_modules/smooth-scrollbar/decorators/boolean.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "boolean", function() { return _boolean__WEBPACK_IMPORTED_MODULE_1__["boolean"]; });
+
+/* harmony import */ var _debounce__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./debounce */ "./node_modules/smooth-scrollbar/decorators/debounce.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "debounce", function() { return _debounce__WEBPACK_IMPORTED_MODULE_2__["debounce"]; });
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/decorators/range.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/decorators/range.js ***!
+  \***********************************************************/
+/*! exports provided: range */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "range", function() { return range; });
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+
+function range(min, max) {
+    if (min === void 0) { min = -Infinity; }
+    if (max === void 0) { max = Infinity; }
+    return function (proto, key) {
+        var alias = "_" + key;
+        Object.defineProperty(proto, key, {
+            get: function () {
+                return this[alias];
+            },
+            set: function (val) {
+                Object.defineProperty(this, alias, {
+                    value: Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(val, min, max),
+                    enumerable: false,
+                    writable: true,
+                    configurable: true,
+                });
+            },
+            enumerable: true,
+            configurable: true,
+        });
+    };
+}
+//# sourceMappingURL=range.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/index.js ***!
+  \*******************************************************/
+/*! exports provided: keyboardHandler, mouseHandler, resizeHandler, selectHandler, touchHandler, wheelHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _keyboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keyboard */ "./node_modules/smooth-scrollbar/events/keyboard.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "keyboardHandler", function() { return _keyboard__WEBPACK_IMPORTED_MODULE_0__["keyboardHandler"]; });
+
+/* harmony import */ var _mouse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mouse */ "./node_modules/smooth-scrollbar/events/mouse.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mouseHandler", function() { return _mouse__WEBPACK_IMPORTED_MODULE_1__["mouseHandler"]; });
+
+/* harmony import */ var _resize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./resize */ "./node_modules/smooth-scrollbar/events/resize.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "resizeHandler", function() { return _resize__WEBPACK_IMPORTED_MODULE_2__["resizeHandler"]; });
+
+/* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./select */ "./node_modules/smooth-scrollbar/events/select.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selectHandler", function() { return _select__WEBPACK_IMPORTED_MODULE_3__["selectHandler"]; });
+
+/* harmony import */ var _touch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./touch */ "./node_modules/smooth-scrollbar/events/touch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "touchHandler", function() { return _touch__WEBPACK_IMPORTED_MODULE_4__["touchHandler"]; });
+
+/* harmony import */ var _wheel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./wheel */ "./node_modules/smooth-scrollbar/events/wheel.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wheelHandler", function() { return _wheel__WEBPACK_IMPORTED_MODULE_5__["wheelHandler"]; });
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/keyboard.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/keyboard.js ***!
+  \**********************************************************/
+/*! exports provided: keyboardHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyboardHandler", function() { return keyboardHandler; });
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+var KEY_CODE;
+(function (KEY_CODE) {
+    KEY_CODE[KEY_CODE["TAB"] = 9] = "TAB";
+    KEY_CODE[KEY_CODE["SPACE"] = 32] = "SPACE";
+    KEY_CODE[KEY_CODE["PAGE_UP"] = 33] = "PAGE_UP";
+    KEY_CODE[KEY_CODE["PAGE_DOWN"] = 34] = "PAGE_DOWN";
+    KEY_CODE[KEY_CODE["END"] = 35] = "END";
+    KEY_CODE[KEY_CODE["HOME"] = 36] = "HOME";
+    KEY_CODE[KEY_CODE["LEFT"] = 37] = "LEFT";
+    KEY_CODE[KEY_CODE["UP"] = 38] = "UP";
+    KEY_CODE[KEY_CODE["RIGHT"] = 39] = "RIGHT";
+    KEY_CODE[KEY_CODE["DOWN"] = 40] = "DOWN";
+})(KEY_CODE || (KEY_CODE = {}));
+function keyboardHandler(scrollbar) {
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_0__["eventScope"])(scrollbar);
+    var container = scrollbar.containerEl;
+    addEvent(container, 'keydown', function (evt) {
+        var activeElement = document.activeElement;
+        if (activeElement !== container && !container.contains(activeElement)) {
+            return;
+        }
+        if (isEditable(activeElement)) {
+            return;
+        }
+        var delta = getKeyDelta(scrollbar, evt.keyCode || evt.which);
+        if (!delta) {
+            return;
+        }
+        var x = delta[0], y = delta[1];
+        scrollbar.addTransformableMomentum(x, y, evt, function (willScroll) {
+            if (willScroll) {
+                evt.preventDefault();
+            }
+            else {
+                scrollbar.containerEl.blur();
+                if (scrollbar.parent) {
+                    scrollbar.parent.containerEl.focus();
+                }
+            }
+        });
+    });
+}
+function getKeyDelta(scrollbar, keyCode) {
+    var size = scrollbar.size, limit = scrollbar.limit, offset = scrollbar.offset;
+    switch (keyCode) {
+        case KEY_CODE.TAB:
+            return handleTabKey(scrollbar);
+        case KEY_CODE.SPACE:
+            return [0, 200];
+        case KEY_CODE.PAGE_UP:
+            return [0, -size.container.height + 40];
+        case KEY_CODE.PAGE_DOWN:
+            return [0, size.container.height - 40];
+        case KEY_CODE.END:
+            return [0, limit.y - offset.y];
+        case KEY_CODE.HOME:
+            return [0, -offset.y];
+        case KEY_CODE.LEFT:
+            return [-40, 0];
+        case KEY_CODE.UP:
+            return [0, -40];
+        case KEY_CODE.RIGHT:
+            return [40, 0];
+        case KEY_CODE.DOWN:
+            return [0, 40];
+        default:
+            return null;
+    }
+}
+function handleTabKey(scrollbar) {
+    // handle in next frame
+    requestAnimationFrame(function () {
+        scrollbar.scrollIntoView(document.activeElement, {
+            offsetTop: scrollbar.size.container.height / 2,
+            onlyScrollIfNeeded: true,
+        });
+    });
+}
+function isEditable(elem) {
+    if (elem.tagName === 'INPUT' ||
+        elem.tagName === 'SELECT' ||
+        elem.tagName === 'TEXTAREA' ||
+        elem.isContentEditable) {
+        return !elem.disabled;
+    }
+    return false;
+}
+//# sourceMappingURL=keyboard.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/mouse.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/mouse.js ***!
+  \*******************************************************/
+/*! exports provided: mouseHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mouseHandler", function() { return mouseHandler; });
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+var Direction;
+(function (Direction) {
+    Direction[Direction["X"] = 0] = "X";
+    Direction[Direction["Y"] = 1] = "Y";
+})(Direction || (Direction = {}));
+function mouseHandler(scrollbar) {
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["eventScope"])(scrollbar);
+    var container = scrollbar.containerEl;
+    var _a = scrollbar.track, xAxis = _a.xAxis, yAxis = _a.yAxis;
+    function calcOffset(direction, clickPosition) {
+        var size = scrollbar.size;
+        if (direction === Direction.X) {
+            var totalWidth = size.container.width + (xAxis.thumb.realSize - xAxis.thumb.displaySize);
+            return clickPosition / totalWidth * size.content.width;
+        }
+        if (direction === Direction.Y) {
+            var totalHeight = size.container.height + (yAxis.thumb.realSize - yAxis.thumb.displaySize);
+            return clickPosition / totalHeight * size.content.height;
+        }
+        return 0;
+    }
+    function getTrackDirection(elem) {
+        if (Object(_utils___WEBPACK_IMPORTED_MODULE_1__["isOneOf"])(elem, [xAxis.element, xAxis.thumb.element])) {
+            return Direction.X;
+        }
+        if (Object(_utils___WEBPACK_IMPORTED_MODULE_1__["isOneOf"])(elem, [yAxis.element, yAxis.thumb.element])) {
+            return Direction.Y;
+        }
+        return void 0;
+    }
+    var isMouseDown;
+    var isMouseMoving;
+    var startOffsetToThumb;
+    var startTrackDirection;
+    var containerRect;
+    addEvent(container, 'click', function (evt) {
+        if (isMouseMoving || !Object(_utils___WEBPACK_IMPORTED_MODULE_1__["isOneOf"])(evt.target, [xAxis.element, yAxis.element])) {
+            return;
+        }
+        var track = evt.target;
+        var direction = getTrackDirection(track);
+        var rect = track.getBoundingClientRect();
+        var clickPos = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["getPosition"])(evt);
+        var offset = scrollbar.offset, limit = scrollbar.limit;
+        if (direction === Direction.X) {
+            var offsetOnTrack = clickPos.x - rect.left - xAxis.thumb.displaySize / 2;
+            scrollbar.setMomentum(Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(calcOffset(direction, offsetOnTrack) - offset.x, -offset.x, limit.x - offset.x), 0);
+        }
+        if (direction === Direction.Y) {
+            var offsetOnTrack = clickPos.y - rect.top - yAxis.thumb.displaySize / 2;
+            scrollbar.setMomentum(0, Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(calcOffset(direction, offsetOnTrack) - offset.y, -offset.y, limit.y - offset.y));
+        }
+    });
+    addEvent(container, 'mousedown', function (evt) {
+        if (!Object(_utils___WEBPACK_IMPORTED_MODULE_1__["isOneOf"])(evt.target, [xAxis.thumb.element, yAxis.thumb.element])) {
+            return;
+        }
+        isMouseDown = true;
+        var thumb = evt.target;
+        var cursorPos = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["getPosition"])(evt);
+        var thumbRect = thumb.getBoundingClientRect();
+        startTrackDirection = getTrackDirection(thumb);
+        // pointer offset to thumb
+        startOffsetToThumb = {
+            x: cursorPos.x - thumbRect.left,
+            y: cursorPos.y - thumbRect.top,
+        };
+        // container bounding rectangle
+        containerRect = container.getBoundingClientRect();
+        // prevent selection, see:
+        // https://github.com/idiotWu/smooth-scrollbar/issues/48
+        Object(_utils___WEBPACK_IMPORTED_MODULE_1__["setStyle"])(scrollbar.containerEl, {
+            '-user-select': 'none',
+        });
+    });
+    addEvent(window, 'mousemove', function (evt) {
+        if (!isMouseDown)
+            return;
+        isMouseMoving = true;
+        var offset = scrollbar.offset;
+        var cursorPos = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["getPosition"])(evt);
+        if (startTrackDirection === Direction.X) {
+            // get percentage of pointer position in track
+            // then tranform to px
+            // don't need easing
+            var offsetOnTrack = cursorPos.x - startOffsetToThumb.x - containerRect.left;
+            scrollbar.setPosition(calcOffset(startTrackDirection, offsetOnTrack), offset.y);
+        }
+        if (startTrackDirection === Direction.Y) {
+            var offsetOnTrack = cursorPos.y - startOffsetToThumb.y - containerRect.top;
+            scrollbar.setPosition(offset.x, calcOffset(startTrackDirection, offsetOnTrack));
+        }
+    });
+    addEvent(window, 'mouseup blur', function () {
+        isMouseDown = isMouseMoving = false;
+        Object(_utils___WEBPACK_IMPORTED_MODULE_1__["setStyle"])(scrollbar.containerEl, {
+            '-user-select': '',
+        });
+    });
+}
+//# sourceMappingURL=mouse.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/resize.js":
+/*!********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/resize.js ***!
+  \********************************************************/
+/*! exports provided: resizeHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resizeHandler", function() { return resizeHandler; });
+/* harmony import */ var lodash_es_debounce__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/debounce */ "./node_modules/lodash-es/debounce.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+function resizeHandler(scrollbar) {
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["eventScope"])(scrollbar);
+    addEvent(window, 'resize', Object(lodash_es_debounce__WEBPACK_IMPORTED_MODULE_0__["default"])(scrollbar.update.bind(scrollbar), 300));
+}
+//# sourceMappingURL=resize.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/select.js":
+/*!********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/select.js ***!
+  \********************************************************/
+/*! exports provided: selectHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectHandler", function() { return selectHandler; });
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+function selectHandler(scrollbar) {
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["eventScope"])(scrollbar);
+    var containerEl = scrollbar.containerEl, contentEl = scrollbar.contentEl, offset = scrollbar.offset, limit = scrollbar.limit;
+    var isSelected = false;
+    var animationID;
+    function scroll(_a) {
+        var x = _a.x, y = _a.y;
+        if (!x && !y)
+            return;
+        // DISALLOW delta transformation
+        scrollbar.setMomentum(Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(offset.x + x, 0, limit.x) - offset.x, Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(offset.y + y, 0, limit.y) - offset.y);
+        animationID = requestAnimationFrame(function () {
+            scroll({ x: x, y: y });
+        });
+    }
+    addEvent(window, 'mousemove', function (evt) {
+        if (!isSelected)
+            return;
+        cancelAnimationFrame(animationID);
+        var dir = calcMomentum(scrollbar, evt);
+        scroll(dir);
+    });
+    addEvent(contentEl, 'selectstart', function (evt) {
+        evt.stopPropagation();
+        cancelAnimationFrame(animationID);
+        isSelected = true;
+    });
+    addEvent(window, 'mouseup blur', function () {
+        cancelAnimationFrame(animationID);
+        isSelected = false;
+    });
+    // patch for touch devices
+    addEvent(containerEl, 'scroll', function (evt) {
+        evt.preventDefault();
+        containerEl.scrollTop = containerEl.scrollLeft = 0;
+    });
+}
+function calcMomentum(scrollbar, evt) {
+    var _a = scrollbar.bounding, top = _a.top, right = _a.right, bottom = _a.bottom, left = _a.left;
+    var _b = Object(_utils___WEBPACK_IMPORTED_MODULE_1__["getPosition"])(evt), x = _b.x, y = _b.y;
+    var res = {
+        x: 0,
+        y: 0,
+    };
+    var padding = 20;
+    if (x === 0 && y === 0)
+        return res;
+    if (x > right - padding) {
+        res.x = (x - right + padding);
+    }
+    else if (x < left + padding) {
+        res.x = (x - left - padding);
+    }
+    if (y > bottom - padding) {
+        res.y = (y - bottom + padding);
+    }
+    else if (y < top + padding) {
+        res.y = (y - top - padding);
+    }
+    res.x *= 2;
+    res.y *= 2;
+    return res;
+}
+//# sourceMappingURL=select.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/touch.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/touch.js ***!
+  \*******************************************************/
+/*! exports provided: touchHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "touchHandler", function() { return touchHandler; });
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+var activeScrollbar;
+function touchHandler(scrollbar) {
+    var MIN_EAING_MOMENTUM = 50;
+    var EASING_MULTIPLIER = /Android/.test(navigator.userAgent) ? 3 : 2;
+    var target = scrollbar.options.delegateTo || scrollbar.containerEl;
+    var touchRecord = new _utils___WEBPACK_IMPORTED_MODULE_0__["TouchRecord"]();
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_0__["eventScope"])(scrollbar);
+    var damping;
+    var pointerCount = 0;
+    addEvent(target, 'touchstart', function (evt) {
+        // start records
+        touchRecord.track(evt);
+        // stop scrolling
+        scrollbar.setMomentum(0, 0);
+        // save damping
+        if (pointerCount === 0) {
+            damping = scrollbar.options.damping;
+            scrollbar.options.damping = Math.max(damping, 0.5); // less frames on touchmove
+        }
+        pointerCount++;
+    });
+    addEvent(target, 'touchmove', function (evt) {
+        if (activeScrollbar && activeScrollbar !== scrollbar)
+            return;
+        touchRecord.update(evt);
+        var _a = touchRecord.getDelta(), x = _a.x, y = _a.y;
+        scrollbar.addTransformableMomentum(x, y, evt, function (willScroll) {
+            if (willScroll) {
+                evt.preventDefault();
+                activeScrollbar = scrollbar;
+            }
+        });
+    });
+    addEvent(target, 'touchcancel touchend', function (evt) {
+        var velocity = touchRecord.getVelocity();
+        var momentum = { x: 0, y: 0 };
+        Object.keys(velocity).forEach(function (dir) {
+            var s = velocity[dir] / damping;
+            // throw small values
+            momentum[dir] = Math.abs(s) < MIN_EAING_MOMENTUM ? 0 : s * EASING_MULTIPLIER;
+        });
+        scrollbar.addTransformableMomentum(momentum.x, momentum.y, evt);
+        pointerCount--;
+        // restore damping
+        if (pointerCount === 0) {
+            scrollbar.options.damping = damping;
+        }
+        touchRecord.release(evt);
+        activeScrollbar = null;
+    });
+}
+//# sourceMappingURL=touch.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/events/wheel.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/events/wheel.js ***!
+  \*******************************************************/
+/*! exports provided: wheelHandler */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wheelHandler", function() { return wheelHandler; });
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+function wheelHandler(scrollbar) {
+    var addEvent = Object(_utils___WEBPACK_IMPORTED_MODULE_0__["eventScope"])(scrollbar);
+    var target = scrollbar.options.delegateTo || scrollbar.containerEl;
+    var eventName = ('onwheel' in window || document.implementation.hasFeature('Events.wheel', '3.0')) ? 'wheel' : 'mousewheel';
+    addEvent(target, eventName, function (evt) {
+        var _a = normalizeDelta(evt), x = _a.x, y = _a.y;
+        scrollbar.addTransformableMomentum(x, y, evt, function (willScroll) {
+            if (willScroll) {
+                evt.preventDefault();
+            }
+        });
+    });
+}
+// Normalizing wheel delta
+var DELTA_SCALE = {
+    STANDARD: 1,
+    OTHERS: -3,
+};
+var DELTA_MODE = [1.0, 28.0, 500.0];
+var getDeltaMode = function (mode) { return DELTA_MODE[mode] || DELTA_MODE[0]; };
+function normalizeDelta(evt) {
+    if ('deltaX' in evt) {
+        var mode = getDeltaMode(evt.deltaMode);
+        return {
+            x: evt.deltaX / DELTA_SCALE.STANDARD * mode,
+            y: evt.deltaY / DELTA_SCALE.STANDARD * mode,
+        };
+    }
+    if ('wheelDeltaX' in evt) {
+        return {
+            x: evt.wheelDeltaX / DELTA_SCALE.OTHERS,
+            y: evt.wheelDeltaY / DELTA_SCALE.OTHERS,
+        };
+    }
+    // ie with touchpad
+    return {
+        x: 0,
+        y: evt.wheelDelta / DELTA_SCALE.OTHERS,
+    };
+}
+//# sourceMappingURL=wheel.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/geometry/get-size.js":
+/*!************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/geometry/get-size.js ***!
+  \************************************************************/
+/*! exports provided: getSize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSize", function() { return getSize; });
+function getSize(scrollbar) {
+    var containerEl = scrollbar.containerEl, contentEl = scrollbar.contentEl;
+    return {
+        container: {
+            // requires `overflow: hidden`
+            width: containerEl.clientWidth,
+            height: containerEl.clientHeight,
+        },
+        content: {
+            // border width should be included
+            width: contentEl.offsetWidth - contentEl.clientWidth + contentEl.scrollWidth,
+            height: contentEl.offsetHeight - contentEl.clientHeight + contentEl.scrollHeight,
+        },
+    };
+}
+//# sourceMappingURL=get-size.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/geometry/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/geometry/index.js ***!
+  \*********************************************************/
+/*! exports provided: getSize, isVisible, update */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _get_size__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-size */ "./node_modules/smooth-scrollbar/geometry/get-size.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getSize", function() { return _get_size__WEBPACK_IMPORTED_MODULE_0__["getSize"]; });
+
+/* harmony import */ var _is_visible__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./is-visible */ "./node_modules/smooth-scrollbar/geometry/is-visible.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isVisible", function() { return _is_visible__WEBPACK_IMPORTED_MODULE_1__["isVisible"]; });
+
+/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./update */ "./node_modules/smooth-scrollbar/geometry/update.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "update", function() { return _update__WEBPACK_IMPORTED_MODULE_2__["update"]; });
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/geometry/is-visible.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/geometry/is-visible.js ***!
+  \**************************************************************/
+/*! exports provided: isVisible */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isVisible", function() { return isVisible; });
+function isVisible(scrollbar, elem) {
+    var bounding = scrollbar.bounding;
+    var targetBounding = elem.getBoundingClientRect();
+    // check overlapping
+    var top = Math.max(bounding.top, targetBounding.top);
+    var left = Math.max(bounding.left, targetBounding.left);
+    var right = Math.min(bounding.right, targetBounding.right);
+    var bottom = Math.min(bounding.bottom, targetBounding.bottom);
+    return top < bottom && left < right;
+}
+//# sourceMappingURL=is-visible.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/geometry/update.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/geometry/update.js ***!
+  \**********************************************************/
+/*! exports provided: update */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "update", function() { return update; });
+function update(scrollbar) {
+    var newSize = scrollbar.getSize();
+    var limit = {
+        x: Math.max(newSize.content.width - newSize.container.width, 0),
+        y: Math.max(newSize.content.height - newSize.container.height, 0),
+    };
+    // metrics
+    var containerBounding = scrollbar.containerEl.getBoundingClientRect();
+    var bounding = {
+        top: Math.max(containerBounding.top, 0),
+        right: Math.min(containerBounding.right, window.innerWidth),
+        bottom: Math.min(containerBounding.bottom, window.innerHeight),
+        left: Math.max(containerBounding.left, 0),
+    };
+    // assign props
+    scrollbar.size = newSize;
+    scrollbar.limit = limit;
+    scrollbar.bounding = bounding;
+    // update tracks
+    scrollbar.track.update();
+    // re-positioning
+    scrollbar.setPosition();
+}
+//# sourceMappingURL=update.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/index.js ***!
+  \************************************************/
+/*! exports provided: ScrollbarPlugin, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./polyfills */ "./node_modules/smooth-scrollbar/polyfills.js");
+/* harmony import */ var _scrollbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scrollbar */ "./node_modules/smooth-scrollbar/scrollbar.js");
+/* harmony import */ var _plugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./plugin */ "./node_modules/smooth-scrollbar/plugin.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ScrollbarPlugin", function() { return _plugin__WEBPACK_IMPORTED_MODULE_3__["ScrollbarPlugin"]; });
+
+/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style */ "./node_modules/smooth-scrollbar/style.js");
+
+
+
+
+
+
+/*!
+ * cast `I.Scrollbar` to `Scrollbar` to avoid error
+ *
+ * `I.Scrollbar` is not assignable to `Scrollbar`:
+ *     "privateProp" is missing in `I.Scrollbar`
+ *
+ * @see https://github.com/Microsoft/TypeScript/issues/2672
+ */
+var SmoothScrollbar = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(SmoothScrollbar, _super);
+    function SmoothScrollbar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Initializes a scrollbar on the given element.
+     *
+     * @param elem The DOM element that you want to initialize scrollbar to
+     * @param [options] Initial options
+     */
+    SmoothScrollbar.init = function (elem, options) {
+        if (!elem || elem.nodeType !== 1) {
+            throw new TypeError("expect element to be DOM Element, but got " + elem);
+        }
+        // attach stylesheet
+        Object(_style__WEBPACK_IMPORTED_MODULE_4__["attachStyle"])();
+        if (_scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].has(elem)) {
+            return _scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].get(elem);
+        }
+        return new _scrollbar__WEBPACK_IMPORTED_MODULE_2__["Scrollbar"](elem, options);
+    };
+    /**
+     * Automatically init scrollbar on all elements base on the selector `[data-scrollbar]`
+     *
+     * @param options Initial options
+     */
+    SmoothScrollbar.initAll = function (options) {
+        return Array.from(document.querySelectorAll('[data-scrollbar]'), function (elem) {
+            return SmoothScrollbar.init(elem, options);
+        });
+    };
+    /**
+     * Check if there is a scrollbar on given element
+     *
+     * @param elem The DOM element that you want to check
+     */
+    SmoothScrollbar.has = function (elem) {
+        return _scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].has(elem);
+    };
+    /**
+     * Gets scrollbar on the given element.
+     * If no scrollbar instance exsits, returns `undefined`
+     *
+     * @param elem The DOM element that you want to check.
+     */
+    SmoothScrollbar.get = function (elem) {
+        return _scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].get(elem);
+    };
+    /**
+     * Returns an array that contains all scrollbar instances
+     */
+    SmoothScrollbar.getAll = function () {
+        return Array.from(_scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].values());
+    };
+    /**
+     * Removes scrollbar on the given element
+     */
+    SmoothScrollbar.destroy = function (elem) {
+        var scrollbar = _scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].get(elem);
+        if (scrollbar) {
+            scrollbar.destroy();
+        }
+    };
+    /**
+     * Removes all scrollbar instances from current document
+     */
+    SmoothScrollbar.destroyAll = function () {
+        _scrollbar__WEBPACK_IMPORTED_MODULE_2__["scrollbarMap"].forEach(function (scrollbar) {
+            scrollbar.destroy();
+        });
+    };
+    /**
+     * Attaches plugins to scrollbars
+     *
+     * @param ...Plugins Scrollbar plugin classes
+     */
+    SmoothScrollbar.use = function () {
+        var Plugins = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            Plugins[_i] = arguments[_i];
+        }
+        return _plugin__WEBPACK_IMPORTED_MODULE_3__["addPlugins"].apply(void 0, Plugins);
+    };
+    /**
+     * Attaches default style sheets to current document.
+     * You don't need to call this method manually unless
+     * you removed the default styles via `Scrollbar.detachStyle()`
+     */
+    SmoothScrollbar.attachStyle = function () {
+        return Object(_style__WEBPACK_IMPORTED_MODULE_4__["attachStyle"])();
+    };
+    /**
+     * Removes default styles from current document.
+     * Use this method when you want to use your own css for scrollbars.
+     */
+    SmoothScrollbar.detachStyle = function () {
+        return Object(_style__WEBPACK_IMPORTED_MODULE_4__["detachStyle"])();
+    };
+    SmoothScrollbar.version = "8.5.2";
+    SmoothScrollbar.ScrollbarPlugin = _plugin__WEBPACK_IMPORTED_MODULE_3__["ScrollbarPlugin"];
+    return SmoothScrollbar;
+}(_scrollbar__WEBPACK_IMPORTED_MODULE_2__["Scrollbar"]));
+/* harmony default export */ __webpack_exports__["default"] = (SmoothScrollbar);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/options.js":
+/*!**************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/options.js ***!
+  \**************************************************/
+/*! exports provided: Options */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Options", function() { return Options; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _decorators___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./decorators/ */ "./node_modules/smooth-scrollbar/decorators/index.js");
+
+
+var Options = /** @class */ (function () {
+    function Options(config) {
+        var _this = this;
+        if (config === void 0) { config = {}; }
+        /**
+         * Momentum reduction damping factor, a float value between `(0, 1)`.
+         * The lower the value is, the more smooth the scrolling will be
+         * (also the more paint frames).
+         */
+        this.damping = 0.1;
+        /**
+         * Minimal size for scrollbar thumbs.
+         */
+        this.thumbMinSize = 20;
+        /**
+         * Render every frame in integer pixel values
+         * set to `true` to improve scrolling performance.
+         */
+        this.renderByPixels = true;
+        /**
+         * Keep scrollbar tracks visible
+         */
+        this.alwaysShowTracks = false;
+        /**
+         * Set to `true` to allow outer scrollbars continue scrolling
+         * when current scrollbar reaches edge.
+         */
+        this.continuousScrolling = true;
+        /**
+         * Delegate wheel events and touch events to the given element.
+         * By default, the container element is used.
+         * This option will be useful for dealing with fixed elements.
+         */
+        this.delegateTo = null;
+        /**
+         * Options for plugins. Syntax:
+         *   plugins[pluginName] = pluginOptions: any
+         */
+        this.plugins = {};
+        Object.keys(config).forEach(function (prop) {
+            _this[prop] = config[prop];
+        });
+    }
+    Object.defineProperty(Options.prototype, "wheelEventTarget", {
+        get: function () {
+            return this.delegateTo;
+        },
+        set: function (el) {
+            console.warn('[smooth-scrollbar]: `options.wheelEventTarget` is deprecated and will be removed in the future, use `options.delegateTo` instead.');
+            this.delegateTo = el;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_decorators___WEBPACK_IMPORTED_MODULE_1__["range"])(0, 1)
+    ], Options.prototype, "damping", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_decorators___WEBPACK_IMPORTED_MODULE_1__["range"])(0, Infinity)
+    ], Options.prototype, "thumbMinSize", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        _decorators___WEBPACK_IMPORTED_MODULE_1__["boolean"]
+    ], Options.prototype, "renderByPixels", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        _decorators___WEBPACK_IMPORTED_MODULE_1__["boolean"]
+    ], Options.prototype, "alwaysShowTracks", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        _decorators___WEBPACK_IMPORTED_MODULE_1__["boolean"]
+    ], Options.prototype, "continuousScrolling", void 0);
+    return Options;
+}());
+
+//# sourceMappingURL=options.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/plugin.js":
+/*!*************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/plugin.js ***!
+  \*************************************************/
+/*! exports provided: ScrollbarPlugin, globalPlugins, addPlugins, initPlugins */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollbarPlugin", function() { return ScrollbarPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalPlugins", function() { return globalPlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPlugins", function() { return addPlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initPlugins", function() { return initPlugins; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var ScrollbarPlugin = /** @class */ (function () {
+    function ScrollbarPlugin(scrollbar, options) {
+        var _newTarget = this.constructor;
+        this.scrollbar = scrollbar;
+        this.name = _newTarget.pluginName;
+        this.options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _newTarget.defaultOptions), options);
+    }
+    ScrollbarPlugin.prototype.onInit = function () { };
+    ScrollbarPlugin.prototype.onDestroy = function () { };
+    ScrollbarPlugin.prototype.onUpdate = function () { };
+    ScrollbarPlugin.prototype.onRender = function (_remainMomentum) { };
+    ScrollbarPlugin.prototype.transformDelta = function (delta, _evt) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, delta);
+    };
+    ScrollbarPlugin.pluginName = '';
+    ScrollbarPlugin.defaultOptions = {};
+    return ScrollbarPlugin;
+}());
+
+var globalPlugins = {
+    order: new Set(),
+    constructors: {},
+};
+function addPlugins() {
+    var Plugins = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        Plugins[_i] = arguments[_i];
+    }
+    Plugins.forEach(function (P) {
+        var pluginName = P.pluginName;
+        if (!pluginName) {
+            throw new TypeError("plugin name is required");
+        }
+        globalPlugins.order.add(pluginName);
+        globalPlugins.constructors[pluginName] = P;
+    });
+}
+function initPlugins(scrollbar, options) {
+    return Array.from(globalPlugins.order)
+        .filter(function (pluginName) {
+        return options[pluginName] !== false;
+    })
+        .map(function (pluginName) {
+        var Plugin = globalPlugins.constructors[pluginName];
+        var instance = new Plugin(scrollbar, options[pluginName]);
+        // bind plugin options to `scrollbar.options`
+        options[pluginName] = instance.options;
+        return instance;
+    });
+}
+//# sourceMappingURL=plugin.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/polyfills.js":
+/*!****************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/polyfills.js ***!
+  \****************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_fn_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/fn/map */ "./node_modules/core-js/fn/map.js");
+/* harmony import */ var core_js_fn_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_fn_set__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/fn/set */ "./node_modules/core-js/fn/set.js");
+/* harmony import */ var core_js_fn_set__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_set__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_fn_weak_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/fn/weak-map */ "./node_modules/core-js/fn/weak-map.js");
+/* harmony import */ var core_js_fn_weak_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_weak_map__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_fn_array_from__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/fn/array/from */ "./node_modules/core-js/fn/array/from.js");
+/* harmony import */ var core_js_fn_array_from__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_array_from__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_fn_object_assign__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/fn/object/assign */ "./node_modules/core-js/fn/object/assign.js");
+/* harmony import */ var core_js_fn_object_assign__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_object_assign__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+//# sourceMappingURL=polyfills.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/scrollbar.js":
+/*!****************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/scrollbar.js ***!
+  \****************************************************/
+/*! exports provided: scrollbarMap, Scrollbar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollbarMap", function() { return scrollbarMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scrollbar", function() { return Scrollbar; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+/* harmony import */ var _options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./options */ "./node_modules/smooth-scrollbar/options.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+/* harmony import */ var _decorators___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./decorators/ */ "./node_modules/smooth-scrollbar/decorators/index.js");
+/* harmony import */ var _track___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./track/ */ "./node_modules/smooth-scrollbar/track/index.js");
+/* harmony import */ var _geometry___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./geometry/ */ "./node_modules/smooth-scrollbar/geometry/index.js");
+/* harmony import */ var _scrolling___WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scrolling/ */ "./node_modules/smooth-scrollbar/scrolling/index.js");
+/* harmony import */ var _plugin__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./plugin */ "./node_modules/smooth-scrollbar/plugin.js");
+/* harmony import */ var _events___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./events/ */ "./node_modules/smooth-scrollbar/events/index.js");
+
+
+
+
+
+
+
+
+
+
+// DO NOT use WeakMap here
+// .getAll() methods requires `scrollbarMap.values()`
+var scrollbarMap = new Map();
+var Scrollbar = /** @class */ (function () {
+    function Scrollbar(containerEl, options) {
+        var _this = this;
+        /**
+         * Current scrolling offsets
+         */
+        this.offset = {
+            x: 0,
+            y: 0,
+        };
+        /**
+         * Max-allowed scrolling offsets
+         */
+        this.limit = {
+            x: Infinity,
+            y: Infinity,
+        };
+        /**
+         * Container bounding rect
+         */
+        this.bounding = {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        };
+        this._plugins = [];
+        this._momentum = { x: 0, y: 0 };
+        this._listeners = new Set();
+        this.containerEl = containerEl;
+        var contentEl = this.contentEl = document.createElement('div');
+        this.options = new _options__WEBPACK_IMPORTED_MODULE_2__["Options"](options);
+        // mark as a scroll element
+        containerEl.setAttribute('data-scrollbar', 'true');
+        // make container focusable
+        containerEl.setAttribute('tabindex', '-1');
+        Object(_utils___WEBPACK_IMPORTED_MODULE_3__["setStyle"])(containerEl, {
+            overflow: 'hidden',
+            outline: 'none',
+        });
+        // enable touch event capturing in IE, see:
+        // https://github.com/idiotWu/smooth-scrollbar/issues/39
+        if (window.navigator.msPointerEnabled) {
+            containerEl.style.msTouchAction = 'none';
+        }
+        // mount content
+        contentEl.className = 'scroll-content';
+        Array.from(containerEl.childNodes).forEach(function (node) {
+            contentEl.appendChild(node);
+        });
+        containerEl.appendChild(contentEl);
+        // attach track
+        this.track = new _track___WEBPACK_IMPORTED_MODULE_5__["TrackController"](this);
+        // initial measuring
+        this.size = this.getSize();
+        // init plugins
+        this._plugins = Object(_plugin__WEBPACK_IMPORTED_MODULE_8__["initPlugins"])(this, this.options.plugins);
+        // preserve scroll offset
+        var scrollLeft = containerEl.scrollLeft, scrollTop = containerEl.scrollTop;
+        containerEl.scrollLeft = containerEl.scrollTop = 0;
+        this.setPosition(scrollLeft, scrollTop, {
+            withoutCallbacks: true,
+        });
+        var global = window;
+        var MutationObserver = global.MutationObserver || global.WebKitMutationObserver || global.MozMutationObserver;
+        // observe
+        if (typeof MutationObserver === 'function') {
+            this._observer = new MutationObserver(function () {
+                _this.update();
+            });
+            this._observer.observe(contentEl, {
+                subtree: true,
+                childList: true,
+            });
+        }
+        scrollbarMap.set(containerEl, this);
+        // wait for DOM ready
+        requestAnimationFrame(function () {
+            _this._init();
+        });
+    }
+    Object.defineProperty(Scrollbar.prototype, "parent", {
+        /**
+         * Parent scrollbar
+         */
+        get: function () {
+            var elem = this.containerEl.parentElement;
+            while (elem) {
+                var parentScrollbar = scrollbarMap.get(elem);
+                if (parentScrollbar) {
+                    return parentScrollbar;
+                }
+                elem = elem.parentElement;
+            }
+            return null;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Scrollbar.prototype, "scrollTop", {
+        /**
+         * Gets or sets `scrollbar.offset.y`
+         */
+        get: function () {
+            return this.offset.y;
+        },
+        set: function (y) {
+            this.setPosition(this.scrollLeft, y);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Scrollbar.prototype, "scrollLeft", {
+        /**
+         * Gets or sets `scrollbar.offset.x`
+         */
+        get: function () {
+            return this.offset.x;
+        },
+        set: function (x) {
+            this.setPosition(x, this.scrollTop);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Returns the size of the scrollbar container element
+     * and the content wrapper element
+     */
+    Scrollbar.prototype.getSize = function () {
+        return Object(_geometry___WEBPACK_IMPORTED_MODULE_6__["getSize"])(this);
+    };
+    /**
+     * Forces scrollbar to update geometry infomation.
+     *
+     * By default, scrollbars are automatically updated with `100ms` debounce (or `MutationObserver` fires).
+     * You can call this method to force an update when you modified contents
+     */
+    Scrollbar.prototype.update = function () {
+        Object(_geometry___WEBPACK_IMPORTED_MODULE_6__["update"])(this);
+        this._plugins.forEach(function (plugin) {
+            plugin.onUpdate();
+        });
+    };
+    /**
+     * Checks if an element is visible in the current view area
+     */
+    Scrollbar.prototype.isVisible = function (elem) {
+        return Object(_geometry___WEBPACK_IMPORTED_MODULE_6__["isVisible"])(this, elem);
+    };
+    /**
+     * Sets the scrollbar to the given offset without easing
+     */
+    Scrollbar.prototype.setPosition = function (x, y, options) {
+        var _this = this;
+        if (x === void 0) { x = this.offset.x; }
+        if (y === void 0) { y = this.offset.y; }
+        if (options === void 0) { options = {}; }
+        var status = Object(_scrolling___WEBPACK_IMPORTED_MODULE_7__["setPosition"])(this, x, y);
+        if (!status || options.withoutCallbacks) {
+            return;
+        }
+        this._listeners.forEach(function (fn) {
+            fn.call(_this, status);
+        });
+    };
+    /**
+     * Scrolls to given position with easing function
+     */
+    Scrollbar.prototype.scrollTo = function (x, y, duration, options) {
+        if (x === void 0) { x = this.offset.x; }
+        if (y === void 0) { y = this.offset.y; }
+        if (duration === void 0) { duration = 0; }
+        if (options === void 0) { options = {}; }
+        Object(_scrolling___WEBPACK_IMPORTED_MODULE_7__["scrollTo"])(this, x, y, duration, options);
+    };
+    /**
+     * Scrolls the target element into visible area of scrollbar,
+     * likes the DOM method `element.scrollIntoView().
+     */
+    Scrollbar.prototype.scrollIntoView = function (elem, options) {
+        if (options === void 0) { options = {}; }
+        Object(_scrolling___WEBPACK_IMPORTED_MODULE_7__["scrollIntoView"])(this, elem, options);
+    };
+    /**
+     * Adds scrolling listener
+     */
+    Scrollbar.prototype.addListener = function (fn) {
+        if (typeof fn !== 'function') {
+            throw new TypeError('[smooth-scrollbar] scrolling listener should be a function');
+        }
+        this._listeners.add(fn);
+    };
+    /**
+     * Removes listener previously registered with `scrollbar.addListener()`
+     */
+    Scrollbar.prototype.removeListener = function (fn) {
+        this._listeners.delete(fn);
+    };
+    /**
+     * Adds momentum and applys delta transformers.
+     */
+    Scrollbar.prototype.addTransformableMomentum = function (x, y, fromEvent, callback) {
+        this._updateDebounced();
+        var finalDelta = this._plugins.reduce(function (delta, plugin) {
+            return plugin.transformDelta(delta, fromEvent) || delta;
+        }, { x: x, y: y });
+        var willScroll = !this._shouldPropagateMomentum(finalDelta.x, finalDelta.y);
+        if (willScroll) {
+            this.addMomentum(finalDelta.x, finalDelta.y);
+        }
+        if (callback) {
+            callback.call(this, willScroll);
+        }
+    };
+    /**
+     * Increases scrollbar's momentum
+     */
+    Scrollbar.prototype.addMomentum = function (x, y) {
+        this.setMomentum(this._momentum.x + x, this._momentum.y + y);
+    };
+    /**
+     * Sets scrollbar's momentum to given value
+     */
+    Scrollbar.prototype.setMomentum = function (x, y) {
+        if (this.limit.x === 0) {
+            x = 0;
+        }
+        if (this.limit.y === 0) {
+            y = 0;
+        }
+        if (this.options.renderByPixels) {
+            x = Math.round(x);
+            y = Math.round(y);
+        }
+        this._momentum.x = x;
+        this._momentum.y = y;
+    };
+    /**
+     * Update options for specific plugin
+     *
+     * @param pluginName Name of the plugin
+     * @param [options] An object includes the properties that you want to update
+     */
+    Scrollbar.prototype.updatePluginOptions = function (pluginName, options) {
+        this._plugins.forEach(function (plugin) {
+            if (plugin.name === pluginName) {
+                Object.assign(plugin.options, options);
+            }
+        });
+    };
+    Scrollbar.prototype.destroy = function () {
+        var _a = this, containerEl = _a.containerEl, contentEl = _a.contentEl;
+        Object(_utils___WEBPACK_IMPORTED_MODULE_3__["clearEventsOn"])(this);
+        this._listeners.clear();
+        this.setMomentum(0, 0);
+        cancelAnimationFrame(this._renderID);
+        if (this._observer) {
+            this._observer.disconnect();
+        }
+        scrollbarMap.delete(this.containerEl);
+        // restore contents
+        var childNodes = Array.from(contentEl.childNodes);
+        while (containerEl.firstChild) {
+            containerEl.removeChild(containerEl.firstChild);
+        }
+        childNodes.forEach(function (el) {
+            containerEl.appendChild(el);
+        });
+        // reset scroll position
+        Object(_utils___WEBPACK_IMPORTED_MODULE_3__["setStyle"])(containerEl, {
+            overflow: '',
+        });
+        containerEl.scrollTop = this.scrollTop;
+        containerEl.scrollLeft = this.scrollLeft;
+        // invoke plugin.onDestroy
+        this._plugins.forEach(function (plugin) {
+            plugin.onDestroy();
+        });
+        this._plugins.length = 0;
+    };
+    Scrollbar.prototype._init = function () {
+        var _this = this;
+        this.update();
+        // init evet handlers
+        Object.keys(_events___WEBPACK_IMPORTED_MODULE_9__).forEach(function (prop) {
+            _events___WEBPACK_IMPORTED_MODULE_9__[prop](_this);
+        });
+        // invoke `plugin.onInit`
+        this._plugins.forEach(function (plugin) {
+            plugin.onInit();
+        });
+        this._render();
+    };
+    Scrollbar.prototype._updateDebounced = function () {
+        this.update();
+    };
+    // check whether to propagate monmentum to parent scrollbar
+    // the following situations are considered as `true`:
+    //         1. continuous scrolling is enabled (automatically disabled when overscroll is enabled)
+    //         2. scrollbar reaches one side and is not about to scroll on the other direction
+    Scrollbar.prototype._shouldPropagateMomentum = function (deltaX, deltaY) {
+        if (deltaX === void 0) { deltaX = 0; }
+        if (deltaY === void 0) { deltaY = 0; }
+        var _a = this, options = _a.options, offset = _a.offset, limit = _a.limit;
+        if (!options.continuousScrolling)
+            return false;
+        // force an update when scrollbar is "unscrollable", see #106
+        if (limit.x === 0 && limit.y === 0) {
+            this._updateDebounced();
+        }
+        var destX = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__["default"])(deltaX + offset.x, 0, limit.x);
+        var destY = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__["default"])(deltaY + offset.y, 0, limit.y);
+        var res = true;
+        // offsets are not about to change
+        // `&=` operator is not allowed for boolean types
+        res = res && (destX === offset.x);
+        res = res && (destY === offset.y);
+        // current offsets are on the edge
+        res = res && (offset.x === limit.x || offset.x === 0 || offset.y === limit.y || offset.y === 0);
+        return res;
+    };
+    Scrollbar.prototype._render = function () {
+        var _momentum = this._momentum;
+        if (_momentum.x || _momentum.y) {
+            var nextX = this._nextTick('x');
+            var nextY = this._nextTick('y');
+            _momentum.x = nextX.momentum;
+            _momentum.y = nextY.momentum;
+            this.setPosition(nextX.position, nextY.position);
+        }
+        var remain = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this._momentum);
+        this._plugins.forEach(function (plugin) {
+            plugin.onRender(remain);
+        });
+        this._renderID = requestAnimationFrame(this._render.bind(this));
+    };
+    Scrollbar.prototype._nextTick = function (direction) {
+        var _a = this, options = _a.options, offset = _a.offset, _momentum = _a._momentum;
+        var current = offset[direction];
+        var remain = _momentum[direction];
+        if (Math.abs(remain) <= 0.1) {
+            return {
+                momentum: 0,
+                position: current + remain,
+            };
+        }
+        var nextMomentum = remain * (1 - options.damping);
+        if (options.renderByPixels) {
+            nextMomentum |= 0;
+        }
+        return {
+            momentum: nextMomentum,
+            position: current + remain - nextMomentum,
+        };
+    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_decorators___WEBPACK_IMPORTED_MODULE_4__["debounce"])(100, { leading: true })
+    ], Scrollbar.prototype, "_updateDebounced", null);
+    return Scrollbar;
+}());
+
+//# sourceMappingURL=scrollbar.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/scrolling/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/scrolling/index.js ***!
+  \**********************************************************/
+/*! exports provided: setPosition, scrollTo, scrollIntoView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _set_position__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./set-position */ "./node_modules/smooth-scrollbar/scrolling/set-position.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setPosition", function() { return _set_position__WEBPACK_IMPORTED_MODULE_0__["setPosition"]; });
+
+/* harmony import */ var _scroll_to__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scroll-to */ "./node_modules/smooth-scrollbar/scrolling/scroll-to.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scrollTo", function() { return _scroll_to__WEBPACK_IMPORTED_MODULE_1__["scrollTo"]; });
+
+/* harmony import */ var _scroll_into_view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scroll-into-view */ "./node_modules/smooth-scrollbar/scrolling/scroll-into-view.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "scrollIntoView", function() { return _scroll_into_view__WEBPACK_IMPORTED_MODULE_2__["scrollIntoView"]; });
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/scrolling/scroll-into-view.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/scrolling/scroll-into-view.js ***!
+  \*********************************************************************/
+/*! exports provided: scrollIntoView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollIntoView", function() { return scrollIntoView; });
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+
+function scrollIntoView(scrollbar, elem, _a) {
+    var _b = _a === void 0 ? {} : _a, _c = _b.alignToTop, alignToTop = _c === void 0 ? true : _c, _d = _b.onlyScrollIfNeeded, onlyScrollIfNeeded = _d === void 0 ? false : _d, _e = _b.offsetTop, offsetTop = _e === void 0 ? 0 : _e, _f = _b.offsetLeft, offsetLeft = _f === void 0 ? 0 : _f, _g = _b.offsetBottom, offsetBottom = _g === void 0 ? 0 : _g;
+    var containerEl = scrollbar.containerEl, bounding = scrollbar.bounding, offset = scrollbar.offset, limit = scrollbar.limit;
+    if (!elem || !containerEl.contains(elem))
+        return;
+    var targetBounding = elem.getBoundingClientRect();
+    if (onlyScrollIfNeeded && scrollbar.isVisible(elem))
+        return;
+    var delta = alignToTop ? targetBounding.top - bounding.top - offsetTop : targetBounding.bottom - bounding.bottom + offsetBottom;
+    scrollbar.setMomentum(targetBounding.left - bounding.left - offsetLeft, Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(delta, -offset.y, limit.y - offset.y));
+}
+//# sourceMappingURL=scroll-into-view.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/scrolling/scroll-to.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/scrolling/scroll-to.js ***!
+  \**************************************************************/
+/*! exports provided: scrollTo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scrollTo", function() { return scrollTo; });
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+
+var animationIDStorage = new WeakMap();
+function scrollTo(scrollbar, x, y, duration, _a) {
+    if (duration === void 0) { duration = 0; }
+    var _b = _a === void 0 ? {} : _a, _c = _b.easing, easing = _c === void 0 ? defaultEasing : _c, callback = _b.callback;
+    var options = scrollbar.options, offset = scrollbar.offset, limit = scrollbar.limit;
+    if (options.renderByPixels) {
+        // ensure resolved with integer
+        x = Math.round(x);
+        y = Math.round(y);
+    }
+    var startX = offset.x;
+    var startY = offset.y;
+    var disX = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(x, 0, limit.x) - startX;
+    var disY = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_0__["default"])(y, 0, limit.y) - startY;
+    var start = Date.now();
+    function scroll() {
+        var elapse = Date.now() - start;
+        var progress = duration ? easing(Math.min(elapse / duration, 1)) : 1;
+        scrollbar.setPosition(startX + disX * progress, startY + disY * progress);
+        if (elapse >= duration) {
+            if (typeof callback === 'function') {
+                callback.call(scrollbar);
+            }
+        }
+        else {
+            var animationID = requestAnimationFrame(scroll);
+            animationIDStorage.set(scrollbar, animationID);
+        }
+    }
+    cancelAnimationFrame(animationIDStorage.get(scrollbar));
+    scroll();
+}
+/**
+ * easeOutCubic
+ */
+function defaultEasing(t) {
+    return Math.pow((t - 1), 3) + 1;
+}
+//# sourceMappingURL=scroll-to.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/scrolling/set-position.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/scrolling/set-position.js ***!
+  \*****************************************************************/
+/*! exports provided: setPosition */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setPosition", function() { return setPosition; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es/clamp */ "./node_modules/lodash-es/clamp.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+
+function setPosition(scrollbar, x, y) {
+    var options = scrollbar.options, offset = scrollbar.offset, limit = scrollbar.limit, track = scrollbar.track, contentEl = scrollbar.contentEl;
+    if (options.renderByPixels) {
+        x = Math.round(x);
+        y = Math.round(y);
+    }
+    x = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__["default"])(x, 0, limit.x);
+    y = Object(lodash_es_clamp__WEBPACK_IMPORTED_MODULE_1__["default"])(y, 0, limit.y);
+    // position changed -> show track for 300ms
+    if (x !== offset.x)
+        track.xAxis.show();
+    if (y !== offset.y)
+        track.yAxis.show();
+    if (!options.alwaysShowTracks) {
+        track.autoHideOnIdle();
+    }
+    if (x === offset.x && y === offset.y) {
+        return null;
+    }
+    offset.x = x;
+    offset.y = y;
+    Object(_utils___WEBPACK_IMPORTED_MODULE_2__["setStyle"])(contentEl, {
+        '-transform': "translate3d(" + -x + "px, " + -y + "px, 0)",
+    });
+    track.update();
+    return {
+        offset: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, offset),
+        limit: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, limit),
+    };
+}
+//# sourceMappingURL=set-position.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/style.js":
+/*!************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/style.js ***!
+  \************************************************/
+/*! exports provided: attachStyle, detachStyle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "attachStyle", function() { return attachStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detachStyle", function() { return detachStyle; });
+var TRACK_BG = 'rgba(222, 222, 222, .75)';
+var THUMB_BG = 'rgba(0, 0, 0, .5)';
+var SCROLLBAR_STYLE = "\n[data-scrollbar] {\n  display: block;\n  position: relative;\n}\n\n.scroll-content {\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n}\n\n.scrollbar-track {\n  position: absolute;\n  opacity: 0;\n  z-index: 1;\n  background: " + TRACK_BG + ";\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  -webkit-transition: opacity 0.5s 0.5s ease-out;\n          transition: opacity 0.5s 0.5s ease-out;\n}\n.scrollbar-track.show,\n.scrollbar-track:hover {\n  opacity: 1;\n  -webkit-transition-delay: 0s;\n          transition-delay: 0s;\n}\n\n.scrollbar-track-x {\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 8px;\n}\n.scrollbar-track-y {\n  top: 0;\n  right: 0;\n  width: 8px;\n  height: 100%;\n}\n.scrollbar-thumb {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 8px;\n  height: 8px;\n  background: " + THUMB_BG + ";\n  border-radius: 4px;\n}\n";
+var STYLE_ID = 'smooth-scrollbar-style';
+var isStyleAttached = false;
+function attachStyle() {
+    if (isStyleAttached || typeof window === 'undefined') {
+        return;
+    }
+    var styleEl = document.createElement('style');
+    styleEl.id = STYLE_ID;
+    styleEl.textContent = SCROLLBAR_STYLE;
+    if (document.head) {
+        document.head.appendChild(styleEl);
+    }
+    isStyleAttached = true;
+}
+function detachStyle() {
+    if (!isStyleAttached || typeof window === 'undefined') {
+        return;
+    }
+    var styleEl = document.getElementById(STYLE_ID);
+    if (!styleEl || !styleEl.parentNode) {
+        return;
+    }
+    styleEl.parentNode.removeChild(styleEl);
+    isStyleAttached = false;
+}
+//# sourceMappingURL=style.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/track/direction.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/track/direction.js ***!
+  \**********************************************************/
+/*! exports provided: TrackDirection */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackDirection", function() { return TrackDirection; });
+var TrackDirection;
+(function (TrackDirection) {
+    TrackDirection["X"] = "x";
+    TrackDirection["Y"] = "y";
+})(TrackDirection || (TrackDirection = {}));
+//# sourceMappingURL=direction.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/track/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/track/index.js ***!
+  \******************************************************/
+/*! exports provided: TrackController */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackController", function() { return TrackController; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _track__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./track */ "./node_modules/smooth-scrollbar/track/track.js");
+/* harmony import */ var _direction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./direction */ "./node_modules/smooth-scrollbar/track/direction.js");
+/* harmony import */ var _decorators___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../decorators/ */ "./node_modules/smooth-scrollbar/decorators/index.js");
+
+
+
+
+var TrackController = /** @class */ (function () {
+    function TrackController(_scrollbar) {
+        this._scrollbar = _scrollbar;
+        var thumbMinSize = _scrollbar.options.thumbMinSize;
+        this.xAxis = new _track__WEBPACK_IMPORTED_MODULE_1__["ScrollbarTrack"](_direction__WEBPACK_IMPORTED_MODULE_2__["TrackDirection"].X, thumbMinSize);
+        this.yAxis = new _track__WEBPACK_IMPORTED_MODULE_1__["ScrollbarTrack"](_direction__WEBPACK_IMPORTED_MODULE_2__["TrackDirection"].Y, thumbMinSize);
+        this.xAxis.attachTo(_scrollbar.containerEl);
+        this.yAxis.attachTo(_scrollbar.containerEl);
+        if (_scrollbar.options.alwaysShowTracks) {
+            this.xAxis.show();
+            this.yAxis.show();
+        }
+    }
+    /**
+     * Updates track appearance
+     */
+    TrackController.prototype.update = function () {
+        var _a = this._scrollbar, size = _a.size, offset = _a.offset;
+        this.xAxis.update(offset.x, size.container.width, size.content.width);
+        this.yAxis.update(offset.y, size.container.height, size.content.height);
+    };
+    /**
+     * Automatically hide tracks when scrollbar is in idle state
+     */
+    TrackController.prototype.autoHideOnIdle = function () {
+        if (this._scrollbar.options.alwaysShowTracks) {
+            return;
+        }
+        this.xAxis.hide();
+        this.yAxis.hide();
+    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_decorators___WEBPACK_IMPORTED_MODULE_3__["debounce"])(300)
+    ], TrackController.prototype, "autoHideOnIdle", null);
+    return TrackController;
+}());
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/track/thumb.js":
+/*!******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/track/thumb.js ***!
+  \******************************************************/
+/*! exports provided: ScrollbarThumb */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollbarThumb", function() { return ScrollbarThumb; });
+/* harmony import */ var _direction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./direction */ "./node_modules/smooth-scrollbar/track/direction.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+var ScrollbarThumb = /** @class */ (function () {
+    function ScrollbarThumb(_direction, _minSize) {
+        if (_minSize === void 0) { _minSize = 0; }
+        this._direction = _direction;
+        this._minSize = _minSize;
+        /**
+         * Thumb element
+         */
+        this.element = document.createElement('div');
+        /**
+         * Display size of the thumb
+         * will always be greater than `scrollbar.options.thumbMinSize`
+         */
+        this.displaySize = 0;
+        /**
+         * Actual size of the thumb
+         */
+        this.realSize = 0;
+        /**
+         * Thumb offset to the top
+         */
+        this.offset = 0;
+        this.element.className = "scrollbar-thumb scrollbar-thumb-" + _direction;
+    }
+    /**
+     * Attach to track element
+     *
+     * @param trackEl Track element
+     */
+    ScrollbarThumb.prototype.attachTo = function (trackEl) {
+        trackEl.appendChild(this.element);
+    };
+    ScrollbarThumb.prototype.update = function (scrollOffset, containerSize, pageSize) {
+        // calculate thumb size
+        // pageSize > containerSize -> scrollable
+        this.realSize = Math.min(containerSize / pageSize, 1) * containerSize;
+        this.displaySize = Math.max(this.realSize, this._minSize);
+        // calculate thumb offset
+        this.offset = scrollOffset / pageSize * (containerSize + (this.realSize - this.displaySize));
+        Object(_utils___WEBPACK_IMPORTED_MODULE_1__["setStyle"])(this.element, this._getStyle());
+    };
+    ScrollbarThumb.prototype._getStyle = function () {
+        switch (this._direction) {
+            case _direction__WEBPACK_IMPORTED_MODULE_0__["TrackDirection"].X:
+                return {
+                    width: this.displaySize + "px",
+                    '-transform': "translate3d(" + this.offset + "px, 0, 0)",
+                };
+            case _direction__WEBPACK_IMPORTED_MODULE_0__["TrackDirection"].Y:
+                return {
+                    height: this.displaySize + "px",
+                    '-transform': "translate3d(0, " + this.offset + "px, 0)",
+                };
+            default:
+                return null;
+        }
+    };
+    return ScrollbarThumb;
+}());
+
+//# sourceMappingURL=thumb.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/track/track.js":
+/*!******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/track/track.js ***!
+  \******************************************************/
+/*! exports provided: ScrollbarTrack */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollbarTrack", function() { return ScrollbarTrack; });
+/* harmony import */ var _thumb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./thumb */ "./node_modules/smooth-scrollbar/track/thumb.js");
+/* harmony import */ var _utils___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/ */ "./node_modules/smooth-scrollbar/utils/index.js");
+
+
+var ScrollbarTrack = /** @class */ (function () {
+    function ScrollbarTrack(direction, thumbMinSize) {
+        if (thumbMinSize === void 0) { thumbMinSize = 0; }
+        /**
+         * Track element
+         */
+        this.element = document.createElement('div');
+        this._isShown = false;
+        this.element.className = "scrollbar-track scrollbar-track-" + direction;
+        this.thumb = new _thumb__WEBPACK_IMPORTED_MODULE_0__["ScrollbarThumb"](direction, thumbMinSize);
+        this.thumb.attachTo(this.element);
+    }
+    /**
+     * Attach to scrollbar container element
+     *
+     * @param scrollbarContainer Scrollbar container element
+     */
+    ScrollbarTrack.prototype.attachTo = function (scrollbarContainer) {
+        scrollbarContainer.appendChild(this.element);
+    };
+    /**
+     * Show track immediately
+     */
+    ScrollbarTrack.prototype.show = function () {
+        if (this._isShown) {
+            return;
+        }
+        this._isShown = true;
+        this.element.classList.add('show');
+    };
+    /**
+     * Hide track immediately
+     */
+    ScrollbarTrack.prototype.hide = function () {
+        if (!this._isShown) {
+            return;
+        }
+        this._isShown = false;
+        this.element.classList.remove('show');
+    };
+    ScrollbarTrack.prototype.update = function (scrollOffset, containerSize, pageSize) {
+        Object(_utils___WEBPACK_IMPORTED_MODULE_1__["setStyle"])(this.element, {
+            display: pageSize <= containerSize ? 'none' : 'block',
+        });
+        this.thumb.update(scrollOffset, containerSize, pageSize);
+    };
+    return ScrollbarTrack;
+}());
+
+//# sourceMappingURL=track.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/event-hub.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/event-hub.js ***!
+  \**********************************************************/
+/*! exports provided: eventScope, clearEventsOn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "eventScope", function() { return eventScope; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearEventsOn", function() { return clearEventsOn; });
+var eventListenerOptions;
+var eventMap = new WeakMap();
+function getOptions() {
+    if (eventListenerOptions !== undefined) {
+        return eventListenerOptions;
+    }
+    var supportPassiveEvent = false;
+    try {
+        var noop = function () { };
+        var options = Object.defineProperty({}, 'passive', {
+            get: function () {
+                supportPassiveEvent = true;
+            },
+        });
+        window.addEventListener('testPassive', noop, options);
+        window.removeEventListener('testPassive', noop, options);
+    }
+    catch (e) { }
+    eventListenerOptions = supportPassiveEvent ? { passive: false } : false;
+    return eventListenerOptions;
+}
+function eventScope(scrollbar) {
+    var configs = eventMap.get(scrollbar) || [];
+    eventMap.set(scrollbar, configs);
+    return function addEvent(elem, events, fn) {
+        function handler(event) {
+            // ignore default prevented events
+            if (event.defaultPrevented) {
+                return;
+            }
+            fn(event);
+        }
+        events.split(/\s+/g).forEach(function (eventName) {
+            configs.push({ elem: elem, eventName: eventName, handler: handler });
+            elem.addEventListener(eventName, handler, getOptions());
+        });
+    };
+}
+function clearEventsOn(scrollbar) {
+    var configs = eventMap.get(scrollbar);
+    if (!configs) {
+        return;
+    }
+    configs.forEach(function (_a) {
+        var elem = _a.elem, eventName = _a.eventName, handler = _a.handler;
+        elem.removeEventListener(eventName, handler, getOptions());
+    });
+    eventMap.delete(scrollbar);
+}
+//# sourceMappingURL=event-hub.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/get-pointer-data.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/get-pointer-data.js ***!
+  \*****************************************************************/
+/*! exports provided: getPointerData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPointerData", function() { return getPointerData; });
+/**
+ * Get pointer/touch data
+ */
+function getPointerData(evt) {
+    // if is touch event, return last item in touchList
+    // else return original event
+    return evt.touches ? evt.touches[evt.touches.length - 1] : evt;
+}
+//# sourceMappingURL=get-pointer-data.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/get-position.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/get-position.js ***!
+  \*************************************************************/
+/*! exports provided: getPosition */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosition", function() { return getPosition; });
+/* harmony import */ var _get_pointer_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-pointer-data */ "./node_modules/smooth-scrollbar/utils/get-pointer-data.js");
+
+/**
+ * Get pointer/finger position
+ */
+function getPosition(evt) {
+    var data = Object(_get_pointer_data__WEBPACK_IMPORTED_MODULE_0__["getPointerData"])(evt);
+    return {
+        x: data.clientX,
+        y: data.clientY,
+    };
+}
+//# sourceMappingURL=get-position.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/index.js ***!
+  \******************************************************/
+/*! exports provided: eventScope, clearEventsOn, getPointerData, getPosition, isOneOf, setStyle, Tracker, TouchRecord */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _event_hub__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./event-hub */ "./node_modules/smooth-scrollbar/utils/event-hub.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "eventScope", function() { return _event_hub__WEBPACK_IMPORTED_MODULE_0__["eventScope"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "clearEventsOn", function() { return _event_hub__WEBPACK_IMPORTED_MODULE_0__["clearEventsOn"]; });
+
+/* harmony import */ var _get_pointer_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-pointer-data */ "./node_modules/smooth-scrollbar/utils/get-pointer-data.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getPointerData", function() { return _get_pointer_data__WEBPACK_IMPORTED_MODULE_1__["getPointerData"]; });
+
+/* harmony import */ var _get_position__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./get-position */ "./node_modules/smooth-scrollbar/utils/get-position.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getPosition", function() { return _get_position__WEBPACK_IMPORTED_MODULE_2__["getPosition"]; });
+
+/* harmony import */ var _is_one_of__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./is-one-of */ "./node_modules/smooth-scrollbar/utils/is-one-of.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isOneOf", function() { return _is_one_of__WEBPACK_IMPORTED_MODULE_3__["isOneOf"]; });
+
+/* harmony import */ var _set_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./set-style */ "./node_modules/smooth-scrollbar/utils/set-style.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "setStyle", function() { return _set_style__WEBPACK_IMPORTED_MODULE_4__["setStyle"]; });
+
+/* harmony import */ var _touch_record__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./touch-record */ "./node_modules/smooth-scrollbar/utils/touch-record.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Tracker", function() { return _touch_record__WEBPACK_IMPORTED_MODULE_5__["Tracker"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TouchRecord", function() { return _touch_record__WEBPACK_IMPORTED_MODULE_5__["TouchRecord"]; });
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/is-one-of.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/is-one-of.js ***!
+  \**********************************************************/
+/*! exports provided: isOneOf */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isOneOf", function() { return isOneOf; });
+/**
+ * Check if `a` is one of `[...b]`
+ */
+function isOneOf(a, b) {
+    if (b === void 0) { b = []; }
+    return b.some(function (v) { return a === v; });
+}
+//# sourceMappingURL=is-one-of.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/set-style.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/set-style.js ***!
+  \**********************************************************/
+/*! exports provided: setStyle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setStyle", function() { return setStyle; });
+var VENDOR_PREFIX = [
+    'webkit',
+    'moz',
+    'ms',
+    'o',
+];
+var RE = new RegExp("^-(?!(?:" + VENDOR_PREFIX.join('|') + ")-)");
+function autoPrefix(styles) {
+    var res = {};
+    Object.keys(styles).forEach(function (prop) {
+        if (!RE.test(prop)) {
+            res[prop] = styles[prop];
+            return;
+        }
+        var val = styles[prop];
+        prop = prop.replace(/^-/, '');
+        res[prop] = val;
+        VENDOR_PREFIX.forEach(function (prefix) {
+            res["-" + prefix + "-" + prop] = val;
+        });
+    });
+    return res;
+}
+function setStyle(elem, styles) {
+    styles = autoPrefix(styles);
+    Object.keys(styles).forEach(function (prop) {
+        var cssProp = prop.replace(/^-/, '').replace(/-([a-z])/g, function (_, $1) { return $1.toUpperCase(); });
+        elem.style[cssProp] = styles[prop];
+    });
+}
+//# sourceMappingURL=set-style.js.map
+
+/***/ }),
+
+/***/ "./node_modules/smooth-scrollbar/utils/touch-record.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/smooth-scrollbar/utils/touch-record.js ***!
+  \*************************************************************/
+/*! exports provided: Tracker, TouchRecord */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tracker", function() { return Tracker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TouchRecord", function() { return TouchRecord; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _get_position__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-position */ "./node_modules/smooth-scrollbar/utils/get-position.js");
+
+
+var Tracker = /** @class */ (function () {
+    function Tracker(touch) {
+        this.updateTime = Date.now();
+        this.delta = { x: 0, y: 0 };
+        this.velocity = { x: 0, y: 0 };
+        this.lastPosition = { x: 0, y: 0 };
+        this.lastPosition = Object(_get_position__WEBPACK_IMPORTED_MODULE_1__["getPosition"])(touch);
+    }
+    Tracker.prototype.update = function (touch) {
+        var _a = this, velocity = _a.velocity, updateTime = _a.updateTime, lastPosition = _a.lastPosition;
+        var now = Date.now();
+        var position = Object(_get_position__WEBPACK_IMPORTED_MODULE_1__["getPosition"])(touch);
+        var delta = {
+            x: -(position.x - lastPosition.x),
+            y: -(position.y - lastPosition.y),
+        };
+        var duration = (now - updateTime) || 16;
+        var vx = delta.x / duration * 16;
+        var vy = delta.y / duration * 16;
+        velocity.x = vx * 0.9 + velocity.x * 0.1;
+        velocity.y = vy * 0.9 + velocity.y * 0.1;
+        this.delta = delta;
+        this.updateTime = now;
+        this.lastPosition = position;
+    };
+    return Tracker;
+}());
+
+var TouchRecord = /** @class */ (function () {
+    function TouchRecord() {
+        this._touchList = {};
+    }
+    Object.defineProperty(TouchRecord.prototype, "_primitiveValue", {
+        get: function () {
+            return { x: 0, y: 0 };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TouchRecord.prototype.isActive = function () {
+        return this._activeTouchID !== undefined;
+    };
+    TouchRecord.prototype.getDelta = function () {
+        var tracker = this._getActiveTracker();
+        if (!tracker) {
+            return this._primitiveValue;
+        }
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, tracker.delta);
+    };
+    TouchRecord.prototype.getVelocity = function () {
+        var tracker = this._getActiveTracker();
+        if (!tracker) {
+            return this._primitiveValue;
+        }
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, tracker.velocity);
+    };
+    TouchRecord.prototype.track = function (evt) {
+        var _this = this;
+        var targetTouches = evt.targetTouches;
+        Array.from(targetTouches).forEach(function (touch) {
+            _this._add(touch);
+        });
+        return this._touchList;
+    };
+    TouchRecord.prototype.update = function (evt) {
+        var _this = this;
+        var touches = evt.touches, changedTouches = evt.changedTouches;
+        Array.from(touches).forEach(function (touch) {
+            _this._renew(touch);
+        });
+        this._setActiveID(changedTouches);
+        return this._touchList;
+    };
+    TouchRecord.prototype.release = function (evt) {
+        var _this = this;
+        delete this._activeTouchID;
+        Array.from(evt.changedTouches).forEach(function (touch) {
+            _this._delete(touch);
+        });
+    };
+    TouchRecord.prototype._add = function (touch) {
+        if (this._has(touch)) {
+            return;
+        }
+        var tracker = new Tracker(touch);
+        this._touchList[touch.identifier] = tracker;
+    };
+    TouchRecord.prototype._renew = function (touch) {
+        if (!this._has(touch)) {
+            return;
+        }
+        var tracker = this._touchList[touch.identifier];
+        tracker.update(touch);
+    };
+    TouchRecord.prototype._delete = function (touch) {
+        delete this._touchList[touch.identifier];
+    };
+    TouchRecord.prototype._has = function (touch) {
+        return this._touchList.hasOwnProperty(touch.identifier);
+    };
+    TouchRecord.prototype._setActiveID = function (touches) {
+        this._activeTouchID = touches[touches.length - 1].identifier;
+    };
+    TouchRecord.prototype._getActiveTracker = function () {
+        var _a = this, _touchList = _a._touchList, _activeTouchID = _a._activeTouchID;
+        return _touchList[_activeTouchID];
+    };
+    return TouchRecord;
+}());
+
+//# sourceMappingURL=touch-record.js.map
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -27404,6 +38761,1779 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/tslib/tslib.es6.js":
+/*!*****************************************!*\
+  !*** ./node_modules/tslib/tslib.es6.js ***!
+  \*****************************************/
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-instagram-feed/dist-web/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/vue-instagram-feed/dist-web/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+var index = {
+  name: 'VueInstagram',
+  props: {
+    count: {
+      type: Number,
+      default: 2
+    },
+    token: {
+      type: String,
+      required: true
+    }
+  },
+
+  data() {
+    return {
+      posts: [],
+      nextURL: '',
+      errorMsg: '',
+      areMorePages: false
+    };
+  },
+
+  created() {
+    this.fetchPosts();
+  },
+
+  methods: {
+    fetchPosts() {
+      var _this = this;
+
+      return _asyncToGenerator(function* () {
+        const url = _this.nextURL ? _this.nextURL : "https://api.instagram.com/v1/users/self/media/recent/?access_token=".concat(_this.token, "&count=").concat(_this.count);
+
+        try {
+          if (!window.fetch) {
+            throw new Error('This browser does not support the Fetch API natively. A polyfill is needed.');
+          }
+
+          const res = yield fetch(url);
+
+          if (!res.ok) {
+            throw res;
+          }
+
+          const parsed = yield res.json(); // check for pagination
+
+          if (Object.entries(parsed.pagination).length === 0) {
+            _this.areMorePages = false;
+          } else {
+            _this.areMorePages = true;
+            _this.nextURL = parsed.pagination.next_url;
+          }
+
+          console.log(parsed);
+          _this.nextURL = parsed.pagination.next_url;
+
+          _this.posts.push(...parsed.data);
+        } catch (err) {
+          if (err.json) {
+            const {
+              meta: {
+                code,
+                error_type,
+                error_message
+              }
+            } = yield err.json();
+            _this.errorMsg = "Error ".concat(code, " (").concat(error_type, ") : ").concat(error_message);
+          } else {
+            _this.errorMsg = err.message;
+          }
+
+          console.error(err);
+        }
+      })();
+    }
+
+  },
+
+  render() {
+    return this.$scopedSlots.default({
+      posts: this.posts,
+      errorMsg: this.errorMsg,
+      fetchMorePosts: this.fetchPosts,
+      areMorePages: this.areMorePages
+    });
+  }
+
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "a",
+    {
+      staticClass: "btn expand-cursor",
+      attrs: { href: "#" },
+      on: {
+        click: function($event) {
+          $event.preventDefault()
+          return _vm.addToCart($event)
+        }
+      }
+    },
+    [_vm._v("Tilføj til kurv")]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      class: ["cart", { "products-in-cart": _vm.currentCart.length > 0 }],
+      style: "--product-count: " + _vm.currentCart.length
+    },
+    [
+      _c("span", { attrs: { "data-feather": "shopping-bag" } }),
+      _vm._v(" "),
+      _vm.currentCart.length > 0
+        ? _c("div", { staticClass: "product-count" }, [
+            _c("p", [_vm._v(_vm._s(_vm.currentCart.length))])
+          ])
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { class: ["categories-nav-mobile", { open: _vm.menuOpen }] },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "top",
+          on: {
+            click: function($event) {
+              _vm.menuOpen = !_vm.menuOpen
+            }
+          }
+        },
+        [
+          _c("span", {
+            staticClass: "arrow-icon",
+            attrs: { "data-feather": "chevron-up" }
+          }),
+          _vm._v(" "),
+          _c("h6", [_vm._v("Sortiment")])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "content" },
+        _vm._l(_vm.categories, function(category, index) {
+          return _c("li", { key: category.id }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "#" + _vm.toSlug(category.title) },
+                on: {
+                  click: function($event) {
+                    _vm.menuOpen = !_vm.menuOpen
+                  }
+                }
+              },
+              [
+                _vm._v(
+                  _vm._s(category.title.replace("slikkepinde", "")) +
+                    "\n        "
+                ),
+                _c("span", [_vm._v("0" + _vm._s(index + 1))])
+              ]
+            )
+          ])
+        }),
+        0
+      )
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "wrapper configuration" },
+    [
+      _c("ConfigurationOptions", {
+        attrs: {
+          sizes: _vm.options.sizes,
+          amounts: _vm.options.predefined_amounts,
+          colors: _vm.options.colors,
+          flavors: _vm.options.flavors,
+          "min-order": _vm.options.min_order
+        }
+      }),
+      _vm._v(" "),
+      _c("ConfigurationSummary")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "configuration--options" }, [
+    _vm.step === 1
+      ? _c("div", { staticClass: "custom-builder-form" }, [
+          _c("h5", [_vm._v("Vælg størrelse")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "option row select-size" },
+            _vm._l(_vm.sizes, function(size) {
+              return _c(
+                "div",
+                { key: size.id, staticClass: "col-12 col-lg-4" },
+                [
+                  _c(
+                    "div",
+                    {
+                      class: [
+                        "size-option u-cursor-pointer",
+                        { selected: size.size_name === _vm.selectedSize }
+                      ],
+                      on: {
+                        click: function($event) {
+                          return _vm.selectSize(size.size_name, size.price)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "size-option-top" }, [
+                        _c("h6", [_vm._v(_vm._s(size.size_name))]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(_vm._s(size.size_guide))])
+                      ])
+                    ]
+                  )
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("h5", { class: { disabled: !_vm.selectedSize } }, [
+            _vm._v("Vælg antal")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              class: [
+                "option row select-amount",
+                { disabled: !_vm.selectedSize }
+              ]
+            },
+            _vm._l(_vm.amounts, function(amount) {
+              return _c(
+                "div",
+                { key: amount.id, staticClass: "col-12 col-lg-4" },
+                [
+                  _c(
+                    "div",
+                    {
+                      class: [
+                        "amount-option u-cursor-pointer",
+                        { selected: amount.amount === _vm.selectedAmount }
+                      ],
+                      on: {
+                        click: function($event) {
+                          return _vm.selectAmount(amount.amount)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "amount-option-top" }, [
+                        _c("h6", [_vm._v(_vm._s(amount.amount))]),
+                        _vm._v(" "),
+                        _vm.selectedSize
+                          ? _c("p", [
+                              _vm._v(
+                                "\n                pris i alt:\n                " +
+                                  _vm._s(
+                                    Number(_vm.priceForEach) *
+                                      Number(amount.amount)
+                                  ) +
+                                  " kr.\n              "
+                              )
+                            ])
+                          : _vm._e()
+                      ])
+                    ]
+                  )
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("h5", { class: { disabled: !_vm.selectedAmount } }, [
+            _vm._v("Vælg farve")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              class: [
+                "option w-1/2 select-color",
+                { disabled: !_vm.selectedAmount }
+              ]
+            },
+            _vm._l(_vm.colors, function(color) {
+              return _c(
+                "div",
+                {
+                  key: color.id,
+                  class: [
+                    "color-option u-cursor-pointer",
+                    { selected: color.color_name === _vm.selectedColor }
+                  ],
+                  on: {
+                    click: function($event) {
+                      return _vm.selectColor(color.color_name, color.color_code)
+                    }
+                  }
+                },
+                [
+                  _c("div", {
+                    staticClass: "color",
+                    style: "--bg-color:" + color.color_code
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "color-name" }, [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(color.color_name) +
+                        "\n          "
+                    )
+                  ])
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12 col-md-6" }, [
+              _c("div", { staticClass: "content" }, [
+                _c("h5", { class: { disabled: !_vm.selectedColor } }, [
+                  _vm._v("Vælg smag")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    class: [
+                      "option select-flavor",
+                      { disabled: !_vm.selectedColor }
+                    ]
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass: "u-cursor-pointer",
+                          attrs: { name: "flavor", id: "flavorSelector" },
+                          on: { change: _vm.changeFlavor }
+                        },
+                        _vm._l(_vm.filteredFlavors, function(flavor) {
+                          return _c(
+                            "option",
+                            {
+                              key: flavor.id,
+                              domProps: { value: flavor.name }
+                            },
+                            [_vm._v(_vm._s(flavor.name))]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6" }, [
+              _c("div", { staticClass: "content" }, [
+                _c("h5", { class: { disabled: !_vm.selectedColor } }, [
+                  _vm._v("Vælg dekoration")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    class: [
+                      "option select-flavor",
+                      { disabled: !_vm.selectedColor }
+                    ]
+                  },
+                  [
+                    _c("div", { staticClass: "group" }, [
+                      _c("input", {
+                        attrs: {
+                          type: "text",
+                          name: "lollipopText",
+                          id: "lollipopText",
+                          placeholder: "Ikke valgt"
+                        },
+                        on: { keyup: _vm.changeText }
+                      }),
+                      _vm._v(" "),
+                      _c("small", [
+                        _vm._v("Efterlad blank hvis tekst ikke ønskes.")
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6" }, [
+              _c("h5", { class: { disabled: !_vm.selectedColor } }, [
+                _vm._v("Ønsket leveringsdato")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  class: [
+                    "option select-flavor u-cursor-pointer",
+                    { disabled: !_vm.selectedColor }
+                  ]
+                },
+                [
+                  _c("datepicker", {
+                    staticClass: "u-cursor-pointer",
+                    attrs: {
+                      "disabled-dates": _vm.calender.disabledDates,
+                      "monday-first": true
+                    },
+                    on: { selected: _vm.changeDate },
+                    model: {
+                      value: _vm.selectedDate,
+                      callback: function($$v) {
+                        _vm.selectedDate = $$v
+                      },
+                      expression: "selectedDate"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "col-12 row justify-content-center mt-2 mb-3 mt-md-3" },
+      [
+        _vm.step === 1
+          ? _c(
+              "button",
+              {
+                staticClass: "button-icon large",
+                class: [{ disabled: !_vm.selectedDate }],
+                on: {
+                  click: function($event) {
+                    return _vm.goToStep(2)
+                  }
+                }
+              },
+              [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("span", { staticClass: "button-text" }, [
+                  _vm._v("Leverings information")
+                ])
+              ]
+            )
+          : _vm._e()
+      ]
+    ),
+    _vm._v(" "),
+    _vm.step === 2
+      ? _c("div", { staticClass: "contact-information-form" }, [
+          _c("h1", { staticClass: "text-center mb-4" }, [
+            _vm._v("Dine informationer")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-12 col-md-6" }, [
+              _c("div", { staticClass: "group" }, [
+                _c("label", [_vm._v("Fornavn:")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.name,
+                      expression: "contactForm.name"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.name.valid },
+                  attrs: {
+                    type: "text",
+                    name: "firstname",
+                    id: "firstname",
+                    placeholder: "Jens"
+                  },
+                  domProps: { value: _vm.contactForm.name },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("name")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "name", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(1)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-6" }, [
+              _c("div", { staticClass: "group" }, [
+                _c("label", [_vm._v("Efternavn:")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.lastname,
+                      expression: "contactForm.lastname"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.lastname.valid },
+                  attrs: {
+                    type: "text",
+                    name: "lastname",
+                    id: "lastname",
+                    placeholder: "Jensen"
+                  },
+                  domProps: { value: _vm.contactForm.lastname },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("lastname")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "lastname", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(2)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "group" }, [
+                _c("label", [_vm._v("E-mail:")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.email,
+                      expression: "contactForm.email"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.email.valid },
+                  attrs: {
+                    type: "email",
+                    name: "email",
+                    id: "email",
+                    placeholder: "jens.jensen@gmail.com"
+                  },
+                  domProps: { value: _vm.contactForm.email },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("email")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "email", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "group" }, [
+                _vm._m(4),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.phone,
+                      expression: "contactForm.phone"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.phone.valid },
+                  attrs: {
+                    type: "tel",
+                    name: "tel",
+                    id: "tel",
+                    placeholder: "22222222"
+                  },
+                  domProps: { value: _vm.contactForm.phone },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("phone")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "phone", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(5)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-4" }, [
+              _c("div", { staticClass: "group" }, [
+                _c("label", [_vm._v("Post nr.")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.postal,
+                      expression: "contactForm.postal"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.postal.valid },
+                  attrs: {
+                    type: "text",
+                    name: "postal",
+                    id: "postal",
+                    placeholder: "2500"
+                  },
+                  domProps: { value: _vm.contactForm.postal },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("postal")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "postal", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(6)
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-md-8" }, [
+              _c("div", { staticClass: "group" }, [
+                _c("label", [_vm._v("Adresse")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.contactForm.address,
+                      expression: "contactForm.address"
+                    }
+                  ],
+                  class: { "is-invalid": !_vm.validation.address.valid },
+                  attrs: {
+                    type: "text",
+                    name: "address",
+                    id: "address",
+                    placeholder: "Valby langgade 30, 1.th"
+                  },
+                  domProps: { value: _vm.contactForm.address },
+                  on: {
+                    keyup: function($event) {
+                      return _vm.validateInput("address")
+                    },
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.contactForm, "address", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm._m(7)
+              ])
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "col-12 row justify-content-center mt-2 mb-3 mt-md-3",
+        class: [{ disabled: !_vm.isFormValid }]
+      },
+      [
+        _vm.step === 2
+          ? _c(
+              "button",
+              { staticClass: "button-icon", on: { click: _vm.submitOrder } },
+              [
+                _vm._m(8),
+                _vm._v(" "),
+                _c("span", { staticClass: "button-text" }, [
+                  _vm._v("Bestil og betal")
+                ])
+              ]
+            )
+          : _vm._e()
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "hidden-form" }, [
+      _c("form", { attrs: { id: "custom-order", action: "/!/Form/create" } }, [
+        _c("input", {
+          attrs: {
+            type: "hidden",
+            name: "_token",
+            value: "iv5CkIuzmC6UT1TOdJVBY0Q4mxPsBNF6dqxmIwJd"
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          attrs: {
+            type: "hidden",
+            name: "_params",
+            value:
+              "eyJpdiI6IjdZbk1qam1yVEJReVJ4T1VmVmNCcnc9PSIsInZhbHVlIjoiRTd6TENZZnpkUklpZHdEVTF4TGVOSDgxb1FPaEpGRkVWT3pWbk5lUFhDRngwNStMQXpiazVGVitmelNOWkNcL3IiLCJtYWMiOiJiZjIzNDFkM2JlNzYwMDZiY2RjYjU5MTFkNTQxODc4NzZjZjhmZTA5MTk5YzgyZTExMzJmODUxNGViMDJiNDNhIn0="
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedSize,
+              expression: "selectedSize"
+            }
+          ],
+          attrs: { type: "text", name: "size", id: "size" },
+          domProps: { value: _vm.selectedSize },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.selectedSize = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedAmount,
+              expression: "selectedAmount"
+            }
+          ],
+          attrs: { type: "text", name: "amount", id: "amount" },
+          domProps: { value: _vm.selectedAmount },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.selectedAmount = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedColor,
+              expression: "selectedColor"
+            }
+          ],
+          attrs: { type: "text", name: "color", id: "color" },
+          domProps: { value: _vm.selectedColor },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.selectedColor = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedFlavor,
+              expression: "selectedFlavor"
+            }
+          ],
+          attrs: { type: "text", name: "flavor", id: "flavor" },
+          domProps: { value: _vm.selectedFlavor },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.selectedFlavor = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedText,
+              expression: "selectedText"
+            }
+          ],
+          attrs: { type: "text", name: "text", id: "text" },
+          domProps: { value: _vm.selectedText },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.selectedText = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.date,
+              expression: "date"
+            }
+          ],
+          attrs: { type: "text", name: "delivery_date", id: "delivery_date" },
+          domProps: { value: _vm.date },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.date = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.totalPrice,
+              expression: "totalPrice"
+            }
+          ],
+          attrs: { type: "text", name: "total_price", id: "total_price" },
+          domProps: { value: _vm.totalPrice },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.totalPrice = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.name,
+              expression: "contactForm.name"
+            }
+          ],
+          attrs: {
+            type: "text",
+            name: "firstname",
+            id: "firstname",
+            placeholder: "Jens"
+          },
+          domProps: { value: _vm.contactForm.name },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "name", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.lastname,
+              expression: "contactForm.lastname"
+            }
+          ],
+          attrs: {
+            type: "text",
+            name: "lastname",
+            id: "lastname",
+            placeholder: "Jensen"
+          },
+          domProps: { value: _vm.contactForm.lastname },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "lastname", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.email,
+              expression: "contactForm.email"
+            }
+          ],
+          attrs: {
+            type: "email",
+            name: "email",
+            id: "email",
+            placeholder: "jens.jensen@gmail.com"
+          },
+          domProps: { value: _vm.contactForm.email },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "email", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.phone,
+              expression: "contactForm.phone"
+            }
+          ],
+          attrs: {
+            type: "tel",
+            name: "tel",
+            id: "tel",
+            placeholder: "+45 22 22 22 22"
+          },
+          domProps: { value: _vm.contactForm.phone },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "phone", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.postal,
+              expression: "contactForm.postal"
+            }
+          ],
+          attrs: {
+            type: "text",
+            name: "postal",
+            id: "postal",
+            placeholder: "2500"
+          },
+          domProps: { value: _vm.contactForm.postal },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "postal", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.contactForm.address,
+              expression: "contactForm.address"
+            }
+          ],
+          attrs: {
+            type: "text",
+            name: "address",
+            id: "address",
+            placeholder: "Valby langgade 30, 1.th"
+          },
+          domProps: { value: _vm.contactForm.address },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.contactForm, "address", $event.target.value)
+            }
+          }
+        })
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "circle", attrs: { "aria-hidden": "true" } },
+      [_c("span", { staticClass: "icon arrow" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("Fornavn")]),
+      _vm._v(" må kun indholde bogstaver.\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("Efternavn")]),
+      _vm._v(" må kun indholde bogstaver.\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("E-mail")]),
+      _vm._v(" skal indholde en gyldig e-mail\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "label",
+      {
+        staticClass: "col-form-label d-flex justify-content-between ",
+        attrs: { for: "comment" }
+      },
+      [
+        _vm._v("Telefon nr.:\n              "),
+        _c("span", { staticClass: "helper-label" }, [_vm._v("Ikke påkrævet")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("Telefon")]),
+      _vm._v(
+        " skal indholde et gyldigt mobil nummer eller\n              efterlades blankt\n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("Post nr.")]),
+      _vm._v(" må maks indholde 4 tal.\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "invalid-message" }, [
+      _c("em", [_vm._v("Adresse")]),
+      _vm._v(" skal indeholde en gyldig adressse.\n            ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "circle", attrs: { "aria-hidden": "true" } },
+      [_c("span", { staticClass: "icon arrow" })]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "configuration--summary" }, [
+    _c("div", { staticClass: "inner-content" }, [
+      _c(
+        "h1",
+        {
+          class: {
+            "d-flex align-items-center justify-content-between": _vm.step === 2
+          }
+        },
+        [
+          _vm._v("\n      Oversigt\n      "),
+          _vm.step === 2
+            ? _c(
+                "span",
+                {
+                  staticClass: "helper-label u-cursor-pointer",
+                  on: {
+                    click: function($event) {
+                      _vm.step = 1
+                    }
+                  }
+                },
+                [_vm._v("Rediger")]
+              )
+            : _vm._e()
+        ]
+      ),
+      _vm._v(" "),
+      _c("ul", { staticClass: "summary-list" }, [
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Størrelse:")]),
+          _vm._v(" "),
+          !_vm.selectedSize
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.selectedSize))
+              ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Antal:")]),
+          _vm._v(" "),
+          !_vm.amount
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c("p", { staticClass: "value" }, [_vm._v(_vm._s(_vm.amount))])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Farve:")]),
+          _vm._v(" "),
+          !_vm.selectedColor
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c(
+                "p",
+                {
+                  staticClass: "value color-value",
+                  style: "--bg-color: " + _vm.selectedColorCode
+                },
+                [
+                  _vm._v(
+                    "\n          " + _vm._s(_vm.selectedColor) + "\n        "
+                  )
+                ]
+              )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Smag:")]),
+          _vm._v(" "),
+          !_vm.selectedFlavor
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.selectedFlavor))
+              ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Tekst:")]),
+          _vm._v(" "),
+          !_vm.text
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c("p", { staticClass: "value" }, [_vm._v(_vm._s(_vm.text))])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-item size" }, [
+          _c("p", { staticClass: "title" }, [_vm._v("Ønsket leveringsdato:")]),
+          _vm._v(" "),
+          !_vm.date
+            ? _c("p", { staticClass: "value" }, [
+                _vm._v(_vm._s(_vm.notSelectedText))
+              ])
+            : _c("p", { staticClass: "value" }, [_vm._v(_vm._s(_vm.date))])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("h6", { staticClass: "text-center mt-5" }, [
+        _vm._v(
+          "\n      Pris i alt: " +
+            _vm._s(Number(_vm.price) * Number(_vm.amount)) +
+            " kr.\n    "
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Vueinstagram", {
+    attrs: { token: _vm.accessToken, count: _vm.totalPost },
+    scopedSlots: _vm._u([
+      {
+        key: "default",
+        fn: function(ref) {
+          var posts = ref.posts
+          var errorMsg = ref.errorMsg
+          return [
+            _c(
+              "div",
+              { staticClass: "instagram-feed" },
+              [
+                _vm._l(posts, function(post) {
+                  return _c("article", { key: post.id, staticClass: "post" }, [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: post.link,
+                          target: "_blank",
+                          rel: "noopener"
+                        }
+                      },
+                      [
+                        _c("button", { staticClass: "btn" }, [
+                          _vm._v("Se på instagram")
+                        ]),
+                        _vm._v(" "),
+                        _c("img", {
+                          attrs: {
+                            src: post.images.low_resolution.url,
+                            alt: "instagram"
+                          }
+                        })
+                      ]
+                    )
+                  ])
+                }),
+                _vm._v(" "),
+                errorMsg ? _c("pre", [_vm._v(_vm._s(errorMsg))]) : _vm._e()
+              ],
+              2
+            )
+          ]
+        }
+      }
+    ])
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=template&id=98d346b0&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LogoSlider.vue?vue&type=template&id=98d346b0&scoped=true& ***!
@@ -27419,34 +40549,41 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "wrapper narrow text-center logo-slider " }, [
-    _c("h4", [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "slider position-relative" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "slick",
-          { ref: "slick", attrs: { options: _vm.slickOptions } },
-          [_vm._t("logos")],
-          2
-        ),
-        _vm._v(" "),
-        _vm._m(1)
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    {
+      staticClass: "wrapper narrow text-center logo-slider ",
+      attrs: { "data-aos": "fade-up", "data-aos-duration": "1000" }
+    },
+    [
+      _c("h4", [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "slider position-relative" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "slick",
+            { ref: "slick", attrs: { options: _vm.slickOptions } },
+            [_vm._t("logos")],
+            2
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ],
+        1
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "prev" }, [
+    return _c("div", { staticClass: "prev expand-cursor" }, [
       _c("span", { attrs: { "data-feather": "chevron-left" } })
     ])
   },
@@ -27454,7 +40591,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "next" }, [
+    return _c("div", { staticClass: "next expand-cursor" }, [
       _c("span", { attrs: { "data-feather": "chevron-right" } })
     ])
   }
@@ -27465,10 +40602,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c&":
-/*!*********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c& ***!
-  \*********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99& ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27489,10 +40626,94 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241&":
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241& ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", {
+    class: ["menu-toggle hide--medium--up", { "is-active": _vm.menuOpen }],
+    on: { click: _vm.toggleMenu }
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "slider position-relative" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "slick",
+        { ref: "slick", attrs: { options: _vm.slickOptions } },
+        [_vm._t("products")],
+        2
+      ),
+      _vm._v(" "),
+      _vm._m(1)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "prev expand-cursor" }, [
+      _c("span", { attrs: { "data-feather": "chevron-left" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "next expand-cursor" }, [
+      _c("span", { attrs: { "data-feather": "chevron-right" } })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27663,6 +40884,352 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-range-slider/dist/vue-range-slider.cjs.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-range-slider/dist/vue-range-slider.cjs.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * vue-range-slider v0.6.0
+ * https://github.com/ktsn/vue-range-slider
+ *
+ * @license
+ * Copyright (c) 2016-2018 katashin
+ * Released under the MIT license
+ * https://github.com/ktsn/vue-range-slider/blob/master/LICENSE
+ */
+
+
+/* global window, document */
+
+var DocumentEventHelper = {
+  created: function created() {
+    if (typeof document === 'undefined') return;
+    forEachListener(this, function (key, listener) {
+      on(document, key, listener);
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (typeof document === 'undefined') return;
+    forEachListener(this, function (key, listener) {
+      off(document, key, listener);
+    });
+  }
+};
+
+var isBrowser = typeof window !== 'undefined';
+
+var hasPassive = isBrowser && function () {
+  var supported = false;
+
+  try {
+    var desc = {
+      get: function get() {
+        supported = true;
+      }
+    };
+    var opts = Object.defineProperty({}, 'passive', desc);
+
+    window.addEventListener('test', null, opts);
+    window.removeEventListener('test', null, opts);
+  } catch (e) {
+    supported = false;
+  }
+
+  return supported;
+}();
+
+function forEachListener(vm, f) {
+  var events = vm.$options.events;
+  Object.keys(events).forEach(function (key) {
+    f(key, function (event) {
+      return events[key].call(vm, event);
+    });
+  });
+}
+
+function on(el, name, fn) {
+  var options = hasPassive ? { passive: false } : undefined;
+  el.addEventListener(name, fn, options);
+}
+
+function off(el, name, fn) {
+  var options = hasPassive ? { passive: false } : undefined;
+  el.removeEventListener(name, fn, options);
+}
+
+function relativeMouseOffset(offset, base) {
+  var bounds = base.getBoundingClientRect();
+  return {
+    left: offset.clientX - bounds.left,
+    top: offset.clientY - bounds.top
+  };
+}
+
+function round(value, min, max, step) {
+  if (value <= min) {
+    return min;
+  }
+
+  var roundedMax = Math.floor((max - min) / step) * step + min;
+  if (value >= roundedMax) {
+    return roundedMax;
+  }
+
+  var normalize = (value - min) / step;
+  var decimal = Math.floor(normalize);
+  var fraction = normalize - decimal;
+
+  if (fraction === 0) return value;
+
+  if (fraction < 0.5) {
+    return step * decimal + min;
+  } else {
+    return step * (decimal + 1) + min;
+  }
+}
+
+var DragHelper = {
+  mixins: [DocumentEventHelper],
+
+  props: {
+    disabled: Boolean
+  },
+
+  data: function data() {
+    return {
+      isDrag: false
+    };
+  },
+
+
+  events: {
+    mousedown: function mousedown(event) {
+      return this.dragStart(event, this.offsetByMouse);
+    },
+    mousemove: function mousemove(event) {
+      return this.dragMove(event, this.offsetByMouse);
+    },
+    mouseup: function mouseup(event) {
+      return this.dragEnd(event, this.offsetByMouse);
+    },
+    touchstart: function touchstart(event) {
+      return this.dragStart(event, this.offsetByTouch);
+    },
+    touchmove: function touchmove(event) {
+      return this.dragMove(event, this.offsetByTouch);
+    },
+    touchend: function touchend(event) {
+      return this.dragEnd(event, this.offsetByTouch);
+    },
+    touchcancel: function touchcancel(event) {
+      return this.dragEnd(event, this.offsetByTouch);
+    }
+  },
+
+  methods: {
+    isInTarget: function isInTarget(el) {
+      if (!el) return false;
+
+      if (el === this.$el) {
+        return true;
+      } else {
+        return this.isInTarget(el.parentElement);
+      }
+    },
+    offsetByMouse: function offsetByMouse(event) {
+      return relativeMouseOffset(event, this.$el);
+    },
+    offsetByTouch: function offsetByTouch(event) {
+      var touch = event.touches.length === 0 ? event.changedTouches[0] : event.touches[0];
+      return relativeMouseOffset(touch, this.$el);
+    },
+    dragStart: function dragStart(event, f) {
+      if (this.disabled || event.button !== undefined && event.button !== 0 || !this.isInTarget(event.target)) {
+        return;
+      }
+
+      event.preventDefault();
+      this.isDrag = true;
+      this.$emit('dragstart', event, f(event), this.$el);
+    },
+    dragMove: function dragMove(event, f) {
+      if (!this.isDrag) return;
+      event.preventDefault();
+      this.$emit('drag', event, f(event), this.$el);
+    },
+    dragEnd: function dragEnd(event, f) {
+      if (!this.isDrag) return;
+      event.preventDefault();
+      this.isDrag = false;
+      this.$emit('dragend', event, f(event), this.$el);
+    }
+  },
+
+  render: function render() {
+    return this.$slots.default && this.$slots.default[0];
+  }
+};
+
+var RangeSlider = { render: function render() {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('span', { staticClass: "range-slider", class: { disabled: _vm.disabled } }, [_c('drag-helper', { attrs: { "disabled": _vm.disabled }, on: { "dragstart": _vm.dragStart, "drag": _vm.drag, "dragend": _vm.dragEnd } }, [_c('span', { ref: "inner", staticClass: "range-slider-inner" }, [_c('input', { staticClass: "range-slider-hidden", attrs: { "type": "text", "name": _vm.name, "disabled": _vm.disabled }, domProps: { "value": _vm.actualValue } }), _vm._v(" "), _c('span', { staticClass: "range-slider-rail" }), _vm._v(" "), _c('span', { staticClass: "range-slider-fill", style: { width: _vm.valuePercent + '%' } }), _vm._v(" "), _c('span', { ref: "knob", staticClass: "range-slider-knob", style: { left: _vm.valuePercent + '%' } }, [_vm._t("knob")], 2)])])], 1);
+  }, staticRenderFns: [],
+  props: {
+    name: String,
+    value: [String, Number],
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    min: {
+      type: [String, Number],
+      default: 0
+    },
+    max: {
+      type: [String, Number],
+      default: 100
+    },
+    step: {
+      type: [String, Number],
+      default: 1
+    }
+  },
+
+  data: function data() {
+    return {
+      actualValue: null,
+      dragStartValue: null
+    };
+  },
+  created: function created() {
+    var min = this._min,
+        max = this._max;
+
+    var defaultValue = Number(this.value);
+
+    if (this.value == null || isNaN(defaultValue)) {
+      if (min > max) {
+        defaultValue = min;
+      } else {
+        defaultValue = (min + max) / 2;
+      }
+    }
+
+    this.actualValue = this.round(defaultValue);
+  },
+
+
+  computed: {
+    _min: function _min() {
+      return Number(this.min);
+    },
+    _max: function _max() {
+      return Number(this.max);
+    },
+    _step: function _step() {
+      return Number(this.step);
+    },
+    valuePercent: function valuePercent() {
+      return (this.actualValue - this._min) / (this._max - this._min) * 100;
+    }
+  },
+
+  watch: {
+    value: function value(newValue) {
+      var value = Number(newValue);
+      if (newValue != null && !isNaN(value)) {
+        this.actualValue = this.round(value);
+      }
+    },
+    min: function min() {
+      this.actualValue = this.round(this.actualValue);
+    },
+    max: function max() {
+      this.actualValue = this.round(this.actualValue);
+    }
+  },
+
+  methods: {
+    dragStart: function dragStart(event, offset) {
+      this.dragStartValue = this.actualValue;
+      if (event.target === this.$refs.knob) {
+        return;
+      }
+      // If the click is out of knob, move it to mouse position
+      this.drag(event, offset);
+    },
+    drag: function drag(event, offset) {
+      var offsetWidth = this.$refs.inner.offsetWidth;
+
+      this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth));
+      this.emitInput(this.actualValue);
+    },
+    dragEnd: function dragEnd(event, offset) {
+      var offsetWidth = this.$refs.inner.offsetWidth;
+
+      this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth));
+
+      if (this.dragStartValue !== this.actualValue) {
+        this.emitChange(this.actualValue);
+      }
+    },
+    emitInput: function emitInput(value) {
+      this.$emit('input', value);
+    },
+    emitChange: function emitChange(value) {
+      this.$emit('change', value);
+    },
+    valueFromBounds: function valueFromBounds(point, width) {
+      return point / width * (this._max - this._min) + this._min;
+    },
+    round: function round$$1(value) {
+      return round(value, this._min, this._max, this._step);
+    }
+  },
+
+  components: {
+    DragHelper: DragHelper
+  }
+};
+
+module.exports = RangeSlider;
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-range-slider/dist/vue-range-slider.css":
+/*!*****************************************************************!*\
+  !*** ./node_modules/vue-range-slider/dist/vue-range-slider.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vue-range-slider.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-range-slider/dist/vue-range-slider.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -42896,6 +56463,3569 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+var Language =
+/*#__PURE__*/
+function () {
+  function Language(language, months, monthsAbbr, days) {
+    _classCallCheck(this, Language);
+
+    this.language = language;
+    this.months = months;
+    this.monthsAbbr = monthsAbbr;
+    this.days = days;
+    this.rtl = false;
+    this.ymd = false;
+    this.yearSuffix = '';
+  }
+
+  _createClass(Language, [{
+    key: "language",
+    get: function get() {
+      return this._language;
+    },
+    set: function set(language) {
+      if (typeof language !== 'string') {
+        throw new TypeError('Language must be a string');
+      }
+
+      this._language = language;
+    }
+  }, {
+    key: "months",
+    get: function get() {
+      return this._months;
+    },
+    set: function set(months) {
+      if (months.length !== 12) {
+        throw new RangeError("There must be 12 months for ".concat(this.language, " language"));
+      }
+
+      this._months = months;
+    }
+  }, {
+    key: "monthsAbbr",
+    get: function get() {
+      return this._monthsAbbr;
+    },
+    set: function set(monthsAbbr) {
+      if (monthsAbbr.length !== 12) {
+        throw new RangeError("There must be 12 abbreviated months for ".concat(this.language, " language"));
+      }
+
+      this._monthsAbbr = monthsAbbr;
+    }
+  }, {
+    key: "days",
+    get: function get() {
+      return this._days;
+    },
+    set: function set(days) {
+      if (days.length !== 7) {
+        throw new RangeError("There must be 7 days for ".concat(this.language, " language"));
+      }
+
+      this._days = days;
+    }
+  }]);
+
+  return Language;
+}(); // eslint-disable-next-line
+
+var en = new Language('English', ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']) // eslint-disable-next-line
+;
+
+var utils = {
+  /**
+   * @type {Boolean}
+   */
+  useUtc: false,
+
+  /**
+   * Returns the full year, using UTC or not
+   * @param {Date} date
+   */
+  getFullYear: function getFullYear(date) {
+    return this.useUtc ? date.getUTCFullYear() : date.getFullYear();
+  },
+
+  /**
+   * Returns the month, using UTC or not
+   * @param {Date} date
+   */
+  getMonth: function getMonth(date) {
+    return this.useUtc ? date.getUTCMonth() : date.getMonth();
+  },
+
+  /**
+   * Returns the date, using UTC or not
+   * @param {Date} date
+   */
+  getDate: function getDate(date) {
+    return this.useUtc ? date.getUTCDate() : date.getDate();
+  },
+
+  /**
+   * Returns the day, using UTC or not
+   * @param {Date} date
+   */
+  getDay: function getDay(date) {
+    return this.useUtc ? date.getUTCDay() : date.getDay();
+  },
+
+  /**
+   * Returns the hours, using UTC or not
+   * @param {Date} date
+   */
+  getHours: function getHours(date) {
+    return this.useUtc ? date.getUTCHours() : date.getHours();
+  },
+
+  /**
+   * Returns the minutes, using UTC or not
+   * @param {Date} date
+   */
+  getMinutes: function getMinutes(date) {
+    return this.useUtc ? date.getUTCMinutes() : date.getMinutes();
+  },
+
+  /**
+   * Sets the full year, using UTC or not
+   * @param {Date} date
+   */
+  setFullYear: function setFullYear(date, value, useUtc) {
+    return this.useUtc ? date.setUTCFullYear(value) : date.setFullYear(value);
+  },
+
+  /**
+   * Sets the month, using UTC or not
+   * @param {Date} date
+   */
+  setMonth: function setMonth(date, value, useUtc) {
+    return this.useUtc ? date.setUTCMonth(value) : date.setMonth(value);
+  },
+
+  /**
+   * Sets the date, using UTC or not
+   * @param {Date} date
+   * @param {Number} value
+   */
+  setDate: function setDate(date, value, useUtc) {
+    return this.useUtc ? date.setUTCDate(value) : date.setDate(value);
+  },
+
+  /**
+   * Check if date1 is equivalent to date2, without comparing the time
+   * @see https://stackoverflow.com/a/6202196/4455925
+   * @param {Date} date1
+   * @param {Date} date2
+   */
+  compareDates: function compareDates(date1, date2) {
+    var d1 = new Date(date1.getTime());
+    var d2 = new Date(date2.getTime());
+
+    if (this.useUtc) {
+      d1.setUTCHours(0, 0, 0, 0);
+      d2.setUTCHours(0, 0, 0, 0);
+    } else {
+      d1.setHours(0, 0, 0, 0);
+      d2.setHours(0, 0, 0, 0);
+    }
+
+    return d1.getTime() === d2.getTime();
+  },
+
+  /**
+   * Validates a date object
+   * @param {Date} date - an object instantiated with the new Date constructor
+   * @return {Boolean}
+   */
+  isValidDate: function isValidDate(date) {
+    if (Object.prototype.toString.call(date) !== '[object Date]') {
+      return false;
+    }
+
+    return !isNaN(date.getTime());
+  },
+
+  /**
+   * Return abbreviated week day name
+   * @param {Date}
+   * @param {Array}
+   * @return {String}
+   */
+  getDayNameAbbr: function getDayNameAbbr(date, days) {
+    if (_typeof(date) !== 'object') {
+      throw TypeError('Invalid Type');
+    }
+
+    return days[this.getDay(date)];
+  },
+
+  /**
+   * Return name of the month
+   * @param {Number|Date}
+   * @param {Array}
+   * @return {String}
+   */
+  getMonthName: function getMonthName(month, months) {
+    if (!months) {
+      throw Error('missing 2nd parameter Months array');
+    }
+
+    if (_typeof(month) === 'object') {
+      return months[this.getMonth(month)];
+    }
+
+    if (typeof month === 'number') {
+      return months[month];
+    }
+
+    throw TypeError('Invalid type');
+  },
+
+  /**
+   * Return an abbreviated version of the month
+   * @param {Number|Date}
+   * @return {String}
+   */
+  getMonthNameAbbr: function getMonthNameAbbr(month, monthsAbbr) {
+    if (!monthsAbbr) {
+      throw Error('missing 2nd paramter Months array');
+    }
+
+    if (_typeof(month) === 'object') {
+      return monthsAbbr[this.getMonth(month)];
+    }
+
+    if (typeof month === 'number') {
+      return monthsAbbr[month];
+    }
+
+    throw TypeError('Invalid type');
+  },
+
+  /**
+   * Alternative get total number of days in month
+   * @param {Number} year
+   * @param {Number} m
+   * @return {Number}
+   */
+  daysInMonth: function daysInMonth(year, month) {
+    return /8|3|5|10/.test(month) ? 30 : month === 1 ? !(year % 4) && year % 100 || !(year % 400) ? 29 : 28 : 31;
+  },
+
+  /**
+   * Get nth suffix for date
+   * @param {Number} day
+   * @return {String}
+   */
+  getNthSuffix: function getNthSuffix(day) {
+    switch (day) {
+      case 1:
+      case 21:
+      case 31:
+        return 'st';
+
+      case 2:
+      case 22:
+        return 'nd';
+
+      case 3:
+      case 23:
+        return 'rd';
+
+      default:
+        return 'th';
+    }
+  },
+
+  /**
+   * Formats date object
+   * @param {Date}
+   * @param {String}
+   * @param {Object}
+   * @return {String}
+   */
+  formatDate: function formatDate(date, format, translation) {
+    translation = !translation ? en : translation;
+    var year = this.getFullYear(date);
+    var month = this.getMonth(date) + 1;
+    var day = this.getDate(date);
+    var str = format.replace(/dd/, ('0' + day).slice(-2)).replace(/d/, day).replace(/yyyy/, year).replace(/yy/, String(year).slice(2)).replace(/MMMM/, this.getMonthName(this.getMonth(date), translation.months)).replace(/MMM/, this.getMonthNameAbbr(this.getMonth(date), translation.monthsAbbr)).replace(/MM/, ('0' + month).slice(-2)).replace(/M(?!a|ä|e)/, month).replace(/su/, this.getNthSuffix(this.getDate(date))).replace(/D(?!e|é|i)/, this.getDayNameAbbr(date, translation.days));
+    return str;
+  },
+
+  /**
+   * Creates an array of dates for each day in between two dates.
+   * @param {Date} start
+   * @param {Date} end
+   * @return {Array}
+   */
+  createDateArray: function createDateArray(start, end) {
+    var dates = [];
+
+    while (start <= end) {
+      dates.push(new Date(start));
+      start = this.setDate(new Date(start), this.getDate(new Date(start)) + 1);
+    }
+
+    return dates;
+  },
+
+  /**
+   * method used as a prop validator for input values
+   * @param {*} val
+   * @return {Boolean}
+   */
+  validateDateInput: function validateDateInput(val) {
+    return val === null || val instanceof Date || typeof val === 'string' || typeof val === 'number';
+  }
+};
+var makeDateUtils = function makeDateUtils(useUtc) {
+  return _objectSpread({}, utils, {
+    useUtc: useUtc
+  });
+};
+var utils$1 = _objectSpread({}, utils) // eslint-disable-next-line
+;
+
+var script = {
+  props: {
+    selectedDate: Date,
+    resetTypedDate: [Date],
+    format: [String, Function],
+    translation: Object,
+    inline: Boolean,
+    id: String,
+    name: String,
+    refName: String,
+    openDate: Date,
+    placeholder: String,
+    inputClass: [String, Object, Array],
+    clearButton: Boolean,
+    clearButtonIcon: String,
+    calendarButton: Boolean,
+    calendarButtonIcon: String,
+    calendarButtonIconContent: String,
+    disabled: Boolean,
+    required: Boolean,
+    typeable: Boolean,
+    bootstrapStyling: Boolean,
+    useUtc: Boolean
+  },
+  data: function data() {
+    var constructedDateUtils = makeDateUtils(this.useUtc);
+    return {
+      input: null,
+      typedDate: false,
+      utils: constructedDateUtils
+    };
+  },
+  computed: {
+    formattedValue: function formattedValue() {
+      if (!this.selectedDate) {
+        return null;
+      }
+
+      if (this.typedDate) {
+        return this.typedDate;
+      }
+
+      return typeof this.format === 'function' ? this.format(this.selectedDate) : this.utils.formatDate(new Date(this.selectedDate), this.format, this.translation);
+    },
+    computedInputClass: function computedInputClass() {
+      if (this.bootstrapStyling) {
+        if (typeof this.inputClass === 'string') {
+          return [this.inputClass, 'form-control'].join(' ');
+        }
+
+        return _objectSpread({
+          'form-control': true
+        }, this.inputClass);
+      }
+
+      return this.inputClass;
+    }
+  },
+  watch: {
+    resetTypedDate: function resetTypedDate() {
+      this.typedDate = false;
+    }
+  },
+  methods: {
+    showCalendar: function showCalendar() {
+      this.$emit('showCalendar');
+    },
+
+    /**
+     * Attempt to parse a typed date
+     * @param {Event} event
+     */
+    parseTypedDate: function parseTypedDate(event) {
+      // close calendar if escape or enter are pressed
+      if ([27, // escape
+      13 // enter
+      ].includes(event.keyCode)) {
+        this.input.blur();
+      }
+
+      if (this.typeable) {
+        var typedDate = Date.parse(this.input.value);
+
+        if (!isNaN(typedDate)) {
+          this.typedDate = this.input.value;
+          this.$emit('typedDate', new Date(this.typedDate));
+        }
+      }
+    },
+
+    /**
+     * nullify the typed date to defer to regular formatting
+     * called once the input is blurred
+     */
+    inputBlurred: function inputBlurred() {
+      if (this.typeable && isNaN(Date.parse(this.input.value))) {
+        this.clearDate();
+        this.input.value = null;
+        this.typedDate = null;
+      }
+
+      this.$emit('closeCalendar');
+    },
+
+    /**
+     * emit a clearDate event
+     */
+    clearDate: function clearDate() {
+      this.$emit('clearDate');
+    }
+  },
+  mounted: function mounted() {
+    this.input = this.$el.querySelector('input');
+  }
+} // eslint-disable-next-line
+;
+
+function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier
+/* server only */
+, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+  if (typeof shadowMode !== 'boolean') {
+    createInjectorSSR = createInjector;
+    createInjector = shadowMode;
+    shadowMode = false;
+  } // Vue.extend constructor export interop.
+
+
+  var options = typeof script === 'function' ? script.options : script; // render functions
+
+  if (template && template.render) {
+    options.render = template.render;
+    options.staticRenderFns = template.staticRenderFns;
+    options._compiled = true; // functional template
+
+    if (isFunctionalTemplate) {
+      options.functional = true;
+    }
+  } // scopedId
+
+
+  if (scopeId) {
+    options._scopeId = scopeId;
+  }
+
+  var hook;
+
+  if (moduleIdentifier) {
+    // server build
+    hook = function hook(context) {
+      // 2.3 injection
+      context = context || // cached call
+      this.$vnode && this.$vnode.ssrContext || // stateful
+      this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext; // functional
+      // 2.2 with runInNewContext: true
+
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__;
+      } // inject component styles
+
+
+      if (style) {
+        style.call(this, createInjectorSSR(context));
+      } // register component module identifier for async chunk inference
+
+
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier);
+      }
+    }; // used by ssr in case component is cached and beforeCreate
+    // never gets called
+
+
+    options._ssrRegister = hook;
+  } else if (style) {
+    hook = shadowMode ? function () {
+      style.call(this, createInjectorShadow(this.$root.$options.shadowRoot));
+    } : function (context) {
+      style.call(this, createInjector(context));
+    };
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // register for functional component in vue file
+      var originalRender = options.render;
+
+      options.render = function renderWithStyleInjection(h, context) {
+        hook.call(context);
+        return originalRender(h, context);
+      };
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate;
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+    }
+  }
+
+  return script;
+}
+
+var normalizeComponent_1 = normalizeComponent;
+
+/* script */
+const __vue_script__ = script;
+
+/* template */
+var __vue_render__ = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    { class: { "input-group": _vm.bootstrapStyling } },
+    [
+      _vm.calendarButton
+        ? _c(
+            "span",
+            {
+              staticClass: "vdp-datepicker__calendar-button",
+              class: { "input-group-prepend": _vm.bootstrapStyling },
+              style: { "cursor:not-allowed;": _vm.disabled },
+              on: { click: _vm.showCalendar }
+            },
+            [
+              _c(
+                "span",
+                { class: { "input-group-text": _vm.bootstrapStyling } },
+                [
+                  _c("i", { class: _vm.calendarButtonIcon }, [
+                    _vm._v(
+                      "\n        " +
+                        _vm._s(_vm.calendarButtonIconContent) +
+                        "\n        "
+                    ),
+                    !_vm.calendarButtonIcon
+                      ? _c("span", [_vm._v("…")])
+                      : _vm._e()
+                  ])
+                ]
+              )
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("input", {
+        ref: _vm.refName,
+        class: _vm.computedInputClass,
+        attrs: {
+          type: _vm.inline ? "hidden" : "text",
+          name: _vm.name,
+          id: _vm.id,
+          "open-date": _vm.openDate,
+          placeholder: _vm.placeholder,
+          "clear-button": _vm.clearButton,
+          disabled: _vm.disabled,
+          required: _vm.required,
+          readonly: !_vm.typeable,
+          autocomplete: "off"
+        },
+        domProps: { value: _vm.formattedValue },
+        on: {
+          click: _vm.showCalendar,
+          keyup: _vm.parseTypedDate,
+          blur: _vm.inputBlurred
+        }
+      }),
+      _vm._v(" "),
+      _vm.clearButton && _vm.selectedDate
+        ? _c(
+            "span",
+            {
+              staticClass: "vdp-datepicker__clear-button",
+              class: { "input-group-append": _vm.bootstrapStyling },
+              on: {
+                click: function($event) {
+                  return _vm.clearDate()
+                }
+              }
+            },
+            [
+              _c(
+                "span",
+                { class: { "input-group-text": _vm.bootstrapStyling } },
+                [
+                  _c("i", { class: _vm.clearButtonIcon }, [
+                    !_vm.clearButtonIcon ? _c("span", [_vm._v("×")]) : _vm._e()
+                  ])
+                ]
+              )
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._t("afterDateInput")
+    ],
+    2
+  )
+};
+var __vue_staticRenderFns__ = [];
+__vue_render__._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__ = undefined;
+  /* scoped */
+  const __vue_scope_id__ = undefined;
+  /* module identifier */
+  const __vue_module_identifier__ = undefined;
+  /* functional template */
+  const __vue_is_functional_template__ = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var DateInput = normalizeComponent_1(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    undefined,
+    undefined
+  );
+
+//
+var script$1 = {
+  props: {
+    showDayView: Boolean,
+    selectedDate: Date,
+    pageDate: Date,
+    pageTimestamp: Number,
+    fullMonthName: Boolean,
+    allowedToShowView: Function,
+    dayCellContent: {
+      type: Function,
+      "default": function _default(day) {
+        return day.date;
+      }
+    },
+    disabledDates: Object,
+    highlighted: Object,
+    calendarClass: [String, Object, Array],
+    calendarStyle: Object,
+    translation: Object,
+    isRtl: Boolean,
+    mondayFirst: Boolean,
+    useUtc: Boolean
+  },
+  data: function data() {
+    var constructedDateUtils = makeDateUtils(this.useUtc);
+    return {
+      utils: constructedDateUtils
+    };
+  },
+  computed: {
+    /**
+     * Returns an array of day names
+     * @return {String[]}
+     */
+    daysOfWeek: function daysOfWeek() {
+      if (this.mondayFirst) {
+        var tempDays = this.translation.days.slice();
+        tempDays.push(tempDays.shift());
+        return tempDays;
+      }
+
+      return this.translation.days;
+    },
+
+    /**
+     * Returns the day number of the week less one for the first of the current month
+     * Used to show amount of empty cells before the first in the day calendar layout
+     * @return {Number}
+     */
+    blankDays: function blankDays() {
+      var d = this.pageDate;
+      var dObj = this.useUtc ? new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1)) : new Date(d.getFullYear(), d.getMonth(), 1, d.getHours(), d.getMinutes());
+
+      if (this.mondayFirst) {
+        return this.utils.getDay(dObj) > 0 ? this.utils.getDay(dObj) - 1 : 6;
+      }
+
+      return this.utils.getDay(dObj);
+    },
+
+    /**
+     * @return {Object[]}
+     */
+    days: function days() {
+      var d = this.pageDate;
+      var days = []; // set up a new date object to the beginning of the current 'page'
+
+      var dObj = this.useUtc ? new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1)) : new Date(d.getFullYear(), d.getMonth(), 1, d.getHours(), d.getMinutes());
+      var daysInMonth = this.utils.daysInMonth(this.utils.getFullYear(dObj), this.utils.getMonth(dObj));
+
+      for (var i = 0; i < daysInMonth; i++) {
+        days.push({
+          date: this.utils.getDate(dObj),
+          timestamp: dObj.getTime(),
+          isSelected: this.isSelectedDate(dObj),
+          isDisabled: this.isDisabledDate(dObj),
+          isHighlighted: this.isHighlightedDate(dObj),
+          isHighlightStart: this.isHighlightStart(dObj),
+          isHighlightEnd: this.isHighlightEnd(dObj),
+          isToday: this.utils.compareDates(dObj, new Date()),
+          isWeekend: this.utils.getDay(dObj) === 0 || this.utils.getDay(dObj) === 6,
+          isSaturday: this.utils.getDay(dObj) === 6,
+          isSunday: this.utils.getDay(dObj) === 0
+        });
+        this.utils.setDate(dObj, this.utils.getDate(dObj) + 1);
+      }
+
+      return days;
+    },
+
+    /**
+     * Gets the name of the month the current page is on
+     * @return {String}
+     */
+    currMonthName: function currMonthName() {
+      var monthName = this.fullMonthName ? this.translation.months : this.translation.monthsAbbr;
+      return this.utils.getMonthNameAbbr(this.utils.getMonth(this.pageDate), monthName);
+    },
+
+    /**
+     * Gets the name of the year that current page is on
+     * @return {Number}
+     */
+    currYearName: function currYearName() {
+      var yearSuffix = this.translation.yearSuffix;
+      return "".concat(this.utils.getFullYear(this.pageDate)).concat(yearSuffix);
+    },
+
+    /**
+     * Is this translation using year/month/day format?
+     * @return {Boolean}
+     */
+    isYmd: function isYmd() {
+      return this.translation.ymd && this.translation.ymd === true;
+    },
+
+    /**
+     * Is the left hand navigation button disabled?
+     * @return {Boolean}
+     */
+    isLeftNavDisabled: function isLeftNavDisabled() {
+      return this.isRtl ? this.isNextMonthDisabled(this.pageTimestamp) : this.isPreviousMonthDisabled(this.pageTimestamp);
+    },
+
+    /**
+     * Is the right hand navigation button disabled?
+     * @return {Boolean}
+     */
+    isRightNavDisabled: function isRightNavDisabled() {
+      return this.isRtl ? this.isPreviousMonthDisabled(this.pageTimestamp) : this.isNextMonthDisabled(this.pageTimestamp);
+    }
+  },
+  methods: {
+    selectDate: function selectDate(date) {
+      if (date.isDisabled) {
+        this.$emit('selectedDisabled', date);
+        return false;
+      }
+
+      this.$emit('selectDate', date);
+    },
+
+    /**
+     * @return {Number}
+     */
+    getPageMonth: function getPageMonth() {
+      return this.utils.getMonth(this.pageDate);
+    },
+
+    /**
+     * Emit an event to show the month picker
+     */
+    showMonthCalendar: function showMonthCalendar() {
+      this.$emit('showMonthCalendar');
+    },
+
+    /**
+     * Change the page month
+     * @param {Number} incrementBy
+     */
+    changeMonth: function changeMonth(incrementBy) {
+      var date = this.pageDate;
+      this.utils.setMonth(date, this.utils.getMonth(date) + incrementBy);
+      this.$emit('changedMonth', date);
+    },
+
+    /**
+     * Decrement the page month
+     */
+    previousMonth: function previousMonth() {
+      if (!this.isPreviousMonthDisabled()) {
+        this.changeMonth(-1);
+      }
+    },
+
+    /**
+     * Is the previous month disabled?
+     * @return {Boolean}
+     */
+    isPreviousMonthDisabled: function isPreviousMonthDisabled() {
+      if (!this.disabledDates || !this.disabledDates.to) {
+        return false;
+      }
+
+      var d = this.pageDate;
+      return this.utils.getMonth(this.disabledDates.to) >= this.utils.getMonth(d) && this.utils.getFullYear(this.disabledDates.to) >= this.utils.getFullYear(d);
+    },
+
+    /**
+     * Increment the current page month
+     */
+    nextMonth: function nextMonth() {
+      if (!this.isNextMonthDisabled()) {
+        this.changeMonth(+1);
+      }
+    },
+
+    /**
+     * Is the next month disabled?
+     * @return {Boolean}
+     */
+    isNextMonthDisabled: function isNextMonthDisabled() {
+      if (!this.disabledDates || !this.disabledDates.from) {
+        return false;
+      }
+
+      var d = this.pageDate;
+      return this.utils.getMonth(this.disabledDates.from) <= this.utils.getMonth(d) && this.utils.getFullYear(this.disabledDates.from) <= this.utils.getFullYear(d);
+    },
+
+    /**
+     * Whether a day is selected
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isSelectedDate: function isSelectedDate(dObj) {
+      return this.selectedDate && this.utils.compareDates(this.selectedDate, dObj);
+    },
+
+    /**
+     * Whether a day is disabled
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isDisabledDate: function isDisabledDate(date) {
+      var _this = this;
+
+      var disabledDates = false;
+
+      if (typeof this.disabledDates === 'undefined') {
+        return false;
+      }
+
+      if (typeof this.disabledDates.dates !== 'undefined') {
+        this.disabledDates.dates.forEach(function (d) {
+          if (_this.utils.compareDates(date, d)) {
+            disabledDates = true;
+            return true;
+          }
+        });
+      }
+
+      if (typeof this.disabledDates.to !== 'undefined' && this.disabledDates.to && date < this.disabledDates.to) {
+        disabledDates = true;
+      }
+
+      if (typeof this.disabledDates.from !== 'undefined' && this.disabledDates.from && date > this.disabledDates.from) {
+        disabledDates = true;
+      }
+
+      if (typeof this.disabledDates.ranges !== 'undefined') {
+        this.disabledDates.ranges.forEach(function (range) {
+          if (typeof range.from !== 'undefined' && range.from && typeof range.to !== 'undefined' && range.to) {
+            if (date < range.to && date > range.from) {
+              disabledDates = true;
+              return true;
+            }
+          }
+        });
+      }
+
+      if (typeof this.disabledDates.days !== 'undefined' && this.disabledDates.days.indexOf(this.utils.getDay(date)) !== -1) {
+        disabledDates = true;
+      }
+
+      if (typeof this.disabledDates.daysOfMonth !== 'undefined' && this.disabledDates.daysOfMonth.indexOf(this.utils.getDate(date)) !== -1) {
+        disabledDates = true;
+      }
+
+      if (typeof this.disabledDates.customPredictor === 'function' && this.disabledDates.customPredictor(date)) {
+        disabledDates = true;
+      }
+
+      return disabledDates;
+    },
+
+    /**
+     * Whether a day is highlighted (only if it is not disabled already except when highlighted.includeDisabled is true)
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isHighlightedDate: function isHighlightedDate(date) {
+      var _this2 = this;
+
+      if (!(this.highlighted && this.highlighted.includeDisabled) && this.isDisabledDate(date)) {
+        return false;
+      }
+
+      var highlighted = false;
+
+      if (typeof this.highlighted === 'undefined') {
+        return false;
+      }
+
+      if (typeof this.highlighted.dates !== 'undefined') {
+        this.highlighted.dates.forEach(function (d) {
+          if (_this2.utils.compareDates(date, d)) {
+            highlighted = true;
+            return true;
+          }
+        });
+      }
+
+      if (this.isDefined(this.highlighted.from) && this.isDefined(this.highlighted.to)) {
+        highlighted = date >= this.highlighted.from && date <= this.highlighted.to;
+      }
+
+      if (typeof this.highlighted.days !== 'undefined' && this.highlighted.days.indexOf(this.utils.getDay(date)) !== -1) {
+        highlighted = true;
+      }
+
+      if (typeof this.highlighted.daysOfMonth !== 'undefined' && this.highlighted.daysOfMonth.indexOf(this.utils.getDate(date)) !== -1) {
+        highlighted = true;
+      }
+
+      if (typeof this.highlighted.customPredictor === 'function' && this.highlighted.customPredictor(date)) {
+        highlighted = true;
+      }
+
+      return highlighted;
+    },
+    dayClasses: function dayClasses(day) {
+      return {
+        'selected': day.isSelected,
+        'disabled': day.isDisabled,
+        'highlighted': day.isHighlighted,
+        'today': day.isToday,
+        'weekend': day.isWeekend,
+        'sat': day.isSaturday,
+        'sun': day.isSunday,
+        'highlight-start': day.isHighlightStart,
+        'highlight-end': day.isHighlightEnd
+      };
+    },
+
+    /**
+     * Whether a day is highlighted and it is the first date
+     * in the highlighted range of dates
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isHighlightStart: function isHighlightStart(date) {
+      return this.isHighlightedDate(date) && this.highlighted.from instanceof Date && this.utils.getFullYear(this.highlighted.from) === this.utils.getFullYear(date) && this.utils.getMonth(this.highlighted.from) === this.utils.getMonth(date) && this.utils.getDate(this.highlighted.from) === this.utils.getDate(date);
+    },
+
+    /**
+     * Whether a day is highlighted and it is the first date
+     * in the highlighted range of dates
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isHighlightEnd: function isHighlightEnd(date) {
+      return this.isHighlightedDate(date) && this.highlighted.to instanceof Date && this.utils.getFullYear(this.highlighted.to) === this.utils.getFullYear(date) && this.utils.getMonth(this.highlighted.to) === this.utils.getMonth(date) && this.utils.getDate(this.highlighted.to) === this.utils.getDate(date);
+    },
+
+    /**
+     * Helper
+     * @param  {mixed}  prop
+     * @return {Boolean}
+     */
+    isDefined: function isDefined(prop) {
+      return typeof prop !== 'undefined' && prop;
+    }
+  } // eslint-disable-next-line
+
+};
+
+/* script */
+const __vue_script__$1 = script$1;
+
+/* template */
+var __vue_render__$1 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.showDayView,
+          expression: "showDayView"
+        }
+      ],
+      class: [_vm.calendarClass, "vdp-datepicker__calendar"],
+      style: _vm.calendarStyle,
+      on: {
+        mousedown: function($event) {
+          $event.preventDefault();
+        }
+      }
+    },
+    [
+      _vm._t("beforeCalendarHeader"),
+      _vm._v(" "),
+      _c("header", [
+        _c(
+          "span",
+          {
+            staticClass: "prev",
+            class: { disabled: _vm.isLeftNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.nextMonth() : _vm.previousMonth();
+              }
+            }
+          },
+          [_vm._v("<")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "day__month_btn",
+            class: _vm.allowedToShowView("month") ? "up" : "",
+            on: { click: _vm.showMonthCalendar }
+          },
+          [
+            _vm._v(
+              _vm._s(_vm.isYmd ? _vm.currYearName : _vm.currMonthName) +
+                " " +
+                _vm._s(_vm.isYmd ? _vm.currMonthName : _vm.currYearName)
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "next",
+            class: { disabled: _vm.isRightNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.previousMonth() : _vm.nextMonth();
+              }
+            }
+          },
+          [_vm._v(">")]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { class: _vm.isRtl ? "flex-rtl" : "" },
+        [
+          _vm._l(_vm.daysOfWeek, function(d) {
+            return _c(
+              "span",
+              { key: d.timestamp, staticClass: "cell day-header" },
+              [_vm._v(_vm._s(d))]
+            )
+          }),
+          _vm._v(" "),
+          _vm.blankDays > 0
+            ? _vm._l(_vm.blankDays, function(d) {
+                return _c("span", {
+                  key: d.timestamp,
+                  staticClass: "cell day blank"
+                })
+              })
+            : _vm._e(),
+          _vm._l(_vm.days, function(day) {
+            return _c("span", {
+              key: day.timestamp,
+              staticClass: "cell day",
+              class: _vm.dayClasses(day),
+              domProps: { innerHTML: _vm._s(_vm.dayCellContent(day)) },
+              on: {
+                click: function($event) {
+                  return _vm.selectDate(day)
+                }
+              }
+            })
+          })
+        ],
+        2
+      )
+    ],
+    2
+  )
+};
+var __vue_staticRenderFns__$1 = [];
+__vue_render__$1._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$1 = undefined;
+  /* scoped */
+  const __vue_scope_id__$1 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$1 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$1 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var PickerDay = normalizeComponent_1(
+    { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
+    __vue_inject_styles__$1,
+    __vue_script__$1,
+    __vue_scope_id__$1,
+    __vue_is_functional_template__$1,
+    __vue_module_identifier__$1,
+    undefined,
+    undefined
+  );
+
+//
+var script$2 = {
+  props: {
+    showMonthView: Boolean,
+    selectedDate: Date,
+    pageDate: Date,
+    pageTimestamp: Number,
+    disabledDates: Object,
+    calendarClass: [String, Object, Array],
+    calendarStyle: Object,
+    translation: Object,
+    isRtl: Boolean,
+    allowedToShowView: Function,
+    useUtc: Boolean
+  },
+  data: function data() {
+    var constructedDateUtils = makeDateUtils(this.useUtc);
+    return {
+      utils: constructedDateUtils
+    };
+  },
+  computed: {
+    months: function months() {
+      var d = this.pageDate;
+      var months = []; // set up a new date object to the beginning of the current 'page'
+
+      var dObj = this.useUtc ? new Date(Date.UTC(d.getUTCFullYear(), 0, d.getUTCDate())) : new Date(d.getFullYear(), 0, d.getDate(), d.getHours(), d.getMinutes());
+
+      for (var i = 0; i < 12; i++) {
+        months.push({
+          month: this.utils.getMonthName(i, this.translation.months),
+          timestamp: dObj.getTime(),
+          isSelected: this.isSelectedMonth(dObj),
+          isDisabled: this.isDisabledMonth(dObj)
+        });
+        this.utils.setMonth(dObj, this.utils.getMonth(dObj) + 1);
+      }
+
+      return months;
+    },
+
+    /**
+     * Get year name on current page.
+     * @return {String}
+     */
+    pageYearName: function pageYearName() {
+      var yearSuffix = this.translation.yearSuffix;
+      return "".concat(this.utils.getFullYear(this.pageDate)).concat(yearSuffix);
+    },
+
+    /**
+     * Is the left hand navigation disabled
+     * @return {Boolean}
+     */
+    isLeftNavDisabled: function isLeftNavDisabled() {
+      return this.isRtl ? this.isNextYearDisabled(this.pageTimestamp) : this.isPreviousYearDisabled(this.pageTimestamp);
+    },
+
+    /**
+     * Is the right hand navigation disabled
+     * @return {Boolean}
+     */
+    isRightNavDisabled: function isRightNavDisabled() {
+      return this.isRtl ? this.isPreviousYearDisabled(this.pageTimestamp) : this.isNextYearDisabled(this.pageTimestamp);
+    }
+  },
+  methods: {
+    /**
+     * Emits a selectMonth event
+     * @param {Object} month
+     */
+    selectMonth: function selectMonth(month) {
+      if (month.isDisabled) {
+        return false;
+      }
+
+      this.$emit('selectMonth', month);
+    },
+
+    /**
+     * Changes the year up or down
+     * @param {Number} incrementBy
+     */
+    changeYear: function changeYear(incrementBy) {
+      var date = this.pageDate;
+      this.utils.setFullYear(date, this.utils.getFullYear(date) + incrementBy);
+      this.$emit('changedYear', date);
+    },
+
+    /**
+     * Decrements the year
+     */
+    previousYear: function previousYear() {
+      if (!this.isPreviousYearDisabled()) {
+        this.changeYear(-1);
+      }
+    },
+
+    /**
+     * Checks if the previous year is disabled or not
+     * @return {Boolean}
+     */
+    isPreviousYearDisabled: function isPreviousYearDisabled() {
+      if (!this.disabledDates || !this.disabledDates.to) {
+        return false;
+      }
+
+      return this.utils.getFullYear(this.disabledDates.to) >= this.utils.getFullYear(this.pageDate);
+    },
+
+    /**
+     * Increments the year
+     */
+    nextYear: function nextYear() {
+      if (!this.isNextYearDisabled()) {
+        this.changeYear(1);
+      }
+    },
+
+    /**
+     * Checks if the next year is disabled or not
+     * @return {Boolean}
+     */
+    isNextYearDisabled: function isNextYearDisabled() {
+      if (!this.disabledDates || !this.disabledDates.from) {
+        return false;
+      }
+
+      return this.utils.getFullYear(this.disabledDates.from) <= this.utils.getFullYear(this.pageDate);
+    },
+
+    /**
+     * Emits an event that shows the year calendar
+     */
+    showYearCalendar: function showYearCalendar() {
+      this.$emit('showYearCalendar');
+    },
+
+    /**
+     * Whether the selected date is in this month
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isSelectedMonth: function isSelectedMonth(date) {
+      return this.selectedDate && this.utils.getFullYear(this.selectedDate) === this.utils.getFullYear(date) && this.utils.getMonth(this.selectedDate) === this.utils.getMonth(date);
+    },
+
+    /**
+     * Whether a month is disabled
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isDisabledMonth: function isDisabledMonth(date) {
+      var disabledDates = false;
+
+      if (typeof this.disabledDates === 'undefined') {
+        return false;
+      }
+
+      if (typeof this.disabledDates.to !== 'undefined' && this.disabledDates.to) {
+        if (this.utils.getMonth(date) < this.utils.getMonth(this.disabledDates.to) && this.utils.getFullYear(date) <= this.utils.getFullYear(this.disabledDates.to) || this.utils.getFullYear(date) < this.utils.getFullYear(this.disabledDates.to)) {
+          disabledDates = true;
+        }
+      }
+
+      if (typeof this.disabledDates.from !== 'undefined' && this.disabledDates.from) {
+        if (this.utils.getMonth(date) > this.utils.getMonth(this.disabledDates.from) && this.utils.getFullYear(date) >= this.utils.getFullYear(this.disabledDates.from) || this.utils.getFullYear(date) > this.utils.getFullYear(this.disabledDates.from)) {
+          disabledDates = true;
+        }
+      }
+
+      if (typeof this.disabledDates.customPredictor === 'function' && this.disabledDates.customPredictor(date)) {
+        disabledDates = true;
+      }
+
+      return disabledDates;
+    }
+  } // eslint-disable-next-line
+
+};
+
+/* script */
+const __vue_script__$2 = script$2;
+
+/* template */
+var __vue_render__$2 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.showMonthView,
+          expression: "showMonthView"
+        }
+      ],
+      class: [_vm.calendarClass, "vdp-datepicker__calendar"],
+      style: _vm.calendarStyle,
+      on: {
+        mousedown: function($event) {
+          $event.preventDefault();
+        }
+      }
+    },
+    [
+      _vm._t("beforeCalendarHeader"),
+      _vm._v(" "),
+      _c("header", [
+        _c(
+          "span",
+          {
+            staticClass: "prev",
+            class: { disabled: _vm.isLeftNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.nextYear() : _vm.previousYear();
+              }
+            }
+          },
+          [_vm._v("<")]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "month__year_btn",
+            class: _vm.allowedToShowView("year") ? "up" : "",
+            on: { click: _vm.showYearCalendar }
+          },
+          [_vm._v(_vm._s(_vm.pageYearName))]
+        ),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "next",
+            class: { disabled: _vm.isRightNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.previousYear() : _vm.nextYear();
+              }
+            }
+          },
+          [_vm._v(">")]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.months, function(month) {
+        return _c(
+          "span",
+          {
+            key: month.timestamp,
+            staticClass: "cell month",
+            class: { selected: month.isSelected, disabled: month.isDisabled },
+            on: {
+              click: function($event) {
+                $event.stopPropagation();
+                return _vm.selectMonth(month)
+              }
+            }
+          },
+          [_vm._v(_vm._s(month.month))]
+        )
+      })
+    ],
+    2
+  )
+};
+var __vue_staticRenderFns__$2 = [];
+__vue_render__$2._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$2 = undefined;
+  /* scoped */
+  const __vue_scope_id__$2 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$2 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$2 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var PickerMonth = normalizeComponent_1(
+    { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
+    __vue_inject_styles__$2,
+    __vue_script__$2,
+    __vue_scope_id__$2,
+    __vue_is_functional_template__$2,
+    __vue_module_identifier__$2,
+    undefined,
+    undefined
+  );
+
+//
+var script$3 = {
+  props: {
+    showYearView: Boolean,
+    selectedDate: Date,
+    pageDate: Date,
+    pageTimestamp: Number,
+    disabledDates: Object,
+    highlighted: Object,
+    calendarClass: [String, Object, Array],
+    calendarStyle: Object,
+    translation: Object,
+    isRtl: Boolean,
+    allowedToShowView: Function,
+    useUtc: Boolean
+  },
+  computed: {
+    years: function years() {
+      var d = this.pageDate;
+      var years = []; // set up a new date object to the beginning of the current 'page'7
+
+      var dObj = this.useUtc ? new Date(Date.UTC(Math.floor(d.getUTCFullYear() / 10) * 10, d.getUTCMonth(), d.getUTCDate())) : new Date(Math.floor(d.getFullYear() / 10) * 10, d.getMonth(), d.getDate(), d.getHours(), d.getMinutes());
+
+      for (var i = 0; i < 10; i++) {
+        years.push({
+          year: this.utils.getFullYear(dObj),
+          timestamp: dObj.getTime(),
+          isSelected: this.isSelectedYear(dObj),
+          isDisabled: this.isDisabledYear(dObj)
+        });
+        this.utils.setFullYear(dObj, this.utils.getFullYear(dObj) + 1);
+      }
+
+      return years;
+    },
+
+    /**
+     * @return {String}
+     */
+    getPageDecade: function getPageDecade() {
+      var decadeStart = Math.floor(this.utils.getFullYear(this.pageDate) / 10) * 10;
+      var decadeEnd = decadeStart + 9;
+      var yearSuffix = this.translation.yearSuffix;
+      return "".concat(decadeStart, " - ").concat(decadeEnd).concat(yearSuffix);
+    },
+
+    /**
+     * Is the left hand navigation button disabled?
+     * @return {Boolean}
+     */
+    isLeftNavDisabled: function isLeftNavDisabled() {
+      return this.isRtl ? this.isNextDecadeDisabled(this.pageTimestamp) : this.isPreviousDecadeDisabled(this.pageTimestamp);
+    },
+
+    /**
+     * Is the right hand navigation button disabled?
+     * @return {Boolean}
+     */
+    isRightNavDisabled: function isRightNavDisabled() {
+      return this.isRtl ? this.isPreviousDecadeDisabled(this.pageTimestamp) : this.isNextDecadeDisabled(this.pageTimestamp);
+    }
+  },
+  data: function data() {
+    var constructedDateUtils = makeDateUtils(this.useUtc);
+    return {
+      utils: constructedDateUtils
+    };
+  },
+  methods: {
+    selectYear: function selectYear(year) {
+      if (year.isDisabled) {
+        return false;
+      }
+
+      this.$emit('selectYear', year);
+    },
+    changeYear: function changeYear(incrementBy) {
+      var date = this.pageDate;
+      this.utils.setFullYear(date, this.utils.getFullYear(date) + incrementBy);
+      this.$emit('changedDecade', date);
+    },
+    previousDecade: function previousDecade() {
+      if (this.isPreviousDecadeDisabled()) {
+        return false;
+      }
+
+      this.changeYear(-10);
+    },
+    isPreviousDecadeDisabled: function isPreviousDecadeDisabled() {
+      if (!this.disabledDates || !this.disabledDates.to) {
+        return false;
+      }
+
+      var disabledYear = this.utils.getFullYear(this.disabledDates.to);
+      var lastYearInPreviousPage = Math.floor(this.utils.getFullYear(this.pageDate) / 10) * 10 - 1;
+      return disabledYear > lastYearInPreviousPage;
+    },
+    nextDecade: function nextDecade() {
+      if (this.isNextDecadeDisabled()) {
+        return false;
+      }
+
+      this.changeYear(10);
+    },
+    isNextDecadeDisabled: function isNextDecadeDisabled() {
+      if (!this.disabledDates || !this.disabledDates.from) {
+        return false;
+      }
+
+      var disabledYear = this.utils.getFullYear(this.disabledDates.from);
+      var firstYearInNextPage = Math.ceil(this.utils.getFullYear(this.pageDate) / 10) * 10;
+      return disabledYear < firstYearInNextPage;
+    },
+
+    /**
+     * Whether the selected date is in this year
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isSelectedYear: function isSelectedYear(date) {
+      return this.selectedDate && this.utils.getFullYear(this.selectedDate) === this.utils.getFullYear(date);
+    },
+
+    /**
+     * Whether a year is disabled
+     * @param {Date}
+     * @return {Boolean}
+     */
+    isDisabledYear: function isDisabledYear(date) {
+      var disabledDates = false;
+
+      if (typeof this.disabledDates === 'undefined' || !this.disabledDates) {
+        return false;
+      }
+
+      if (typeof this.disabledDates.to !== 'undefined' && this.disabledDates.to) {
+        if (this.utils.getFullYear(date) < this.utils.getFullYear(this.disabledDates.to)) {
+          disabledDates = true;
+        }
+      }
+
+      if (typeof this.disabledDates.from !== 'undefined' && this.disabledDates.from) {
+        if (this.utils.getFullYear(date) > this.utils.getFullYear(this.disabledDates.from)) {
+          disabledDates = true;
+        }
+      }
+
+      if (typeof this.disabledDates.customPredictor === 'function' && this.disabledDates.customPredictor(date)) {
+        disabledDates = true;
+      }
+
+      return disabledDates;
+    }
+  } // eslint-disable-next-line
+
+};
+
+/* script */
+const __vue_script__$3 = script$3;
+
+/* template */
+var __vue_render__$3 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.showYearView,
+          expression: "showYearView"
+        }
+      ],
+      class: [_vm.calendarClass, "vdp-datepicker__calendar"],
+      style: _vm.calendarStyle,
+      on: {
+        mousedown: function($event) {
+          $event.preventDefault();
+        }
+      }
+    },
+    [
+      _vm._t("beforeCalendarHeader"),
+      _vm._v(" "),
+      _c("header", [
+        _c(
+          "span",
+          {
+            staticClass: "prev",
+            class: { disabled: _vm.isLeftNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.nextDecade() : _vm.previousDecade();
+              }
+            }
+          },
+          [_vm._v("<")]
+        ),
+        _vm._v(" "),
+        _c("span", [_vm._v(_vm._s(_vm.getPageDecade))]),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "next",
+            class: { disabled: _vm.isRightNavDisabled },
+            on: {
+              click: function($event) {
+                _vm.isRtl ? _vm.previousDecade() : _vm.nextDecade();
+              }
+            }
+          },
+          [_vm._v(">")]
+        )
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.years, function(year) {
+        return _c(
+          "span",
+          {
+            key: year.timestamp,
+            staticClass: "cell year",
+            class: { selected: year.isSelected, disabled: year.isDisabled },
+            on: {
+              click: function($event) {
+                $event.stopPropagation();
+                return _vm.selectYear(year)
+              }
+            }
+          },
+          [_vm._v(_vm._s(year.year))]
+        )
+      })
+    ],
+    2
+  )
+};
+var __vue_staticRenderFns__$3 = [];
+__vue_render__$3._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$3 = undefined;
+  /* scoped */
+  const __vue_scope_id__$3 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$3 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$3 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var PickerYear = normalizeComponent_1(
+    { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
+    __vue_inject_styles__$3,
+    __vue_script__$3,
+    __vue_scope_id__$3,
+    __vue_is_functional_template__$3,
+    __vue_module_identifier__$3,
+    undefined,
+    undefined
+  );
+
+//
+var script$4 = {
+  components: {
+    DateInput: DateInput,
+    PickerDay: PickerDay,
+    PickerMonth: PickerMonth,
+    PickerYear: PickerYear
+  },
+  props: {
+    value: {
+      validator: function validator(val) {
+        return utils$1.validateDateInput(val);
+      }
+    },
+    name: String,
+    refName: String,
+    id: String,
+    format: {
+      type: [String, Function],
+      "default": 'dd MMM yyyy'
+    },
+    language: {
+      type: Object,
+      "default": function _default() {
+        return en;
+      }
+    },
+    openDate: {
+      validator: function validator(val) {
+        return utils$1.validateDateInput(val);
+      }
+    },
+    dayCellContent: Function,
+    fullMonthName: Boolean,
+    disabledDates: Object,
+    highlighted: Object,
+    placeholder: String,
+    inline: Boolean,
+    calendarClass: [String, Object, Array],
+    inputClass: [String, Object, Array],
+    wrapperClass: [String, Object, Array],
+    mondayFirst: Boolean,
+    clearButton: Boolean,
+    clearButtonIcon: String,
+    calendarButton: Boolean,
+    calendarButtonIcon: String,
+    calendarButtonIconContent: String,
+    bootstrapStyling: Boolean,
+    initialView: String,
+    disabled: Boolean,
+    required: Boolean,
+    typeable: Boolean,
+    useUtc: Boolean,
+    minimumView: {
+      type: String,
+      "default": 'day'
+    },
+    maximumView: {
+      type: String,
+      "default": 'year'
+    }
+  },
+  data: function data() {
+    var startDate = this.openDate ? new Date(this.openDate) : new Date();
+    var constructedDateUtils = makeDateUtils(this.useUtc);
+    var pageTimestamp = constructedDateUtils.setDate(startDate, 1);
+    return {
+      /*
+       * Vue cannot observe changes to a Date Object so date must be stored as a timestamp
+       * This represents the first day of the current viewing month
+       * {Number}
+       */
+      pageTimestamp: pageTimestamp,
+
+      /*
+       * Selected Date
+       * {Date}
+       */
+      selectedDate: null,
+
+      /*
+       * Flags to show calendar views
+       * {Boolean}
+       */
+      showDayView: false,
+      showMonthView: false,
+      showYearView: false,
+
+      /*
+       * Positioning
+       */
+      calendarHeight: 0,
+      resetTypedDate: new Date(),
+      utils: constructedDateUtils
+    };
+  },
+  watch: {
+    value: function value(_value) {
+      this.setValue(_value);
+    },
+    openDate: function openDate() {
+      this.setPageDate();
+    },
+    initialView: function initialView() {
+      this.setInitialView();
+    }
+  },
+  computed: {
+    computedInitialView: function computedInitialView() {
+      if (!this.initialView) {
+        return this.minimumView;
+      }
+
+      return this.initialView;
+    },
+    pageDate: function pageDate() {
+      return new Date(this.pageTimestamp);
+    },
+    translation: function translation() {
+      return this.language;
+    },
+    calendarStyle: function calendarStyle() {
+      return {
+        position: this.isInline ? 'static' : undefined
+      };
+    },
+    isOpen: function isOpen() {
+      return this.showDayView || this.showMonthView || this.showYearView;
+    },
+    isInline: function isInline() {
+      return !!this.inline;
+    },
+    isRtl: function isRtl() {
+      return this.translation.rtl === true;
+    }
+  },
+  methods: {
+    /**
+     * Called in the event that the user navigates to date pages and
+     * closes the picker without selecting a date.
+     */
+    resetDefaultPageDate: function resetDefaultPageDate() {
+      if (this.selectedDate === null) {
+        this.setPageDate();
+        return;
+      }
+
+      this.setPageDate(this.selectedDate);
+    },
+
+    /**
+     * Effectively a toggle to show/hide the calendar
+     * @return {mixed}
+     */
+    showCalendar: function showCalendar() {
+      if (this.disabled || this.isInline) {
+        return false;
+      }
+
+      if (this.isOpen) {
+        return this.close(true);
+      }
+
+      this.setInitialView();
+    },
+
+    /**
+     * Sets the initial picker page view: day, month or year
+     */
+    setInitialView: function setInitialView() {
+      var initialView = this.computedInitialView;
+
+      if (!this.allowedToShowView(initialView)) {
+        throw new Error("initialView '".concat(this.initialView, "' cannot be rendered based on minimum '").concat(this.minimumView, "' and maximum '").concat(this.maximumView, "'"));
+      }
+
+      switch (initialView) {
+        case 'year':
+          this.showYearCalendar();
+          break;
+
+        case 'month':
+          this.showMonthCalendar();
+          break;
+
+        default:
+          this.showDayCalendar();
+          break;
+      }
+    },
+
+    /**
+     * Are we allowed to show a specific picker view?
+     * @param {String} view
+     * @return {Boolean}
+     */
+    allowedToShowView: function allowedToShowView(view) {
+      var views = ['day', 'month', 'year'];
+      var minimumViewIndex = views.indexOf(this.minimumView);
+      var maximumViewIndex = views.indexOf(this.maximumView);
+      var viewIndex = views.indexOf(view);
+      return viewIndex >= minimumViewIndex && viewIndex <= maximumViewIndex;
+    },
+
+    /**
+     * Show the day picker
+     * @return {Boolean}
+     */
+    showDayCalendar: function showDayCalendar() {
+      if (!this.allowedToShowView('day')) {
+        return false;
+      }
+
+      this.close();
+      this.showDayView = true;
+      return true;
+    },
+
+    /**
+     * Show the month picker
+     * @return {Boolean}
+     */
+    showMonthCalendar: function showMonthCalendar() {
+      if (!this.allowedToShowView('month')) {
+        return false;
+      }
+
+      this.close();
+      this.showMonthView = true;
+      return true;
+    },
+
+    /**
+     * Show the year picker
+     * @return {Boolean}
+     */
+    showYearCalendar: function showYearCalendar() {
+      if (!this.allowedToShowView('year')) {
+        return false;
+      }
+
+      this.close();
+      this.showYearView = true;
+      return true;
+    },
+
+    /**
+     * Set the selected date
+     * @param {Number} timestamp
+     */
+    setDate: function setDate(timestamp) {
+      var date = new Date(timestamp);
+      this.selectedDate = date;
+      this.setPageDate(date);
+      this.$emit('selected', date);
+      this.$emit('input', date);
+    },
+
+    /**
+     * Clear the selected date
+     */
+    clearDate: function clearDate() {
+      this.selectedDate = null;
+      this.setPageDate();
+      this.$emit('selected', null);
+      this.$emit('input', null);
+      this.$emit('cleared');
+    },
+
+    /**
+     * @param {Object} date
+     */
+    selectDate: function selectDate(date) {
+      this.setDate(date.timestamp);
+
+      if (!this.isInline) {
+        this.close(true);
+      }
+
+      this.resetTypedDate = new Date();
+    },
+
+    /**
+     * @param {Object} date
+     */
+    selectDisabledDate: function selectDisabledDate(date) {
+      this.$emit('selectedDisabled', date);
+    },
+
+    /**
+     * @param {Object} month
+     */
+    selectMonth: function selectMonth(month) {
+      var date = new Date(month.timestamp);
+
+      if (this.allowedToShowView('day')) {
+        this.setPageDate(date);
+        this.$emit('changedMonth', month);
+        this.showDayCalendar();
+      } else {
+        this.selectDate(month);
+      }
+    },
+
+    /**
+     * @param {Object} year
+     */
+    selectYear: function selectYear(year) {
+      var date = new Date(year.timestamp);
+
+      if (this.allowedToShowView('month')) {
+        this.setPageDate(date);
+        this.$emit('changedYear', year);
+        this.showMonthCalendar();
+      } else {
+        this.selectDate(year);
+      }
+    },
+
+    /**
+     * Set the datepicker value
+     * @param {Date|String|Number|null} date
+     */
+    setValue: function setValue(date) {
+      if (typeof date === 'string' || typeof date === 'number') {
+        var parsed = new Date(date);
+        date = isNaN(parsed.valueOf()) ? null : parsed;
+      }
+
+      if (!date) {
+        this.setPageDate();
+        this.selectedDate = null;
+        return;
+      }
+
+      this.selectedDate = date;
+      this.setPageDate(date);
+    },
+
+    /**
+     * Sets the date that the calendar should open on
+     */
+    setPageDate: function setPageDate(date) {
+      if (!date) {
+        if (this.openDate) {
+          date = new Date(this.openDate);
+        } else {
+          date = new Date();
+        }
+      }
+
+      this.pageTimestamp = this.utils.setDate(new Date(date), 1);
+    },
+
+    /**
+     * Handles a month change from the day picker
+     */
+    handleChangedMonthFromDayPicker: function handleChangedMonthFromDayPicker(date) {
+      this.setPageDate(date);
+      this.$emit('changedMonth', date);
+    },
+
+    /**
+     * Set the date from a typedDate event
+     */
+    setTypedDate: function setTypedDate(date) {
+      this.setDate(date.getTime());
+    },
+
+    /**
+     * Close all calendar layers
+     * @param {Boolean} emitEvent - emit close event
+     */
+    close: function close(emitEvent) {
+      this.showDayView = this.showMonthView = this.showYearView = false;
+
+      if (!this.isInline) {
+        if (emitEvent) {
+          this.$emit('closed');
+        }
+
+        document.removeEventListener('click', this.clickOutside, false);
+      }
+    },
+
+    /**
+     * Initiate the component
+     */
+    init: function init() {
+      if (this.value) {
+        this.setValue(this.value);
+      }
+
+      if (this.isInline) {
+        this.setInitialView();
+      }
+    }
+  },
+  mounted: function mounted() {
+    this.init();
+  }
+} // eslint-disable-next-line
+;
+
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+function createInjector(context) {
+  return function (id, style) {
+    return addStyle(id, style);
+  };
+}
+var HEAD = document.head || document.getElementsByTagName('head')[0];
+var styles = {};
+
+function addStyle(id, css) {
+  var group = isOldIE ? css.media || 'default' : id;
+  var style = styles[group] || (styles[group] = {
+    ids: new Set(),
+    styles: []
+  });
+
+  if (!style.ids.has(id)) {
+    style.ids.add(id);
+    var code = css.source;
+
+    if (css.map) {
+      // https://developer.chrome.com/devtools/docs/javascript-debugging
+      // this makes source maps inside style tags work properly in Chrome
+      code += '\n/*# sourceURL=' + css.map.sources[0] + ' */'; // http://stackoverflow.com/a/26603875
+
+      code += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) + ' */';
+    }
+
+    if (!style.element) {
+      style.element = document.createElement('style');
+      style.element.type = 'text/css';
+      if (css.media) style.element.setAttribute('media', css.media);
+      HEAD.appendChild(style.element);
+    }
+
+    if ('styleSheet' in style.element) {
+      style.styles.push(code);
+      style.element.styleSheet.cssText = style.styles.filter(Boolean).join('\n');
+    } else {
+      var index = style.ids.size - 1;
+      var textNode = document.createTextNode(code);
+      var nodes = style.element.childNodes;
+      if (nodes[index]) style.element.removeChild(nodes[index]);
+      if (nodes.length) style.element.insertBefore(textNode, nodes[index]);else style.element.appendChild(textNode);
+    }
+  }
+}
+
+var browser = createInjector;
+
+/* script */
+const __vue_script__$4 = script$4;
+
+/* template */
+var __vue_render__$4 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      staticClass: "vdp-datepicker",
+      class: [_vm.wrapperClass, _vm.isRtl ? "rtl" : ""]
+    },
+    [
+      _c(
+        "date-input",
+        {
+          attrs: {
+            selectedDate: _vm.selectedDate,
+            resetTypedDate: _vm.resetTypedDate,
+            format: _vm.format,
+            translation: _vm.translation,
+            inline: _vm.inline,
+            id: _vm.id,
+            name: _vm.name,
+            refName: _vm.refName,
+            openDate: _vm.openDate,
+            placeholder: _vm.placeholder,
+            inputClass: _vm.inputClass,
+            typeable: _vm.typeable,
+            clearButton: _vm.clearButton,
+            clearButtonIcon: _vm.clearButtonIcon,
+            calendarButton: _vm.calendarButton,
+            calendarButtonIcon: _vm.calendarButtonIcon,
+            calendarButtonIconContent: _vm.calendarButtonIconContent,
+            disabled: _vm.disabled,
+            required: _vm.required,
+            bootstrapStyling: _vm.bootstrapStyling,
+            "use-utc": _vm.useUtc
+          },
+          on: {
+            showCalendar: _vm.showCalendar,
+            closeCalendar: _vm.close,
+            typedDate: _vm.setTypedDate,
+            clearDate: _vm.clearDate
+          }
+        },
+        [_vm._t("afterDateInput", null, { slot: "afterDateInput" })],
+        2
+      ),
+      _vm._v(" "),
+      _vm.allowedToShowView("day")
+        ? _c(
+            "picker-day",
+            {
+              attrs: {
+                pageDate: _vm.pageDate,
+                selectedDate: _vm.selectedDate,
+                showDayView: _vm.showDayView,
+                fullMonthName: _vm.fullMonthName,
+                allowedToShowView: _vm.allowedToShowView,
+                disabledDates: _vm.disabledDates,
+                highlighted: _vm.highlighted,
+                calendarClass: _vm.calendarClass,
+                calendarStyle: _vm.calendarStyle,
+                translation: _vm.translation,
+                pageTimestamp: _vm.pageTimestamp,
+                isRtl: _vm.isRtl,
+                mondayFirst: _vm.mondayFirst,
+                dayCellContent: _vm.dayCellContent,
+                "use-utc": _vm.useUtc
+              },
+              on: {
+                changedMonth: _vm.handleChangedMonthFromDayPicker,
+                selectDate: _vm.selectDate,
+                showMonthCalendar: _vm.showMonthCalendar,
+                selectedDisabled: _vm.selectDisabledDate
+              }
+            },
+            [
+              _vm._t("beforeCalendarHeader", null, {
+                slot: "beforeCalendarHeader"
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.allowedToShowView("month")
+        ? _c(
+            "picker-month",
+            {
+              attrs: {
+                pageDate: _vm.pageDate,
+                selectedDate: _vm.selectedDate,
+                showMonthView: _vm.showMonthView,
+                allowedToShowView: _vm.allowedToShowView,
+                disabledDates: _vm.disabledDates,
+                calendarClass: _vm.calendarClass,
+                calendarStyle: _vm.calendarStyle,
+                translation: _vm.translation,
+                isRtl: _vm.isRtl,
+                "use-utc": _vm.useUtc
+              },
+              on: {
+                selectMonth: _vm.selectMonth,
+                showYearCalendar: _vm.showYearCalendar,
+                changedYear: _vm.setPageDate
+              }
+            },
+            [
+              _vm._t("beforeCalendarHeader", null, {
+                slot: "beforeCalendarHeader"
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.allowedToShowView("year")
+        ? _c(
+            "picker-year",
+            {
+              attrs: {
+                pageDate: _vm.pageDate,
+                selectedDate: _vm.selectedDate,
+                showYearView: _vm.showYearView,
+                allowedToShowView: _vm.allowedToShowView,
+                disabledDates: _vm.disabledDates,
+                calendarClass: _vm.calendarClass,
+                calendarStyle: _vm.calendarStyle,
+                translation: _vm.translation,
+                isRtl: _vm.isRtl,
+                "use-utc": _vm.useUtc
+              },
+              on: { selectYear: _vm.selectYear, changedDecade: _vm.setPageDate }
+            },
+            [
+              _vm._t("beforeCalendarHeader", null, {
+                slot: "beforeCalendarHeader"
+              })
+            ],
+            2
+          )
+        : _vm._e()
+    ],
+    1
+  )
+};
+var __vue_staticRenderFns__$4 = [];
+__vue_render__$4._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$4 = function (inject) {
+    if (!inject) return
+    inject("data-v-64ca2bb5_0", { source: ".rtl {\n  direction: rtl;\n}\n.vdp-datepicker {\n  position: relative;\n  text-align: left;\n}\n.vdp-datepicker * {\n  box-sizing: border-box;\n}\n.vdp-datepicker__calendar {\n  position: absolute;\n  z-index: 100;\n  background: #fff;\n  width: 300px;\n  border: 1px solid #ccc;\n}\n.vdp-datepicker__calendar header {\n  display: block;\n  line-height: 40px;\n}\n.vdp-datepicker__calendar header span {\n  display: inline-block;\n  text-align: center;\n  width: 71.42857142857143%;\n  float: left;\n}\n.vdp-datepicker__calendar header .prev,\n.vdp-datepicker__calendar header .next {\n  width: 14.285714285714286%;\n  float: left;\n  text-indent: -10000px;\n  position: relative;\n}\n.vdp-datepicker__calendar header .prev:after,\n.vdp-datepicker__calendar header .next:after {\n  content: '';\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translateX(-50%) translateY(-50%);\n  border: 6px solid transparent;\n}\n.vdp-datepicker__calendar header .prev:after {\n  border-right: 10px solid #000;\n  margin-left: -5px;\n}\n.vdp-datepicker__calendar header .prev.disabled:after {\n  border-right: 10px solid #ddd;\n}\n.vdp-datepicker__calendar header .next:after {\n  border-left: 10px solid #000;\n  margin-left: 5px;\n}\n.vdp-datepicker__calendar header .next.disabled:after {\n  border-left: 10px solid #ddd;\n}\n.vdp-datepicker__calendar header .prev:not(.disabled),\n.vdp-datepicker__calendar header .next:not(.disabled),\n.vdp-datepicker__calendar header .up:not(.disabled) {\n  cursor: pointer;\n}\n.vdp-datepicker__calendar header .prev:not(.disabled):hover,\n.vdp-datepicker__calendar header .next:not(.disabled):hover,\n.vdp-datepicker__calendar header .up:not(.disabled):hover {\n  background: #eee;\n}\n.vdp-datepicker__calendar .disabled {\n  color: #ddd;\n  cursor: default;\n}\n.vdp-datepicker__calendar .flex-rtl {\n  display: flex;\n  width: inherit;\n  flex-wrap: wrap;\n}\n.vdp-datepicker__calendar .cell {\n  display: inline-block;\n  padding: 0 5px;\n  width: 14.285714285714286%;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n  vertical-align: middle;\n  border: 1px solid transparent;\n}\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year {\n  cursor: pointer;\n}\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {\n  border: 1px solid #4bd;\n}\n.vdp-datepicker__calendar .cell.selected {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.selected:hover {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.selected.highlighted {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.highlighted {\n  background: #cae5ed;\n}\n.vdp-datepicker__calendar .cell.highlighted.disabled {\n  color: #a3a3a3;\n}\n.vdp-datepicker__calendar .cell.grey {\n  color: #888;\n}\n.vdp-datepicker__calendar .cell.grey:hover {\n  background: inherit;\n}\n.vdp-datepicker__calendar .cell.day-header {\n  font-size: 75%;\n  white-space: nowrap;\n  cursor: inherit;\n}\n.vdp-datepicker__calendar .cell.day-header:hover {\n  background: inherit;\n}\n.vdp-datepicker__calendar .month,\n.vdp-datepicker__calendar .year {\n  width: 33.333%;\n}\n.vdp-datepicker__clear-button,\n.vdp-datepicker__calendar-button {\n  cursor: pointer;\n  font-style: normal;\n}\n.vdp-datepicker__clear-button.disabled,\n.vdp-datepicker__calendar-button.disabled {\n  color: #999;\n  cursor: default;\n}\n", map: {"version":3,"sources":["Datepicker.vue"],"names":[],"mappings":"AAAA;EACE,cAAc;AAChB;AACA;EACE,kBAAkB;EAClB,gBAAgB;AAClB;AACA;EACE,sBAAsB;AACxB;AACA;EACE,kBAAkB;EAClB,YAAY;EACZ,gBAAgB;EAChB,YAAY;EACZ,sBAAsB;AACxB;AACA;EACE,cAAc;EACd,iBAAiB;AACnB;AACA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,yBAAyB;EACzB,WAAW;AACb;AACA;;EAEE,0BAA0B;EAC1B,WAAW;EACX,qBAAqB;EACrB,kBAAkB;AACpB;AACA;;EAEE,WAAW;EACX,kBAAkB;EAClB,SAAS;EACT,QAAQ;EACR,4CAA4C;EAC5C,6BAA6B;AAC/B;AACA;EACE,6BAA6B;EAC7B,iBAAiB;AACnB;AACA;EACE,6BAA6B;AAC/B;AACA;EACE,4BAA4B;EAC5B,gBAAgB;AAClB;AACA;EACE,4BAA4B;AAC9B;AACA;;;EAGE,eAAe;AACjB;AACA;;;EAGE,gBAAgB;AAClB;AACA;EACE,WAAW;EACX,eAAe;AACjB;AACA;EACE,aAAa;EACb,cAAc;EACd,eAAe;AACjB;AACA;EACE,qBAAqB;EACrB,cAAc;EACd,0BAA0B;EAC1B,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,sBAAsB;EACtB,6BAA6B;AAC/B;AACA;;;EAGE,eAAe;AACjB;AACA;;;EAGE,sBAAsB;AACxB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,cAAc;AAChB;AACA;EACE,WAAW;AACb;AACA;EACE,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,mBAAmB;EACnB,eAAe;AACjB;AACA;EACE,mBAAmB;AACrB;AACA;;EAEE,cAAc;AAChB;AACA;;EAEE,eAAe;EACf,kBAAkB;AACpB;AACA;;EAEE,WAAW;EACX,eAAe;AACjB","file":"Datepicker.vue","sourcesContent":[".rtl {\n  direction: rtl;\n}\n.vdp-datepicker {\n  position: relative;\n  text-align: left;\n}\n.vdp-datepicker * {\n  box-sizing: border-box;\n}\n.vdp-datepicker__calendar {\n  position: absolute;\n  z-index: 100;\n  background: #fff;\n  width: 300px;\n  border: 1px solid #ccc;\n}\n.vdp-datepicker__calendar header {\n  display: block;\n  line-height: 40px;\n}\n.vdp-datepicker__calendar header span {\n  display: inline-block;\n  text-align: center;\n  width: 71.42857142857143%;\n  float: left;\n}\n.vdp-datepicker__calendar header .prev,\n.vdp-datepicker__calendar header .next {\n  width: 14.285714285714286%;\n  float: left;\n  text-indent: -10000px;\n  position: relative;\n}\n.vdp-datepicker__calendar header .prev:after,\n.vdp-datepicker__calendar header .next:after {\n  content: '';\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translateX(-50%) translateY(-50%);\n  border: 6px solid transparent;\n}\n.vdp-datepicker__calendar header .prev:after {\n  border-right: 10px solid #000;\n  margin-left: -5px;\n}\n.vdp-datepicker__calendar header .prev.disabled:after {\n  border-right: 10px solid #ddd;\n}\n.vdp-datepicker__calendar header .next:after {\n  border-left: 10px solid #000;\n  margin-left: 5px;\n}\n.vdp-datepicker__calendar header .next.disabled:after {\n  border-left: 10px solid #ddd;\n}\n.vdp-datepicker__calendar header .prev:not(.disabled),\n.vdp-datepicker__calendar header .next:not(.disabled),\n.vdp-datepicker__calendar header .up:not(.disabled) {\n  cursor: pointer;\n}\n.vdp-datepicker__calendar header .prev:not(.disabled):hover,\n.vdp-datepicker__calendar header .next:not(.disabled):hover,\n.vdp-datepicker__calendar header .up:not(.disabled):hover {\n  background: #eee;\n}\n.vdp-datepicker__calendar .disabled {\n  color: #ddd;\n  cursor: default;\n}\n.vdp-datepicker__calendar .flex-rtl {\n  display: flex;\n  width: inherit;\n  flex-wrap: wrap;\n}\n.vdp-datepicker__calendar .cell {\n  display: inline-block;\n  padding: 0 5px;\n  width: 14.285714285714286%;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n  vertical-align: middle;\n  border: 1px solid transparent;\n}\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year {\n  cursor: pointer;\n}\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,\n.vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {\n  border: 1px solid #4bd;\n}\n.vdp-datepicker__calendar .cell.selected {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.selected:hover {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.selected.highlighted {\n  background: #4bd;\n}\n.vdp-datepicker__calendar .cell.highlighted {\n  background: #cae5ed;\n}\n.vdp-datepicker__calendar .cell.highlighted.disabled {\n  color: #a3a3a3;\n}\n.vdp-datepicker__calendar .cell.grey {\n  color: #888;\n}\n.vdp-datepicker__calendar .cell.grey:hover {\n  background: inherit;\n}\n.vdp-datepicker__calendar .cell.day-header {\n  font-size: 75%;\n  white-space: nowrap;\n  cursor: inherit;\n}\n.vdp-datepicker__calendar .cell.day-header:hover {\n  background: inherit;\n}\n.vdp-datepicker__calendar .month,\n.vdp-datepicker__calendar .year {\n  width: 33.333%;\n}\n.vdp-datepicker__clear-button,\n.vdp-datepicker__calendar-button {\n  cursor: pointer;\n  font-style: normal;\n}\n.vdp-datepicker__clear-button.disabled,\n.vdp-datepicker__calendar-button.disabled {\n  color: #999;\n  cursor: default;\n}\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  const __vue_scope_id__$4 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$4 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$4 = false;
+  /* style inject SSR */
+  
+
+  
+  var Datepicker = normalizeComponent_1(
+    { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
+    __vue_inject_styles__$4,
+    __vue_script__$4,
+    __vue_scope_id__$4,
+    __vue_is_functional_template__$4,
+    __vue_module_identifier__$4,
+    browser,
+    undefined
+  );
+
+/* harmony default export */ __webpack_exports__["default"] = (Datepicker);
+
+
+/***/ }),
+
+/***/ "./node_modules/vuex/dist/vuex.esm.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
+  \********************************************/
+/*! exports provided: default, Store, createNamespacedHelpers, install, mapActions, mapGetters, mapMutations, mapState */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Store", function() { return Store; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNamespacedHelpers", function() { return createNamespacedHelpers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "install", function() { return install; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapActions", function() { return mapActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapGetters", function() { return mapGetters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapMutations", function() { return mapMutations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapState", function() { return mapState; });
+/*!
+ * vuex v3.4.0
+ * (c) 2020 Evan You
+ * @license MIT
+ */
+function applyMixin (Vue) {
+  var version = Number(Vue.version.split('.')[0]);
+
+  if (version >= 2) {
+    Vue.mixin({ beforeCreate: vuexInit });
+  } else {
+    // override init and inject vuex init procedure
+    // for 1.x backwards compatibility.
+    var _init = Vue.prototype._init;
+    Vue.prototype._init = function (options) {
+      if ( options === void 0 ) options = {};
+
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit;
+      _init.call(this, options);
+    };
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+  function vuexInit () {
+    var options = this.$options;
+    // store injection
+    if (options.store) {
+      this.$store = typeof options.store === 'function'
+        ? options.store()
+        : options.store;
+    } else if (options.parent && options.parent.$store) {
+      this.$store = options.parent.$store;
+    }
+  }
+}
+
+var target = typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+    ? global
+    : {};
+var devtoolHook = target.__VUE_DEVTOOLS_GLOBAL_HOOK__;
+
+function devtoolPlugin (store) {
+  if (!devtoolHook) { return }
+
+  store._devtoolHook = devtoolHook;
+
+  devtoolHook.emit('vuex:init', store);
+
+  devtoolHook.on('vuex:travel-to-state', function (targetState) {
+    store.replaceState(targetState);
+  });
+
+  store.subscribe(function (mutation, state) {
+    devtoolHook.emit('vuex:mutation', mutation, state);
+  }, { prepend: true });
+
+  store.subscribeAction(function (action, state) {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
+}
+
+/**
+ * Get the first item that pass the test
+ * by second argument function
+ *
+ * @param {Array} list
+ * @param {Function} f
+ * @return {*}
+ */
+
+/**
+ * forEach for object
+ */
+function forEachValue (obj, fn) {
+  Object.keys(obj).forEach(function (key) { return fn(obj[key], key); });
+}
+
+function isObject (obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
+function isPromise (val) {
+  return val && typeof val.then === 'function'
+}
+
+function assert (condition, msg) {
+  if (!condition) { throw new Error(("[vuex] " + msg)) }
+}
+
+function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+// Base data struct for store's module, package with some attribute and method
+var Module = function Module (rawModule, runtime) {
+  this.runtime = runtime;
+  // Store some children item
+  this._children = Object.create(null);
+  // Store the origin module object which passed by programmer
+  this._rawModule = rawModule;
+  var rawState = rawModule.state;
+
+  // Store the origin module's state
+  this.state = (typeof rawState === 'function' ? rawState() : rawState) || {};
+};
+
+var prototypeAccessors = { namespaced: { configurable: true } };
+
+prototypeAccessors.namespaced.get = function () {
+  return !!this._rawModule.namespaced
+};
+
+Module.prototype.addChild = function addChild (key, module) {
+  this._children[key] = module;
+};
+
+Module.prototype.removeChild = function removeChild (key) {
+  delete this._children[key];
+};
+
+Module.prototype.getChild = function getChild (key) {
+  return this._children[key]
+};
+
+Module.prototype.hasChild = function hasChild (key) {
+  return key in this._children
+};
+
+Module.prototype.update = function update (rawModule) {
+  this._rawModule.namespaced = rawModule.namespaced;
+  if (rawModule.actions) {
+    this._rawModule.actions = rawModule.actions;
+  }
+  if (rawModule.mutations) {
+    this._rawModule.mutations = rawModule.mutations;
+  }
+  if (rawModule.getters) {
+    this._rawModule.getters = rawModule.getters;
+  }
+};
+
+Module.prototype.forEachChild = function forEachChild (fn) {
+  forEachValue(this._children, fn);
+};
+
+Module.prototype.forEachGetter = function forEachGetter (fn) {
+  if (this._rawModule.getters) {
+    forEachValue(this._rawModule.getters, fn);
+  }
+};
+
+Module.prototype.forEachAction = function forEachAction (fn) {
+  if (this._rawModule.actions) {
+    forEachValue(this._rawModule.actions, fn);
+  }
+};
+
+Module.prototype.forEachMutation = function forEachMutation (fn) {
+  if (this._rawModule.mutations) {
+    forEachValue(this._rawModule.mutations, fn);
+  }
+};
+
+Object.defineProperties( Module.prototype, prototypeAccessors );
+
+var ModuleCollection = function ModuleCollection (rawRootModule) {
+  // register root module (Vuex.Store options)
+  this.register([], rawRootModule, false);
+};
+
+ModuleCollection.prototype.get = function get (path) {
+  return path.reduce(function (module, key) {
+    return module.getChild(key)
+  }, this.root)
+};
+
+ModuleCollection.prototype.getNamespace = function getNamespace (path) {
+  var module = this.root;
+  return path.reduce(function (namespace, key) {
+    module = module.getChild(key);
+    return namespace + (module.namespaced ? key + '/' : '')
+  }, '')
+};
+
+ModuleCollection.prototype.update = function update$1 (rawRootModule) {
+  update([], this.root, rawRootModule);
+};
+
+ModuleCollection.prototype.register = function register (path, rawModule, runtime) {
+    var this$1 = this;
+    if ( runtime === void 0 ) runtime = true;
+
+  if ((true)) {
+    assertRawModule(path, rawModule);
+  }
+
+  var newModule = new Module(rawModule, runtime);
+  if (path.length === 0) {
+    this.root = newModule;
+  } else {
+    var parent = this.get(path.slice(0, -1));
+    parent.addChild(path[path.length - 1], newModule);
+  }
+
+  // register nested modules
+  if (rawModule.modules) {
+    forEachValue(rawModule.modules, function (rawChildModule, key) {
+      this$1.register(path.concat(key), rawChildModule, runtime);
+    });
+  }
+};
+
+ModuleCollection.prototype.unregister = function unregister (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+  if (!parent.getChild(key).runtime) { return }
+
+  parent.removeChild(key);
+};
+
+ModuleCollection.prototype.isRegistered = function isRegistered (path) {
+  var parent = this.get(path.slice(0, -1));
+  var key = path[path.length - 1];
+
+  return parent.hasChild(key)
+};
+
+function update (path, targetModule, newModule) {
+  if ((true)) {
+    assertRawModule(path, newModule);
+  }
+
+  // update target module
+  targetModule.update(newModule);
+
+  // update nested modules
+  if (newModule.modules) {
+    for (var key in newModule.modules) {
+      if (!targetModule.getChild(key)) {
+        if ((true)) {
+          console.warn(
+            "[vuex] trying to add a new module '" + key + "' on hot reloading, " +
+            'manual reload is needed'
+          );
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      );
+    }
+  }
+}
+
+var functionAssert = {
+  assert: function (value) { return typeof value === 'function'; },
+  expected: 'function'
+};
+
+var objectAssert = {
+  assert: function (value) { return typeof value === 'function' ||
+    (typeof value === 'object' && typeof value.handler === 'function'); },
+  expected: 'function or object with "handler" function'
+};
+
+var assertTypes = {
+  getters: functionAssert,
+  mutations: functionAssert,
+  actions: objectAssert
+};
+
+function assertRawModule (path, rawModule) {
+  Object.keys(assertTypes).forEach(function (key) {
+    if (!rawModule[key]) { return }
+
+    var assertOptions = assertTypes[key];
+
+    forEachValue(rawModule[key], function (value, type) {
+      assert(
+        assertOptions.assert(value),
+        makeAssertionMessage(path, key, type, value, assertOptions.expected)
+      );
+    });
+  });
+}
+
+function makeAssertionMessage (path, key, type, value, expected) {
+  var buf = key + " should be " + expected + " but \"" + key + "." + type + "\"";
+  if (path.length > 0) {
+    buf += " in module \"" + (path.join('.')) + "\"";
+  }
+  buf += " is " + (JSON.stringify(value)) + ".";
+  return buf
+}
+
+var Vue; // bind on install
+
+var Store = function Store (options) {
+  var this$1 = this;
+  if ( options === void 0 ) options = {};
+
+  // Auto install if it is not done yet and `window` has `Vue`.
+  // To allow users to avoid auto-installation in some cases,
+  // this code should be placed here. See #731
+  if (!Vue && typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+  }
+
+  if ((true)) {
+    assert(Vue, "must call Vue.use(Vuex) before creating a store instance.");
+    assert(typeof Promise !== 'undefined', "vuex requires a Promise polyfill in this browser.");
+    assert(this instanceof Store, "store must be called with the new operator.");
+  }
+
+  var plugins = options.plugins; if ( plugins === void 0 ) plugins = [];
+  var strict = options.strict; if ( strict === void 0 ) strict = false;
+
+  // store internal state
+  this._committing = false;
+  this._actions = Object.create(null);
+  this._actionSubscribers = [];
+  this._mutations = Object.create(null);
+  this._wrappedGetters = Object.create(null);
+  this._modules = new ModuleCollection(options);
+  this._modulesNamespaceMap = Object.create(null);
+  this._subscribers = [];
+  this._watcherVM = new Vue();
+  this._makeLocalGettersCache = Object.create(null);
+
+  // bind commit and dispatch to self
+  var store = this;
+  var ref = this;
+  var dispatch = ref.dispatch;
+  var commit = ref.commit;
+  this.dispatch = function boundDispatch (type, payload) {
+    return dispatch.call(store, type, payload)
+  };
+  this.commit = function boundCommit (type, payload, options) {
+    return commit.call(store, type, payload, options)
+  };
+
+  // strict mode
+  this.strict = strict;
+
+  var state = this._modules.root.state;
+
+  // init root module.
+  // this also recursively registers all sub-modules
+  // and collects all module getters inside this._wrappedGetters
+  installModule(this, state, [], this._modules.root);
+
+  // initialize the store vm, which is responsible for the reactivity
+  // (also registers _wrappedGetters as computed properties)
+  resetStoreVM(this, state);
+
+  // apply plugins
+  plugins.forEach(function (plugin) { return plugin(this$1); });
+
+  var useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools;
+  if (useDevtools) {
+    devtoolPlugin(this);
+  }
+};
+
+var prototypeAccessors$1 = { state: { configurable: true } };
+
+prototypeAccessors$1.state.get = function () {
+  return this._vm._data.$$state
+};
+
+prototypeAccessors$1.state.set = function (v) {
+  if ((true)) {
+    assert(false, "use store.replaceState() to explicit replace store state.");
+  }
+};
+
+Store.prototype.commit = function commit (_type, _payload, _options) {
+    var this$1 = this;
+
+  // check object-style commit
+  var ref = unifyObjectStyle(_type, _payload, _options);
+    var type = ref.type;
+    var payload = ref.payload;
+    var options = ref.options;
+
+  var mutation = { type: type, payload: payload };
+  var entry = this._mutations[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown mutation type: " + type));
+    }
+    return
+  }
+  this._withCommit(function () {
+    entry.forEach(function commitIterator (handler) {
+      handler(payload);
+    });
+  });
+
+  this._subscribers
+    .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+    .forEach(function (sub) { return sub(mutation, this$1.state); });
+
+  if (
+    ( true) &&
+    options && options.silent
+  ) {
+    console.warn(
+      "[vuex] mutation type: " + type + ". Silent option has been removed. " +
+      'Use the filter functionality in the vue-devtools'
+    );
+  }
+};
+
+Store.prototype.dispatch = function dispatch (_type, _payload) {
+    var this$1 = this;
+
+  // check object-style dispatch
+  var ref = unifyObjectStyle(_type, _payload);
+    var type = ref.type;
+    var payload = ref.payload;
+
+  var action = { type: type, payload: payload };
+  var entry = this._actions[type];
+  if (!entry) {
+    if ((true)) {
+      console.error(("[vuex] unknown action type: " + type));
+    }
+    return
+  }
+
+  try {
+    this._actionSubscribers
+      .slice() // shallow copy to prevent iterator invalidation if subscriber synchronously calls unsubscribe
+      .filter(function (sub) { return sub.before; })
+      .forEach(function (sub) { return sub.before(action, this$1.state); });
+  } catch (e) {
+    if ((true)) {
+      console.warn("[vuex] error in before action subscribers: ");
+      console.error(e);
+    }
+  }
+
+  var result = entry.length > 1
+    ? Promise.all(entry.map(function (handler) { return handler(payload); }))
+    : entry[0](payload);
+
+  return new Promise(function (resolve, reject) {
+    result.then(function (res) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.after; })
+          .forEach(function (sub) { return sub.after(action, this$1.state); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in after action subscribers: ");
+          console.error(e);
+        }
+      }
+      resolve(res);
+    }, function (error) {
+      try {
+        this$1._actionSubscribers
+          .filter(function (sub) { return sub.error; })
+          .forEach(function (sub) { return sub.error(action, this$1.state, error); });
+      } catch (e) {
+        if ((true)) {
+          console.warn("[vuex] error in error action subscribers: ");
+          console.error(e);
+        }
+      }
+      reject(error);
+    });
+  })
+};
+
+Store.prototype.subscribe = function subscribe (fn, options) {
+  return genericSubscribe(fn, this._subscribers, options)
+};
+
+Store.prototype.subscribeAction = function subscribeAction (fn, options) {
+  var subs = typeof fn === 'function' ? { before: fn } : fn;
+  return genericSubscribe(subs, this._actionSubscribers, options)
+};
+
+Store.prototype.watch = function watch (getter, cb, options) {
+    var this$1 = this;
+
+  if ((true)) {
+    assert(typeof getter === 'function', "store.watch only accepts a function.");
+  }
+  return this._watcherVM.$watch(function () { return getter(this$1.state, this$1.getters); }, cb, options)
+};
+
+Store.prototype.replaceState = function replaceState (state) {
+    var this$1 = this;
+
+  this._withCommit(function () {
+    this$1._vm._data.$$state = state;
+  });
+};
+
+Store.prototype.registerModule = function registerModule (path, rawModule, options) {
+    if ( options === void 0 ) options = {};
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+    assert(path.length > 0, 'cannot register the root module by using registerModule.');
+  }
+
+  this._modules.register(path, rawModule);
+  installModule(this, this.state, path, this._modules.get(path), options.preserveState);
+  // reset store to update getters...
+  resetStoreVM(this, this.state);
+};
+
+Store.prototype.unregisterModule = function unregisterModule (path) {
+    var this$1 = this;
+
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  this._modules.unregister(path);
+  this._withCommit(function () {
+    var parentState = getNestedState(this$1.state, path.slice(0, -1));
+    Vue.delete(parentState, path[path.length - 1]);
+  });
+  resetStore(this);
+};
+
+Store.prototype.hasModule = function hasModule (path) {
+  if (typeof path === 'string') { path = [path]; }
+
+  if ((true)) {
+    assert(Array.isArray(path), "module path must be a string or an Array.");
+  }
+
+  return this._modules.isRegistered(path)
+};
+
+Store.prototype.hotUpdate = function hotUpdate (newOptions) {
+  this._modules.update(newOptions);
+  resetStore(this, true);
+};
+
+Store.prototype._withCommit = function _withCommit (fn) {
+  var committing = this._committing;
+  this._committing = true;
+  fn();
+  this._committing = committing;
+};
+
+Object.defineProperties( Store.prototype, prototypeAccessors$1 );
+
+function genericSubscribe (fn, subs, options) {
+  if (subs.indexOf(fn) < 0) {
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
+  }
+  return function () {
+    var i = subs.indexOf(fn);
+    if (i > -1) {
+      subs.splice(i, 1);
+    }
+  }
+}
+
+function resetStore (store, hot) {
+  store._actions = Object.create(null);
+  store._mutations = Object.create(null);
+  store._wrappedGetters = Object.create(null);
+  store._modulesNamespaceMap = Object.create(null);
+  var state = store.state;
+  // init all modules
+  installModule(store, state, [], store._modules.root, true);
+  // reset vm
+  resetStoreVM(store, state, hot);
+}
+
+function resetStoreVM (store, state, hot) {
+  var oldVm = store._vm;
+
+  // bind store public getters
+  store.getters = {};
+  // reset local getters cache
+  store._makeLocalGettersCache = Object.create(null);
+  var wrappedGetters = store._wrappedGetters;
+  var computed = {};
+  forEachValue(wrappedGetters, function (fn, key) {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure environment.
+    computed[key] = partial(fn, store);
+    Object.defineProperty(store.getters, key, {
+      get: function () { return store._vm[key]; },
+      enumerable: true // for local getters
+    });
+  });
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  var silent = Vue.config.silent;
+  Vue.config.silent = true;
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed: computed
+  });
+  Vue.config.silent = silent;
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store);
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(function () {
+        oldVm._data.$$state = null;
+      });
+    }
+    Vue.nextTick(function () { return oldVm.$destroy(); });
+  }
+}
+
+function installModule (store, rootState, path, module, hot) {
+  var isRoot = !path.length;
+  var namespace = store._modules.getNamespace(path);
+
+  // register in namespace map
+  if (module.namespaced) {
+    if (store._modulesNamespaceMap[namespace] && ("development" !== 'production')) {
+      console.error(("[vuex] duplicate namespace " + namespace + " for the namespaced module " + (path.join('/'))));
+    }
+    store._modulesNamespaceMap[namespace] = module;
+  }
+
+  // set state
+  if (!isRoot && !hot) {
+    var parentState = getNestedState(rootState, path.slice(0, -1));
+    var moduleName = path[path.length - 1];
+    store._withCommit(function () {
+      if ((true)) {
+        if (moduleName in parentState) {
+          console.warn(
+            ("[vuex] state field \"" + moduleName + "\" was overridden by a module with the same name at \"" + (path.join('.')) + "\"")
+          );
+        }
+      }
+      Vue.set(parentState, moduleName, module.state);
+    });
+  }
+
+  var local = module.context = makeLocalContext(store, namespace, path);
+
+  module.forEachMutation(function (mutation, key) {
+    var namespacedType = namespace + key;
+    registerMutation(store, namespacedType, mutation, local);
+  });
+
+  module.forEachAction(function (action, key) {
+    var type = action.root ? key : namespace + key;
+    var handler = action.handler || action;
+    registerAction(store, type, handler, local);
+  });
+
+  module.forEachGetter(function (getter, key) {
+    var namespacedType = namespace + key;
+    registerGetter(store, namespacedType, getter, local);
+  });
+
+  module.forEachChild(function (child, key) {
+    installModule(store, rootState, path.concat(key), child, hot);
+  });
+}
+
+/**
+ * make localized dispatch, commit, getters and state
+ * if there is no namespace, just use root ones
+ */
+function makeLocalContext (store, namespace, path) {
+  var noNamespace = namespace === '';
+
+  var local = {
+    dispatch: noNamespace ? store.dispatch : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._actions[type]) {
+          console.error(("[vuex] unknown local action type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : function (_type, _payload, _options) {
+      var args = unifyObjectStyle(_type, _payload, _options);
+      var payload = args.payload;
+      var options = args.options;
+      var type = args.type;
+
+      if (!options || !options.root) {
+        type = namespace + type;
+        if (( true) && !store._mutations[type]) {
+          console.error(("[vuex] unknown local mutation type: " + (args.type) + ", global type: " + type));
+          return
+        }
+      }
+
+      store.commit(type, payload, options);
+    }
+  };
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? function () { return store.getters; }
+        : function () { return makeLocalGetters(store, namespace); }
+    },
+    state: {
+      get: function () { return getNestedState(store.state, path); }
+    }
+  });
+
+  return local
+}
+
+function makeLocalGetters (store, namespace) {
+  if (!store._makeLocalGettersCache[namespace]) {
+    var gettersProxy = {};
+    var splitPos = namespace.length;
+    Object.keys(store.getters).forEach(function (type) {
+      // skip if the target getter is not match this namespace
+      if (type.slice(0, splitPos) !== namespace) { return }
+
+      // extract local getter type
+      var localType = type.slice(splitPos);
+
+      // Add a port to the getters proxy.
+      // Define as getter property because
+      // we do not want to evaluate the getters in this time.
+      Object.defineProperty(gettersProxy, localType, {
+        get: function () { return store.getters[type]; },
+        enumerable: true
+      });
+    });
+    store._makeLocalGettersCache[namespace] = gettersProxy;
+  }
+
+  return store._makeLocalGettersCache[namespace]
+}
+
+function registerMutation (store, type, handler, local) {
+  var entry = store._mutations[type] || (store._mutations[type] = []);
+  entry.push(function wrappedMutationHandler (payload) {
+    handler.call(store, local.state, payload);
+  });
+}
+
+function registerAction (store, type, handler, local) {
+  var entry = store._actions[type] || (store._actions[type] = []);
+  entry.push(function wrappedActionHandler (payload) {
+    var res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload);
+    if (!isPromise(res)) {
+      res = Promise.resolve(res);
+    }
+    if (store._devtoolHook) {
+      return res.catch(function (err) {
+        store._devtoolHook.emit('vuex:error', err);
+        throw err
+      })
+    } else {
+      return res
+    }
+  });
+}
+
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if ((true)) {
+      console.error(("[vuex] duplicate getter key: " + type));
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  };
+}
+
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, function () {
+    if ((true)) {
+      assert(store._committing, "do not mutate vuex store state outside mutation handlers.");
+    }
+  }, { deep: true, sync: true });
+}
+
+function getNestedState (state, path) {
+  return path.reduce(function (state, key) { return state[key]; }, state)
+}
+
+function unifyObjectStyle (type, payload, options) {
+  if (isObject(type) && type.type) {
+    options = payload;
+    payload = type;
+    type = type.type;
+  }
+
+  if ((true)) {
+    assert(typeof type === 'string', ("expects string as the type, but found " + (typeof type) + "."));
+  }
+
+  return { type: type, payload: payload, options: options }
+}
+
+function install (_Vue) {
+  if (Vue && _Vue === Vue) {
+    if ((true)) {
+      console.error(
+        '[vuex] already installed. Vue.use(Vuex) should be called only once.'
+      );
+    }
+    return
+  }
+  Vue = _Vue;
+  applyMixin(Vue);
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+var mapState = normalizeNamespace(function (namespace, states) {
+  var res = {};
+  if (( true) && !isValidMap(states)) {
+    console.error('[vuex] mapState: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(states).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedState () {
+      var state = this.$store.state;
+      var getters = this.$store.getters;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapState', namespace);
+        if (!module) {
+          return
+        }
+        state = module.context.state;
+        getters = module.context.getters;
+      }
+      return typeof val === 'function'
+        ? val.call(this, state, getters)
+        : state[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapMutations = normalizeNamespace(function (namespace, mutations) {
+  var res = {};
+  if (( true) && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(mutations).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedMutation () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // Get the commit method from store
+      var commit = this.$store.commit;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapMutations', namespace);
+        if (!module) {
+          return
+        }
+        commit = module.context.commit;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+var mapGetters = normalizeNamespace(function (namespace, getters) {
+  var res = {};
+  if (( true) && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(getters).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val;
+    res[key] = function mappedGetter () {
+      if (namespace && !getModuleByNamespace(this.$store, 'mapGetters', namespace)) {
+        return
+      }
+      if (( true) && !(val in this.$store.getters)) {
+        console.error(("[vuex] unknown getter: " + val));
+        return
+      }
+      return this.$store.getters[val]
+    };
+    // mark vuex getter for devtools
+    res[key].vuex = true;
+  });
+  return res
+});
+
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+var mapActions = normalizeNamespace(function (namespace, actions) {
+  var res = {};
+  if (( true) && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object');
+  }
+  normalizeMap(actions).forEach(function (ref) {
+    var key = ref.key;
+    var val = ref.val;
+
+    res[key] = function mappedAction () {
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+
+      // get dispatch function from store
+      var dispatch = this.$store.dispatch;
+      if (namespace) {
+        var module = getModuleByNamespace(this.$store, 'mapActions', namespace);
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch;
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    };
+  });
+  return res
+});
+
+/**
+ * Rebinding namespace param for mapXXX function in special scoped, and return them by simple object
+ * @param {String} namespace
+ * @return {Object}
+ */
+var createNamespacedHelpers = function (namespace) { return ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+}); };
+
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map) {
+  if (!isValidMap(map)) {
+    return []
+  }
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}
+
+/**
+ * Validate whether given map is valid or not
+ * @param {*} map
+ * @return {Boolean}
+ */
+function isValidMap (map) {
+  return Array.isArray(map) || isObject(map)
+}
+
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn) {
+  return function (namespace, map) {
+    if (typeof namespace !== 'string') {
+      map = namespace;
+      namespace = '';
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/';
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store, helper, namespace) {
+  var module = store._modulesNamespaceMap[namespace];
+  if (( true) && !module) {
+    console.error(("[vuex] module namespace not found in " + helper + "(): " + namespace));
+  }
+  return module
+}
+
+var index = {
+  Store: Store,
+  install: install,
+  version: '3.4.0',
+  mapState: mapState,
+  mapMutations: mapMutations,
+  mapGetters: mapGetters,
+  mapActions: mapActions,
+  createNamespacedHelpers: createNamespacedHelpers
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -42935,9 +60065,18 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./components/Cart/AddToCart.vue": "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue",
+	"./components/Cart/CartInMenu.vue": "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue",
+	"./components/CategoriesNavigationMobile.vue": "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue",
+	"./components/Custom designer/Configuration.vue": "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue",
+	"./components/Custom designer/ConfigurationOptions.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue",
+	"./components/Custom designer/ConfigurationSummary.vue": "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue",
+	"./components/InstagramFeed.vue": "./site/themes/sugarpilots/js/components/InstagramFeed.vue",
 	"./components/LogoSlider.vue": "./site/themes/sugarpilots/js/components/LogoSlider.vue",
-	"./components/lottie-animation.vue": "./site/themes/sugarpilots/js/components/lottie-animation.vue",
-	"./components/video-loader.vue": "./site/themes/sugarpilots/js/components/video-loader.vue"
+	"./components/LottieAnimation.vue": "./site/themes/sugarpilots/js/components/LottieAnimation.vue",
+	"./components/NavigationToggle.vue": "./site/themes/sugarpilots/js/components/NavigationToggle.vue",
+	"./components/ProductSlider.vue": "./site/themes/sugarpilots/js/components/ProductSlider.vue",
+	"./components/VideoLoader.vue": "./site/themes/sugarpilots/js/components/VideoLoader.vue"
 };
 
 
@@ -42959,6 +60098,507 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./site/themes/sugarpilots/js sync recursive \\.vue$/";
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue":
+/*!******************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddToCart.vue?vue&type=template&id=6d732ba9& */ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&");
+/* harmony import */ var _AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddToCart.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Cart/AddToCart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AddToCart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&":
+/*!*************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AddToCart.vue?vue&type=template&id=6d732ba9& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/AddToCart.vue?vue&type=template&id=6d732ba9&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddToCart_vue_vue_type_template_id_6d732ba9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue":
+/*!*******************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=template&id=124c3fc7& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&");
+/* harmony import */ var _CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Cart/CartInMenu.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&":
+/*!*****************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss& ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&":
+/*!**************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./CartInMenu.vue?vue&type=template&id=124c3fc7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Cart/CartInMenu.vue?vue&type=template&id=124c3fc7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CartInMenu_vue_vue_type_template_id_124c3fc7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue":
+/*!******************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& */ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&");
+/* harmony import */ var _CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriesNavigationMobile.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriesNavigationMobile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&":
+/*!*************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriesNavigationMobile.vue?vue&type=template&id=379e6564& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/CategoriesNavigationMobile.vue?vue&type=template&id=379e6564&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriesNavigationMobile_vue_vue_type_template_id_379e6564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue":
+/*!*********************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Configuration.vue?vue&type=template&id=ce001796& */ "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796&");
+/* harmony import */ var _Configuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Configuration.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Configuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Custom designer/Configuration.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Configuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Configuration.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Configuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796&":
+/*!****************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Configuration.vue?vue&type=template&id=ce001796& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/Configuration.vue?vue&type=template&id=ce001796&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Configuration_vue_vue_type_template_id_ce001796___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue":
+/*!****************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfigurationOptions.vue?vue&type=template&id=6f7a85d9& */ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9&");
+/* harmony import */ var _ConfigurationOptions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationOptions.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ConfigurationOptions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationOptions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ConfigurationOptions.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationOptions_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9&":
+/*!***********************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9& ***!
+  \***********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ConfigurationOptions.vue?vue&type=template&id=6f7a85d9& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationOptions.vue?vue&type=template&id=6f7a85d9&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationOptions_vue_vue_type_template_id_6f7a85d9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue":
+/*!****************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1& */ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1&");
+/* harmony import */ var _ConfigurationSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ConfigurationSummary.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ConfigurationSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ConfigurationSummary.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1&":
+/*!***********************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1& ***!
+  \***********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/Custom designer/ConfigurationSummary.vue?vue&type=template&id=3cb2e2e1&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ConfigurationSummary_vue_vue_type_template_id_3cb2e2e1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue":
+/*!*****************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InstagramFeed.vue?vue&type=template&id=44d74238& */ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&");
+/* harmony import */ var _InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InstagramFeed.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/InstagramFeed.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./InstagramFeed.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&":
+/*!************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./InstagramFeed.vue?vue&type=template&id=44d74238& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/InstagramFeed.vue?vue&type=template&id=44d74238&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InstagramFeed_vue_vue_type_template_id_44d74238___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -43049,17 +60689,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/lottie-animation.vue":
+/***/ "./site/themes/sugarpilots/js/components/LottieAnimation.vue":
+/*!*******************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/LottieAnimation.vue ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LottieAnimation.vue?vue&type=template&id=2fdacb99& */ "./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99&");
+/* harmony import */ var _LottieAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LottieAnimation.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LottieAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/LottieAnimation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LottieAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./LottieAnimation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LottieAnimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99&":
+/*!**************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./LottieAnimation.vue?vue&type=template&id=2fdacb99& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/LottieAnimation.vue?vue&type=template&id=2fdacb99&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LottieAnimation_vue_vue_type_template_id_2fdacb99___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/NavigationToggle.vue":
 /*!********************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/lottie-animation.vue ***!
+  !*** ./site/themes/sugarpilots/js/components/NavigationToggle.vue ***!
   \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lottie-animation.vue?vue&type=template&id=fd3b261c& */ "./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c&");
-/* harmony import */ var _lottie_animation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lottie-animation.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js&");
+/* harmony import */ var _NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true& */ "./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true&");
+/* harmony import */ var _NavigationToggle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavigationToggle.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -43069,66 +60778,66 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _lottie_animation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _NavigationToggle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "d0461078",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "site/themes/sugarpilots/js/components/lottie-animation.vue"
+component.options.__file = "site/themes/sugarpilots/js/components/NavigationToggle.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js&":
+/***/ "./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js& ***!
+  !*** ./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lottie_animation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lottie-animation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lottie_animation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationToggle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./NavigationToggle.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationToggle_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c&":
-/*!***************************************************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c& ***!
-  \***************************************************************************************************/
+/***/ "./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true&":
+/*!***************************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true& ***!
+  \***************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./lottie-animation.vue?vue&type=template&id=fd3b261c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/lottie-animation.vue?vue&type=template&id=fd3b261c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/NavigationToggle.vue?vue&type=template&id=d0461078&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lottie_animation_vue_vue_type_template_id_fd3b261c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationToggle_vue_vue_type_template_id_d0461078_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/video-loader.vue":
-/*!****************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/video-loader.vue ***!
-  \****************************************************************/
+/***/ "./site/themes/sugarpilots/js/components/ProductSlider.vue":
+/*!*****************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/ProductSlider.vue ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./video-loader.vue?vue&type=template&id=5fdd9241& */ "./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241&");
-/* harmony import */ var _video_loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./video-loader.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductSlider.vue?vue&type=template&id=6054edb8& */ "./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8&");
+/* harmony import */ var _ProductSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductSlider.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -43138,9 +60847,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _video_loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ProductSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -43150,38 +60859,107 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "site/themes/sugarpilots/js/components/video-loader.vue"
+component.options.__file = "site/themes/sugarpilots/js/components/ProductSlider.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************/
+/***/ "./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_video_loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./video-loader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_video_loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProductSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241&":
-/*!***********************************************************************************************!*\
-  !*** ./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241& ***!
-  \***********************************************************************************************/
+/***/ "./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8&":
+/*!************************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8& ***!
+  \************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./video-loader.vue?vue&type=template&id=5fdd9241& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/video-loader.vue?vue&type=template&id=5fdd9241&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ProductSlider.vue?vue&type=template&id=6054edb8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/ProductSlider.vue?vue&type=template&id=6054edb8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_video_loader_vue_vue_type_template_id_5fdd9241___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductSlider_vue_vue_type_template_id_6054edb8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/VideoLoader.vue":
+/*!***************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/VideoLoader.vue ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VideoLoader.vue?vue&type=template&id=cf20323c& */ "./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c&");
+/* harmony import */ var _VideoLoader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VideoLoader.vue?vue&type=script&lang=js& */ "./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _VideoLoader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "site/themes/sugarpilots/js/components/VideoLoader.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoLoader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoLoader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoLoader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c&":
+/*!**********************************************************************************************!*\
+  !*** ./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoLoader.vue?vue&type=template&id=cf20323c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./site/themes/sugarpilots/js/components/VideoLoader.vue?vue&type=template&id=cf20323c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoLoader_vue_vue_type_template_id_cf20323c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -43222,6 +61000,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./site/themes/sugarpilots/js/navigation.js":
+/*!**************************************************!*\
+  !*** ./site/themes/sugarpilots/js/navigation.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener("scroll", function () {
+  var scrollY = window.pageYOffset;
+  var navigation = document.querySelector(".main-navigation");
+  scrollY >= 200 ? navigation.classList.add("navigation-bg-white") : navigation.classList.remove("navigation-bg-white");
+});
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/scroll_animation.js":
+/*!********************************************************!*\
+  !*** ./site/themes/sugarpilots/js/scroll_animation.js ***!
+  \********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrollmagic */ "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
+/* harmony import */ var scrollmagic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(scrollmagic__WEBPACK_IMPORTED_MODULE_0__);
+window.addEventListener("DOMContentLoaded", start);
+
+
+function start() {
+  var videoContainer = document.querySelector("#videoContainer");
+  var video = document.querySelector("video");
+  var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+
+  if (orientation == "landscape-primary" && videoContainer) {
+    //SCROLLMAGIC
+    var controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Controller(); //Scenes
+
+    var scene = new scrollmagic__WEBPACK_IMPORTED_MODULE_0___default.a.Scene({
+      duration: 11052,
+      triggerElement: videoContainer,
+      triggerHook: 0
+    }).setPin(videoContainer).addTo(controller); //Video Animation
+
+    var accelamount = 0.1;
+    var scrollpos = 0;
+    var delay = 0;
+    var skipAnimation = document.querySelector(".btn.skip-animation"); // skipAnimation.addEventListener("click", () => {
+    //   controller.scrollTo("#youtube-video");
+    // });
+
+    scene.on("update", function (e) {
+      scrollpos = e.scrollPos / 1000;
+
+      if (e.scrollPos <= 11052 && e.scrollPos >= 700) {
+        skipAnimation.classList.add("show");
+      } else {
+        skipAnimation.classList.remove("show");
+      }
+    });
+    setInterval(function () {
+      delay += (scrollpos - delay) * accelamount;
+      video.currentTime = delay;
+    }, 33.3);
+  }
+}
+
+/***/ }),
+
 /***/ "./site/themes/sugarpilots/js/site.js":
 /*!********************************************!*\
   !*** ./site/themes/sugarpilots/js/site.js ***!
@@ -43235,23 +61082,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue_instagram_feed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-instagram-feed */ "./node_modules/vue-instagram-feed/dist-web/index.js");
+/* harmony import */ var smooth_scrollbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! smooth-scrollbar */ "./node_modules/smooth-scrollbar/index.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
-__webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js"); // import all vue components
 
+
+
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_2__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_instagram_feed__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+__webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js");
+
+__webpack_require__(/*! ./navigation */ "./site/themes/sugarpilots/js/navigation.js");
+
+__webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js");
+
+__webpack_require__(/*! ./scroll_animation */ "./site/themes/sugarpilots/js/scroll_animation.js");
+
+aos__WEBPACK_IMPORTED_MODULE_5___default.a.init({
+  once: false,
+  mirror: false,
+  offset: 100,
+  disable: function disable() {
+    var maxWidth = 769;
+    return window.innerWidth < maxWidth;
+  }
+});
+smooth_scrollbar__WEBPACK_IMPORTED_MODULE_4__["default"].initAll({
+  // Momentum reduction damping factor, a float value between (0, 1)
+  damping: .1,
+  // Minimal size for scrollbar thumb.
+  thumbMinSize: 20,
+  // Render scrolling by integer pixels
+  renderByPixels: true,
+  // Whether allow upper scrollable content to continue scrolling when current scrollbar reaches edge. 
+  // When set to 'auto', it will be enabled on nested scrollbars, and disabled on first-class scrollbars.
+  continuousScrolling: true,
+  // Keep scrollbar tracks always visible.
+  alwaysShowTracks: false,
+  // Element to be used as a listener for mouse wheel scroll events. 
+  // By default, the container element is used.
+  wheelEventTarget: null,
+  // plugins
+  plugins: {}
+}); // import all vue components
 
 var files = __webpack_require__("./site/themes/sugarpilots/js sync recursive \\.vue$/");
 
 files.keys().map(function (key) {
   return vue__WEBPACK_IMPORTED_MODULE_1___default.a.component(key.split('/').pop().split('.')[0], files(key)["default"]);
 });
+
+var modules = __webpack_require__("./site/themes/sugarpilots/js/store sync recursive \\.js$/");
+
+var autoRegisteredModules = {};
+modules.keys().map(function (key) {
+  autoRegisteredModules[modules(key).name] = modules(key)["default"];
+});
+var store = new vuex__WEBPACK_IMPORTED_MODULE_2__["default"].Store({
+  state: {},
+  mutations: {},
+  getters: {},
+  actions: {},
+  modules: autoRegisteredModules
+});
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.config.ignoredElements = ['lottie-player'];
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.prototype.$eventBus = new vue__WEBPACK_IMPORTED_MODULE_1___default.a();
 new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   // eslint-disable-line no-new
+  store: store,
   el: '#site'
 }); // enable rellax
 
@@ -43285,6 +61191,200 @@ function resetCursor() {
 
 /***/ }),
 
+/***/ "./site/themes/sugarpilots/js/store sync recursive \\.js$/":
+/*!******************************************************!*\
+  !*** ./site/themes/sugarpilots/js/store sync \.js$/ ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./cart.js": "./site/themes/sugarpilots/js/store/cart.js",
+	"./configuration.js": "./site/themes/sugarpilots/js/store/configuration.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./site/themes/sugarpilots/js/store sync recursive \\.js$/";
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/store/cart.js":
+/*!**************************************************!*\
+  !*** ./site/themes/sugarpilots/js/store/cart.js ***!
+  \**************************************************/
+/*! exports provided: name, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+var name = 'cart';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: {
+    currentCart: [],
+    totalPrice: 0
+  },
+  mutations: {
+    addToCart: function addToCart(state, product) {
+      state.currentCart.push(product);
+    },
+    setTotalPrice: function setTotalPrice(state, totalPrice) {
+      state.totalPrice = totalPrice;
+    }
+  },
+  getters: {
+    currentCart: function currentCart(state) {
+      return state.currentCart;
+    },
+    totalPrice: function totalPrice(state) {
+      return state.totalPrice;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/store/configuration.js":
+/*!***********************************************************!*\
+  !*** ./site/themes/sugarpilots/js/store/configuration.js ***!
+  \***********************************************************/
+/*! exports provided: name, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "name", function() { return name; });
+var name = 'configuration';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: {
+    selectedSize: null,
+    amount: null,
+    selectedColorName: null,
+    selectedColorCode: null,
+    priceForEach: null,
+    selectedFlavor: null,
+    selectedParty: null,
+    selectedText: null,
+    selectedDate: null
+  },
+  mutations: {
+    setSelectedSize: function setSelectedSize(state, size) {
+      state.selectedSize = size;
+    },
+    setPriceForEach: function setPriceForEach(state, price) {
+      state.priceForEach = price;
+    },
+    setAmount: function setAmount(state, amount) {
+      state.amount = amount;
+    },
+    setColorName: function setColorName(state, color) {
+      state.selectedColorName = color;
+    },
+    setColorCode: function setColorCode(state, color) {
+      state.selectedColorCode = color;
+    },
+    setFlavor: function setFlavor(state, flavor) {
+      state.selectedFlavor = flavor;
+    },
+    setSelectedText: function setSelectedText(state, text) {
+      state.selectedText = text;
+    },
+    setDate: function setDate(state, date) {
+      state.selectedDate = date;
+    }
+  },
+  getters: {
+    selectedSize: function selectedSize(state) {
+      return state.selectedSize;
+    },
+    priceForEach: function priceForEach(state) {
+      return state.priceForEach;
+    },
+    amount: function amount(state) {
+      return state.amount;
+    },
+    selectedColorName: function selectedColorName(state) {
+      return state.selectedColorName;
+    },
+    selectedColorCode: function selectedColorCode(state) {
+      return state.selectedColorCode;
+    },
+    selectedFlavor: function selectedFlavor(state) {
+      return state.selectedFlavor;
+    },
+    selectedText: function selectedText(state) {
+      return state.selectedText;
+    },
+    selectedDate: function selectedDate(state) {
+      return state.selectedDate;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./site/themes/sugarpilots/js/webshop.js":
+/*!***********************************************!*\
+  !*** ./site/themes/sugarpilots/js/webshop.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+document.addEventListener("scroll", showSidenav);
+window.addEventListener('DOMContentLoaded', function () {
+  if (document.querySelector(".webshop-sidenav")) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var sectionName = entry.target.getAttribute('id');
+
+        if (entry.isIntersecting > 0) {
+          document.querySelectorAll(".webshop-sidenav .links li a").forEach(function (link) {
+            return link.classList = "";
+          });
+          document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.add("active");
+        } else {
+          document.querySelector("a[href=\"#".concat(sectionName, "\"]")).classList.remove("active");
+        }
+      });
+    });
+    document.querySelectorAll('.section').forEach(function (target) {
+      observer.observe(target);
+    });
+  }
+});
+
+function showSidenav() {
+  if (document.querySelector(".webshop-sidenav")) {
+    var scrollY = window.pageYOffset;
+    var nav = document.querySelector(".webshop-sidenav");
+    scrollY >= 365 ? nav.classList.add("show-sidenav") : nav.classList.remove("show-sidenav");
+  }
+}
+
+/***/ }),
+
 /***/ "./site/themes/sugarpilots/sass/sugarpilots.scss":
 /*!*******************************************************!*\
   !*** ./site/themes/sugarpilots/sass/sugarpilots.scss ***!
@@ -43292,7 +61392,7 @@ function resetCursor() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n   ╷\n27 │ @import \"./components/products.scss\";\n   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   ╵\n  /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss 27:9  root stylesheet\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/webpack/lib/NormalModule.js:316:20\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass-loader/dist/index.js:73:7\n    at Function.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:87584:16)\n    at _render_closure1.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:77359:12)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:13333:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)\n    at _Future._completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24165:9)\n    at _AsyncAwaitCompleter.completeError$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23557:12)\n    at Object._asyncRethrow (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3253:17)\n    at /Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:15991:20\n    at _wrapJsFunctionForAsync_closure.$protected (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3276:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23578:12)\n    at _awaitOnObject_closure0.call$2 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:23570:25)\n    at _RootZone.runBinary$3$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25587:18)\n    at _RootZone.runBinary$3 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:25591:19)\n    at _FutureListener.handleError$1 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24041:19)\n    at _Future__propagateToListeners_handleError.call$0 (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:24337:40)\n    at Object._Future__propagateToListeners (/Users/wecode/Desktop/Projects/sugarpilots/node_modules/sass/sass.dart.js:3497:88)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

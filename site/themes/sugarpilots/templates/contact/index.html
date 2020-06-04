@@ -1,0 +1,159 @@
+<div class="contact-container">
+  <div class="about-section">
+    <div class="about-info wrapper">
+      <div class="about-info-img">
+        <img
+          src="{{ about_img_1 }}"
+          alt=" {{ about_subtitle }}"
+          class="
+                {{ if add_parallax_to_section_contact }} parallax-element"
+          data-rellax-speed="{{ image_scroll_speed_contact }} {{ /if }}"
+        />
+      </div>
+      <div
+        class="about-info-txt {{ if add_parallax_to_section_contact }} parallax-element"
+        data-rellax-speed="{{ text_scroll_speed_contact }} {{ /if }}"
+      >
+        <h2>{{ about_subtitle }}</h2>
+        <p>{{ about_description }}</p>
+      </div>
+    </div>
+
+    <div class="about-quote">
+      <h1
+        class="{{ if add_parallax_to_section_contact }} parallax-element"
+        data-rellax-speed="{{ text_scroll_speed_contact }} {{ /if }}"
+      >
+        {{ about_txt_quote }}
+      </h1>
+      <img
+        src="{{ about_img_quote }}"
+        alt=" {{ about_subtitle }}"
+        class="
+            {{ if add_parallax_to_section_contact }} parallax-element"
+        data-rellax-speed="{{ image_scroll_speed_contact }} {{ /if }}"
+      />
+    </div>
+
+    <div class="about">
+      <div class="content wrapper narrow">
+        <div class="about-img">
+          <img src="{{ about_img }}" alt=" {{ about_title_about }}" />
+        </div>
+        <div class="about-txt">
+          <h1>{{ about_title_about }}</h1>
+          <p>{{ about_charlotte }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section wrapper">
+    <div class="contact-wrapper">
+      <div class="contact-txt">
+        <h1>{{ contact_title }}</h1>
+        <p>{{ contact_description }}</p>
+      </div>
+
+      <form id="form-contact">
+        <fieldset>
+          <div class="field-wrapper">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Fx. Ida Jensen"
+              pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+              required
+            />
+            <label for="name">For- og efternavn</label>
+          </div>
+          <div class="field-wrapper">
+            <input
+              type="text"
+              name="company_name"
+              id="comname"
+              placeholder="Firmanavn"
+            />
+            <label for="comname">Firmanavn <small>(valgfrit)</small></label>
+          </div>
+          <div class="field-wrapper">
+            <input
+              type="tel"
+              name="telefon"
+              placeholder="Fx. +45 45 67 89 12"
+              data-inputmask="mask"
+              id="tel"
+            />
+            <label for="tel">Telefon nummer <small>(valgfrit)</small></label>
+          </div>
+          <div class="field-wrapper">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Fx. ida@gmail.com"
+              required
+            />
+            <label for="email">E-mail</label>
+          </div>
+          <div class="form-town">
+            <div class="field-wrapper">
+              <input
+                type="text"
+                name="postal_code"
+                id="postcode"
+                pattern="[0-9]{3,4}"
+                placeholder="Fx. 1550"
+                required
+              />
+              <label for="postcode">Post nr.</label>
+            </div>
+            <div class="field-wrapper">
+              <input
+                type="text"
+                name="city"
+                id="city"
+                placeholder="Fx. København V"
+                required
+              />
+              <label for="town">By</label>
+            </div>
+          </div>
+          <div class="field-wrapper textarea">
+            <textarea
+              name="comment"
+              id="message"
+              placeholder="Skriv din besked her..."
+              required
+            ></textarea>
+            <label for="message">Besked</label>
+          </div>
+        </fieldset>
+        <button type="button" class="btn m-0 expand-cursor">
+          Send besked
+        </button>
+      </form>
+    </div>
+    <div class="contact-details">
+      <div class="adresse-1">
+        <h5>Sugar Pilots Check-in</h5>
+        <ul>
+          {{ adresse_1 }}
+          <li>{{ value }}</li>
+          {{ /adresse_1 }}
+        </ul>
+      </div>
+      <div class="adresse-2">
+        <h5>Sugar Pilots Køkken</h5>
+        <ul>
+          {{ adresse_2 }}
+          <li>{{ value }}</li>
+          {{ /adresse_2 }}
+        </ul>
+      </div>
+      <h5>Telefon</h5>
+      <p>+45 {{ contact_tlf }}</p>
+    </div>
+  </div>
+</div>

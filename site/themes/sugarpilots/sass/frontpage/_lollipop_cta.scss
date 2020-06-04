@@ -9,13 +9,15 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
-        
     }
-
     .animation {
         max-width: 400px;
-    }
+        margin-bottom: 1.5rem;
 
+        @include md {
+            margin-bottom: unset;
+        }
+    }
     .main-right {
         max-width: 500px;
     }

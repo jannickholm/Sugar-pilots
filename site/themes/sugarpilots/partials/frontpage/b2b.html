@@ -1,4 +1,4 @@
-<div class="b2b-section">
+<div class="b2b-section" data-aos="fade-up" data-aos-duration="1000">
   <div class="wrapper narrow">
     <div class="content">
       <div class="main-left">
@@ -6,33 +6,19 @@
         <div class="b2b-section-text">
           {{ b2b_text }}
         </div>
-        <a class="btn expand-cursor" href="#">Læs mere</a>
+        <a class="btn expand-cursor" href="/virksomheder">Læs mere</a>
       </div>
 
       <div class="main-right">
         {{ if b2b_image_1 }}
-        <img class="b2b-section-image1 
-        {{ if b2b_image_1_scroll_speed }}
-        parallax-element
-        {{ /if }}" 
+        <img class="b2b-section-image1"
         src="{{ b2b_image_1 }}" alt=""
-
-        {{ if b2b_image_1_scroll_speed }}
-        data-rellax-speed="{{ b2b_image_1_scroll_speed }}"
-        {{ /if }}
         />
         {{ /if }} 
 
         {{ if b2b_image_2 }}
-        <img class="b2b-section-image2 
-        {{ if b2b_image_2_scroll_speed }}
-        parallax-element
-        {{ /if }}" 
+        <img class="b2b-section-image2" 
         src="{{ b2b_image_2 }}" alt=""
-
-        {{ if b2b_image_2_scroll_speed }}
-            data-rellax-speed="{{ b2b_image_2_scroll_speed }}"
-        {{ /if }} 
         />
         {{ /if }}
       </div>

@@ -9,6 +9,18 @@ sections:
       template:
         type: template
         display: Template
+      seo:
+        type: section
+        display: SEO
+      seo_title:
+        type: text
+        display: Title
+      seo_keywords:
+        type: textarea
+        display: Keywords
+      seo_description:
+        type: textarea
+        display: Description
   header:
     display: Header
     fields:
@@ -125,35 +137,26 @@ sections:
   sustainable_and_natural_materials:
     display: 'Sustainable section'
     fields:
-      sustainable_title:
-        type: text
-        display: 'Sustainable title'
-      sustainable_image:
+      sustainable_image_1:
         container: main
         folder: /
         restrict: false
-        max_files: 1
-        mode: list
         type: assets
-        width: 50
-        display: Image
-      sustainable_image_scroll_speed:
+        display: 'Image 1'
+        max_files: 1
+      sustainable_title:
         type: text
-        width: 50
-        display: 'Image scroll speed'
+        display: 'Sustainable title'
       sustainable_text:
-        sets:
-          block:
-            display: Block
-            fields:
-              sustainable_text_title:
-                type: text
-                display: Title
-              sustainable_text_body:
-                type: textarea
-                display: Text
-        type: replicator
-        display: 'Sustainable text'
+        type: textarea
+        display: Text
+      sustainable_image_2:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Image 2'
+        max_files: 1
   products_assortment:
     display: 'Products assortment'
     fields:
@@ -192,5 +195,60 @@ sections:
           '#fdfaf6': White
         type: select
         display: 'Background color'
+  gave_ideer:
+    display: 'Gave ideer'
+    fields:
+      gift_idea_title:
+        type: text
+        display: Title
+      gift_idea_text:
+        type: textarea
+        display: Text
+      gift_idea_image_1:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 25
+        display: 'Image 1'
+      gift_idea_image_2:
+        type: text
+  newsletter:
+    display: Newsletter
+    fields:
+      title_newsletter:
+        type: text
+        display: Title
+        validate: required
+        width: 50
+      image_newsletter:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 25
+        display: 'Image 2'
+      gift_idea_image_3:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 25
+        display: 'Image 3'
+      gift_idea_image_4:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        width: 25
+        display: 'Image 4'
+        max_files: 1
+        validate: required
+      text_newsletter:
+        type: textarea
+        display: Text
 taxonomies: true
 title: Home

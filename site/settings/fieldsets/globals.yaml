@@ -1,8 +1,19 @@
-title: Default Globals
+title: 'Default Globals'
 hide: true
-fields:
-  site_name:
-    type: text
-    display: Website Name
-    instructions: The name of your website
-    localizable: true
+sections:
+  main:
+    display: Main
+    fields:
+      site_name:
+        type: text
+        display: 'Website Name'
+        instructions: 'The name of the website'
+        localizable: true
+      site_logo:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Website logo'
+        max_files: 1
+taxonomies: true

@@ -1,0 +1,35 @@
+.instagram-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 2vw;
+  justify-items: center;
+
+  &-container {
+    p,
+    p a {
+      font-size: 12px;
+    }
+  }
+  .post {
+    position: relative;
+
+    button {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s;
+    }
+
+    &:hover button {
+      @include md {
+        opacity: 1;
+      }
+    }
+
+    img {
+      max-width: 250px;
+    }
+  }
+}

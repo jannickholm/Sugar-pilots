@@ -22,18 +22,21 @@
 
     .main-right {
       @include md {
-          margin-left: 2rem;
+        margin-left: 2rem;
       }
       max-width: max-content;
       display: grid;
-      grid-template: 1fr 1fr / 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      @include md {
+        grid-template: 1fr 1fr / 1fr 1fr;
+      }
     }
 
     .main-left {
-        margin-bottom: 2rem;
-        @include md {
-            margin-bottom: 0;
-        }
+      margin-bottom: 2rem;
+      @include md {
+        margin-bottom: 0;
+      }
     }
 
     &-image1 {
@@ -44,8 +47,15 @@
       max-width: 250px;
       grid-column: 2;
       grid-row: 2;
-      margin-left: -4rem;
-      margin-top: -4rem;
+      margin-left: -5rem;
+      margin-top: -5rem;
+      justify-items: center;
+
+      @include md {
+        margin-left: -4rem;
+        margin-top: -4rem;
+        justify-items: unset;
+      }
     }
   }
 }

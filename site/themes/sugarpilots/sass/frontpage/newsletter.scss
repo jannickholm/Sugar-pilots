@@ -1,0 +1,121 @@
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  margin-top: 35px;
+  background-color: $white;
+
+  @include s {
+    flex-direction: initial;
+    margin-top: 50px;
+    width: 100% !important;
+  }
+
+  .newsletter-txt {
+    padding-top: 20px;
+    max-width: 90%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    @include s {
+      max-width: 40%;
+      padding-left: 30px;
+      padding-top: 0;
+      margin: auto;
+    }
+  }
+
+  .newsletter-image {
+    @include s {
+      width: 50%;
+      height: 100vw;
+      max-height: 500px;
+      background-size: cover;
+      background-size: center;
+    }
+    img {
+      object-fit: cover;
+      max-height: 350px;
+
+      @include md {
+        max-width: 300px;
+        max-height: 550px;
+        max-width: 500px;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+
+    @include s {
+      margin-top: 60px;
+      flex-direction: initial;
+      border-bottom: 1px black solid;
+    }
+
+    input,
+    label {
+      transition: all 0.3s;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px black solid;
+      background: none;
+      font-size: 16px;
+      padding: 5px;
+
+      @include s {
+        border: none;
+      }
+      &[type="submit"] {
+        font-weight: bold;
+        opacity: 0.8;
+        border-bottom: none;
+        position: relative;
+        margin-top: 30px;
+        padding: 0.5rem;
+        background: $pink;
+
+        @include s {
+          margin-top: 0;
+          background: none;
+          padding: 0;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:placeholder-shown + label {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    input::-webkit-input-placeholder {
+      opacity: 0;
+      transition: inherit;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      opacity: 1;
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+      top: -14px;
+      font-size: 10px;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      padding: 5px;
+    }
+  }
+}

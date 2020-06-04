@@ -1,70 +1,97 @@
-<div class="shop-container">
-    <div class="shop wrapper">
+<div class="shop-container wrapper">
+    <nav class="webshop-sidenav">
+        <ul class="links">
+            {{ collection:categories }}
+            <li class="expand-cursor">
+                <a href="#{{ title | slugify }}">
+                    {{ title replace="slikkepinde|" }}
+                </a>
+            </li>
+            {{ /collection:categories }}
+        </ul>
+    </nav>
+    <div class="shop">
         <div class="nav-categories">
-            {{ shop_category_info }}
-
-            <a href="#{{ shop_category_name | slugify }}">
+          {{ collection:categories }}
+            <a href="#{{ title | slugify }}">
                 <div class="shop-categories" style="background-color: {{ background_color }};">
-                    <img src="{{ shop_image }}" alt="" />
-                    <p>{{ shop_category_name }}</p>
+                    <img src="{{ category_image }}" alt="" />
+                    <p>{{ title }}</p>
                 </div>
             </a>
-
-            {{ /shop_category_info }}
+          {{ /collection:categories }}
         </div>
+        
 
-        <div class="products-wrapper">
-            {{ collection:categories as="category" limit="4" }}
+    <div class="products-wrapper">
+      {{ collection:categories as="category" }} {{ category }} {{ if title !=
+      "Gaver" && title != "Søde hilsner" }}
+      <div id="{{ title | slugify }}" class="section">
+        <h2 class="category-title">{{ title }}</h2>
 
-            {{ category }}
-            <h2 class="category-title" id="{{ title | slufigy }}">{{ title }}</h2>
-
-            {{ collection:product product_category:is="{{ title }}" as="product" }}
-            {{ product }}
-
-            <div class="product-seperate">
-
-                <div class="product-main-left">
-                    <img src="{{ product_picture }}" alt="" />
-                </div>
-                <div class="product-main-right {{ switch between='odd|even' }}">
-                    <h4> {{ title }}</h4>
-                    <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
-                    <h6 class="price-tag">{{ price_tag }} kr.</h6>
-                    <a class="btn expand-cursor {{ switch between='left|right' }}" href="{{ url }}">Tilføj til kurv</a>
-                </div>
-            </div>
-
-            {{ /product }}
-
-            {{ /collection:product }}
-
-            {{ /category }}
-
-            {{ /collection:categories }}
-
-            {{ collection:categories as="category2" }}
-
-            <div class="gift-container">
-                {{ collection:product product_category:is="gaver" }}
-
-                <div class="gift-wrapper">
-
-                    <div class="gift-main-top">
-                        <img src="{{ product_picture }}" alt="" />
-                    </div>
-                    <div class="gift-main-bottom">
-                        <h5> {{ title }} </h5>
-                        <h5> {{ product_category }}, {{ pcs_number }} stk.</h5>
-                        <h6 class="price-tag"> {{ price_tag }} kr.</h6>
-                        <a class="btn expand-cursor" href="#">Tilføj til kurv</a>
-                    </div>
-                </div>
-
-                {{ /collection:product }}
-            </div>
-            {{ /collection:categories }}
-
+        {{ collection:product product_category:is="{{ title }}" as="product" }}
+        {{ product }}
+        <div class="product-seperate {{ switch between='right|left' }}">
+          <div class="product-main-left">
+            <a href="{{ url }}">
+            <img src="{{ product_picture }}" alt="" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700" />
+            </a>
+          </div>
+          <div class="product-main-right {{ switch between='odd|even' }}" data-aos="{{ switch between='fade-left|fade-right' }}" data-aos-duration="700">
+            <h4>{{ title }}</h4>
+            <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
+            <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
+            <a
+              class="btn expand-cursor {{ switch between='left|right' }}"
+              href="{{ url }}"
+              >Se mere</a
+            >
+          </div>
         </div>
+        {{ /product }} {{ /collection:product }}
+      </div>
+      {{ /if }} 
+      {{ /category }} 
+      {{ /collection:categories }}
+      {{ collection:categories as="category" }} 
+      {{category}} 
+      {{ if title == "Gaver" }}
+      <h1 id="{{ title | slugify }}" class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
+      <div id="{{ title | slugify }}" class="gift-container section" data-aos="fade-up" data-aos-duration="1000">
+        {{ collection:product product_category:is="{{ title }}" as="product" }}
+        {{product}}
+        <div class="gift-wrapper">
+          <div class="gift-main-top">
+            <img src="{{ product_picture }}" alt="" />
+          </div>
+          <div class="gift-main-bottom">
+            <h5>{{ title }}</h5>
+            <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
+            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
+          </div>
+        </div>
+        {{/product}} {{ /collection:product }}
+      </div>
+      {{ elseif title == "Søde hilsner" }}
+      <h1 id="{{ title | slugify }}" class="category-title" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h1>
+      <div id="{{ title | slugify }}" class="gift-container section" data-aos="fade-up" data-aos-duration="1000">
+        {{ collection:product product_category:is="{{ title }}" as="product" }}
+        {{product}}
+        <div class="gift-wrapper">
+          <div class="gift-main-top">
+            <img src="{{ product_picture }}" alt="" />
+          </div>
+          <div class="gift-main-bottom">
+            <h5>{{ title }}</h5>
+            <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
+            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
+          </div>
+        </div>
+        {{/product}} {{ /collection:product }}
+      </div>
+      {{ /if }} {{/category}} {{ /collection:categories }}
     </div>
+  </div>
+  <categories-navigation-mobile api-url="{{ env:APP_URL }}">
+  </categories-navigation-mobile>
 </div>
