@@ -2036,6 +2036,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
   data: function data() {
     return {
       categories: [],
@@ -2049,7 +2055,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchCategories: function fetchCategories() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/!/Fetch/collection/categories").then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.apiUrl + "!/Fetch/collection/categories").then(function (response) {
         _this.categories = response.data.data;
       });
     },
@@ -5824,7 +5830,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\nh4[data-v-98d346b0] {\n  max-width: 800px;\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
+exports.push([module.i, "\nh4[data-v-98d346b0] {\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
 
 // exports
 

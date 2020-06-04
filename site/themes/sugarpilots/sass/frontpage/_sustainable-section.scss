@@ -47,14 +47,12 @@
         h1 {
           margin: auto;
           margin-bottom: 1rem;
-          // font-size: calc(20px + 30 * ((100vw - 320px) / 1080));
           color: #333;
           font-weight: 800;
           width: 90%;
           position: relative;
           z-index: 10;
           @include md {
-            width: unset;
             margin-left: -5rem;
           }
         }

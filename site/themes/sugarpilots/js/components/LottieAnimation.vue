@@ -16,7 +16,6 @@ export default {
     computed: {
         animationUrl() {
             const apiUrl = this.apiUrl.replace(/\//g, "");
-
             if(apiUrl.length === 0) {
             return apiUrl + this.animation;
             } else {

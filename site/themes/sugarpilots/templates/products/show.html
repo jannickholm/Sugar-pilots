@@ -363,7 +363,6 @@
             <p>Vegansk</p>
           </div>
         </div>
-
         <div class="column column-2">
           <div class="sustainable-5">
             <svg
@@ -823,12 +822,12 @@
   <div class="inspi-section">
     <div
       class="img_big"
-      style="background: url({{ inspi_img_big }}); background-position: center; background-size: cover; background-repeat: no-repeat;"
+      style="background-image: url({{ inspi_img_big }});"
     ></div>
     <div
       class="img_small parallax-element"
       data-rellax-speed="{{ image_scroll_speed_small_singleproduct }}"
-      style="background: url({{ inspi_img_small }}); background-position: center; background-size: cover; background-repeat: no-repeat;"
+      style="background-image: url({{ inspi_img_small }});"
     ></div>
   </div>
 
@@ -837,7 +836,8 @@
     <product-slider class="mt-5">
       <template v-slot:products>
         {{ collection:product product_category:is="{{ product_category }}"
-        as="product"}} {{ product }}
+        as="product"}} 
+        {{ product }}
         <div class="product-slide">
           <a href="{{ url }}">
             <img src="{{ product_picture }}" alt="" />

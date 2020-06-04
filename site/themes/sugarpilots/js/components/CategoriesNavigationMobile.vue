@@ -18,18 +18,20 @@
 <script>
 import axios from "axios";
 export default {
+  props: {
+    apiUrl: { type: String, required: true }
+  },
   data() {
     return {
       categories: [],
       menuOpen: false,
     };
-  },
-  mounted() {
+  },mounted() {
     this.fetchCategories();
   },
   methods: {
     fetchCategories() {
-      axios.get("/!/Fetch/collection/categories").then((response) => {
+      axios.get(this.apiUrl + "!/Fetch/collection/categories").then((response) => {
         this.categories = response.data.data;
       });
     },
