@@ -4,18 +4,29 @@
       <h2 class="text-center">{{ assortment_title }}</h2>
       <div class="inner-content">
         {{ collection:categories }}
-        {{ if show_on_frontpage }}
+          {{ if show_on_frontpage }}
         <div id="{{ title | slugify }}-{{ id }}" class="product-block">
-          <div class="main-left {{ switch between='order| ' }}" data-aos="{{ switch between='fade-left|fade-right' }}" data-aos-duration="700">
+          <div 
+              class="main-left {{ switch between='order| ' }}" 
+              data-aos="{{ switch between='fade-left|fade-right' }}" 
+              data-aos-duration="700">
             <h4>{{ title }}</h4>
             <p>{{ category_text }}</p>
-            <a href="/webshop#{{ title | slugify }}" class="btn expand-cursor {{ switch between='|right' }}">Se mere</a>
+            <a 
+              href="/webshop#{{ title | slugify }}" 
+              class="btn expand-cursor {{ switch between='|right' }}">
+              Se mere
+            </a>
           </div>
           <div class="main-right">
-            <img src="{{ category_image }}" alt="" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700">
+            <img 
+              src="{{ category_image }}" 
+              alt="" 
+              data-aos="{{ switch between='fade-right|fade-left' }}" 
+              data-aos-duration="700">
           </div>
         </div>
-        {{ /if }}
+          {{ /if }}
         {{ /collection:categories }}
       </div>
     </div>
