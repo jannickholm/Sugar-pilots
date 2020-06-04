@@ -19,11 +19,14 @@
             </a>
           </div>
           <div class="main-right">
+            <a 
+              href="/webshop#{{ title | slugify }}">
             <img 
               src="{{ category_image }}" 
               alt="" 
               data-aos="{{ switch between='fade-right|fade-left' }}" 
               data-aos-duration="700">
+            </a>
           </div>
         </div>
           {{ /if }}

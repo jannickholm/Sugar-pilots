@@ -18,6 +18,11 @@
     max-width: 400px;
     position: relative;
     z-index: 1;
+    padding-left: 0.5rem;
+
+    @include lg {
+      padding-left: unset;
+    }
     @include lg {
       order: 0;
       max-width: 450px;

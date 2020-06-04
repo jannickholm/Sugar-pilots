@@ -91,7 +91,7 @@
       align-items: center;
       flex-direction: column;
 
-      @include s {
+      @include md {
         flex-direction: initial;
         padding: 80px 35px;
         justify-content: space-evenly;
@@ -112,10 +112,13 @@
 
       .about-txt {
         max-width: 520px;
-        padding-top: 1rem;
+        padding-top: 1.5rem;
 
         @include s {
-          padding-left: 1.5rem;
+          padding-left: 2.2rem;
+        }
+
+        @include md {
           padding-top: 0;
         }
       }
