@@ -3,6 +3,10 @@ about_description: |
   Hos Sugar Pilots tager vi skridtet videre og udforsker den søde verden. Vi nytænker hvordan slikkepinde kan nydes og gør op med de klassiske smage. Vi brænder for at skabe nye smage og flotte, interessante looks, der alle er med til at give en lækker og sjov oplevelse.  <br>
   Vores vision er at tage kunden med på en spændende rejse og give dem et indblik i forskellige landes kulinariske oplevelser og byde dem velkommen ind i den søde verden.
 about_img_1: /assets/_mg_8905-(1)-1590609353.jpg
+menu_title: 'om sugarpilots'
+seo_title: 'Sugar pilots: Om sugar pilots | Kontakt sugar pilots'
+seo_keywords: 'kontakt, sugarpilots, personlige slikkepinde, custommade, slikkepinde, personlig gave, firmagave, bordkort, dekoration'
+seo_description: 'Hos Sugar Pilots tager vi skridtet videre og udforsker den søde verden. Vi nytænker hvordan slikkepinde kan nydes og gør op med de klassiske smage. Vi brænder for at skabe nye smage og flotte, interessante looks, der alle er med til at give en lækker og sjov oplevelse.'
 add_parallax_to_section_contact: true
 image_scroll_speed_contact: '1.5'
 text_scroll_speed_contact: '0'
@@ -19,7 +23,6 @@ about_charlotte: |
   Bedste hilsner <br>
   Charlotte Nørgaard
 about_img: /assets/sugarpilots_charlotte_web-1-1590571191.png
-menu_title: 'om sugarpilots'
 contact_title: 'Har du nogle spørgsmål? <br>Kontakt os med det samme.'
 contact_description: |
   Har du spørgsmål til os, vil du være forhandler eller handler du ind som erhverv, så kontakt os allerede i dag. Vi glæder os til at høre fra dig og sidder klar til at hjælpe, når vi ikke koger slikkepinde.

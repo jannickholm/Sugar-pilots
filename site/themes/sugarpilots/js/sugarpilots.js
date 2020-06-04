@@ -2104,6 +2104,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Configuration",
+  props: {
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
   data: function data() {
     return {
       options: []
@@ -2119,8 +2125,9 @@ __webpack_require__.r(__webpack_exports__);
     fetchData: function fetchData() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/!/Fetch/page/design-din-egen-slikkepind').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.apiUrl + '!/Fetch/page/design-din-egen-slikkepind').then(function (response) {
         _this.options = response.data.data;
+        console.clear();
       });
     }
   }

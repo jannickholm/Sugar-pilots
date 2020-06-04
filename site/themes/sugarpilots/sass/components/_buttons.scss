@@ -48,7 +48,7 @@ a.btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -30px;
+    left: -1.5rem;
     @include s {
       left: -50px;
     }
@@ -58,7 +58,7 @@ a.btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -30px;
+    right: -1.5rem;
     @include s {
       right: -50px;
     }

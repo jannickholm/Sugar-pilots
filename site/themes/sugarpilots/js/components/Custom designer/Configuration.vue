@@ -15,6 +15,9 @@ import { mapMutations } from 'vuex';
 import axios from 'axios';
 export default {
   name: "Configuration",
+  props: {
+    apiUrl: { type: String, required: true }
+  },
   data() {
     return {
       options: []
@@ -28,8 +31,9 @@ export default {
       this.setCurrentStep(2);
     },
     fetchData() {
-      axios.get('/!/Fetch/page/design-din-egen-slikkepind').then((response) => {
+      axios.get(this.apiUrl + '!/Fetch/page/design-din-egen-slikkepind').then((response) => {
         this.options = response.data.data;
+        console.clear();
       })
     }
   },

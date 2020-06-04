@@ -62,7 +62,7 @@ lollipop_builder_text: |
   Kunne du tænke dig at designe dit helt eget unikke produkt? Måske du vil forkæle dine kære med en unik, personlig gave, eller give dine gæster en sjov og anderledes oplevelse? Så design din egen slikkepind. <br>
   Vi specialdesigner både slikkepinde og gaveæsker. Slikkepindene kan sagtens have forskelligt print, så de kan bruges som personlige bordkort, dekoration eller andet sjovt festpynt.
 lollipop_builder_cta_background: '#dfedfb'
-logo_slider_title: 'VIRKSOMHEDER DER HAR FÅET SPECIALLAVEDE SLIKKEPINDE'
+logo_slider_title: 'Virksomheder der har fået speciallavede slikkepinde'
 logos:
   -
     type: logo
@@ -101,7 +101,10 @@ logos:
     type: logo
     company_logo: /assets/download.jpeg
 template: b2b/index
-menu_title: 'brandede slikkepinde'
+menu_title: erhver
+seo_title: 'Sugar pilots: Slikkepinde med logo | Firma events'
+seo_keywords: 'firma, firmafest, forkæl dine medarbejdere, firmagaver med logo, events, personlig gave, bordpynt, dekoration, underholdning til firmafest, fest pynt, custommade'
+seo_description: 'Hos Sugar Pilots laver vi slikkepinde tilpasset dit firmas ønsker og behov. Det kan være til både events, som en fast del af jeres sortiment eller som små firmagaver med logo til jeres kunder. Der er mange muligheder for at få lavet noget helt unikt, og det er kun fantasien der sætter grænser.'
 contact_title: 'Har du nogle spørgsmål? <br> Kontakt os med det samme.'
 contact_description: |
   Har i lyst til at høre mere, om hvordan I kan få lavet et unikt produkt, der er tilpasset efter jeres ønsker? Så kontakt os i dag og lad os sammen finde frem til jeres perfekte, custommade slikkepind. 

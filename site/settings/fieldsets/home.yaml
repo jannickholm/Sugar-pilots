@@ -9,6 +9,18 @@ sections:
       template:
         type: template
         display: Template
+      seo:
+        type: section
+        display: SEO
+      seo_title:
+        type: text
+        display: Title
+      seo_keywords:
+        type: textarea
+        display: Keywords
+      seo_description:
+        type: textarea
+        display: Description
   header:
     display: Header
     fields:
@@ -201,6 +213,7 @@ sections:
         width: 25
         display: 'Image 1'
       gift_idea_image_2:
+        type: text
   newsletter:
     display: Newsletter
     fields:
@@ -233,9 +246,7 @@ sections:
         width: 25
         display: 'Image 4'
         max_files: 1
-        display: Image
         validate: required
-        width: 50
       text_newsletter:
         type: textarea
         display: Text
