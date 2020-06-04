@@ -33,7 +33,9 @@
         {{ product }}
         <div class="product-seperate {{ switch between='right|left' }}">
           <div class="product-main-left">
+            <a href="{{ url }}">
             <img src="{{ product_picture }}" alt="" data-aos="{{ switch between='fade-right|fade-left' }}" data-aos-duration="700" />
+            </a>
           </div>
           <div class="product-main-right {{ switch between='odd|even' }}" data-aos="{{ switch between='fade-left|fade-right' }}" data-aos-duration="700">
             <h4>{{ title }}</h4>

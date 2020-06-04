@@ -363,7 +363,6 @@
             <p>Vegansk</p>
           </div>
         </div>
-
         <div class="column column-2">
           <div class="sustainable-5">
             <svg
@@ -837,7 +836,8 @@
     <product-slider class="mt-5">
       <template v-slot:products>
         {{ collection:product product_category:is="{{ product_category }}"
-        as="product"}} {{ product }}
+        as="product"}} 
+        {{ product }}
         <div class="product-slide">
           <a href="{{ url }}">
             <img src="{{ product_picture }}" alt="" />

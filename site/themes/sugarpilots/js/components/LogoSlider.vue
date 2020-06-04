@@ -71,7 +71,6 @@ export default {
 
 <style scoped>
 h4 {
-  max-width: 800px;
   margin: auto;
   margin-bottom: 2rem;
 }

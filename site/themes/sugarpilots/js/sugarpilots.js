@@ -5824,7 +5824,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\nh4[data-v-98d346b0] {\n  max-width: 800px;\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
+exports.push([module.i, "\nh4[data-v-98d346b0] {\n  margin: auto;\n  margin-bottom: 2rem;\n}\n", ""]);
 
 // exports
 
