@@ -7,7 +7,6 @@ import Scrollbar from 'smooth-scrollbar';
 import AOS from 'aos';
 Vue.use(Vuex);
 Vue.use(VueInstagram);
-require("./cursor");
 require("./navigation");
 require("./webshop");
 require("./scroll_animation");
@@ -94,17 +93,3 @@ window.addEventListener("resize", () => {
     }
 })
 
-document.querySelectorAll(".expand-cursor").forEach(button => {
-    button.addEventListener("mouseover", resizeCursor);
-    button.addEventListener("mouseout", resetCursor);
-});
-
-function resizeCursor() {
-    const cursor = document.querySelector(".cursor");
-    cursor.classList = "cursor link-hover";
-}
-
-function resetCursor() {
-    const cursor = document.querySelector(".cursor");
-    cursor.classList = "cursor";
-}

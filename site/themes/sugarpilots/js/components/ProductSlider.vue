@@ -1,12 +1,12 @@
 <template>
   <div class="slider position-relative">
-    <div class="prev expand-cursor">
+    <div class="prev ">
       <span data-feather="chevron-left"></span>
     </div>
     <slick ref="slick" :options="slickOptions">
       <slot name="products" />
     </slick>
-    <div class="next expand-cursor">
+    <div class="next ">
       <span data-feather="chevron-right"></span>
     </div>
     </div>

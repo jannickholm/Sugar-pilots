@@ -1,14 +1,14 @@
 <nav class="main-navigation">
   <navigation-toggle></navigation-toggle>
   <div class="logo">
-    <a href="{{ env:APP_URL }}" class="expand-cursor">
+    <a href="{{ env:APP_URL }}" class="">
       <img src="{{ site_logo }}" alt="">
     </a>
   </div>
   
   <ul class="links desktop">
     {{ nav from="/" }}
-    <li class="expand-cursor {{ if is_current || is_parent }}active{{ /if }}">
+    <li class=" {{ if is_current || is_parent }}active{{ /if }}">
       <a href="{{ url }}">
         {{ if menu_title }} {{ menu_title }} {{ else }} {{ title }} {{ /if }}
       </a>
@@ -18,7 +18,7 @@
 <cart-in-menu></cart-in-menu>
   <ul class="mobile-menu links">
     {{ nav from="/" }}
-      <li class="expand-cursor {{ if is_current || is_parent }}active{{ /if }}">
+      <li class=" {{ if is_current || is_parent }}active{{ /if }}">
         <a href="{{ url }}">
           {{ if menu_title }} {{ menu_title }} {{ else }} {{ title }} {{ /if }}
         </a>

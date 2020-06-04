@@ -10,13 +10,13 @@
               <span class="icon"><i data-feather="map-pin"></i></span>
               <a
                 href="https://goo.gl/maps/o5hC5jJ3wjmQDRnMA"
-                class="expand-cursor"
+                class=""
                 >{{ office_address }}</a
               >
             </li>
             <li>
               <span class="icon"><i data-feather="smartphone"></i></span>
-              <a href="tel:{{ phone | spaceless }}" class="expand-cursor"
+              <a href="tel:{{ phone | spaceless }}" class=""
                 >{{ phone }}</a
               >
             </li>
@@ -29,7 +29,7 @@
               <span class="icon"><i data-feather="map-pin"></i></span>
               <a
                 href="https://goo.gl/maps/1p4iLT5sm3QxgxX59"
-                class="expand-cursor"
+                class=""
                 >{{ kitchen_address }}</a
               >
             </li>
@@ -37,7 +37,7 @@
               <span class="icon"><i data-feather="mail"></i></span>
               <a
                 href="https://goo.gl/maps/1p4iLT5sm3QxgxX59"
-                class="expand-cursor"
+                class=""
                 >{{ email_address }}</a
               >
             </li>
@@ -60,7 +60,7 @@
         {{ /nav }}
           {{ links }}
           <li>
-            <a href="{{ link_url }}" class="expand-cursor">{{ link_label }}</a>
+            <a href="{{ link_url }}" class="">{{ link_label }}</a>
           </li>
           {{ /links }}
         </ul>
@@ -73,7 +73,7 @@
             <span class="icon"
               ><i data-feather="{{ media_name | lower }}"></i
             ></span>
-            <a href="{{ url }}" class="expand-cursor">{{ username insert="@|0" }}</a>
+            <a href="{{ url }}" class="">{{ username insert="@|0" }}</a>
           </li>
           {{ /social_medias }}
         </ul>

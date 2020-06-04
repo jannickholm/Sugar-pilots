@@ -39140,7 +39140,7 @@ var render = function() {
   return _c(
     "a",
     {
-      staticClass: "btn expand-cursor",
+      staticClass: "btn ",
       attrs: { href: "#" },
       on: {
         click: function($event) {
@@ -40557,7 +40557,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "prev expand-cursor" }, [
+    return _c("div", { staticClass: "prev " }, [
       _c("span", { attrs: { "data-feather": "chevron-left" } })
     ])
   },
@@ -40565,7 +40565,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "next expand-cursor" }, [
+    return _c("div", { staticClass: "next " }, [
       _c("span", { attrs: { "data-feather": "chevron-right" } })
     ])
   }
@@ -40665,7 +40665,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "prev expand-cursor" }, [
+    return _c("div", { staticClass: "prev " }, [
       _c("span", { attrs: { "data-feather": "chevron-left" } })
     ])
   },
@@ -40673,7 +40673,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "next expand-cursor" }, [
+    return _c("div", { staticClass: "next " }, [
       _c("span", { attrs: { "data-feather": "chevron-right" } })
     ])
   }
@@ -60593,41 +60593,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./site/themes/sugarpilots/js/cursor.js":
-/*!**********************************************!*\
-  !*** ./site/themes/sugarpilots/js/cursor.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-!function () {
-  var t, o;
-
-  function r() {
-    for (i = 0; i < o.length; i++) {
-      var e = o[i];
-      e.style.setProperty("--width", e.offsetWidth), e.style.setProperty("--height", e.offsetHeight), e.style.setProperty("--top", e.offsetTop), e.style.setProperty("--left", e.offsetLeft), e.style.setProperty("--random", Math.random());
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    t = document.body.style, o = document.querySelectorAll(".momentumcss"), t.setProperty("--loaded", 0), t.setProperty("--scrollx", window.scrollX), t.setProperty("--scrolly", window.scrollY), t.setProperty("--clientx", "0"), t.setProperty("--clienty", "0");
-    window.addEventListener("scroll", function () {
-      t.setProperty("--scrollx", window.scrollX), t.setProperty("--scrolly", window.scrollY);
-    }, !1), window.addEventListener("pointermove", function (e) {
-      t.setProperty("--clientx", e.clientX), t.setProperty("--clienty", e.clientY);
-    }, !1), window.addEventListener("touchmove", function (e) {
-      t.setProperty("--clientx", e.touches[0].clientX), t.setProperty("--clienty", e.touches[0].clientY);
-    }, !1), window.addEventListener("touchstart", function (e) {
-      t.setProperty("--pointerdown", 0), t.setProperty("--clientx", e.touches[0].clientX), t.setProperty("--clienty", e.touches[0].clientY);
-    }, !1);
-    r();
-  }, !1);
-  window.addEventListener("resize", r);
-}();
-
-/***/ }),
-
 /***/ "./site/themes/sugarpilots/js/navigation.js":
 /*!**************************************************!*\
   !*** ./site/themes/sugarpilots/js/navigation.js ***!
@@ -60726,8 +60691,6 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_2__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_instagram_feed__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
-__webpack_require__(/*! ./cursor */ "./site/themes/sugarpilots/js/cursor.js");
-
 __webpack_require__(/*! ./navigation */ "./site/themes/sugarpilots/js/navigation.js");
 
 __webpack_require__(/*! ./webshop */ "./site/themes/sugarpilots/js/webshop.js");
@@ -60802,20 +60765,6 @@ window.addEventListener("resize", function () {
     var _rellax = new rellax__WEBPACK_IMPORTED_MODULE_0___default.a('.parallax-element');
   }
 });
-document.querySelectorAll(".expand-cursor").forEach(function (button) {
-  button.addEventListener("mouseover", resizeCursor);
-  button.addEventListener("mouseout", resetCursor);
-});
-
-function resizeCursor() {
-  var cursor = document.querySelector(".cursor");
-  cursor.classList = "cursor link-hover";
-}
-
-function resetCursor() {
-  var cursor = document.querySelector(".cursor");
-  cursor.classList = "cursor";
-}
 
 /***/ }),
 
@@ -61031,8 +60980,8 @@ function showSidenav() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
-module.exports = __webpack_require__(/*! /Users/nataliesirich/Desktop/kea/Sugar-pilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
+__webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/js/site.js */"./site/themes/sugarpilots/js/site.js");
+module.exports = __webpack_require__(/*! /Users/wecode/Desktop/Projects/sugarpilots/site/themes/sugarpilots/sass/sugarpilots.scss */"./site/themes/sugarpilots/sass/sugarpilots.scss");
 
 
 /***/ })

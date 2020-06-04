@@ -25,7 +25,7 @@
                     <input type="text" class="form-control" v-model="key" />
                 </div>
                 <div class="col-sm-3">
-                    <button class="btn expand-cursor btn expand-cursor-primary btn expand-cursor-block" @click="validate" :disabled="!key">{{ translate('cp.save') }}</button>
+                    <button class="btn  btn -primary btn -block" @click="validate" :disabled="!key">{{ translate('cp.save') }}</button>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
         <hr>
 
         <div class="trial">
-            <a href="" @click.prevent="continue" class="btn expand-cursor">{{ translate('cp.continue_in_trial_mode') }}</a>
+            <a href="" @click.prevent="continue" class="btn ">{{ translate('cp.continue_in_trial_mode') }}</a>
             <a href="https://statamic.com/try" class="what" target="_blank">{{ translate('cp.whats_this') }}</a>
         </div>
     </template>

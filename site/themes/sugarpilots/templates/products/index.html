@@ -2,7 +2,7 @@
     <nav class="webshop-sidenav">
         <ul class="links">
             {{ collection:categories }}
-            <li class="expand-cursor">
+            <li class="">
                 <a href="#{{ title | slugify }}">
                     {{ title replace="slikkepinde|" }}
                 </a>
@@ -42,7 +42,7 @@
             <h5>{{ product_category }}, {{ pcs_number }} stk.</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
             <a
-              class="btn expand-cursor {{ switch between='left|right' }}"
+              class="btn  {{ switch between='left|right' }}"
               href="{{ url }}"
               >Se mere</a
             >
@@ -67,7 +67,7 @@
           <div class="gift-main-bottom">
             <h5>{{ title }}</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
-            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
+            <a class="btn " href="{{ url }}">Se mere</a>
           </div>
         </div>
         {{/product}} {{ /collection:product }}
@@ -84,7 +84,7 @@
           <div class="gift-main-bottom">
             <h5>{{ title }}</h5>
             <h6 class="price-tag-block">{{ price_tag }} kr.</h6>
-            <a class="btn expand-cursor" href="{{ url }}">Se mere</a>
+            <a class="btn " href="{{ url }}">Se mere</a>
           </div>
         </div>
         {{/product}} {{ /collection:product }}

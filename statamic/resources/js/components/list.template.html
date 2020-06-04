@@ -8,7 +8,7 @@
             <span class="icon icon-documents"></span>
             <h2>{{ no_results_heading }}</h2>
             <h3 v-if="no_results_subheading">{{ no_results_subheading }}</h3>
-            <a href="{{ new_url }}" class="btn expand-cursor btn expand-cursor-default btn expand-cursor-lg">{{ no_results_button }}</a>
+            <a href="{{ new_url }}" class="btn  btn -default btn -lg">{{ no_results_button }}</a>
         </div>
     </div>
 
@@ -18,14 +18,14 @@
             <label for="checkbox-all"></label>
 
             <template v-if="list.actions.delete">
-                <a :href="list.actions.delete.endpoint" class="btn expand-cursor" v-on:click="deleteMultiple">
+                <a :href="list.actions.delete.endpoint" class="btn " v-on:click="deleteMultiple">
                     {{ translate('cp.delete') }}
                 </a>
             </template>
 
             <template v-if="list.actions.reorder">
-                <a href="" v-on:click="toggleReorder($event)" class="btn expand-cursor" v-show="! reordering">{{ translate('cp.reorder') }}</a>
-                <a href="" v-on:click="saveOrder(list.actions.reorder.endpoint, $event)" class="btn expand-cursor" v-show="reordering">{{ translate('cp.save_order') }}</a>
+                <a href="" v-on:click="toggleReorder($event)" class="btn " v-show="! reordering">{{ translate('cp.reorder') }}</a>
+                <a href="" v-on:click="saveOrder(list.actions.reorder.endpoint, $event)" class="btn " v-show="reordering">{{ translate('cp.save_order') }}</a>
             </template>
         </div>
         <input type="text" :placeholder="'Search ' + type" v-on:keydown.esc="reset" v-model="search" name="query" class="search pull-right">
@@ -63,8 +63,8 @@
                 </td>
 
                 <td class="column-actions">
-                    <div class="btn expand-cursor-group">
-                        <button type="button" class="btn expand-cursor-more dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="btn -group">
+                        <button type="button" class="btn -more dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="icon icon-dots-three-vertical"></i>
                         </button>
 

@@ -1,5 +1,5 @@
 <template>
-   <a class="btn expand-cursor" href="#" @click.prevent="addToCart">Tilføj til kurv</a>
+   <a class="btn " href="#" @click.prevent="addToCart">Tilføj til kurv</a>
 </template>
 
 <script>
