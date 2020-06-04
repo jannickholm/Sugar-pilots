@@ -10,6 +10,13 @@ export default {
         animation: {
             type: String,
             required: true
+        },
+        apiUrl: { type: String, required: true }
+    },
+    computed: {
+        AnimationUrl() {
+            const apiUrl = this.apiUrl.replace("/", "");
+            return apiUrl + this.animation;
         }
     },
     mounted() {
