@@ -2941,6 +2941,16 @@ __webpack_require__.r(__webpack_exports__);
     animation: {
       type: String,
       required: true
+    },
+    apiUrl: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    AnimationUrl: function AnimationUrl() {
+      var apiUrl = this.apiUrl.replace("/", "");
+      return apiUrl + this.animation;
     }
   },
   mounted: function mounted() {
