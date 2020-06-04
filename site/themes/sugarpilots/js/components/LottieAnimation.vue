@@ -14,9 +14,14 @@ export default {
         apiUrl: { type: String, required: true }
     },
     computed: {
-        AnimationUrl() {
-            const apiUrl = this.apiUrl.replace("/", "");
+        animationUrl() {
+            const apiUrl = this.apiUrl.replace(/\//g, "");
+
+            if(apiUrl.length === 0) {
             return apiUrl + this.animation;
+            } else {
+                return `/${apiUrl}${this.animation}`
+            }
         }
     },
     mounted() {
@@ -29,7 +34,7 @@ export default {
                 renderer: 'svg',
                 loop: true,
                 autoplay: true,
-                path: this.animation,
+                path: this.animationUrl,
                 rendererSettings: {
                     scaleMode: 'noScale',
                     clearCanvas: false,

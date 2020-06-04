@@ -2948,9 +2948,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    AnimationUrl: function AnimationUrl() {
-      var apiUrl = this.apiUrl.replace("/", "");
-      return apiUrl + this.animation;
+    animationUrl: function animationUrl() {
+      var apiUrl = this.apiUrl.replace(/\//g, "");
+
+      if (apiUrl.length === 0) {
+        return apiUrl + this.animation;
+      } else {
+        return "/".concat(apiUrl).concat(this.animation);
+      }
     }
   },
   mounted: function mounted() {
@@ -2964,7 +2969,7 @@ __webpack_require__.r(__webpack_exports__);
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: this.animation,
+        path: this.animationUrl,
         rendererSettings: {
           scaleMode: 'noScale',
           clearCanvas: false,
