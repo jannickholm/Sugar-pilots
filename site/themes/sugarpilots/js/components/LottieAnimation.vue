@@ -15,7 +15,7 @@ export default {
     },
     computed: {
         AnimationUrl() {
-            const apiUrl = this.apiUrl.replace(/\//g, "");
+            const apiUrl = this.apiUrl.replace("/", "");
             return apiUrl + this.animation;
         }
     },
@@ -29,7 +29,7 @@ export default {
                 renderer: 'svg',
                 loop: true,
                 autoplay: true,
-                path: this.AnimationUrl,
+                path: this.animation,
                 rendererSettings: {
                     scaleMode: 'noScale',
                     clearCanvas: false,
