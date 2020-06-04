@@ -1,5 +1,8 @@
 ---
 template: home
+seo_title: 'Sugar pilots: Slikkepinde med logo | Personlige slikkepinde med navn'
+seo_keywords: 'personlige slikkepinde, custommade, slikkepinde, personlig gave, firmagave, bordkort, dekoration'
+seo_description: 'Personlige slikkepinde m. navn/logo til dit event, din fest, el. dit firma. Vi bruger kun naturlige veganske ingredienser og bæredygtig emballage––Bestil her.'
 header_image: /assets/header-image-2.png
 header_title: 'Håndlavede slikkepinde <wbr> med smage fra hele verden'
 header_text: |

@@ -295,6 +295,9 @@ flavors:
     color: Gul
 template: configuration/index
 menu_title: 'personlige slikkepinde'
+seo_title: 'Sugar pilots: Slikkepinde med logo | Personlige slikkepinde med navn'
+seo_keywords: 'Personlige slikkepinde m. navn/logo til dit event, din fest, el. dit firma. Vi bruger kun naturlige veganske ingredienser og bæredygtig emballage––Bestil her.'
+seo_description: 'personlige slikkepinde, custommade, slikkepinde, personlig gave, firmagave, bordkort, dekoration'
 min_order: '25'
 success_message: 'Din din bestilling er modtaget! Vi glæder os til at levere dine personlige slikkepinde til din hoveddør'
 title: 'Design din egen slikkepind'

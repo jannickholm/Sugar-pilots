@@ -26,6 +26,18 @@ sections:
       menu_title:
         type: text
         display: 'Menu title'
+      seo:
+        type: section
+        display: SEO
+      seo_title:
+        type: text
+        display: Title
+      seo_keywords:
+        type: textarea
+        display: Keywords
+      seo_description:
+        type: textarea
+        display: Description
   shop_categories:
     display: Categories
     fields:

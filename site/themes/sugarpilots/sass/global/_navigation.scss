@@ -51,6 +51,7 @@
 
       li {
         position: relative;
+        text-transform: capitalize;
         &::before {
           content: "";
           position: absolute;
