@@ -332,10 +332,7 @@
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
-import RangeSlider from "vue-range-slider";
 import Datepicker from "vuejs-datepicker";
-// you probably need to import built-in style
-import "vue-range-slider/dist/vue-range-slider.css";
 
 export default {
   props: {
@@ -513,7 +510,6 @@ export default {
     validateInput(name) {
       const value = this.contactForm[name];
       const rule = this.validation[name].rule;
-
       if (typeof rule !== "function") {
         this.validation[name].valid = rule.test(value);
         return this.validation[name].valid;

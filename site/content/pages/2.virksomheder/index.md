@@ -101,7 +101,7 @@ logos:
     type: logo
     company_logo: /assets/download.jpeg
 template: b2b/index
-menu_title: erhver
+menu_title: Erhverv
 seo_title: 'Sugar pilots: Slikkepinde med logo | Firma events'
 seo_keywords: 'firma, firmafest, forkæl dine medarbejdere, firmagaver med logo, events, personlig gave, bordpynt, dekoration, underholdning til firmafest, fest pynt, custommade'
 seo_description: 'Hos Sugar Pilots laver vi slikkepinde tilpasset dit firmas ønsker og behov. Det kan være til både events, som en fast del af jeres sortiment eller som små firmagaver med logo til jeres kunder. Der er mange muligheder for at få lavet noget helt unikt, og det er kun fantasien der sætter grænser.'
